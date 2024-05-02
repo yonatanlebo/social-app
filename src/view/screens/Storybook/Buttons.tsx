@@ -126,7 +126,7 @@ export function Buttons() {
           color="gradient_sky"
           size="small"
           label="Link out">
-          <ButtonIcon icon={Globe} position="left" />
+          <ButtonIcon icon={Globe} position="right" />
           <ButtonText>Link out</ButtonText>
         </Button>
 
@@ -135,7 +135,7 @@ export function Buttons() {
           color="gradient_sky"
           size="tiny"
           label="Link out">
-          <ButtonIcon icon={Globe} position="left" />
+          <ButtonIcon icon={Globe} position="right" />
           <ButtonText>Link out</ButtonText>
         </Button>
       </View>

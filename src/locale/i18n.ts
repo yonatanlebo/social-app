@@ -20,6 +20,7 @@ import {messages as messagesTr} from '#/locale/locales/tr/messages'
 import {messages as messagesUk} from '#/locale/locales/uk/messages'
 import {messages as messagesZh_CN} from '#/locale/locales/zh-CN/messages'
 import {messages as messagesZh_TW} from '#/locale/locales/zh-TW/messages'
+import {messages as messageshe} from '#/locale/locales/he/messages'
 import {useLanguagePrefs} from '#/state/preferences'
 
 /**
@@ -89,6 +90,10 @@ export async function dynamicActivate(locale: AppLanguage) {
     }
     case AppLanguage.zh_TW: {
       i18n.loadAndActivate({locale, messages: messagesZh_TW})
+      break
+    }
+    case AppLanguage.he: {
+      i18n.loadAndActivate({locale, messages: messageshe})
       break
     }
     default: {

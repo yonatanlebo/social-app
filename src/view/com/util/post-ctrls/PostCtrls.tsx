@@ -152,7 +152,7 @@ let PostCtrls = ({
         ]}>
         <TouchableOpacity
           testID="replyBtn"
-          style={[styles.btn, !big && styles.btnPad, {paddingLeft: 0}]}
+          style={[styles.btn, !big && styles.btnPad, {paddingRight: 0}]}
           onPress={() => {
             if (!post.viewer?.replyDisabled) {
               requireAuth(() => onPressReply())

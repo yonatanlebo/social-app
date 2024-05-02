@@ -528,7 +528,7 @@ function PwiOptOut() {
         {updateProfile.isPending && <Loader />}
       </View>
 
-      <View style={[a.pt_md, a.gap_md, {paddingLeft: 38}]}>
+      <View style={[a.pt_md, a.gap_md, {paddingRight: 38}]}>
         <Text style={[a.leading_snug, t.atoms.text_contrast_high]}>
           <Trans>
             Bluesky will not show your profile and posts to logged-out users.

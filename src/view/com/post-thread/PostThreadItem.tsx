@@ -226,7 +226,7 @@ let PostThreadItemLoaded = ({
     return (
       <>
         {rootUri !== post.uri && (
-          <View style={{paddingLeft: 16, flexDirection: 'row', height: 16}}>
+          <View style={{paddingRight: 16, flexDirection: 'row', height: 16}}>
             <View style={{width: 38}}>
               <View
                 style={[
@@ -404,7 +404,7 @@ let PostThreadItemLoaded = ({
               style={{
                 flexDirection: 'row',
                 gap: 10,
-                paddingLeft: 8,
+                paddingRight: 8,
                 height: isThreadedChildAdjacentTop ? 8 : 16,
               }}>
               <View style={{width: 38}}>
@@ -529,7 +529,7 @@ let PostThreadItemLoaded = ({
                 style={[
                   styles.loadMore,
                   {
-                    paddingLeft: treeView ? 8 : 70,
+                    paddingRight: treeView ? 8 : 70,
                     paddingTop: 0,
                     paddingBottom: treeView ? 4 : 12,
                   },
@@ -593,10 +593,10 @@ function PostOuterWrapper({
           <View
             key={`${post.uri}-padding-${n}`}
             style={{
-              borderLeftWidth: 2,
-              borderLeftColor: pal.colors.border,
-              marginLeft: isMobile ? 6 : 12,
-              paddingLeft: isMobile ? 6 : 8,
+              borderRightWidth: 2,
+              borderRightColor: pal.colors.border,
+              marginRight: isMobile ? 6 : 12,
+              paddingRight: isMobile ? 6 : 8,
             }}
           />
         ))}
@@ -654,7 +654,7 @@ function ExpandedPostDetails({
 const styles = StyleSheet.create({
   outer: {
     borderTopWidth: 1,
-    paddingLeft: 8,
+    paddingRight: 8,
   },
   outerHighlighted: {
     paddingTop: 16,
@@ -671,7 +671,7 @@ const styles = StyleSheet.create({
   layoutAvi: {},
   layoutContent: {
     flex: 1,
-    marginLeft: 10,
+    marginRight: 10,
   },
   layoutContentThreaded: {
     flex: 1,

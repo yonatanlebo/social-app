@@ -96,7 +96,7 @@ function ListImpl<ItemT>(
           offset: number
         }) {
           window.scrollTo({
-            left: 0,
+            Right: 0,
             top: offset,
             behavior: animated ? 'smooth' : 'instant',
           })

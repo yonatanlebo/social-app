@@ -58,8 +58,8 @@ export function ProfileHeaderSuggestedFollows({
             alignItems: 'center',
             paddingTop: 4,
             paddingBottom: INNER_PADDING / 2,
-            paddingLeft: INNER_PADDING,
-            paddingRight: INNER_PADDING / 2,
+            paddingLeft: INNER_PADDING / 2,
+            paddingRight: INNER_PADDING,
           }}>
           <Text type="sm-bold" style={[pal.textLight]}>
             <Trans>Suggested for you</Trans>
@@ -86,7 +86,7 @@ export function ProfileHeaderSuggestedFollows({
           scrollEnabled={true}
           contentContainerStyle={{
             alignItems: 'flex-start',
-            paddingLeft: INNER_PADDING / 2,
+            paddingRight: INNER_PADDING / 2,
             paddingBottom: INNER_PADDING,
           }}>
           {isLoading ? (

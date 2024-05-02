@@ -333,6 +333,6 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
   },
   groupContentIcon: {
-    marginLeft: 10,
+    marginRight: 10,
   },
 })

@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   fullscreenContainer: {
     position: 'absolute',
     top: 0,
-    left: 0,
+    Right: 0,
     bottom: 0,
     right: 0,
   },

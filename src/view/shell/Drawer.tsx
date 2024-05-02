@@ -610,7 +610,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#1B1919',
   },
   main: {
-    paddingLeft: 20,
+    paddingRight: 20,
     paddingTop: 20,
   },
   smallSpacer: {
@@ -668,7 +668,7 @@ const styles = StyleSheet.create({
   },
 
   inviteCodes: {
-    paddingLeft: 0,
+    paddingRight: 0,
     paddingVertical: 8,
     flexDirection: 'row',
   },

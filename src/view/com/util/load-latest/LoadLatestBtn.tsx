@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   loadLatest: {
     // @ts-ignore 'fixed' is web only -prf
     position: isWeb ? 'fixed' : 'absolute',
-    left: 18,
+    right: 18,
     bottom: 44,
     borderWidth: 1,
     width: 52,
@@ -74,16 +74,16 @@ const styles = StyleSheet.create({
   },
   loadLatestInline: {
     // @ts-ignore web only
-    left: 'calc(50vw - 282px)',
+    right: 'calc(50vw - 282px)',
   },
   loadLatestOutOfLine: {
     // @ts-ignore web only
-    left: 'calc(50vw - 382px)',
+    right: 'calc(50vw - 382px)',
   },
   indicator: {
     position: 'absolute',
     top: 3,
-    right: 3,
+    left: 3,
     backgroundColor: colors.blue3,
     width: 12,
     height: 12,
