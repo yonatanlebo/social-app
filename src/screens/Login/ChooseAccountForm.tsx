@@ -22,7 +22,7 @@ export const ChooseAccountForm = ({
   onSelectAccount: (account?: SessionAccount) => void
   onPressBack: () => void
 }) => {
-  const [isSwitchingAccounts, setIsSwitchingAccounts] = React.useState(false)
+  const [pendingDid, setPendingDid] = React.useState<string | null>(null)
   const {track, screen} = useAnalytics()
   const {_} = useLingui()
   const {currentAccount} = useSession()
@@ -35,36 +35,48 @@ export const ChooseAccountForm = ({
 
   const onSelect = React.useCallback(
     async (account: SessionAccount) => {
-      if (account.accessJwt) {
-        if (account.did === currentAccount?.did) {
-          setShowLoggedOut(false)
-          Toast.show(_(msg`Already signed in as @${account.handle}`))
-        } else {
-          try {
-            setIsSwitchingAccounts(true)
-            await initSession(account)
-            logEvent('account:loggedIn', {
-              logContext: 'ChooseAccountForm',
-              withPassword: false,
-            })
-            track('Sign In', {resumedSession: true})
-            setTimeout(() => {
-              Toast.show(_(msg`Signed in as @${account.handle}`))
-            }, 100)
-          } catch (e: any) {
-            logger.error('choose account: initSession failed', {
-              message: e.message,
-            })
-            onSelectAccount(account)
-          } finally {
-            setIsSwitchingAccounts(false)
-          }
-        }
-      } else {
+      if (pendingDid) {
+        // The session API isn't resilient to race conditions so let's just ignore this.
+        return
+      }
+      if (!account.accessJwt) {
+        // Move to login form.
         onSelectAccount(account)
+        return
+      }
+      if (account.did === currentAccount?.did) {
+        setShowLoggedOut(false)
+        Toast.show(_(msg`Already signed in as @${account.handle}`))
+        return
+      }
+      try {
+        setPendingDid(account.did)
+        await initSession(account)
+        logEvent('account:loggedIn', {
+          logContext: 'ChooseAccountForm',
+          withPassword: false,
+        })
+        track('Sign In', {resumedSession: true})
+        Toast.show(_(msg`Signed in as @${account.handle}`))
+      } catch (e: any) {
+        logger.error('choose account: initSession failed', {
+          message: e.message,
+        })
+        // Move to login form.
+        onSelectAccount(account)
+      } finally {
+        setPendingDid(null)
       }
     },
-    [currentAccount, track, initSession, onSelectAccount, setShowLoggedOut, _],
+    [
+      currentAccount,
+      track,
+      initSession,
+      pendingDid,
+      onSelectAccount,
+      setShowLoggedOut,
+      _,
+    ],
   )
 
   return (
@@ -78,7 +90,7 @@ export const ChooseAccountForm = ({
         <AccountList
           onSelectAccount={onSelect}
           onSelectOther={() => onSelectAccount()}
-          isSwitchingAccounts={isSwitchingAccounts}
+          pendingDid={pendingDid}
         />
       </View>
       <View style={[a.flex_row]}>

@@ -12,10 +12,10 @@ import {logEvent} from '../statsig/statsig'
 import {LogEvents} from '../statsig/statsig'
 
 export function useAccountSwitcher() {
-  const [isSwitchingAccounts, setIsSwitchingAccounts] = useState(false)
+  const [pendingDid, setPendingDid] = useState<string | null>(null)
   const {_} = useLingui()
   const {track} = useAnalytics()
-  const {initSession, clearCurrentAccount} = useSessionApi()
+  const {initSession} = useSessionApi()
   const {requestSwitchToAccount} = useLoggedOutViewControls()
 
   const onPressSwitchAccount = useCallback(
@@ -24,9 +24,12 @@ export function useAccountSwitcher() {
       logContext: LogEvents['account:loggedIn']['logContext'],
     ) => {
       track('Settings:SwitchAccountButtonClicked')
-
+      if (pendingDid) {
+        // The session API isn't resilient to race conditions so let's just ignore this.
+        return
+      }
       try {
-        setIsSwitchingAccounts(true)
+        setPendingDid(account.did)
         if (account.accessJwt) {
           if (isWeb) {
             // We're switching accounts, which remounts the entire app.
@@ -38,9 +41,7 @@ export function useAccountSwitcher() {
           }
           await initSession(account)
           logEvent('account:loggedIn', {logContext, withPassword: false})
-          setTimeout(() => {
-            Toast.show(_(msg`Signed in as @${account.handle}`))
-          }, 100)
+          Toast.show(_(msg`Signed in as @${account.handle}`))
         } else {
           requestSwitchToAccount({requestedAccount: account.did})
           Toast.show(
@@ -52,16 +53,12 @@ export function useAccountSwitcher() {
         logger.error(`switch account: selectAccount failed`, {
           message: e.message,
         })
-        clearCurrentAccount() // back user out to login
-        setTimeout(() => {
-          Toast.show(_(msg`Sorry! We need you to enter your password.`))
-        }, 100)
       } finally {
-        setIsSwitchingAccounts(false)
+        setPendingDid(null)
       }
     },
-    [_, track, clearCurrentAccount, initSession, requestSwitchToAccount],
+    [_, track, initSession, requestSwitchToAccount, pendingDid],
   )
 
-  return {onPressSwitchAccount, isSwitchingAccounts}
+  return {onPressSwitchAccount, pendingDid}
 }
