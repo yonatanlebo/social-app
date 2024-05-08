@@ -5,15 +5,16 @@ import {AppBskyActorDefs} from '@atproto/api'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 import {msg} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
-import {useNavigation} from '@react-navigation/native'
+import {useFocusEffect, useNavigation} from '@react-navigation/native'
 import {NativeStackScreenProps} from '@react-navigation/native-stack'
 
 import {CommonNavigatorParams, NavigationProp} from '#/lib/routes/types'
 import {useGate} from '#/lib/statsig/statsig'
+import {useCurrentConvoId} from '#/state/messages/current-convo-id'
 import {BACK_HITSLOP} from 'lib/constants'
 import {isWeb} from 'platform/detection'
-import {ChatProvider, useChat} from 'state/messages'
-import {ConvoStatus} from 'state/messages/convo'
+import {ConvoProvider, useConvo} from 'state/messages/convo'
+import {ConvoStatus} from 'state/messages/convo/types'
 import {PreviewableUserAvatar} from 'view/com/util/UserAvatar'
 import {CenteredView} from 'view/com/util/Views'
 import {MessagesList} from '#/screens/Messages/Conversation/MessagesList'
@@ -31,27 +32,37 @@ type Props = NativeStackScreenProps<
 export function MessagesConversationScreen({route}: Props) {
   const gate = useGate()
   const convoId = route.params.conversation
+  const {setCurrentConvoId} = useCurrentConvoId()
+
+  useFocusEffect(
+    useCallback(() => {
+      setCurrentConvoId(convoId)
+      return () => {
+        setCurrentConvoId(undefined)
+      }
+    }, [convoId, setCurrentConvoId]),
+  )
 
   if (!gate('dms')) return <ClipClopGate />
 
   return (
-    <ChatProvider convoId={convoId}>
+    <ConvoProvider convoId={convoId}>
       <Inner />
-    </ChatProvider>
+    </ConvoProvider>
   )
 }
 
 function Inner() {
-  const chat = useChat()
+  const convo = useConvo()
 
   if (
-    chat.status === ConvoStatus.Uninitialized ||
-    chat.status === ConvoStatus.Initializing
+    convo.status === ConvoStatus.Uninitialized ||
+    convo.status === ConvoStatus.Initializing
   ) {
     return <ListMaybePlaceholder isLoading />
   }
 
-  if (chat.status === ConvoStatus.Error) {
+  if (convo.status === ConvoStatus.Error) {
     // TODO
     return (
       <View>
@@ -60,7 +71,7 @@ function Inner() {
           <Button
             label="Retry"
             onPress={() => {
-              chat.error.retry()
+              convo.error.retry()
             }}>
             <ButtonText>Retry</ButtonText>
           </Button>
@@ -70,13 +81,13 @@ function Inner() {
   }
 
   /*
-   * Any other chat states (atm) are "ready" states
+   * Any other convo states (atm) are "ready" states
    */
 
   return (
     <KeyboardProvider>
       <CenteredView style={{flex: 1}} sideBorders>
-        <Header profile={chat.recipients[0]} />
+        <Header profile={convo.recipients[0]} />
         <MessagesList />
       </CenteredView>
     </KeyboardProvider>
@@ -92,7 +103,7 @@ let Header = ({
   const {_} = useLingui()
   const {gtTablet} = useBreakpoints()
   const navigation = useNavigation<NavigationProp>()
-  const chat = useChat()
+  const convo = useConvo()
 
   const onPressBack = useCallback(() => {
     if (isWeb) {
@@ -146,9 +157,9 @@ let Header = ({
           {profile.displayName}
         </Text>
       </View>
-      {chat.status === ConvoStatus.Ready ? (
+      {convo.status === ConvoStatus.Ready ? (
         <ConvoMenu
-          convo={chat.convo}
+          convo={convo.convo}
           profile={profile}
           onUpdateConvo={onUpdateConvo}
           currentScreen="conversation"
