@@ -51,7 +51,7 @@ export function ModerationModlistsScreen({}: Props) {
       <SimpleViewHeader
         showBackButton={isMobile}
         style={
-          !isMobile && [pal.border, {borderRightWidth: 1, borderRightWidth: 1}]
+          !isMobile && [pal.border, {borderLeftWidth: 1, borderRightWidth: 1}]
         }>
         <View style={{flex: 1}}>
           <Text type="title-lg" style={[pal.text, {fontWeight: 'bold'}]}>
@@ -63,7 +63,7 @@ export function ModerationModlistsScreen({}: Props) {
             </Trans>
           </Text>
         </View>
-        <View style={[{marginRight: 18}, isMobile && {marginRight: 12}]}>
+        <View style={[{marginLeft: 18}, isMobile && {marginLeft: 12}]}>
           <Button
             testID="newModListBtn"
             type="default"

@@ -302,7 +302,7 @@ const styles = StyleSheet.create({
   avi: {
     position: 'absolute',
     top: 80,
-    Right: 24,
+    left: 24,
     width: 84,
     height: 84,
     borderWidth: 2,

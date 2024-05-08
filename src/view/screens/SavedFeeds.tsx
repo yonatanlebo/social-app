@@ -30,13 +30,13 @@ import {CenteredView, ScrollView} from 'view/com/util/Views'
 
 const HITSLOP_TOP = {
   top: 20,
-  Right: 20,
+  left: 20,
   bottom: 5,
   right: 20,
 }
 const HITSLOP_BOTTOM = {
   top: 5,
-  Right: 20,
+  left: 20,
   bottom: 20,
   right: 20,
 }

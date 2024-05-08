@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
     paddingLeft: 12,
   },
   labelDesktopWeb: {
-    paddingRight: 12,
+    paddingLeft: 12,
   },
 })

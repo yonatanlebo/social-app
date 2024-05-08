@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
   },
   listItemAvi: {
     width: 54,
-    paddingRight: 4,
+    paddingLeft: 4,
     paddingTop: 8,
     paddingBottom: 10,
   },

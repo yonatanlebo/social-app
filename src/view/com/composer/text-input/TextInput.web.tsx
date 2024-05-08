@@ -306,7 +306,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'flex-start',
     padding: 5,
-    marginRight: 8,
+    marginLeft: 8,
     marginBottom: 10,
   },
   dropContainer: {

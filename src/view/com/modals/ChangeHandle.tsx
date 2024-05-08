@@ -144,7 +144,7 @@ export function Inner({
   return (
     <View style={[s.flex1, pal.view]}>
       <View style={[styles.title, pal.border]}>
-        <View style={styles.titleRight}>
+        <View style={styles.titleLeft}>
           <TouchableOpacity
             onPress={onPressCancel}
             accessibilityRole="button"
@@ -396,7 +396,7 @@ function CustomHandleForm({
         <SelectableBtn
           selected={isDNSForm}
           label={_(msg`DNS Panel`)}
-          Right
+          left
           onSelect={() => setDNSForm(true)}
           accessibilityHint={_(msg`Use the DNS panel`)}
           style={s.flex1}
@@ -552,7 +552,7 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
     borderBottomWidth: 1,
   },
-  titleRight: {
+  titleLeft: {
     width: 80,
   },
   titleRight: {
@@ -572,7 +572,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textInputIcon: {
-    marginRight: 12,
+    marginLeft: 12,
   },
   textInput: {
     flex: 1,

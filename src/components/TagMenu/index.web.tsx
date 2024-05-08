@@ -140,7 +140,7 @@ export function TagMenu({
         // @ts-ignore
         items={dropdownItems}
         triggerStyle={web({
-          textAlign: 'Right',
+          textAlign: 'left',
         })}>
         {children}
       </NativeDropdown>

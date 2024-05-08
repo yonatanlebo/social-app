@@ -66,7 +66,7 @@ export function Component({
             msg({message: `Quote post`, context: 'action'}),
           )}
           accessibilityHint="">
-          <FontAwesomeIcon icon="quote-Right" size={24} style={s.blue3} />
+          <FontAwesomeIcon icon="quote-left" size={24} style={s.blue3} />
           <Text type="title-lg" style={[styles.actionBtnLabel, pal.text]}>
             <Trans context="action">Quote Post</Trans>
           </Text>

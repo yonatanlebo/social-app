@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
   layoutAvi: {
     width: 54,
-    paddingRight: 4,
+    paddingLeft: 4,
     paddingTop: 8,
     paddingBottom: 10,
   },
@@ -164,8 +164,8 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   details: {
-    paddingRight: 54,
-    paddingLeft: 10,
+    paddingLeft: 54,
+    paddingRight: 10,
     paddingBottom: 10,
   },
   pill: {
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   btn: {
     paddingVertical: 7,
     borderRadius: 50,
-    marginRight: 6,
+    marginLeft: 6,
     paddingHorizontal: 14,
   },
 })

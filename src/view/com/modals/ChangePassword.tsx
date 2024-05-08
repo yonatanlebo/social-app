@@ -335,6 +335,6 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
   },
   groupContentIcon: {
-    marginRight: 10,
+    marginLeft: 10,
   },
 })

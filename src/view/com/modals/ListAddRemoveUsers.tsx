@@ -229,7 +229,7 @@ function UserResult({
       <View
         style={{
           width: 54,
-          paddingRight: 4,
+          paddingLeft: 4,
         }}>
         <UserAvatar
           size={40}

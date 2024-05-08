@@ -51,7 +51,7 @@ export function ListsScreen({}: Props) {
       <SimpleViewHeader
         showBackButton={isMobile}
         style={
-          !isMobile && [pal.border, {borderRightWidth: 1, borderLeftWidth: 1}]
+          !isMobile && [pal.border, {borderLeftWidth: 1, borderRightWidth: 1}]
         }>
         <View style={{flex: 1}}>
           <Text type="title-lg" style={[pal.text, {fontWeight: 'bold'}]}>
@@ -61,7 +61,7 @@ export function ListsScreen({}: Props) {
             <Trans>Public, shareable lists which can drive feeds.</Trans>
           </Text>
         </View>
-        <View style={[{marginRight: 18}, isMobile && {marginRight: 12}]}>
+        <View style={[{marginLeft: 18}, isMobile && {marginLeft: 12}]}>
           <Button
             testID="newUserListBtn"
             type="default"

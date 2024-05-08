@@ -71,7 +71,7 @@ export function AccountList({
                 a.flex_1,
                 a.flex_row,
                 a.py_sm,
-                {paddingRight: 48},
+                {paddingLeft: 48},
               ]}>
               {otherLabel ?? <Trans>Other account</Trans>}
             </Text>

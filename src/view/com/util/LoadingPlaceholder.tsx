@@ -68,7 +68,7 @@ export function PostLoadingPlaceholder({
         <LoadingPlaceholder width="80%" height={6} style={{marginBottom: 11}} />
         <View style={styles.postCtrls}>
           <View style={styles.postCtrl}>
-            <View style={[styles.postBtn, {paddingRight: 0}]}>
+            <View style={[styles.postBtn, {paddingLeft: 0}]}>
               <CommentBottomArrow
                 style={[{color: theme.palette.default.icon, marginTop: 1}]}
                 strokeWidth={3}
@@ -126,7 +126,7 @@ export function NotificationLoadingPlaceholder({
   const pal = usePalette('default')
   return (
     <View style={[styles.notification, pal.view, style]}>
-      <View style={{paddingRight: 30, paddingLeft: 10}}>
+      <View style={{paddingLeft: 30, paddingRight: 10}}>
         <HeartIconSolid
           style={{color: pal.colors.backgroundLight} as ViewStyle}
           size={30}
@@ -297,8 +297,8 @@ const styles = StyleSheet.create({
   },
   avatar: {
     borderRadius: 26,
-    marginLeft: 10,
-    marginRight: 8,
+    marginRight: 10,
+    marginLeft: 8,
   },
   notification: {
     flexDirection: 'row',

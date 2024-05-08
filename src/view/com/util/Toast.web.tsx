@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   container: {
     // @ts-ignore web only
     position: 'fixed',
-    Right: 20,
+    left: 20,
     bottom: 20,
     // @ts-ignore web only
     width: 'calc(100% - 40px)',
@@ -83,6 +83,6 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
     fontSize: 18,
-    marginRight: 10,
+    marginLeft: 10,
   },
 })

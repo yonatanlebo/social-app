@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     top: 0,
-    Right: 0,
+    left: 0,
     backgroundColor: 'rgba(0,0,0,0.25)',
   },
   drawerContainer: {
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     // @ts-ignore web only
     position: 'fixed',
     top: 0,
-    Right: 0,
+    left: 0,
     height: '100%',
   },
 })

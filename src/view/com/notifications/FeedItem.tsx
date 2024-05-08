@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
   },
   aviExtraCount: {
     fontWeight: 'bold',
-    paddingRight: 6,
+    paddingLeft: 6,
   },
   meta: {
     flexDirection: 'row',
@@ -515,7 +515,7 @@ const styles = StyleSheet.create({
   },
   additionalPostImages: {
     marginTop: 5,
-    marginRight: 2,
+    marginLeft: 2,
     opacity: 0.8,
   },
   feedcard: {
@@ -527,7 +527,7 @@ const styles = StyleSheet.create({
 
   addedContainer: {
     paddingTop: 4,
-    paddingRight: 36,
+    paddingLeft: 36,
   },
   expandedAuthorsTrigger: {
     zIndex: 1,

@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     // @ts-ignore
     position: 'fixed',
     top: 0,
-    Right: 0,
+    left: 0,
     width: '100%',
     height: '100%',
     backgroundColor: '#000c',

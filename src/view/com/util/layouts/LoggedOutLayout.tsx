@@ -26,7 +26,7 @@ export const LoggedOutLayout = ({
   const contentBg = useColorSchemeStyle(pal.view, {
     backgroundColor: pal.colors.background,
     borderColor: pal.colors.border,
-    borderRightWidth: 1,
+    borderLeftWidth: 1,
   })
 
   if (isMobile) {
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
   descriptionText: {
     maxWidth: 400,
     marginTop: 10,
-    marginRight: 'auto',
+    marginLeft: 'auto',
     textAlign: 'right',
   },
   contentWrapper: {

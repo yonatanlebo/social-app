@@ -85,12 +85,12 @@ export function ContentHider({
             <desc.icon
               size="md"
               fill={t.atoms.text_contrast_medium.color}
-              style={{marginRight: -2}}
+              style={{marginLeft: -2}}
             />
             <Text
               style={[
                 a.flex_1,
-                a.text_Right,
+                a.text_left,
                 a.font_bold,
                 a.leading_snug,
                 gtMobile && [a.font_semibold],
@@ -136,7 +136,7 @@ export function ContentHider({
                 a.font_normal,
                 a.leading_snug,
                 t.atoms.text_contrast_medium,
-                a.text_Right,
+                a.text_left,
               ]}>
               {desc.sourceType === 'user' ? (
                 <Trans>Labeled by the author.</Trans>
@@ -172,11 +172,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginTop: 4,
     paddingVertical: 14,
-    paddingRight: 14,
-    paddingLeft: 18,
+    paddingLeft: 14,
+    paddingRight: 18,
   },
   showBtn: {
-    marginRight: 'auto',
+    marginLeft: 'auto',
     alignSelf: 'center',
   },
 })

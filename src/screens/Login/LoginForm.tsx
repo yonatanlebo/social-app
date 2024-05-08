@@ -222,7 +222,7 @@ export const LoginForm = ({
               style={[
                 a.rounded_sm,
                 // t.atoms.bg_contrast_100,
-                {marginRight: 'auto', Right: 6, padding: 6},
+                {marginLeft: 'auto', left: 6, padding: 6},
                 a.z_10,
               ]}>
               <ButtonText>
