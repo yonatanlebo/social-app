@@ -100,7 +100,7 @@ function HomeHeaderLayoutDesktopAndTablet({
 const styles = StyleSheet.create({
   bar: {
     // @ts-ignore Web only
-    left: 'calc(50% - 300px)',
+    right: 'calc(50% - 300px)',
     width: 600,
     borderLeftWidth: 1,
     borderRightWidth: 1,
