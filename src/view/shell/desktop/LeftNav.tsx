@@ -458,7 +458,7 @@ const styles = StyleSheet.create({
   leftNavTablet: {
     top: 0,
     left: 0,
-    right: 'auto',
+    left: 'auto',
     borderRightWidth: 1,
     height: '100%',
     width: 76,
