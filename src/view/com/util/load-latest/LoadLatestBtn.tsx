@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   loadLatest: {
     // @ts-ignore 'fixed' is web only -prf
     position: isWeb ? 'fixed' : 'absolute',
-    left: 18,
+    right: 18,
     bottom: 44,
     borderWidth: 1,
     width: 52,
