@@ -74,16 +74,16 @@ const styles = StyleSheet.create({
   },
   loadLatestInline: {
     // @ts-ignore web only
-    left: 'calc(50vw - 282px)',
+    right: 'calc(50vw - 282px)',
   },
   loadLatestOutOfLine: {
     // @ts-ignore web only
-    left: 'calc(50vw - 382px)',
+    right: 'calc(50vw - 382px)',
   },
   indicator: {
     position: 'absolute',
     top: 3,
-    right: 3,
+    left: 3,
     backgroundColor: colors.blue3,
     width: 12,
     height: 12,

@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   viewFullThread: {
     flexDirection: 'row',
     gap: 10,
-    paddingLeft: 18,
+    paddingRight: 18,
   },
   viewFullThreadDots: {
     width: 52,

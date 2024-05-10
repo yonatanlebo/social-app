@@ -236,9 +236,9 @@ function PostInner({
 const styles = StyleSheet.create({
   outer: {
     paddingTop: 10,
-    paddingRight: 15,
+    paddingRight: 10,
     paddingBottom: 5,
-    paddingLeft: 10,
+    paddingLeft: 15,
     borderTopWidth: 1,
     // @ts-ignore web only -prf
     cursor: 'pointer',
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
   },
   layoutAvi: {
     width: 70,
-    paddingLeft: 8,
+    paddingRight: 8,
   },
   layoutContent: {
     flex: 1,
@@ -263,11 +263,11 @@ const styles = StyleSheet.create({
   },
   replyLine: {
     position: 'absolute',
-    left: 36,
+    Right: 36,
     top: 70,
     bottom: 0,
-    borderLeftWidth: 2,
-    borderLeftColor: colors.gray2,
+    borderRightWidth: 2,
+    borderRightColor: colors.gray2,
   },
   contentHider: {
     marginBottom: 2,

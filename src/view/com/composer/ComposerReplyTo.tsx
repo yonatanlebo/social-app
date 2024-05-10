@@ -224,8 +224,8 @@ const styles = StyleSheet.create({
   },
   replyToPost: {
     flex: 1,
-    paddingLeft: 13,
-    paddingRight: 8,
+    paddingRight: 13,
+    paddingLeft: 8,
   },
   replyToBody: {
     flexDirection: 'row',

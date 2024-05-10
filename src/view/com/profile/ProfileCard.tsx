@@ -294,7 +294,7 @@ const styles = StyleSheet.create({
   layoutAvi: {
     alignSelf: 'flex-start',
     width: 54,
-    paddingLeft: 4,
+    paddingRight: 4,
     paddingTop: 10,
   },
   avi: {
@@ -313,8 +313,8 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   details: {
-    paddingLeft: 54,
-    paddingRight: 10,
+    paddingRight: 54,
+    paddingLeft: 10,
     paddingBottom: 10,
   },
   pills: {
@@ -331,15 +331,15 @@ const styles = StyleSheet.create({
   btn: {
     paddingVertical: 7,
     borderRadius: 50,
-    marginLeft: 6,
+    marginRight: 6,
     paddingHorizontal: 14,
   },
 
   followedBy: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 54,
-    paddingRight: 20,
+    paddingRight: 54,
+    paddingLeft: 20,
     marginBottom: 10,
     marginTop: -6,
   },

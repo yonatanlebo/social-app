@@ -97,7 +97,7 @@ export function ProfileSubpageHeader({
             {canGoBack ? (
               <FontAwesomeIcon
                 size={18}
-                icon="angle-left"
+                icon="angle-Right"
                 style={[styles.backIcon, pal.text]}
               />
             ) : (

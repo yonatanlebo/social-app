@@ -602,7 +602,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingHorizontal: 20,
     paddingVertical: 6,
-    marginLeft: 12,
+    marginRight: 12,
   },
   errorLine: {
     flexDirection: 'row',
@@ -656,8 +656,8 @@ const styles = StyleSheet.create({
   bottomBar: {
     flexDirection: 'row',
     paddingVertical: 4,
-    paddingLeft: 15,
-    paddingRight: 20,
+    paddingRight: 15,
+    paddingLeft: 20,
     alignItems: 'center',
     borderTopWidth: 1,
   },

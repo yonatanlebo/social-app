@@ -54,8 +54,8 @@ function ProfileLabel({cause}: {cause: ModerationCause}) {
           control.open()
         }}
         style={[a.px_sm, a.py_xs, a.gap_xs]}>
-        <ButtonIcon icon={desc.icon} position="left" />
-        <ButtonText style={[a.text_left, a.leading_snug]}>
+        <ButtonIcon icon={desc.icon} position="right" />
+        <ButtonText style={[a.text_right, a.leading_snug]}>
           {desc.name}
         </ButtonText>
       </Button>

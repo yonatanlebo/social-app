@@ -51,7 +51,7 @@ export function LabelsOnMe({
         onPress={() => {
           control.open()
         }}>
-        <ButtonIcon position="Right" icon={CircleInfo} />
+        <ButtonIcon position="left" icon={CircleInfo} />
         <ButtonText style={[a.leading_snug]}>
           {isAccount ? (
             <Plural

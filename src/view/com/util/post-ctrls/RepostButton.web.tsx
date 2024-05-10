@@ -60,7 +60,7 @@ export const RepostButton = ({
       icon: {
         ios: {name: 'quote.bubble'},
         android: '',
-        web: 'quote-left',
+        web: 'quote-Right',
       },
       onPress: onQuote,
     },

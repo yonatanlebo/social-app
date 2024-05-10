@@ -203,7 +203,7 @@ let FeedItemInner = ({
       noFeedback
       accessible={false}
       onBeforePress={onBeforePress}>
-      <View style={{flexDirection: 'row', gap: 10, paddingLeft: 8}}>
+      <View style={{flexDirection: 'row', gap: 10, paddingRight: 8}}>
         <View style={{width: 52}}>
           {isThreadChild && (
             <View
@@ -437,8 +437,8 @@ PostContent = memo(PostContent)
 const styles = StyleSheet.create({
   outer: {
     borderTopWidth: 1,
-    paddingLeft: 10,
-    paddingRight: 15,
+    paddingRight: 10,
+    paddingLeft: 15,
     // @ts-ignore web only -prf
     cursor: 'pointer',
     overflow: 'hidden',
@@ -455,7 +455,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 2,
     marginBottom: 2,
-    marginLeft: -20,
+    marginRight: -20,
   },
   layout: {
     flexDirection: 'row',
@@ -463,7 +463,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   layoutAvi: {
-    paddingLeft: 8,
+    paddingRight: 8,
   },
   layoutContent: {
     flex: 1,
