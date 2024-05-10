@@ -251,8 +251,8 @@ const styles = StyleSheet.create({
   },
   quotePost: {
     flex: 1,
-    paddingLeft: 13,
-    paddingRight: 8,
+    paddingRight: 13,
+    paddingLeft: 8,
   },
   errorContainer: {
     flexDirection: 'row',
