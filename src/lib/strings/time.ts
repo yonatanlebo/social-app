@@ -15,17 +15,17 @@ export function ago(date: number | string | Date): string {
   }
   const diffSeconds = Math.floor((Date.now() - ts) / 1e3)
   if (diffSeconds < NOW) {
-    return `now`
+    return `עכשיו`
   } else if (diffSeconds < MINUTE) {
-    return `${diffSeconds}s`
+    return `${diffSeconds}שניות`
   } else if (diffSeconds < HOUR) {
-    return `${Math.floor(diffSeconds / MINUTE)}m`
+    return `${Math.floor(diffSeconds / MINUTE)}דקות`
   } else if (diffSeconds < DAY) {
-    return `${Math.floor(diffSeconds / HOUR)}h`
+    return `${Math.floor(diffSeconds / HOUR)}שעות`
   } else if (diffSeconds < MONTH) {
-    return `${Math.round(diffSeconds / DAY)}d`
+    return `${Math.round(diffSeconds / DAY)}ימים`
   } else if (diffSeconds < YEAR) {
-    return `${Math.floor(diffSeconds / MONTH)}mo`
+    return `${Math.floor(diffSeconds / MONTH)}חודשים`
   } else {
     return new Date(ts).toLocaleDateString()
   }
@@ -33,7 +33,7 @@ export function ago(date: number | string | Date): string {
 
 export function niceDate(date: number | string | Date) {
   const d = new Date(date)
-  return `${d.toLocaleDateString('en-us', {
+  return `${d.toLocaleDateString('he-il', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
