@@ -59,7 +59,7 @@ msgstr ""
 
 #: src/view/com/feeds/FeedSourceCard.tsx:267
 msgid "{0, plural, one {Liked by # user} other {Liked by # users}}"
-msgstr ""
+msgstr "{0, plural, one {אהב # user} other {אהבו # אהבו}}"
 
 #: src/screens/Profile/Header/Metrics.tsx:59
 msgid "{0, plural, one {post} other {posts}}"
@@ -79,7 +79,7 @@ msgstr ""
 
 #: src/components/LabelingServiceCard/index.tsx:71
 msgid "{count, plural, one {Liked by # user} other {Liked by # users}}"
-msgstr ""
+msgstr "{count, plural, one {אהב # משתמש} other {אהבו # משתמשים}}"
 
 #: src/screens/Deactivated.tsx:207
 msgid "{estimatedTimeHrs, plural, one {hour} other {hours}}"
