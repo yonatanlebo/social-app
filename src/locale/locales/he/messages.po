@@ -42,20 +42,20 @@ msgstr ""
 #: src/components/ProfileHoverCard/index.web.tsx:373
 #: src/screens/Profile/Header/Metrics.tsx:23
 msgid "{0, plural, one {follower} other {followers}}"
-msgstr "{follower} במעקב"
+msgstr ""
 
 #: src/components/ProfileHoverCard/index.web.tsx:377
 #: src/screens/Profile/Header/Metrics.tsx:27
 msgid "{0, plural, one {following} other {following}}"
-msgstr "{0, plural, one {following} אחר {following}}"
+msgstr ""
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:245
 msgid "{0, plural, one {Like (# like)} other {Like (# likes)}}"
-msgstr "{0, plural, one {Like (# like)} אחר {Like (# likes)}}"
+msgstr ""
 
 #: src/view/com/post-thread/PostThreadItem.tsx:359
 msgid "{0, plural, one {like} other {likes}}"
-msgstr "{0, plural, one {like} אחר {likes}}"
+msgstr ""
 
 #: src/view/com/feeds/FeedSourceCard.tsx:267
 msgid "{0, plural, one {Liked by # user} other {Liked by # users}}"
