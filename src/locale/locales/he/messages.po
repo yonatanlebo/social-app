@@ -42,20 +42,20 @@ msgstr ""
 #: src/components/ProfileHoverCard/index.web.tsx:373
 #: src/screens/Profile/Header/Metrics.tsx:23
 msgid "{0, plural, one {follower} other {followers}}"
-msgstr "{0, plural, one {עוקב} other {עוקבים}}"
+msgstr "{0, plural, one {follower} other {followers}}"
 
 #: src/components/ProfileHoverCard/index.web.tsx:377
 #: src/screens/Profile/Header/Metrics.tsx:27
 msgid "{0, plural, one {following} other {following}}"
-msgstr ""
+msgstr "{0, plural, one {following} other {following}}"
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:245
 msgid "{0, plural, one {Like (# like)} other {Like (# likes)}}"
-msgstr ""
+msgstr "{0, plural, one {Like (# like)} other {Like (# likes)}}"
 
 #: src/view/com/post-thread/PostThreadItem.tsx:359
 msgid "{0, plural, one {like} other {likes}}"
-msgstr ""
+msgstr "{0, plural, one {like} other {likes}}"
 
 #: src/view/com/feeds/FeedSourceCard.tsx:267
 msgid "{0, plural, one {Liked by # user} other {Liked by # users}}"
@@ -63,7 +63,7 @@ msgstr "{0, plural, one {אהב # user} other {אהבו # אהבו}}"
 
 #: src/screens/Profile/Header/Metrics.tsx:59
 msgid "{0, plural, one {post} other {posts}}"
-msgstr ""
+msgstr "{0, plural, one {post} other {posts}}"
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:204
 msgid "{0, plural, one {Reply (# reply)} other {Reply (# replies)}}"
@@ -116,7 +116,7 @@ msgstr "<0/> חברים"
 
 #: src/view/shell/Drawer.tsx:92
 msgid "<0>{0}</0> {1, plural, one {follower} other {followers}}"
-msgstr ""
+msgstr "<0>{0}</0> {1, plural, one {follower} other {followers}}"
 
 #: src/view/shell/Drawer.tsx:103
 msgid "<0>{0}</0> {1, plural, one {following} other {following}}"
