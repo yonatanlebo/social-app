@@ -42,28 +42,28 @@ msgstr ""
 #: src/components/ProfileHoverCard/index.web.tsx:373
 #: src/screens/Profile/Header/Metrics.tsx:23
 msgid "{0, plural, one {follower} other {followers}}"
-msgstr "{0, plural, one {follower} other {followers}}"
+msgstr ""
 
 #: src/components/ProfileHoverCard/index.web.tsx:377
 #: src/screens/Profile/Header/Metrics.tsx:27
 msgid "{0, plural, one {following} other {following}}"
-msgstr "{0, plural, one {following} other {following}}"
+msgstr ""
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:245
 msgid "{0, plural, one {Like (# like)} other {Like (# likes)}}"
-msgstr "{0, plural, one {Like (# like)} other {Like (# likes)}}"
+msgstr ""
 
 #: src/view/com/post-thread/PostThreadItem.tsx:359
 msgid "{0, plural, one {like} other {likes}}"
-msgstr "{0, plural, one {like} other {likes}}"
+msgstr ""
 
 #: src/view/com/feeds/FeedSourceCard.tsx:267
 msgid "{0, plural, one {Liked by # user} other {Liked by # users}}"
-msgstr "{0, plural, one {אהב # user} other {אהבו # אהבו}}"
+msgstr ""
 
 #: src/screens/Profile/Header/Metrics.tsx:59
 msgid "{0, plural, one {post} other {posts}}"
-msgstr "{0, plural, one {post} other {posts}}"
+msgstr ""
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:204
 msgid "{0, plural, one {Reply (# reply)} other {Reply (# replies)}}"
@@ -79,7 +79,7 @@ msgstr ""
 
 #: src/components/LabelingServiceCard/index.tsx:71
 msgid "{count, plural, one {Liked by # user} other {Liked by # users}}"
-msgstr "{count, plural, one {אהב # משתמש} other {אהבו # משתמשים}}"
+msgstr ""
 
 #: src/screens/Deactivated.tsx:207
 msgid "{estimatedTimeHrs, plural, one {hour} other {hours}}"
@@ -240,8 +240,6 @@ msgid "Add alt text"
 msgstr "הוסף טקסט חלופי"
 
 #: src/view/com/composer/GifAltText.tsx:175
-#, fuzzy
-#| msgid "Add alt text"
 msgid "Add ALT text"
 msgstr "הוסף טקסט חלופי"
 
@@ -256,7 +254,7 @@ msgstr "הוסף מילת השתקה להגדרות המוגדרות"
 
 #: src/components/dialogs/MutedWords.tsx:86
 msgid "Add muted words and tags"
-msgstr "     הוסף מילים ותגיות מושתקות"
+msgstr "הוסף מילים ותגיות מושתקות"
 
 #: src/view/com/modals/ChangeHandle.tsx:417
 msgid "Add the following DNS record to your domain:"
@@ -324,8 +322,6 @@ msgid "Alt text"
 msgstr "טקסט חלופי"
 
 #: src/view/com/util/post-embeds/GifEmbed.tsx:179
-#, fuzzy
-#| msgid "Alt text"
 msgid "Alt Text"
 msgstr "טקסט חלופי"
 
@@ -520,10 +516,8 @@ msgid "Block"
 msgstr "חסום"
 
 #: src/components/dms/ConvoMenu.tsx:135 src/components/dms/ConvoMenu.tsx:139
-#, fuzzy
-#| msgid "Block accounts"
 msgid "Block account"
-msgstr "חסום חשבונות"
+msgstr "חסום חשבון"
 
 #: src/view/com/profile/ProfileMenu.tsx:300
 #: src/view/com/profile/ProfileMenu.tsx:307
@@ -649,8 +643,6 @@ msgid "By {0}"
 msgstr "על ידי {0}"
 
 #: src/screens/Onboarding/StepAlgoFeeds/FeedCard.tsx:112
-#, fuzzy
-#| msgid "Post by @{0}"
 msgid "by @{0}"
 msgstr "פוסט על ידי @{0}"
 
@@ -779,25 +771,19 @@ msgstr "שנה את המייל שלך"
 
 #: src/Navigation.tsx:302
 msgid "Chat"
-msgstr ""
+msgstr "שיחה"
 
 #: src/components/dms/ConvoMenu.tsx:55
-#, fuzzy
-#| msgid "List muted"
 msgid "Chat muted"
-msgstr "רשימה הושתקה"
+msgstr "שיחה הושתקה"
 
 #: src/components/dms/ConvoMenu.tsx:87 src/components/dms/MessageMenu.tsx:69
-#, fuzzy
-#| msgid "Moderation settings"
 msgid "Chat settings"
-msgstr "הגדרת העדפות"
+msgstr "הגדרת שיחה"
 
 #: src/components/dms/ConvoMenu.tsx:65
-#, fuzzy
-#| msgid "List unmuted"
 msgid "Chat unmuted"
-msgstr "השתקת רשימה בוטלה"
+msgstr "השתקת שיחה בוטלה"
 
 #: src/screens/Deactivated.tsx:78 src/screens/Deactivated.tsx:82
 msgid "Check my status"
@@ -1171,10 +1157,8 @@ msgid "Could not mute chat"
 msgstr ""
 
 #: src/components/dms/ConvoMenu.tsx:68
-#, fuzzy
-#| msgid "Account unmuted"
 msgid "Could not unmute chat"
-msgstr "בוטלה ההשתקה של החשבון"
+msgstr "לא ניתן לבטל את השתקת השיחה"
 
 #: src/view/com/auth/SplashScreen.tsx:57
 #: src/view/com/auth/SplashScreen.web.tsx:106
@@ -1284,20 +1268,16 @@ msgid "Delete app password?"
 msgstr "למחוק את סיסמת האפליקציה?"
 
 #: src/components/dms/MessageMenu.tsx:101
-#, fuzzy
-#| msgid "Delete post"
 msgid "Delete for me"
-msgstr "מחק פוסט"
+msgstr "מחק בשבילי"
 
 #: src/view/screens/ProfileList.tsx:417
 msgid "Delete List"
 msgstr "מחק רשימה"
 
 #: src/components/dms/MessageMenu.tsx:119
-#, fuzzy
-#| msgid "Delete List"
 msgid "Delete message"
-msgstr "מחק רשימה"
+msgstr "מחק הודעה"
 
 #: src/components/dms/MessageMenu.tsx:99
 msgid "Delete message for me"
@@ -1405,7 +1385,7 @@ msgstr ""
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:39
 msgid "Does not include nudity."
-msgstr ""
+msgstr "לא מכיל עירום."
 
 #: src/screens/Signup/StepHandle.tsx:105
 msgid "Doesn't begin or end with a hyphen"
@@ -1652,7 +1632,7 @@ msgstr ""
 
 #: src/screens/Moderation/index.tsx:339
 msgid "Enabled"
-msgstr ""
+msgstr "מאופשר"
 
 #: src/screens/Profile/Sections/Feed.tsx:104
 msgid "End of feed"
@@ -2089,10 +2069,8 @@ msgid "Go to next"
 msgstr ""
 
 #: src/components/dms/ConvoMenu.tsx:114
-#, fuzzy
-#| msgid "Edit profile"
 msgid "Go to profile"
-msgstr "ערוך פרופיל"
+msgstr "עבור אל הפרופיל"
 
 #: src/components/dms/ConvoMenu.tsx:111
 msgid "Go to user's profile"
@@ -2637,10 +2615,8 @@ msgstr "תפריט"
 
 #: src/components/dms/MessageMenu.tsx:56
 #: src/screens/Messages/List/index.tsx:245
-#, fuzzy
-#| msgid "List deleted"
 msgid "Message deleted"
-msgstr "רשימה נמחקה"
+msgstr "הודעה נמחקה"
 
 #: src/view/com/posts/FeedErrorMessage.tsx:192
 msgid "Message from server: {0}"
@@ -2652,10 +2628,8 @@ msgstr ""
 
 #: src/screens/Messages/List/index.tsx:62
 #: src/screens/Messages/List/index.tsx:374
-#, fuzzy
-#| msgid "Language settings"
 msgid "Message settings"
-msgstr "הגדרות שפה"
+msgstr "הגדרות הודעה"
 
 #: src/Navigation.tsx:517 src/screens/Messages/List/index.tsx:163
 #: src/screens/Messages/List/index.tsx:190
@@ -2666,10 +2640,8 @@ msgid "Messages"
 msgstr ""
 
 #: src/Navigation.tsx:307
-#, fuzzy
-#| msgid "Moderation settings"
 msgid "Messaging settings"
-msgstr "הגדרת העדפות"
+msgstr "הגדרת שיחה"
 
 #: src/lib/moderation/useReportOptions.ts:45
 msgid "Misleading Account"
@@ -2782,10 +2754,8 @@ msgid "Mute list"
 msgstr ""
 
 #: src/components/dms/ConvoMenu.tsx:119 src/components/dms/ConvoMenu.tsx:125
-#, fuzzy
-#| msgid "Notifications"
 msgid "Mute notifications"
-msgstr "התראות"
+msgstr "השתק התראות"
 
 #: src/view/screens/ProfileList.tsx:615
 msgid "Mute these accounts?"
@@ -2914,10 +2884,8 @@ msgstr "חדש"
 
 #: src/components/dms/NewChat.tsx:60 src/screens/Messages/List/index.tsx:384
 #: src/screens/Messages/List/index.tsx:392
-#, fuzzy
-#| msgid "New post"
 msgid "New chat"
-msgstr "פוסט חדש"
+msgstr "שיחה חדשה"
 
 #: src/view/com/modals/CreateOrEditList.tsx:255
 msgid "New Moderation List"
@@ -3088,18 +3056,16 @@ msgid "Notifications"
 msgstr "התראות"
 
 #: src/components/dms/MessageItem.tsx:139
-#, fuzzy
-#| msgid "New"
 msgid "Now"
-msgstr "חדש"
+msgstr "עכשיו"
 
 #: src/view/com/modals/SelfLabel.tsx:103
 msgid "Nudity"
-msgstr ""
+msgstr "עירום"
 
 #: src/lib/moderation/useReportOptions.ts:71
 msgid "Nudity or adult content not labeled as such"
-msgstr ""
+msgstr "עירום או תוכן למבוגרים שאינו מתויג ככזה"
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:11
 msgid "Off"
@@ -3195,10 +3161,8 @@ msgid "Opens {numItems} options"
 msgstr ""
 
 #: src/view/screens/Settings/index.tsx:501
-#, fuzzy
-#| msgid "Opens the app password settings"
 msgid "Opens accessibility settings"
-msgstr "פתח את הגדרות הסיסמא לאפליקציות"
+msgstr "פתח את הגדרות הנגישות"
 
 #: src/view/screens/Log.tsx:54
 msgid "Opens additional details for a debug entry"
@@ -3299,10 +3263,8 @@ msgid "Opens the linked website"
 msgstr ""
 
 #: src/screens/Messages/List/index.tsx:63
-#, fuzzy
-#| msgid "Opens the app password settings"
 msgid "Opens the message settings page"
-msgstr "פתח את הגדרות הסיסמא לאפליקציות"
+msgstr "פתח את דף הגדרות ההודעות"
 
 #: src/view/screens/Settings/index.tsx:804
 #: src/view/screens/Settings/index.tsx:814
@@ -3481,8 +3443,6 @@ msgid "Please explain why you think this label was incorrectly applied by {0}"
 msgstr ""
 
 #: src/lib/hooks/useAccountSwitcher.ts:48
-#, fuzzy
-#| msgid "Already signed in as @{0}"
 msgid "Please sign in as @{0}"
 msgstr "כבר מחובר בתור @{0}"
 
@@ -3730,10 +3690,8 @@ msgid "Remove mute word from your list"
 msgstr ""
 
 #: src/view/com/util/post-embeds/QuoteEmbed.tsx:223
-#, fuzzy
-#| msgid "Remove feed"
 msgid "Remove quote"
-msgstr "הסר פיד"
+msgstr "הסר ציטוט"
 
 #: src/view/com/modals/Repost.tsx:48
 msgid "Remove repost"
@@ -3761,10 +3719,8 @@ msgid "Removes default thumbnail from {0}"
 msgstr ""
 
 #: src/view/com/util/post-embeds/QuoteEmbed.tsx:224
-#, fuzzy
-#| msgid "Reposts of this post"
 msgid "Removes quoted post"
-msgstr "פרסם/ה מחדש את הפוסט הזה"
+msgstr "מסיר שיתוף הציטוט"
 
 #: src/view/screens/Profile.tsx:194
 msgid "Replies"
@@ -3793,10 +3749,8 @@ msgid "Report"
 msgstr ""
 
 #: src/components/dms/ConvoMenu.tsx:146 src/components/dms/ConvoMenu.tsx:150
-#, fuzzy
-#| msgid "Remove account"
 msgid "Report account"
-msgstr "הסר חשבון"
+msgstr "דווח על החשבון"
 
 #: src/view/com/profile/ProfileMenu.tsx:319
 #: src/view/com/profile/ProfileMenu.tsx:322
@@ -3816,10 +3770,8 @@ msgid "Report List"
 msgstr ""
 
 #: src/components/dms/MessageMenu.tsx:107
-#, fuzzy
-#| msgid "Report this user"
 msgid "Report message"
-msgstr "דווח על המשתמש הזה"
+msgstr "דווח הודעה"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:363
 #: src/view/com/util/forms/PostDropdownBtn.tsx:365
@@ -3906,10 +3858,8 @@ msgstr ""
 
 #: src/view/screens/Settings/DisableEmail2FADialog.tsx:169
 #: src/view/screens/Settings/DisableEmail2FADialog.tsx:172
-#, fuzzy
-#| msgid "(no email)"
 msgid "Resend email"
-msgstr "(ללא אימייל)"
+msgstr "שלח מחדש את האימייל"
 
 #: src/view/com/modals/ChangePassword.tsx:187
 msgid "Reset code"
@@ -4020,10 +3970,8 @@ msgid "Saved Feeds"
 msgstr "פידים שמורים"
 
 #: src/view/com/lightbox/Lightbox.tsx:81
-#, fuzzy
-#| msgid "Saved to your feeds"
 msgid "Saved to your camera roll"
-msgstr "נשמר לפידים שלך"
+msgstr "נשמר לגלריה שלך"
 
 #: src/view/screens/ProfileFeed.tsx:214
 msgid "Saved to your feeds"
@@ -4090,22 +4038,16 @@ msgid "Search for users"
 msgstr ""
 
 #: src/components/dialogs/GifSelect.tsx:158
-#, fuzzy
-#| msgid "Search"
 msgid "Search GIFs"
-msgstr "חיפוש"
+msgstr "חיפוש גיף"
 
 #: src/components/dms/NewChat.tsx:183
-#, fuzzy
-#| msgid "See profile"
 msgid "Search profiles"
-msgstr "צפה בפרופיל"
+msgstr "חפש פרופילים"
 
 #: src/components/dialogs/GifSelect.tsx:159
-#, fuzzy
-#| msgid "Search"
 msgid "Search Tenor"
-msgstr "חיפוש"
+msgstr "חיפוש בטנור"
 
 #: src/view/com/modals/ChangeEmail.tsx:112
 msgid "Security Step Required"
@@ -5001,7 +4943,7 @@ msgstr "תווית זו הושמה על ידי <0>{0}</0>."
 
 #: src/components/moderation/ModerationDetailsDialog.tsx:125
 msgid "This label was applied by the author."
-msgstr "תווית זו הושמה על ידי המשתמש"
+msgstr "תווית זו הושמה על ידי המשתמש."
 
 #: src/screens/Profile/Sections/Labels.tsx:181
 msgid ""
@@ -5927,8 +5869,126 @@ msgstr "התגובה שלך פורסמה"
 msgid "Your user handle"
 msgstr ""
 
-msgid "Chat with {chatId}"
+msgid "<0>{0}</0> following"
+msgstr "<0>{0}</0> עוקב"
+
+msgid "<0>{followers} </0><1>{pluralizedFollowers}</1>"
 msgstr ""
 
-msgid "See what's next"
+msgid "<0>Choose your</0><1>Recommended</1><2>Feeds</2>"
+msgstr ""
+
+msgid "<0>Follow some</0><1>Recommended</1><2>Users</2>"
+msgstr ""
+
+msgid "<0>Welcome to</0><1>Bluesky</1>"
+msgstr ""
+
+msgid "Add link card"
+msgstr ""
+
+msgid "Add link card:"
+msgstr ""
+
+msgid "Added"
+msgstr ""
+
+msgid "Appeal submitted."
+msgstr ""
+
+msgid "Bluesky is flexible."
+msgstr ""
+
+msgid "Bluesky is public."
+msgstr ""
+
+msgid ""
+"Check out some recommended feeds. Tap + to add them to your list of pinned "
+"feeds."
+msgstr ""
+
+msgid "Check out some recommended users. Follow them to see similar users."
+msgstr ""
+
+msgid "Choose the algorithms that power your experience with custom feeds."
+msgstr ""
+
+msgid "Click here to open tag menu for #{tag}"
+msgstr ""
+
+msgid "Creates a card with a thumbnail. The card links to {url}"
+msgstr ""
+
+msgid "Disable haptics"
+msgstr ""
+
+msgid "Disable vibrations"
+msgstr ""
+
+msgid "Failed to load recommended feeds"
+msgstr ""
+
+msgid ""
+"Feeds are created by users to curate content. Choose some feeds that you "
+"find interesting."
+msgstr ""
+
+msgid "Find users with the search tool on the right"
+msgstr ""
+
+msgid "Finding similar accounts..."
+msgstr ""
+
+msgid ""
+"Follow some users to get started. We can recommend you more users based on "
+"who you find interesting."
+msgstr ""
+
+msgid "Go to @{queryMaybeHandle}"
+msgstr ""
+
+msgid "label has been placed on this {labelTarget}"
+msgstr ""
+
+msgid "labels have been placed on this {labelTarget}"
+msgstr ""
+
+msgid "Liked by {count} {0}"
+msgstr ""
+
+msgid "Liked by {likeCount} {0}"
+msgstr ""
+
+msgid "Never lose access to your followers and data."
+msgstr ""
+
+msgctxt "action"
+msgid "Next"
+msgstr ""
+
+msgid "Not Applicable."
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "Show replies with at least {value} {0}"
+msgstr ""
+
+msgid "Step"
+msgstr ""
+
+msgid "the author"
+msgstr ""
+
+msgid "This warning is only available for posts with media attached."
+msgstr ""
+
+msgid "Unlike"
+msgstr ""
+
+msgid "Version {0}"
+msgstr ""
+
+msgid "Welcome to <0>Bluesky</0>"
 msgstr ""
