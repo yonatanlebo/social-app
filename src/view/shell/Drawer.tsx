@@ -104,8 +104,8 @@ let DrawerProfileCard = ({
           </Text>{' '}
           <Plural
             value={profile?.followersCount || 0}
-            one="follower"
-            other="followers"
+            one="Follower"
+            other="Followers"
           />
         </Trans>{' '}
         &middot;{' '}
@@ -115,8 +115,8 @@ let DrawerProfileCard = ({
           </Text>{' '}
           <Plural
             value={profile?.followsCount || 0}
-            one="following"
-            other="following"
+            one="Following"
+            other="Following"
           />
         </Trans>
       </Text>
