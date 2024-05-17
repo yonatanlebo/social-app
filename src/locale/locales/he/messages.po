@@ -63,7 +63,7 @@ msgstr ""
 
 #: src/screens/Profile/Header/Metrics.tsx:59
 msgid "{0, plural, one {post} other {posts}}"
-msgstr ""
+msgstr "{0, plural, one פוסט other פוסטים}"
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:204
 msgid "{0, plural, one {Reply (# reply)} other {Reply (# replies)}}"
@@ -4643,7 +4643,7 @@ msgstr ""
 
 #: src/screens/Messages/Conversation/index.tsx:89
 msgid "Something went wrong"
-msgstr "משהו השתבש."
+msgstr "משהו השתבש"
 
 #: src/components/ReportDialog/index.tsx:59
 #: src/screens/Moderation/index.tsx:114
@@ -6034,8 +6034,129 @@ msgstr ""
 msgid "Your user handle"
 msgstr ""
 
-msgid "Chat with {chatId}"
+msgid "<0>{0}</0> following"
 msgstr ""
 
-msgid "See what's next"
+msgid "<0>{followers} </0><1>{pluralizedFollowers}</1>"
+msgstr ""
+
+msgid "<0>Choose your</0><1>Recommended</1><2>Feeds</2>"
+msgstr ""
+
+msgid "<0>Follow some</0><1>Recommended</1><2>Users</2>"
+msgstr ""
+
+msgid "<0>Welcome to</0><1>Bluesky</1>"
+msgstr ""
+
+msgid "Add link card"
+msgstr ""
+
+msgid "Add link card:"
+msgstr ""
+
+msgid "Added"
+msgstr ""
+
+msgid "Appeal submitted."
+msgstr ""
+
+msgid "Bluesky is flexible."
+msgstr ""
+
+msgid "Bluesky is public."
+msgstr ""
+
+msgid ""
+"Check out some recommended feeds. Tap + to add them to your list of pinned "
+"feeds."
+msgstr ""
+
+msgid "Check out some recommended users. Follow them to see similar users."
+msgstr ""
+
+msgid "Choose the algorithms that power your experience with custom feeds."
+msgstr ""
+
+msgid "Click here to open tag menu for #{tag}"
+msgstr ""
+
+msgid "Creates a card with a thumbnail. The card links to {url}"
+msgstr ""
+
+msgid "Disable haptics"
+msgstr ""
+
+msgid "Disable vibrations"
+msgstr ""
+
+msgid ""
+"Feeds are created by users to curate content. Choose some feeds that you "
+"find interesting."
+msgstr ""
+
+msgid "Find users with the search tool on the right"
+msgstr ""
+
+msgid "Finding similar accounts..."
+msgstr ""
+
+msgid ""
+"Follow some users to get started. We can recommend you more users based on "
+"who you find interesting."
+msgstr ""
+
+msgid "Go to @{queryMaybeHandle}"
+msgstr ""
+
+msgid "label has been placed on this {labelTarget}"
+msgstr ""
+
+msgid "labels have been placed on this {labelTarget}"
+msgstr ""
+
+msgid "Liked by {count} {0}"
+msgstr ""
+
+msgid "Liked by {likeCount} {0}"
+msgstr ""
+
+msgid "Never lose access to your followers and data."
+msgstr ""
+
+msgctxt "action"
+msgid "Next"
+msgstr ""
+
+msgid "Not Applicable."
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "Press to Retry"
+msgstr ""
+
+msgid "Retry."
+msgstr ""
+
+msgid "Show replies with at least {value} {0}"
+msgstr ""
+
+msgid "Step"
+msgstr ""
+
+msgid "the author"
+msgstr ""
+
+msgid "This warning is only available for posts with media attached."
+msgstr ""
+
+msgid "Unlike"
+msgstr ""
+
+msgid "Welcome to <0>Bluesky</0>"
+msgstr ""
+
+msgid "You don't have any saved feeds!"
 msgstr ""
