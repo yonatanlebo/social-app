@@ -43,6 +43,8 @@ export function MessagesConversationScreen({route}: Props) {
 
       if (isWeb && !gtMobile) {
         setMinimalShellMode(true)
+      } else {
+        setMinimalShellMode(false)
       }
 
       return () => {
@@ -80,6 +82,14 @@ function Inner() {
     (convoState.status === ConvoStatus.Ready &&
       !convoState.isFetchingHistory &&
       convoState.items.length === 0)
+
+  // Any time that we re-render the `Initializing` state, we have to reset `hasScrolled` to false. After entering this
+  // state, we know that we're resetting the list of messages and need to re-scroll to the bottom when they get added.
+  React.useEffect(() => {
+    if (convoState.status === ConvoStatus.Initializing) {
+      setHasScrolled(false)
+    }
+  }, [convoState.status])
 
   if (convoState.status === ConvoStatus.Error) {
     return (
