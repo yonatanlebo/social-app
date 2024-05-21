@@ -1936,7 +1936,7 @@ msgstr ""
 #: src/view/com/post-thread/PostThreadFollowBtn.tsx:146
 #: src/view/com/profile/ProfileHeaderSuggestedFollows.tsx:247
 msgid "Follow"
-msgstr "עוקב"
+msgstr "עקוב"
 
 #: src/view/com/profile/FollowButton.tsx:69
 msgctxt "action"
