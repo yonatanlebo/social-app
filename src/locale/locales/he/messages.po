@@ -116,7 +116,7 @@ msgstr ""
 
 #: src/view/com/threadgate/WhoCanReply.tsx:159
 msgid "<0/> members"
-msgstr "<0/> חברים"
+msgstr "<0/> משתתפים"
 
 #: src/view/shell/Drawer.tsx:101
 msgid "<0>{0}</0> {1, plural, one {follower} other {followers}}"
@@ -3660,7 +3660,7 @@ msgstr ""
 #: src/lib/hooks/useAccountSwitcher.ts:48
 #: src/lib/hooks/useAccountSwitcher.ts:58
 msgid "Please sign in as @{0}"
-msgstr "כבר מחובר בתור @{0}"
+msgstr "אנא התחבר בתור @{0}"
 
 #: src/view/com/modals/VerifyEmail.tsx:109
 msgid "Please Verify Your Email"
@@ -6269,179 +6269,8 @@ msgstr ""
 msgid "Your user handle"
 msgstr ""
 
-msgid ""
-"{0, plural, one {# label has been placed on this account} other {# labels "
-"has been placed on this account}}"
+msgid "Chat with {chatId}"
 msgstr ""
 
-msgid ""
-"{0, plural, one {# label has been placed on this content} other {# labels "
-"has been placed on this content}}"
-msgstr ""
-
-msgid "<0>{0}</0> following"
-msgstr ""
-
-msgid "<0>{followers} </0><1>{pluralizedFollowers}</1>"
-msgstr ""
-
-msgid "<0>Choose your</0><1>Recommended</1><2>Feeds</2>"
-msgstr ""
-
-msgid "<0>Follow some</0><1>Recommended</1><2>Users</2>"
-msgstr ""
-
-msgid "<0>Welcome to</0><1>Bluesky</1>"
-msgstr ""
-
-msgid "Add link card"
-msgstr ""
-
-msgid "Add link card:"
-msgstr ""
-
-msgid "Added"
-msgstr ""
-
-msgid "An error occurred while trying to delete the message. Please try again."
-msgstr ""
-
-msgid "Appeal submitted."
-msgstr ""
-
-msgid ""
-"Are you sure you want to delete this message? The message will be deleted "
-"for you, but not for other participants."
-msgstr ""
-
-msgid ""
-"Are you sure you want to leave this conversation? Your messages will be "
-"deleted for you, but not for other participants."
-msgstr ""
-
-msgid "Bluesky is flexible."
-msgstr ""
-
-msgid "Bluesky is public."
-msgstr ""
-
-msgid ""
-"Check out some recommended feeds. Tap + to add them to your list of pinned "
-"feeds."
-msgstr ""
-
-msgid "Check out some recommended users. Follow them to see similar users."
-msgstr ""
-
-msgid "Choose the algorithms that power your experience with custom feeds."
-msgstr ""
-
-msgid "Click here to add one."
-msgstr ""
-
-msgid "Click here to open tag menu for #{tag}"
-msgstr ""
-
-msgid "Could not load profiles. Please try again later."
-msgstr ""
-
-msgid "Creates a card with a thumbnail. The card links to {url}"
-msgstr ""
-
-msgid "Disable haptics"
-msgstr ""
-
-msgid "Disable vibrations"
-msgstr ""
-
-msgid ""
-"Feeds are created by users to curate content. Choose some feeds that you "
-"find interesting."
-msgstr ""
-
-msgid "Find users with the search tool on the right"
-msgstr ""
-
-msgid "Finding similar accounts..."
-msgstr ""
-
-msgid ""
-"Follow some users to get started. We can recommend you more users based on "
-"who you find interesting."
-msgstr ""
-
-msgid "Go to @{queryMaybeHandle}"
-msgstr ""
-
-msgid "label has been placed on this {labelTarget}"
-msgstr ""
-
-msgid "labels have been placed on this {labelTarget}"
-msgstr ""
-
-msgid "Liked by {count} {0}"
-msgstr ""
-
-msgid "Liked by {likeCount} {0}"
-msgstr ""
-
-msgid "Looks like you're missing a following feed."
-msgstr ""
-
-msgid "Never lose access to your followers and data."
-msgstr ""
-
-msgctxt "action"
-msgid "Next"
-msgstr ""
-
-msgid "No search results found for \"{searchText}\"."
-msgstr ""
-
-msgid "Not Applicable."
-msgstr ""
-
-msgid "of"
-msgstr ""
-
-msgid "Press to Retry"
-msgstr ""
-
-msgid "Retry."
-msgstr ""
-
-msgid "Search for someone to start a conversation with."
-msgstr ""
-
-msgid "Show replies with at least {value} {0}"
-msgstr ""
-
-msgid "Source:"
-msgstr ""
-
-msgid "Step"
-msgstr ""
-
-msgid "the author"
-msgstr ""
-
-msgid "There was an issue connecting to the chat."
-msgstr ""
-
-msgid "This chat was disconnected due to a network error."
-msgstr ""
-
-msgid "This warning is only available for posts with media attached."
-msgstr ""
-
-msgid "Unlike"
-msgstr ""
-
-msgid "Version {0}"
-msgstr ""
-
-msgid "Welcome to <0>Bluesky</0>"
-msgstr ""
-
-msgid "You don't have any saved feeds!"
+msgid "See what's next"
 msgstr ""
