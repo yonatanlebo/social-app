@@ -196,8 +196,9 @@ let FeedItemInner = ({
       href={href}
       noFeedback
       accessible={false}
-      onBeforePress={onBeforePress}>
-      <View style={{flexDirection: 'row', gap: 10, paddingRight: 8}}>
+      onBeforePress={onBeforePress}
+      dataSet={{feedContext}}>
+      <View style={{flexDirection: 'row', gap: 10, paddingLeft: 8}}>
         <View style={{width: 52}}>
           {isThreadChild && (
             <View
@@ -367,7 +368,7 @@ let PostContent = ({
       modui={moderation.ui('contentList')}
       ignoreMute
       childContainerStyle={styles.contentHiderChild}>
-      <PostAlerts modui={moderation.ui('contentList')} style={[a.py_xs]} />
+      <PostAlerts modui={moderation.ui('contentList')} style={[a.pb_xs]} />
       {richText.text ? (
         <View style={styles.postTextContainer}>
           <RichText
@@ -442,8 +443,8 @@ function ReplyToLabel({profile}: {profile: AppBskyActorDefs.ProfileViewBasic}) {
 const styles = StyleSheet.create({
   outer: {
     borderTopWidth: 1,
-    paddingRight: 10,
-    paddingLeft: 15,
+    paddingLeft: 10,
+    paddingRight: 15,
     // @ts-ignore web only -prf
     cursor: 'pointer',
     overflow: 'hidden',
@@ -460,7 +461,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 2,
     marginBottom: 2,
-    marginRight: -20,
+    marginLeft: -20,
   },
   layout: {
     flexDirection: 'row',
@@ -468,7 +469,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   layoutAvi: {
-    paddingRight: 8,
+    paddingLeft: 8,
   },
   layoutContent: {
     flex: 1,
