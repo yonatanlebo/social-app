@@ -1,17 +1,22 @@
 import React from 'react'
 import {StyleSheet, TouchableOpacity, View} from 'react-native'
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 import Animated from 'react-native-reanimated'
+import {useSafeAreaInsets} from 'react-native-safe-area-context'
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 import {useMediaQuery} from 'react-responsive'
-import {usePalette} from 'lib/hooks/usePalette'
-import {useWebMediaQueries} from 'lib/hooks/useWebMediaQueries'
-import {colors} from 'lib/styles'
-import {HITSLOP_20} from 'lib/constants'
-import {useMinimalShellMode} from 'lib/hooks/useMinimalShellMode'
+
+import {HITSLOP_20} from '#/lib/constants'
+import {useMinimalShellMode} from '#/lib/hooks/useMinimalShellMode'
+import {usePalette} from '#/lib/hooks/usePalette'
+import {useWebMediaQueries} from '#/lib/hooks/useWebMediaQueries'
+import {clamp} from '#/lib/numbers'
+import {colors} from '#/lib/styles'
+import {isWeb} from '#/platform/detection'
+import {useSession} from '#/state/session'
+import hairlineWidth = StyleSheet.hairlineWidth
+
 const AnimatedTouchableOpacity =
   Animated.createAnimatedComponent(TouchableOpacity)
-import {isWeb} from 'platform/detection'
-import {useSession} from 'state/session'
 
 export function LoadLatestBtn({
   onPress,
@@ -26,6 +31,7 @@ export function LoadLatestBtn({
   const {hasSession} = useSession()
   const {isDesktop, isTablet, isMobile, isTabletOrMobile} = useWebMediaQueries()
   const {fabMinimalShellTransform} = useMinimalShellMode()
+  const insets = useSafeAreaInsets()
 
   // move button inline if it starts overlapping the left nav
   const isTallViewport = useMediaQuery({minHeight: 700})
@@ -33,6 +39,10 @@ export function LoadLatestBtn({
   // Adjust height of the fab if we have a session only on mobile web. If we don't have a session, we want to adjust
   // it on both tablet and mobile since we are showing the bottom bar (see createNativeStackNavigatorWithAuth)
   const showBottomBar = hasSession ? isMobile : isTabletOrMobile
+
+  const bottomPosition = isTablet
+    ? {bottom: 50}
+    : {bottom: clamp(insets.bottom, 15, 60) + 15}
 
   return (
     <AnimatedTouchableOpacity
@@ -45,6 +55,7 @@ export function LoadLatestBtn({
         isTablet && styles.loadLatestInline,
         pal.borderDark,
         pal.view,
+        bottomPosition,
         showBottomBar && fabMinimalShellTransform,
       ]}
       onPress={onPress}
@@ -62,9 +73,8 @@ const styles = StyleSheet.create({
   loadLatest: {
     // @ts-ignore 'fixed' is web only -prf
     position: isWeb ? 'fixed' : 'absolute',
-    right: 18,
-    bottom: 44,
-    borderWidth: 1,
+    left: 18,
+    borderWidth: hairlineWidth,
     width: 52,
     height: 52,
     borderRadius: 26,
@@ -74,16 +84,16 @@ const styles = StyleSheet.create({
   },
   loadLatestInline: {
     // @ts-ignore web only
-    right: 'calc(50vw - 282px)',
+    left: 'calc(50vw - 282px)',
   },
   loadLatestOutOfLine: {
     // @ts-ignore web only
-    right: 'calc(50vw - 382px)',
+    left: 'calc(50vw - 382px)',
   },
   indicator: {
     position: 'absolute',
     top: 3,
-    left: 3,
+    right: 3,
     backgroundColor: colors.blue3,
     width: 12,
     height: 12,

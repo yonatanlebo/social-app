@@ -1,20 +1,21 @@
 import React from 'react'
 import {
-  StyleSheet,
+  DimensionValue,
   StyleProp,
+  StyleSheet,
   View,
   ViewStyle,
-  DimensionValue,
 } from 'react-native'
-import {
-  HeartIcon,
-  HeartIconSolid,
-  CommentBottomArrow,
-  RepostIcon,
-} from 'lib/icons'
+
+import {usePalette} from 'lib/hooks/usePalette'
+import {HeartIconSolid} from 'lib/icons'
 import {s} from 'lib/styles'
 import {useTheme} from 'lib/ThemeContext'
-import {usePalette} from 'lib/hooks/usePalette'
+import {useTheme as useTheme_NEW} from '#/alf'
+import {Bubble_Stroke2_Corner2_Rounded as Bubble} from '#/components/icons/Bubble'
+import {Heart2_Stroke2_Corner0_Rounded as HeartIconOutline} from '#/components/icons/Heart2'
+import {Repost_Stroke2_Corner2_Rounded as Repost} from '#/components/icons/Repost'
+import hairlineWidth = StyleSheet.hairlineWidth
 
 export function LoadingPlaceholder({
   width,
@@ -46,7 +47,7 @@ export function PostLoadingPlaceholder({
 }: {
   style?: StyleProp<ViewStyle>
 }) {
-  const theme = useTheme()
+  const t = useTheme_NEW()
   const pal = usePalette('default')
   return (
     <View style={[styles.post, pal.view, style]}>
@@ -67,35 +68,47 @@ export function PostLoadingPlaceholder({
         <LoadingPlaceholder width="95%" height={6} style={{marginBottom: 8}} />
         <LoadingPlaceholder width="80%" height={6} style={{marginBottom: 11}} />
         <View style={styles.postCtrls}>
-          <View style={styles.postCtrl}>
-            <View style={[styles.postBtn, {paddingRight: 0}]}>
-              <CommentBottomArrow
-                style={[{color: theme.palette.default.icon, marginTop: 1}]}
-                strokeWidth={3}
-                size={15}
+          <View style={[styles.postCtrl, {marginLeft: -6}]}>
+            <View style={styles.postBtn}>
+              <Bubble
+                style={[
+                  {
+                    color: t.palette.contrast_500,
+                  },
+                  {pointerEvents: 'none'},
+                ]}
+                width={18}
               />
             </View>
           </View>
           <View style={styles.postCtrl}>
             <View style={styles.postBtn}>
-              <RepostIcon
-                style={{color: theme.palette.default.icon}}
-                strokeWidth={3}
-                size={20}
+              <Repost
+                style={[
+                  {
+                    color: t.palette.contrast_500,
+                  },
+                  {pointerEvents: 'none'},
+                ]}
+                width={18}
               />
             </View>
           </View>
           <View style={styles.postCtrl}>
             <View style={styles.postBtn}>
-              <HeartIcon
-                style={{color: theme.palette.default.icon} as ViewStyle}
-                size={16}
-                strokeWidth={3}
+              <HeartIconOutline
+                style={[
+                  {
+                    color: t.palette.contrast_500,
+                  },
+                  {pointerEvents: 'none'},
+                ]}
+                width={18}
               />
             </View>
           </View>
           <View style={styles.postCtrl}>
-            <View style={styles.postBtn} />
+            <View style={[styles.postBtn, {minHeight: 30}]} />
           </View>
         </View>
       </View>
@@ -126,7 +139,7 @@ export function NotificationLoadingPlaceholder({
   const pal = usePalette('default')
   return (
     <View style={[styles.notification, pal.view, style]}>
-      <View style={{paddingRight: 30, paddingLeft: 10}}>
+      <View style={{paddingLeft: 30, paddingRight: 10}}>
         <HeartIconSolid
           style={{color: pal.colors.backgroundLight} as ViewStyle}
           size={30}
@@ -221,7 +234,7 @@ export function FeedLoadingPlaceholder({
         {
           paddingHorizontal: 12,
           paddingVertical: 18,
-          borderTopWidth: showTopBorder ? 1 : 0,
+          borderTopWidth: showTopBorder ? hairlineWidth : 0,
         },
         pal.border,
         style,
@@ -290,15 +303,15 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   postBtn: {
-    padding: 5,
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    padding: 5,
   },
   avatar: {
     borderRadius: 26,
-    marginLeft: 10,
-    marginRight: 8,
+    marginRight: 10,
+    marginLeft: 8,
   },
   notification: {
     flexDirection: 'row',
