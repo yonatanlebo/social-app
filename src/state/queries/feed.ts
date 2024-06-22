@@ -9,6 +9,7 @@ import {
 } from '@atproto/api'
 import {
   InfiniteData,
+  keepPreviousData,
   QueryClient,
   QueryKey,
   useInfiniteQuery,
@@ -315,6 +316,22 @@ export function useSearchPopularFeedsMutation() {
   })
 }
 
+export function useSearchPopularFeedsQuery({q}: {q: string}) {
+  const agent = useAgent()
+  return useQuery({
+    queryKey: ['searchPopularFeeds', q],
+    queryFn: async () => {
+      const res = await agent.app.bsky.unspecced.getPopularFeedGenerators({
+        limit: 15,
+        query: q,
+      })
+
+      return res.data.feeds
+    },
+    placeholderData: keepPreviousData,
+  })
+}
+
 const popularFeedsSearchQueryKeyRoot = 'popularFeedsSearch'
 export const createPopularFeedsSearchQueryKey = (query: string) => [
   popularFeedsSearchQueryKeyRoot,
@@ -578,7 +595,7 @@ function precacheFeed(queryClient: QueryClient, hydratedFeed: FeedSourceInfo) {
   )
 }
 
-function precacheList(
+export function precacheList(
   queryClient: QueryClient,
   list: AppBskyGraphDefs.ListView,
 ) {
@@ -587,4 +604,12 @@ function precacheList(
     listQueryKey(list.uri),
     list,
   )
+}
+
+export function precacheFeedFromGeneratorView(
+  queryClient: QueryClient,
+  view: AppBskyFeedDefs.GeneratorView,
+) {
+  const hydratedFeed = hydrateFeedGenerator(view)
+  precacheFeed(queryClient, hydratedFeed)
 }

@@ -251,12 +251,14 @@ export function ProfileCardWithFollowBtn({
   noBorder,
   followers,
   onPress,
+  logContext = 'ProfileCard',
 }: {
   profile: AppBskyActorDefs.ProfileViewBasic
   noBg?: boolean
   noBorder?: boolean
   followers?: AppBskyActorDefs.ProfileView[] | undefined
   onPress?: () => void
+  logContext?: 'ProfileCard' | 'StarterPackProfilesList'
 }) {
   const {currentAccount} = useSession()
   const isMe = profile.did === currentAccount?.did
@@ -271,7 +273,7 @@ export function ProfileCardWithFollowBtn({
         isMe
           ? undefined
           : profileShadow => (
-              <FollowButton profile={profileShadow} logContext="ProfileCard" />
+              <FollowButton profile={profileShadow} logContext={logContext} />
             )
       }
       onPress={onPress}
@@ -295,7 +297,7 @@ const styles = StyleSheet.create({
   layoutAvi: {
     alignSelf: 'flex-start',
     width: 54,
-    paddingRight: 4,
+    paddingLeft: 4,
     paddingTop: 10,
   },
   avi: {
@@ -314,8 +316,9 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   details: {
-    paddingRight: 54,
-    paddingLeft: 10,
+    justifyContent: 'center',
+    paddingLeft: 54,
+    paddingRight: 10,
     paddingBottom: 10,
   },
   pills: {
@@ -333,15 +336,14 @@ const styles = StyleSheet.create({
   btn: {
     paddingVertical: 7,
     borderRadius: 50,
-    marginRight: 6,
+    marginLeft: 6,
     paddingHorizontal: 14,
   },
 
   followedBy: {
     flexDirection: 'row',
-    alignItems: 'center',
-    paddingRight: 54,
-    paddingLeft: 20,
+    paddingLeft: 54,
+    paddingRight: 20,
     marginBottom: 10,
     marginTop: -6,
   },
