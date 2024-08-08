@@ -1,5 +1,5 @@
 import React from 'react'
-import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native'
+import {StyleProp, View, ViewStyle} from 'react-native'
 import {ModerationUI} from '@atproto/api'
 import {msg, Trans} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
@@ -40,7 +40,7 @@ export function ContentHider({
 
   if (!blur || (ignoreMute && isJustAMute(modui))) {
     return (
-      <View testID={testID} style={[styles.outer, style]}>
+      <View testID={testID} style={style}>
         {children}
       </View>
     )
@@ -86,12 +86,12 @@ export function ContentHider({
             <desc.icon
               size="md"
               fill={t.atoms.text_contrast_medium.color}
-              style={{marginRight: -2}}
+              style={{marginLeft: -2}}
             />
             <Text
               style={[
                 a.flex_1,
-                a.text_Right,
+                a.text_left,
                 a.font_bold,
                 a.leading_snug,
                 gtMobile && [a.font_semibold],
@@ -139,7 +139,7 @@ export function ContentHider({
                 a.font_normal,
                 a.leading_snug,
                 t.atoms.text_contrast_medium,
-                a.text_Right,
+                a.text_left,
               ]}>
               {desc.sourceType === 'user' ? (
                 <Trans>Labeled by the author.</Trans>
@@ -163,21 +163,3 @@ export function ContentHider({
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  outer: {},
-  cover: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    borderRadius: 8,
-    marginTop: 4,
-    paddingVertical: 14,
-    paddingRight: 14,
-    paddingLeft: 18,
-  },
-  showBtn: {
-    marginRight: 'auto',
-    alignSelf: 'center',
-  },
-})
