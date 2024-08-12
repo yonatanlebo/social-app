@@ -5693,7 +5693,7 @@ msgstr ""
 
 #: src/components/StarterPack/StarterPackCard.tsx:70
 msgid "Starter pack by {0}"
-msgstr "חבילת התחלה מאת {0}"
+msgstr "יוצר חבילת התחלה {0}"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:692
 msgid "Starter pack is invalid"
