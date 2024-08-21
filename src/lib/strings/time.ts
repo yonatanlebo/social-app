@@ -1,6 +1,6 @@
 export function niceDate(date: number | string | Date) {
   const d = new Date(date)
-  return `${d.toLocaleDateString('en-us', {
+  return `${d.toLocaleDateString('he-il', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',

@@ -417,7 +417,7 @@ function SayHelloBtn({profile}: {profile: AppBskyActorDefs.ProfileViewBasic}) {
       variant="ghost"
       color="primary"
       size="xsmall"
-      style={[a.self_center, {marginLeft: 'auto'}]}
+      style={[a.self_center, {marginRight: 'auto'}]}
       disabled={isLoading}
       onPress={async () => {
         try {
