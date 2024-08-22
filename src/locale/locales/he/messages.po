@@ -71,7 +71,7 @@ msgstr ""
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:224
 msgid "{0, plural, one {Reply (# reply)} other {Reply (# replies)}}"
-msgstr "{0, plural, one {מגיב (# reply)} other {מגיבים (# replies)}}"
+msgstr "{0, plural, one {הגב (# reply)} other {הגב (# replies)}}"
 
 #: src/view/com/post-thread/PostThreadItem.tsx:362
 msgid "{0, plural, one {repost} other {reposts}}"
@@ -119,11 +119,11 @@ msgstr "{diff, plural, one {דקה} other {דקות}}"
 
 #: src/lib/hooks/useTimeAgo.ts:75
 msgid "{diff, plural, one {month} other {months}}"
-msgstr ""
+msgstr "{diff, plural, one {חודש} other {חודשים}}"
 
 #: src/lib/hooks/useTimeAgo.ts:54
 msgid "{diffSeconds, plural, one {second} other {seconds}}"
-msgstr "{diffSeconds, plural, one {שניה} other {שניות}}"
+msgstr "{diffSeconds, plural, one {second} other {seconds}}"
 
 #: src/screens/StarterPack/Wizard/index.tsx:175
 msgid "{displayName}'s Starter Pack"
@@ -410,7 +410,7 @@ msgstr ""
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:360
 msgid "All accounts have been followed!"
-msgstr "כל החשבונות נוספו למעקב"
+msgstr "כל החשבונות נוספו למעקב!"
 
 #: src/view/screens/Feeds.tsx:734
 msgid "All the feeds you've saved, right in one place."
@@ -7332,295 +7332,29 @@ msgstr ""
 msgid "Your user handle"
 msgstr ""
 
-msgid ""
-"{0, plural, one {# label has been placed on this account} other {# labels "
-"has been placed on this account}}"
+msgid "<0>{0} </0>and<1> </1><2>{1} </2>are included in your starter pack"
 msgstr ""
 
 msgid ""
-"{0, plural, one {# label has been placed on this content} other {# labels "
-"has been placed on this content}}"
-msgstr ""
-
-msgid "<0>{0}</0> following"
-msgstr "<0>{0}</0> עוקב"
-
-msgid "<0>{followers} </0><1>{pluralizedFollowers}</1>"
-msgstr ""
-
-msgid "<0>Choose your</0><1>Recommended</1><2>Feeds</2>"
-msgstr ""
-
-msgid "<0>Follow some</0><1>Recommended</1><2>Users</2>"
-msgstr ""
-
-msgid "<0>Welcome to</0><1>Bluesky</1>"
-msgstr ""
-
-msgid "Add link card"
-msgstr ""
-
-msgid "Add link card:"
-msgstr ""
-
-msgid "Added"
-msgstr ""
-
-msgid "An error occurred while trying to delete the message. Please try again."
-msgstr ""
-
-msgid "Appeal submitted."
+"<0>{0}, </0><1>{1}, </1>and {2} {3, plural, one {other} other {others}} are "
+"included in your starter pack"
 msgstr ""
 
 msgid ""
-"Are you sure you want to delete this message? The message will be deleted "
-"for you, but not for other participants."
+"Add people to your starter pack that you think others will enjoy following"
 msgstr ""
 
-msgid ""
-"Are you sure you want to leave this conversation? Your messages will be "
-"deleted for you, but not for other participants."
+msgid "Chat with {chatId}"
 msgstr ""
 
-msgid "Based on your interest in {interestsText}"
+msgid "Go back to previous screen"
 msgstr ""
 
-msgid "Bluesky is flexible."
+msgid "Removes default thumbnail from {0}"
 msgstr ""
 
-msgid "Bluesky is public."
+msgid "See what's next"
 msgstr ""
 
-msgid ""
-"Check out some recommended feeds. Tap + to add them to your list of pinned "
-"feeds."
-msgstr ""
-
-msgid "Check out some recommended users. Follow them to see similar users."
-msgstr ""
-
-msgid "Choose the algorithms that power your experience with custom feeds."
-msgstr ""
-
-msgid "Click here to add one."
-msgstr ""
-
-msgid "Click here to open tag menu for #{tag}"
-msgstr ""
-
-msgid "Configure content filtering setting for category: {0}"
-msgstr ""
-
-msgid "Continue to the next step"
-msgstr ""
-
-msgid "Continue to the next step without following any accounts"
-msgstr ""
-
-msgid "Could not load profiles. Please try again later."
-msgstr ""
-
-msgid "Creates a card with a thumbnail. The card links to {url}"
-msgstr ""
-
-msgid "Disable haptics"
-msgstr ""
-
-msgid "Disable vibrations"
-msgstr ""
-
-msgid ""
-"Due to Apple policies, adult content can only be enabled on the web after "
-"completing sign up."
-msgstr ""
-
-msgid ""
-"Feeds are created by users to curate content. Choose some feeds that you "
-"find interesting."
-msgstr ""
-
-msgid "Feeds can be topical as well!"
-msgstr ""
-
-msgid "Find users with the search tool on the right"
-msgstr ""
-
-msgid "Finding similar accounts..."
-msgstr "מצא חשבונות דומים..."
-
-msgid "Follow selected accounts and continue to the next step"
-msgstr ""
-
-msgid ""
-"Follow some users to get started. We can recommend you more users based on "
-"who you find interesting."
-msgstr ""
-
-msgid "Go to @{queryMaybeHandle}"
-msgstr ""
-
-msgid "Here are some accounts for you to follow"
-msgstr ""
-
-msgid ""
-"Here are some popular topical feeds. You can choose to follow as many as you "
-"like."
-msgstr ""
-
-msgid ""
-"Here are some topical feeds based on your interests: {interestsText}. You "
-"can choose to follow as many as you like."
-msgstr ""
-
-msgid "Input the password tied to {identifier}"
-msgstr ""
-
-msgid "It shows posts from the people you follow as they happen."
-msgstr ""
-
-msgid "label has been placed on this {labelTarget}"
-msgstr ""
-
-msgid "labels have been placed on this {labelTarget}"
-msgstr ""
-
-msgid "Liked by {count} {0}"
-msgstr "נאהב על ידי {count} {0}"
-
-msgid "Liked by {likeCount} {0}"
-msgstr "נאהב על ידי {likeCount} {0}"
-
-msgid "Looks like you're missing a following feed."
-msgstr ""
-
-msgid "Never lose access to your followers and data."
-msgstr ""
-
-msgctxt "action"
-msgid "Next"
-msgstr "הבא"
-
-msgid "No search results found for \"{searchText}\"."
-msgstr ""
-
-msgid "Not Applicable."
-msgstr ""
-
-msgid "of"
-msgstr "של"
-
-msgid "Opens an expanded list of users in this notification"
-msgstr ""
-
-msgid "Opens screen to edit Saved Feeds"
-msgstr ""
-
-msgid "Press to Retry"
-msgstr ""
-
-msgid "Retry."
-msgstr ""
-
-msgid "Search for someone to start a conversation with."
-msgstr ""
-
-msgid "Select some accounts below to follow"
-msgstr ""
-
-msgid "Select topical feeds to follow from the list below"
-msgstr ""
-
-msgid "Select what you want to see (or not see), and we’ll handle the rest."
-msgstr ""
-
-msgid "Select your primary algorithmic feeds"
-msgstr ""
-
-msgid "Select your secondary algorithmic feeds"
-msgstr ""
-
-msgid "Show quote-posts in Following feed"
-msgstr ""
-
-msgid "Show quotes in Following"
-msgstr ""
-
-msgid "Show re-posts in Following feed"
-msgstr ""
-
-msgid "Show replies in Following"
-msgstr ""
-
-msgid "Show replies in Following feed"
-msgstr ""
-
-msgid "Show replies with at least {value} {0}"
-msgstr ""
-
-msgid "Show reposts in Following"
-msgstr ""
-
-msgid "Source:"
-msgstr ""
-
-msgid "Step"
-msgstr ""
-
-msgid "Subscribe to the {0} feed"
-msgstr ""
-
-msgid "the author"
-msgstr "המחבר"
-
-msgid "There are many feeds to try:"
-msgstr ""
-
-msgid "There was an issue connecting to the chat."
-msgstr ""
-
-msgid "There was an issue syncing your preferences with the server"
-msgstr ""
-
-msgid "These are popular accounts you might like:"
-msgstr ""
-
-msgid "This chat was disconnected due to a network error."
-msgstr ""
-
-msgid "This feed is empty!"
-msgstr ""
-
-msgid "This warning is only available for posts with media attached."
-msgstr ""
-
-msgid "Unlike"
-msgstr ""
-
-msgid "Version {0}"
-msgstr ""
-
-msgid "We recommend our \"Discover\" feed:"
-msgstr ""
-
-msgid ""
-"We're sorry! You can only subscribe to ten labelers, and you've reached your "
-"limit of ten."
-msgstr ""
-
-msgid "Welcome to <0>Bluesky</0>"
-msgstr ""
-
-msgid "You can change these settings later."
-msgstr ""
-
-msgid "You don't have any saved feeds!"
-msgstr ""
-
-msgid "You must be 18 years or older to enable adult content"
-msgstr ""
-
-msgid "You're in control"
-msgstr ""
-
-msgid "Your default feed is \"Following\""
+msgid "Some subtitle"
 msgstr ""
