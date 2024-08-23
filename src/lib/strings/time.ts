@@ -4,7 +4,7 @@ export function niceDate(date: number | string | Date) {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-  })} at ${d.toLocaleTimeString(undefined, {
+  })} ב ${d.toLocaleTimeString(undefined, {
     hour: 'numeric',
     minute: '2-digit',
   })}`
