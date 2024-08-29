@@ -64,17 +64,15 @@ msgstr ""
 
 #: src/components/FeedCard.tsx:210 src/view/com/feeds/FeedSourceCard.tsx:300
 msgid "{0, plural, one {Liked by # user} other {Liked by # users}}"
-msgstr ""
+msgstr "{0, plural, one {Liked by # משתמש} other {Liked by # משתמשים}}"
 
 #: src/screens/Profile/Header/Metrics.tsx:59
 msgid "{0, plural, one {post} other {posts}}"
 msgstr "{0, plural, one {פוסט} other {פוסטים}}"
 
 #: src/view/com/post-thread/PostThreadItem.tsx:413
-#, fuzzy
-#| msgid "{0, plural, one {post} other {posts}}"
 msgid "{0, plural, one {quote} other {quotes}}"
-msgstr "{0, plural, one {פוסט} other {פוסטים}}"
+msgstr "{0, plural, one {מצוטט} other {מצוטטים}}"
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:233
 msgid "{0, plural, one {Reply (# reply)} other {Reply (# replies)}}"
@@ -1560,7 +1558,7 @@ msgstr "התאם אישית מדיה מאתרים חיצוניים."
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:288
 msgid "Customize who can interact with this post."
-msgstr ""
+msgstr "התאם אישית מי יכול ליצור אינטראקציה עם הפוסט הזה."
 
 #: src/screens/Settings/AppearanceSettings.tsx:95
 #: src/screens/Settings/AppearanceSettings.tsx:97
@@ -3075,10 +3073,8 @@ msgid "Input your user handle"
 msgstr ""
 
 #: src/view/com/composer/threadgate/ThreadgateBtn.tsx:55
-#, fuzzy
-#| msgid "Conversation deleted"
 msgid "Interaction limited"
-msgstr "שיחה נמחקה"
+msgstr "אינטראקציה מוגבלת"
 
 #: src/components/dms/MessagesNUX.tsx:82
 msgid "Introducing Direct Messages"
@@ -4350,7 +4346,7 @@ msgstr ""
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:388
 msgid "Or combine these options:"
-msgstr ""
+msgstr "או שלבו את האפשרויות האלה:"
 
 #: src/screens/Deactivated.tsx:211
 msgid "Or, continue with another account."
@@ -4805,7 +4801,7 @@ msgstr "תגובות"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:311
 msgid "Quote posts enabled"
-msgstr ""
+msgstr "ציטוט פוסט מאופשר"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:295
 #, fuzzy
@@ -7087,7 +7083,7 @@ msgstr "משתמשים שאני עוקב אחריהם"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:416
 msgid "Users in \"{0}\""
-msgstr ""
+msgstr "משתמשים ב\"{0}\""
 
 #: src/components/LikesDialog.tsx:85
 msgid "Users that have liked this content or profile"
