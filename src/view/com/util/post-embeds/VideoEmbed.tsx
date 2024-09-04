@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react'
+import React, {useCallback, useId, useState} from 'react'
 import {View} from 'react-native'
 import {Image} from 'expo-image'
 import {AppBskyEmbedVideo} from '@atproto/api'
@@ -8,19 +8,22 @@ import {useLingui} from '@lingui/react'
 import {clamp} from '#/lib/numbers'
 import {useGate} from '#/lib/statsig/statsig'
 import {VideoEmbedInnerNative} from '#/view/com/util/post-embeds/VideoEmbedInner/VideoEmbedInnerNative'
-import {atoms as a, useTheme} from '#/alf'
+import {atoms as a} from '#/alf'
 import {Button} from '#/components/Button'
-import {Play_Filled_Corner2_Rounded as PlayIcon} from '#/components/icons/Play'
+import {PlayButtonIcon} from '#/components/video/PlayButtonIcon'
 import {VisibilityView} from '../../../../../modules/expo-bluesky-swiss-army'
 import {ErrorBoundary} from '../ErrorBoundary'
 import {useActiveVideoNative} from './ActiveVideoNativeContext'
 import * as VideoFallback from './VideoEmbedInner/VideoFallback'
 
 export function VideoEmbed({embed}: {embed: AppBskyEmbedVideo.View}) {
-  const t = useTheme()
-  const {activeSource, setActiveSource} = useActiveVideoNative()
-  const isActive = embed.playlist === activeSource
   const {_} = useLingui()
+  const {activeSource, activeViewId, setActiveSource, player} =
+    useActiveVideoNative()
+  const viewId = useId()
+
+  const [isFullscreen, setIsFullscreen] = React.useState(false)
+  const isActive = embed.playlist === activeSource && activeViewId === viewId
 
   const [key, setKey] = useState(0)
   const renderError = useCallback(
@@ -30,6 +33,20 @@ export function VideoEmbed({embed}: {embed: AppBskyEmbedVideo.View}) {
     [key],
   )
   const gate = useGate()
+
+  const onChangeStatus = (isVisible: boolean) => {
+    if (isVisible) {
+      setActiveSource(embed.playlist, viewId)
+      if (!player.playing) {
+        player.play()
+      }
+    } else if (!isFullscreen) {
+      player.muted = true
+      if (player.playing) {
+        player.pause()
+      }
+    }
+  }
 
   if (!gate('video_view_on_posts')) {
     return null
@@ -54,15 +71,13 @@ export function VideoEmbed({embed}: {embed: AppBskyEmbedVideo.View}) {
         a.my_xs,
       ]}>
       <ErrorBoundary renderError={renderError} key={key}>
-        <VisibilityView
-          enabled={true}
-          onChangeStatus={isVisible => {
-            if (isVisible) {
-              setActiveSource(embed.playlist)
-            }
-          }}>
+        <VisibilityView enabled={true} onChangeStatus={onChangeStatus}>
           {isActive ? (
-            <VideoEmbedInnerNative embed={embed} />
+            <VideoEmbedInnerNative
+              embed={embed}
+              isFullscreen={isFullscreen}
+              setIsFullscreen={setIsFullscreen}
+            />
           ) : (
             <>
               <Image
@@ -75,11 +90,11 @@ export function VideoEmbed({embed}: {embed: AppBskyEmbedVideo.View}) {
               <Button
                 style={[a.absolute, a.inset_0]}
                 onPress={() => {
-                  setActiveSource(embed.playlist)
+                  setActiveSource(embed.playlist, viewId)
                 }}
                 label={_(msg`Play video`)}
                 color="secondary">
-                <PlayIcon width={48} fill={t.palette.white} />
+                <PlayButtonIcon />
               </Button>
             </>
           )}

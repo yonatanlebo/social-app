@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react'
+import React, {useCallback, useEffect} from 'react'
 import {ImagePickerAsset} from 'expo-image-picker'
 import {AppBskyVideoDefs, BlobRef} from '@atproto/api'
 import {msg} from '@lingui/macro'
@@ -25,7 +25,7 @@ type Action =
   | {type: 'SetDimensions'; width: number; height: number}
   | {type: 'SetVideo'; video: CompressedVideo}
   | {type: 'SetJobStatus'; jobStatus: AppBskyVideoDefs.JobStatus}
-  | {type: 'SetBlobRef'; blobRef: BlobRef}
+  | {type: 'SetComplete'; blobRef: BlobRef}
 
 export interface State {
   status: Status
@@ -36,6 +36,7 @@ export interface State {
   blobRef?: BlobRef
   error?: string
   abortController: AbortController
+  pendingPublish?: {blobRef: BlobRef; mutableProcessed: boolean}
 }
 
 function reducer(queryClient: QueryClient) {
@@ -77,8 +78,15 @@ function reducer(queryClient: QueryClient) {
       updatedState = {...state, video: action.video, status: 'uploading'}
     } else if (action.type === 'SetJobStatus') {
       updatedState = {...state, jobStatus: action.jobStatus}
-    } else if (action.type === 'SetBlobRef') {
-      updatedState = {...state, blobRef: action.blobRef, status: 'done'}
+    } else if (action.type === 'SetComplete') {
+      updatedState = {
+        ...state,
+        pendingPublish: {
+          blobRef: action.blobRef,
+          mutableProcessed: false,
+        },
+        status: 'done',
+      }
     }
     return updatedState
   }
@@ -86,7 +94,6 @@ function reducer(queryClient: QueryClient) {
 
 export function useUploadVideo({
   setStatus,
-  onSuccess,
 }: {
   setStatus: (status: string) => void
   onSuccess: () => void
@@ -112,11 +119,20 @@ export function useUploadVideo({
     },
     onSuccess: blobRef => {
       dispatch({
-        type: 'SetBlobRef',
+        type: 'SetComplete',
         blobRef,
       })
-      onSuccess()
     },
+    onError: useCallback(
+      error => {
+        logger.error('Error processing video', {safeMessage: error})
+        dispatch({
+          type: 'SetError',
+          error: _(msg`Video failed to process`),
+        })
+      },
+      [_],
+    ),
   })
 
   const {mutate: onVideoCompressed} = useUploadVideoMutation({
@@ -128,6 +144,7 @@ export function useUploadVideo({
       setJobId(response.jobId)
     },
     onError: e => {
+      logger.error('Error uploading video', {safeMessage: e})
       if (e instanceof ServerError) {
         dispatch({
           type: 'SetError',
@@ -159,6 +176,7 @@ export function useUploadVideo({
       onVideoCompressed(video)
     },
     onError: e => {
+      logger.error('Error uploading video', {safeMessage: e})
       if (e instanceof VideoTooLargeError) {
         dispatch({
           type: 'SetError',
@@ -215,15 +233,17 @@ export function useUploadVideo({
 const useUploadStatusQuery = ({
   onStatusChange,
   onSuccess,
+  onError,
 }: {
   onStatusChange: (status: AppBskyVideoDefs.JobStatus) => void
   onSuccess: (blobRef: BlobRef) => void
+  onError: (error: Error) => void
 }) => {
   const videoAgent = useVideoAgent()
   const [enabled, setEnabled] = React.useState(true)
   const [jobId, setJobId] = React.useState<string>()
 
-  const {isLoading, isError} = useQuery({
+  const {error} = useQuery({
     queryKey: ['video', 'upload status', jobId],
     queryFn: async () => {
       if (!jobId) return // this won't happen, can ignore
@@ -236,7 +256,7 @@ const useUploadStatusQuery = ({
           throw new Error('Job completed, but did not return a blob')
         onSuccess(status.blob)
       } else if (status.state === 'JOB_STATE_FAILED') {
-        throw new Error('Job failed to process')
+        throw new Error(status.error ?? 'Job failed to process')
       }
       onStatusChange(status)
       return status
@@ -245,9 +265,14 @@ const useUploadStatusQuery = ({
     refetchInterval: 1500,
   })
 
+  useEffect(() => {
+    if (error) {
+      onError(error)
+      setEnabled(false)
+    }
+  }, [error, onError])
+
   return {
-    isLoading,
-    isError,
     setJobId: (_jobId: string) => {
       setJobId(_jobId)
       setEnabled(true)
