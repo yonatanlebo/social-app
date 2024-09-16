@@ -177,7 +177,7 @@ msgstr ""
 
 #: src/screens/SignupQueued.tsx:207
 msgid "{estimatedTimeHrs, plural, one {hour} other {hours}}"
-msgstr "{estimatedTimeHrs, plural, one {שעה} other {שעות}}"
+msgstr "{estimatedTimeHrs, plural, one {שעות} other {שעה}}"
 
 #: src/screens/SignupQueued.tsx:213
 msgid "{estimatedTimeMins, plural, one {minute} other {minutes}}"
@@ -1078,7 +1078,7 @@ msgstr "שינוי שם משתמש"
 #: src/view/com/modals/ChangeHandle.tsx:156
 #: src/view/screens/Settings/index.tsx:695
 msgid "Change Handle"
-msgstr "Change handle"
+msgstr "שינוי שם משתמש"
 
 #: src/view/com/modals/VerifyEmail.tsx:155
 msgid "Change my email"
@@ -1847,7 +1847,7 @@ msgstr ""
 
 #: src/view/screens/AccessibilitySettings.tsx:99
 msgid "Display larger alt text badges"
-msgstr ""
+msgstr "הצג תג טקסט חלופי גדול יותר"
 
 #: src/view/com/modals/EditProfile.tsx:193
 msgid "Display name"
@@ -2351,11 +2351,11 @@ msgstr ""
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:47
 msgid "Explicit or potentially disturbing media."
-msgstr ""
+msgstr "תמונות מפורשת או עם פוטנציאלית להטריד"
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:35
 msgid "Explicit sexual images."
-msgstr ""
+msgstr "תמונות מיניות מפורשות."
 
 #: src/view/screens/Settings/index.tsx:752
 msgid "Export my data"
@@ -2878,7 +2878,7 @@ msgstr ""
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:46
 msgid "Graphic Media"
-msgstr ""
+msgstr "תמונות גרפיות"
 
 #: src/state/shell/progress-guide.tsx:161
 msgid "Half way there!"
@@ -3570,7 +3570,7 @@ msgstr ""
 
 #: src/components/dialogs/MutedWords.tsx:108
 msgid "Manage your muted words and tags"
-msgstr ""
+msgstr "נהל את המילים המושתקות והתגיות"
 
 #: src/components/dms/ConvoMenu.tsx:151 src/components/dms/ConvoMenu.tsx:158
 msgid "Mark as read"
@@ -3637,7 +3637,7 @@ msgstr "חשבונות מוליכים שולל"
 
 #: src/screens/Settings/AppearanceSettings.tsx:78
 msgid "Mode"
-msgstr ""
+msgstr "מצב"
 
 #: src/Navigation.tsx:135 src/screens/Moderation/index.tsx:105
 #: src/view/screens/Settings/index.tsx:527
@@ -3826,7 +3826,7 @@ msgstr "הושתק על ידי \"{0}\""
 
 #: src/screens/Moderation/index.tsx:234
 msgid "Muted words & tags"
-msgstr ""
+msgstr "מילים מושתקות ותגיות"
 
 #: src/view/screens/ProfileList.tsx:731
 msgid ""
@@ -4812,7 +4812,7 @@ msgstr ""
 
 #: src/view/screens/LanguageSettings.tsx:190
 msgid "Primary Language"
-msgstr ""
+msgstr "שפה ראשית"
 
 #: src/view/screens/PreferencesThreads.tsx:91
 msgid "Prioritize Your Follows"
@@ -5855,7 +5855,7 @@ msgstr ""
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:38
 msgid "Sexually Suggestive"
-msgstr ""
+msgstr "עירום מרומז"
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:644
 #: src/components/StarterPack/QrCodeDialog.tsx:177
@@ -8050,7 +8050,7 @@ msgstr ""
 
 #: src/components/dialogs/MutedWords.tsx:369
 msgid "Your muted words"
-msgstr ""
+msgstr "המילים המושתקות שלך"
 
 #: src/view/com/modals/ChangePassword.tsx:158
 msgid "Your password has been changed successfully!"
@@ -8164,6 +8164,8 @@ msgstr ""
 msgid ""
 "This will delete {0} from your muted words. You can always add it back later."
 msgstr ""
+"פעולה זו תמחק את {0} מהמילים המושתקות שלך. אתה תמיד יכול להוסיף אותו בחזרה "
+"מאוחר יותר."
 
 msgid "Toggle between muted word options."
 msgstr ""
