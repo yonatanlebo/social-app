@@ -148,22 +148,22 @@ msgstr "יום{0}"
 #. How many hours have passed, displayed in a narrow form
 #: src/lib/hooks/useTimeAgo.ts:148
 msgid "{0}h"
-msgstr "שעה{0}"
+msgstr "שעות{0}"
 
 #. How many minutes have passed, displayed in a narrow form
 #: src/lib/hooks/useTimeAgo.ts:138
 msgid "{0}m"
-msgstr "דקה{0}"
+msgstr "דקות{0}"
 
 #. How many months have passed, displayed in a narrow form
 #: src/lib/hooks/useTimeAgo.ts:169
 msgid "{0}mo"
-msgstr "חודש{0}"
+msgstr "חודשים{0}"
 
 #. How many seconds have passed, displayed in a narrow form
 #: src/lib/hooks/useTimeAgo.ts:128
 msgid "{0}s"
-msgstr "שניה{0}"
+msgstr "שניות{0}"
 
 #: src/components/LabelingServiceCard/index.tsx:71
 msgid "{count, plural, one {Liked by # user} other {Liked by # users}}"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: src/screens/SignupQueued.tsx:207
 msgid "{estimatedTimeHrs, plural, one {hour} other {hours}}"
-msgstr "{estimatedTimeHrs, plural, one {שעות} other {שעה}}"
+msgstr "{estimatedTimeHrs, plural, one {שעה} other {שעות}}"
 
 #: src/screens/SignupQueued.tsx:213
 msgid "{estimatedTimeMins, plural, one {minute} other {minutes}}"
@@ -1820,7 +1820,7 @@ msgstr ""
 
 #: src/screens/Moderation/index.tsx:552 src/screens/Moderation/index.tsx:556
 msgid "Discourage apps from showing my account to logged-out users"
-msgstr ""
+msgstr "לא לעודד אפליקציות להציג את החשבון שלי למשתמשים מנותקים"
 
 #: src/view/com/posts/FollowingEmptyState.tsx:70
 #: src/view/com/posts/FollowingEndOfFeed.tsx:71
@@ -1914,10 +1914,8 @@ msgid "Done{extraText}"
 msgstr ""
 
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:326
-#, fuzzy
-#| msgid "Bluesky"
 msgid "Download Bluesky"
-msgstr "בלוסקיי"
+msgstr "הורד בלוסקיי"
 
 #: src/view/screens/Settings/ExportCarDialog.tsx:77
 #: src/view/screens/Settings/ExportCarDialog.tsx:81
@@ -1925,20 +1923,16 @@ msgid "Download CAR file"
 msgstr ""
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:622
-#, fuzzy
-#| msgid "Bluesky"
 msgid "Download image"
-msgstr "בלוסקיי"
+msgstr "הורד תמונה"
 
 #: src/view/com/composer/text-input/TextInput.web.tsx:269
 msgid "Drop to add images"
 msgstr ""
 
 #: src/components/dialogs/MutedWords.tsx:153
-#, fuzzy
-#| msgid "Moderation"
 msgid "Duration:"
-msgstr "העדפות תוכן"
+msgstr "זמן:"
 
 #: src/view/com/modals/ChangeHandle.tsx:252
 msgid "e.g. alice"
@@ -1958,7 +1952,7 @@ msgstr ""
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:43
 msgid "E.g. artistic nudes."
-msgstr ""
+msgstr "לדוגמא עירום אמנותי."
 
 #: src/view/com/modals/CreateOrEditList.tsx:272
 msgid "e.g. Great Posters"
@@ -2560,7 +2554,7 @@ msgstr ""
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:51
 msgid "Fine-tune the content you see on your Following feed."
-msgstr ""
+msgstr "התאם את התוכן שאתה רואה בפיד של מי שאתה עוקב אחריהם"
 
 #: src/view/screens/PreferencesThreads.tsx:54
 msgid "Fine-tune the discussion threads."
@@ -3334,7 +3328,7 @@ msgstr ""
 
 #: src/screens/Moderation/index.tsx:583 src/screens/Moderation/index.tsx:585
 msgid "Learn more about what is public on Bluesky."
-msgstr ""
+msgstr "למידע נוסף על מה שפומבי ב-Blusky"
 
 #: src/components/moderation/ContentHider.tsx:155
 msgid "Learn more."
@@ -3527,7 +3521,7 @@ msgstr ""
 
 #: src/screens/Moderation/index.tsx:476
 msgid "Logged-out visibility"
-msgstr ""
+msgstr "נראות מנותקת"
 
 #: src/components/AccountList.tsx:58
 msgid "Login to account that is not listed"
@@ -3715,7 +3709,7 @@ msgstr ""
 
 #: src/view/screens/PreferencesThreads.tsx:76
 msgid "Most-liked replies first"
-msgstr ""
+msgstr "תשובות הכי אהובות קודם"
 
 #: src/screens/Onboarding/state.ts:90
 msgid "Movies"
@@ -3963,7 +3957,7 @@ msgstr ""
 
 #: src/view/screens/PreferencesThreads.tsx:73
 msgid "Newest replies first"
-msgstr ""
+msgstr "תגובות חדשות קודם"
 
 #: src/screens/Onboarding/index.tsx:20 src/screens/Onboarding/state.ts:93
 msgid "News"
@@ -3995,7 +3989,7 @@ msgstr ""
 #: src/view/screens/PreferencesThreads.tsx:100
 #: src/view/screens/PreferencesThreads.tsx:123
 msgid "No"
-msgstr ""
+msgstr "לא"
 
 #: src/view/screens/ProfileFeed.tsx:564 src/view/screens/ProfileList.tsx:879
 msgid "No description"
@@ -4097,7 +4091,7 @@ msgstr ""
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:42
 msgid "Non-sexual Nudity"
-msgstr ""
+msgstr "עירום שאינו מיני"
 
 #: src/Navigation.tsx:125 src/view/screens/Profile.tsx:119
 msgid "Not Found"
@@ -4121,6 +4115,9 @@ msgid ""
 "may not respect this setting. Your content may still be shown to logged-out "
 "users by other apps and websites."
 msgstr ""
+"הערה: Bluesky היא רשת פתוחה וציבורית. הגדרה זו מגבילה רק את הנראות של התוכן "
+"שלך באפליקציית Bluesky ובאתר, וייתכן שאפליקציות אחרות לא יכבדו הגדרה זו. "
+"ייתכן שהתוכן שלך עדיין יוצג למשתמשים מנותקים על ידי אפליקציות ואתרים אחרים."
 
 #: src/screens/Messages/List/index.tsx:215
 msgid "Nothing here"
@@ -4209,7 +4206,7 @@ msgstr ""
 
 #: src/view/screens/PreferencesThreads.tsx:72
 msgid "Oldest replies first"
-msgstr ""
+msgstr "תגובות ישנות קודם"
 
 #: src/components/StarterPack/QrCode.tsx:70
 msgid "on<0><1/><2><3/></2></0>"
@@ -4816,7 +4813,7 @@ msgstr "שפה ראשית"
 
 #: src/view/screens/PreferencesThreads.tsx:91
 msgid "Prioritize Your Follows"
-msgstr ""
+msgstr "תן עדיפות לעוקבים שלך"
 
 #: src/view/screens/NotificationsSettings.tsx:57
 #, fuzzy
@@ -4942,7 +4939,7 @@ msgstr "פרסם/ה מחדש את הפוסט הזה"
 
 #: src/view/screens/PreferencesThreads.tsx:80
 msgid "Random (aka \"Poster's Roulette\")"
-msgstr ""
+msgstr "אקראי (המכונה \"הרולטה של ה​​מפרסם\")"
 
 #: src/view/com/modals/EditImage.tsx:237
 msgid "Ratios"
@@ -5801,23 +5798,26 @@ msgstr ""
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:63
 msgid "Set this setting to \"No\" to hide all replies from your feed."
-msgstr ""
+msgstr "הגדר את ההגדרה הזו ל\"לא\" כדי להסתיר את כל התשובות מהפיד שלך."
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:87
 msgid "Set this setting to \"No\" to hide all reposts from your feed."
-msgstr ""
+msgstr "הגדר את ההגדרה הזו ל\"לא\" כדי להסתיר את כל הפוסטים החוזרים מהפיד שלך."
 
 #: src/view/screens/PreferencesThreads.tsx:116
 msgid ""
 "Set this setting to \"Yes\" to show replies in a threaded view. This is an "
 "experimental feature."
 msgstr ""
+"הגדר הגדרה זו ל\"כן\" כדי להציג תשובות בתצוגת שרשור. זוהי תכונה ניסיונית."
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:157
 msgid ""
 "Set this setting to \"Yes\" to show samples of your saved feeds in your "
 "Following feed. This is an experimental feature."
 msgstr ""
+"הגדר את ההגדרה הזו ל\"כן\" כדי להציג דוגמאות של הפידים השמורים שלך בפיד "
+"הנעקבים שלך. זוהי תכונה ניסיונית."
 
 #: src/screens/Onboarding/Layout.tsx:48
 msgid "Set up your account"
@@ -5960,73 +5960,73 @@ msgstr "הצג טקסט חלופי"
 #: src/components/moderation/ScreenHider.tsx:181
 #: src/screens/List/ListHiddenScreen.tsx:176
 msgid "Show anyway"
-msgstr ""
+msgstr "הצג בכל מקרה"
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:27
 #: src/lib/moderation/useLabelBehaviorDescription.ts:63
 msgid "Show badge"
-msgstr ""
+msgstr "הצג תג"
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:61
 msgid "Show badge and filter from feeds"
-msgstr ""
+msgstr "הצג תג וסנן מהפידים"
 
 #: src/view/com/post-thread/PostThreadShowHiddenReplies.tsx:23
 msgid "Show hidden replies"
-msgstr ""
+msgstr "הצג תגובות מוסתרות"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:449
 #: src/view/com/util/forms/PostDropdownBtn.tsx:451
 msgid "Show less like this"
-msgstr ""
+msgstr "הצג פחות כאלה"
 
 #: src/screens/List/ListHiddenScreen.tsx:172
 msgid "Show list anyway"
-msgstr ""
+msgstr "הצג רשימה בכל מקרה"
 
 #: src/view/com/post-thread/PostThreadItem.tsx:590
 #: src/view/com/post/Post.tsx:234 src/view/com/posts/FeedItem.tsx:476
 msgid "Show More"
-msgstr ""
+msgstr "הצג עוד"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:441
 #: src/view/com/util/forms/PostDropdownBtn.tsx:443
 msgid "Show more like this"
-msgstr ""
+msgstr "הצג עוד כמו זה"
 
 #: src/view/com/post-thread/PostThreadShowHiddenReplies.tsx:23
 msgid "Show muted replies"
-msgstr ""
+msgstr "הצג תגובות מושתקות"
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:154
 msgid "Show Posts from My Feeds"
-msgstr ""
+msgstr "הצג פוסטים מהפידים שלי"
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:118
 msgid "Show Quote Posts"
-msgstr ""
+msgstr "הצג פוסטים מצוטטים"
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:60
 msgid "Show Replies"
-msgstr ""
+msgstr "הצג תגובות"
 
 #: src/view/screens/PreferencesThreads.tsx:94
 msgid "Show replies by people you follow before all other replies."
-msgstr ""
+msgstr "הצג תשובות של אנשים שאתה עוקב אחריהם לפני כל התשובות האחרות."
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:517
 #: src/view/com/util/forms/PostDropdownBtn.tsx:527
 msgid "Show reply for everyone"
-msgstr ""
+msgstr "הצג תגובות לכולם"
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:84
 msgid "Show Reposts"
-msgstr ""
+msgstr "הצג שיתופים"
 
 #: src/components/moderation/ContentHider.tsx:69
 #: src/components/moderation/PostHider.tsx:79
 msgid "Show the content"
-msgstr ""
+msgstr "הצג את התוכן"
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:58
 msgid "Show warning"
@@ -6034,11 +6034,11 @@ msgstr "הצג אזהרות"
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:56
 msgid "Show warning and filter from feeds"
-msgstr ""
+msgstr "הצג אזהרה וסנן מהפידים"
 
 #: src/view/com/post-thread/PostThreadFollowBtn.tsx:128
 msgid "Shows posts from {0} in your feed"
-msgstr ""
+msgstr "הצג פוסטים מ-{0} בפיד שלך"
 
 #: src/components/dialogs/Signin.tsx:97 src/components/dialogs/Signin.tsx:99
 #: src/screens/Login/index.tsx:100 src/screens/Login/index.tsx:119
@@ -6172,32 +6172,32 @@ msgstr ""
 
 #: src/view/screens/PreferencesThreads.tsx:63
 msgid "Sort Replies"
-msgstr ""
+msgstr "מיין תגובות"
 
 #: src/view/screens/PreferencesThreads.tsx:66
 msgid "Sort replies to the same post by:"
-msgstr ""
+msgstr "מיין את התשובות לאותו פוסט לפי:"
 
 #: src/components/moderation/LabelsOnMeDialog.tsx:163
 msgid "Source: <0>{sourceName}</0>"
-msgstr ""
+msgstr "מקור: <0>{sourceName}</0>"
 
 #: src/lib/moderation/useReportOptions.ts:72
 #: src/lib/moderation/useReportOptions.ts:85
 msgid "Spam"
-msgstr ""
+msgstr "ספאם"
 
 #: src/lib/moderation/useReportOptions.ts:55
 msgid "Spam; excessive mentions or replies"
-msgstr ""
+msgstr "ספאם; אזכורים או תשובות מוגזמות"
 
 #: src/screens/Onboarding/index.tsx:27 src/screens/Onboarding/state.ts:98
 msgid "Sports"
-msgstr ""
+msgstr "ספורט"
 
 #: src/view/com/modals/crop-image/CropImage.web.tsx:145
 msgid "Square"
-msgstr ""
+msgstr "מרובע"
 
 #: src/components/dms/dialogs/NewChatDialog.tsx:63
 msgid "Start a new chat"
@@ -6205,11 +6205,11 @@ msgstr "התחלת שיחה חדשה"
 
 #: src/components/dms/dialogs/SearchablePeopleList.tsx:371
 msgid "Start chat with {displayName}"
-msgstr ""
+msgstr "התחל שיחה עם {displayName}"
 
 #: src/components/dms/MessagesNUX.tsx:161
 msgid "Start chatting"
-msgstr ""
+msgstr "התחל לשוחח"
 
 #: src/Navigation.tsx:358 src/Navigation.tsx:363
 #: src/screens/StarterPack/Wizard/index.tsx:182
@@ -6226,7 +6226,7 @@ msgstr ""
 
 #: src/view/screens/Profile.tsx:225
 msgid "Starter Packs"
-msgstr ""
+msgstr "חבילות התחלה"
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:238
 msgid ""
@@ -6240,7 +6240,7 @@ msgstr "דף מידע"
 
 #: src/screens/Signup/index.tsx:136
 msgid "Step {0} of {1}"
-msgstr ""
+msgstr "שלב {0} מתוך {1}"
 
 #: src/view/screens/Settings/index.tsx:278
 msgid "Storage cleared, you need to restart the app now."
@@ -6255,59 +6255,57 @@ msgstr ""
 #: src/screens/Messages/Conversation/ChatDisabled.tsx:142
 #: src/screens/Messages/Conversation/ChatDisabled.tsx:143
 msgid "Submit"
-msgstr ""
+msgstr "שליחה"
 
 #: src/view/screens/ProfileList.tsx:700
 msgid "Subscribe"
-msgstr ""
+msgstr "הרשם"
 
 #: src/screens/Profile/Sections/Labels.tsx:201
 msgid "Subscribe to @{0} to use these labels:"
-msgstr ""
+msgstr "הירשם ל-@{0} כדי להשתמש בתוויות אלה:"
 
 #: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:230
 msgid "Subscribe to Labeler"
-msgstr ""
+msgstr "הירשם למתווג"
 
 #: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:197
 msgid "Subscribe to this labeler"
-msgstr ""
+msgstr "הירשמו למתווג הזה"
 
 #: src/view/screens/ProfileList.tsx:696
 msgid "Subscribe to this list"
-msgstr ""
+msgstr "הירשם לרשימה הזאת"
 
 #: src/view/screens/Search/Explore.tsx:332
-#, fuzzy
-#| msgid "Select account"
 msgid "Suggested accounts"
-msgstr "בחר חשבון"
+msgstr "חשבונות מומלצים"
 
 #: src/components/FeedInterstitials.tsx:318
 msgid "Suggested for you"
-msgstr ""
+msgstr "מוצע בשבילך"
 
 #: src/view/com/modals/SelfLabel.tsx:96
 msgid "Suggestive"
-msgstr ""
+msgstr "מרומז"
 
 #: src/Navigation.tsx:261 src/view/screens/Support.tsx:30
 #: src/view/screens/Support.tsx:33
 msgid "Support"
-msgstr ""
+msgstr "תמיכה"
 
 #: src/components/dialogs/SwitchAccount.tsx:47
 #: src/components/dialogs/SwitchAccount.tsx:50
 msgid "Switch Account"
-msgstr ""
+msgstr "החלף חשבון"
 
 #: src/view/screens/Settings/index.tsx:126
 msgid "Switch to {0}"
-msgstr ""
+msgstr "החלף אל {0}"
 
 #: src/view/screens/Settings/index.tsx:127
 msgid "Switches the account you are logged in to"
-msgstr ""
+msgstr "מחליף את החשבון שאתה מחובר אליו"
 
 #: src/screens/Settings/AppearanceSettings.tsx:85
 #: src/screens/Settings/AppearanceSettings.tsx:87
@@ -7158,6 +7156,8 @@ msgid ""
 "Use app passwords to login to other Bluesky clients without giving full "
 "access to your account or password."
 msgstr ""
+"השתמש בסיסמאות לאפליקציות כדי להתחבר ללקוחות אחרים של Bluesky מבלי לתת גישה "
+"מלאה לחשבון או לסיסמה שלך."
 
 #: src/view/com/modals/ChangeHandle.tsx:513
 msgid "Use bsky.social as hosting provider"
