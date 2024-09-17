@@ -1060,7 +1060,7 @@ msgstr "כתוביות & וטקסט חלופי"
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:368
 msgid "Celebrating {0} users"
-msgstr ""
+msgstr "חוגגים {0} משתמשים"
 
 #: src/view/com/modals/VerifyEmail.tsx:160
 msgid "Change"
@@ -1788,7 +1788,7 @@ msgstr ""
 
 #: src/view/screens/AccessibilitySettings.tsx:111
 msgid "Disable autoplay for videos and GIFs"
-msgstr ""
+msgstr "ביטול ניגון אוטומטי של גיפים"
 
 #: src/view/screens/Settings/DisableEmail2FADialog.tsx:90
 msgid "Disable Email 2FA"
@@ -2558,7 +2558,7 @@ msgstr "התאם את התוכן שאתה רואה בפיד של מי שאתה �
 
 #: src/view/screens/PreferencesThreads.tsx:54
 msgid "Fine-tune the discussion threads."
-msgstr ""
+msgstr "התאם אישית את תצוגת השרשורים."
 
 #: src/screens/StarterPack/Wizard/index.tsx:191
 msgid "Finish"
@@ -3253,10 +3253,8 @@ msgid "Join the conversation"
 msgstr "ביטול השתקת הדיון"
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:492
-#, fuzzy
-#| msgid "Following {0}"
 msgid "Joined {0}"
-msgstr "עוקב אחרי {0}"
+msgstr "הצטרף {0}"
 
 #: src/screens/Onboarding/index.tsx:21 src/screens/Onboarding/state.ts:89
 msgid "Journalism"
@@ -5795,6 +5793,8 @@ msgid ""
 "Set this setting to \"No\" to hide all quote posts from your feed. Reposts "
 "will still be visible."
 msgstr ""
+"הגדר את ההגדרה הזו ל\"לא\" כדי להסתיר את כל פוסטי הציטוטים מהפיד שלך. פוסטים "
+"ששותפו מחדש עדיין יהיו גלויים."
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:63
 msgid "Set this setting to \"No\" to hide all replies from your feed."
