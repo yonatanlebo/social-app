@@ -41,12 +41,16 @@ msgid ""
 "{0, plural, one {# label has been placed on this account} other {# labels "
 "have been placed on this account}}"
 msgstr ""
+"{0, plural, one {# תווית הוצבה על התוכן הזה} other {# תוויות הוצבו על התוכן "
+"הזה}}"
 
 #: src/components/moderation/LabelsOnMe.tsx:60
 msgid ""
 "{0, plural, one {# label has been placed on this content} other {# labels "
 "have been placed on this content}}"
 msgstr ""
+"{0, plural, one {# תווית הוצבה על החשבון הזה} other {# תוויות הוצבו על "
+"החשבון הזה}}"
 
 #: src/lib/hooks/useTimeAgo.ts:136
 msgid "{0, plural, one {# minute} other {# minutes}}"
@@ -104,7 +108,7 @@ msgstr "{0, plural, one {שיתוף מחדש} other {שיתפו מחדש}}"
 
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:308
 msgid "{0, plural, one {Unlike (# like)} other {Unlike (# likes)}}"
-msgstr ""
+msgstr "{0, plural, one {Unlike (# לייק)} other {Unlike (# לייקים)}}"
 
 #. Pattern: {wordValue} in tags
 #: src/components/dialogs/MutedWords.tsx:475
@@ -126,7 +130,7 @@ msgstr "{0} מתוך {1}"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:467
 msgid "{0} people have used this starter pack!"
-msgstr ""
+msgstr "{0} אנשים שהשתמשו בחבילת ההתחלה הזאת!"
 
 #: src/view/com/util/UserAvatar.tsx:425
 msgid "{0}'s avatar"
@@ -134,7 +138,7 @@ msgstr "{0} תמונת פרופיל"
 
 #: src/screens/StarterPack/Wizard/StepDetails.tsx:68
 msgid "{0}'s favorite feeds and people - join me!"
-msgstr ""
+msgstr "האנשים והפידים המועדפים של {0} - הצטרפו אלי!"
 
 #: src/screens/StarterPack/Wizard/StepDetails.tsx:47
 msgid "{0}'s starter pack"
@@ -173,7 +177,7 @@ msgstr ""
 #: src/lib/generate-starterpack.ts:108
 #: src/screens/StarterPack/Wizard/index.tsx:174
 msgid "{displayName}'s Starter Pack"
-msgstr ""
+msgstr "חבילת ההתחלה של {displayName}"
 
 #: src/screens/SignupQueued.tsx:207
 msgid "{estimatedTimeHrs, plural, one {hour} other {hours}}"
@@ -208,7 +212,7 @@ msgstr "{profileName} הצטרף לבלוסקיי לפני {0}"
 
 #: src/components/NewskieDialog.tsx:111
 msgid "{profileName} joined Bluesky using a starter pack {0} ago"
-msgstr ""
+msgstr "{displayName} הצטרף לבלוסקיי בעזרת חבילת ההתחלה לפני {0}"
 
 #: src/screens/StarterPack/Wizard/index.tsx:466
 msgctxt "profiles"
@@ -216,6 +220,8 @@ msgid ""
 "<0>{0}, </0><1>{1}, </1>and {2, plural, one {# other} other {# others}} are "
 "included in your starter pack"
 msgstr ""
+"<0>{0}, </0><1>{1}, </1>ו {2, plural, one {# אחר} other {# אחרים}} כלול/ים "
+"ברשימת ההתחלה שלך"
 
 #: src/screens/StarterPack/Wizard/index.tsx:519
 msgctxt "feeds"
@@ -223,6 +229,8 @@ msgid ""
 "<0>{0}, </0><1>{1}, </1>and {2, plural, one {# other} other {# others}} are "
 "included in your starter pack"
 msgstr ""
+"<0>{0}, </0><1>{1}, </1>ו {2, plural, one {# אחר} other {# אחרים}} כלול/ים "
+"ברשימת ההתחלה שלך"
 
 #: src/view/shell/Drawer.tsx:109
 msgid "<0>{0}</0> {1, plural, one {follower} other {followers}}"
@@ -1800,7 +1808,7 @@ msgstr ""
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:379
 msgid "Disable subtitles"
-msgstr ""
+msgstr "ביטול כתוביות"
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:32
 #: src/lib/moderation/useLabelBehaviorDescription.ts:42
@@ -1808,7 +1816,7 @@ msgstr ""
 #: src/screens/Messages/Settings.tsx:140 src/screens/Messages/Settings.tsx:143
 #: src/screens/Moderation/index.tsx:355
 msgid "Disabled"
-msgstr ""
+msgstr "מבוטל"
 
 #: src/view/com/composer/Composer.tsx:840
 msgid "Discard"
@@ -1828,8 +1836,6 @@ msgid "Discover new custom feeds"
 msgstr ""
 
 #: src/view/screens/Search/Explore.tsx:389
-#, fuzzy
-#| msgid "Discover New Feeds"
 msgid "Discover new feeds"
 msgstr "גלה פידים חדשים"
 
@@ -1907,7 +1913,7 @@ msgstr ""
 #: src/view/com/modals/UserAddRemoveLists.tsx:110
 msgctxt "action"
 msgid "Done"
-msgstr ""
+msgstr "סיום"
 
 #: src/view/com/modals/lang-settings/ConfirmLanguagesButton.tsx:43
 msgid "Done{extraText}"
@@ -1978,26 +1984,21 @@ msgstr ""
 #: src/screens/StarterPack/Wizard/index.tsx:551
 #: src/screens/StarterPack/Wizard/index.tsx:558 src/view/screens/Feeds.tsx:385
 #: src/view/screens/Feeds.tsx:453
-#, fuzzy
-#| msgctxt "action"
-#| msgid "Edit"
 msgid "Edit"
 msgstr "עריכה"
 
 #: src/view/com/lists/ListMembers.tsx:149
 msgctxt "action"
 msgid "Edit"
-msgstr "עריכה"
+msgstr "לערוך"
 
 #: src/view/com/util/UserAvatar.tsx:334 src/view/com/util/UserBanner.tsx:92
 msgid "Edit avatar"
 msgstr "ערוך תמונת פרופיל"
 
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:119
-#, fuzzy
-#| msgid "Edit My Feeds"
 msgid "Edit Feeds"
-msgstr "ערוך את הפידים שלי"
+msgstr "ערוך פידים"
 
 #: src/view/com/composer/photos/Gallery.tsx:151
 #: src/view/com/modals/EditImage.tsx:208
@@ -2006,10 +2007,8 @@ msgstr "ערוך תמונה"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:590
 #: src/view/com/util/forms/PostDropdownBtn.tsx:603
-#, fuzzy
-#| msgid "Moderation settings"
 msgid "Edit interaction settings"
-msgstr "הגדרת העדפות"
+msgstr "הגדרת העדפות אינטראקציה"
 
 #: src/view/screens/ProfileList.tsx:515
 msgid "Edit list details"
@@ -2029,17 +2028,13 @@ msgid "Edit my profile"
 msgstr "ערוך את הפרופיל שלך"
 
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:117
-#, fuzzy
-#| msgid "Edit Profile"
 msgid "Edit People"
-msgstr "ערוך פרופיל"
+msgstr "ערוך אנשים"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:66
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:204
-#, fuzzy
-#| msgid "Moderation settings"
 msgid "Edit post interaction settings"
-msgstr "הגדרת העדפות"
+msgstr "הגדרת העדפות אינטראקציה לפוסטים"
 
 #: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:184
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:175
@@ -2060,10 +2055,8 @@ msgid "Edit User List"
 msgstr ""
 
 #: src/components/WhoCanReply.tsx:87
-#, fuzzy
-#| msgid "Who can reply"
 msgid "Edit who can reply"
-msgstr "מי יכול להגיב"
+msgstr "ערוך את מי יכול להגיב"
 
 #: src/view/com/modals/EditProfile.tsx:194
 msgid "Edit your display name"
@@ -2095,10 +2088,8 @@ msgid "Email address"
 msgstr "כתובת דואר אלקטרוני"
 
 #: src/components/intents/VerifyEmailIntentDialog.tsx:95
-#, fuzzy
-#| msgid "Email address"
 msgid "Email Resent"
-msgstr "כתובת דואר אלקטרוני"
+msgstr "דואר אלקטרוני נשלח מחדש"
 
 #: src/view/com/modals/ChangeEmail.tsx:54
 #: src/view/com/modals/ChangeEmail.tsx:83
@@ -2162,10 +2153,8 @@ msgid "Enable priority notifications"
 msgstr "הפעל עדיפות התראות"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:380
-#, fuzzy
-#| msgid "Enable adult content"
 msgid "Enable subtitles"
-msgstr "הפעל תוכן למבוגרים"
+msgstr "הפעל כתוביות"
 
 #: src/components/dialogs/EmbedConsent.tsx:94
 msgid "Enable this source only"
@@ -2195,7 +2184,7 @@ msgstr ""
 #: src/components/dialogs/MutedWords.tsx:127
 #: src/components/dialogs/MutedWords.tsx:128
 msgid "Enter a word or tag"
-msgstr ""
+msgstr "רשום מילה או תגית"
 
 #: src/view/com/modals/VerifyEmail.tsx:113
 msgid "Enter Confirmation Code"
@@ -2258,10 +2247,8 @@ msgid "Everybody can reply"
 msgstr "כולם יכולים להגיב"
 
 #: src/components/WhoCanReply.tsx:213
-#, fuzzy
-#| msgid "Everybody can reply"
 msgid "Everybody can reply to this post."
-msgstr "כולם יכולים להגיב"
+msgstr "כולם יכולים להגיב לפוסט הזה."
 
 #: src/components/dms/MessagesNUX.tsx:131
 #: src/components/dms/MessagesNUX.tsx:134 src/screens/Messages/Settings.tsx:75
@@ -2278,16 +2265,12 @@ msgid "Excessive or unwanted messages"
 msgstr ""
 
 #: src/components/dialogs/MutedWords.tsx:311
-#, fuzzy
-#| msgid "Users I follow"
 msgid "Exclude users you follow"
-msgstr "משתמשים שאני עוקב אחריהם"
+msgstr "לא לכלול משתמשים שאתה עוקב אחריהם"
 
 #: src/components/dialogs/MutedWords.tsx:514
-#, fuzzy
-#| msgid "Users I follow"
 msgid "Excludes users you follow"
-msgstr "משתמשים שאני עוקב אחריהם"
+msgstr "לא כולל משתמשים שאתה עוקב אחריהם"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:397
 msgid "Exit fullscreen"
@@ -2391,10 +2374,8 @@ msgstr ""
 
 #: src/screens/StarterPack/Wizard/index.tsx:229
 #: src/screens/StarterPack/Wizard/index.tsx:237
-#, fuzzy
-#| msgid "Failed to update settings"
 msgid "Failed to create starter pack"
-msgstr "עדכון ההגדרות נכשל"
+msgstr "כשל ביצירת חבילת התחלה"
 
 #: src/view/com/modals/CreateOrEditList.tsx:194
 msgid ""
@@ -2410,17 +2391,13 @@ msgid "Failed to delete post, please try again"
 msgstr ""
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:686
-#, fuzzy
-#| msgid "Failed to update settings"
 msgid "Failed to delete starter pack"
-msgstr "עדכון ההגדרות נכשל"
+msgstr "כשל במחיקת חבילת התחלה"
 
 #: src/view/screens/Search/Explore.tsx:427
 #: src/view/screens/Search/Explore.tsx:455
-#, fuzzy
-#| msgid "Following feed preferences"
 msgid "Failed to load feeds preferences"
-msgstr "הגדרות פיד מעקב"
+msgstr "כשל בהעלאת העדפות פידים"
 
 #: src/components/dialogs/GifSelect.ios.tsx:196
 #: src/components/dialogs/GifSelect.tsx:212
@@ -2433,26 +2410,20 @@ msgstr "טעינת הודעות ישנות נכשלה"
 
 #: src/view/screens/Search/Explore.tsx:420
 #: src/view/screens/Search/Explore.tsx:448
-#, fuzzy
-#| msgid "Failed to load past messages"
 msgid "Failed to load suggested feeds"
-msgstr "טעינת הודעות ישנות נכשלה"
+msgstr "כשל בהעלאת פידים מוצעים"
 
 #: src/view/screens/Search/Explore.tsx:378
-#, fuzzy
-#| msgid "Failed to load past messages"
 msgid "Failed to load suggested follows"
-msgstr "טעינת הודעות ישנות נכשלה"
+msgstr "כשל בהעלאת משתמשים מוצעים"
 
 #: src/view/com/lightbox/Lightbox.tsx:90
 msgid "Failed to save image: {0}"
 msgstr ""
 
 #: src/state/queries/notifications/settings.ts:39
-#, fuzzy
-#| msgid "Failed to submit appeal, please try again."
 msgid "Failed to save notification preferences, please try again"
-msgstr "הגשת הערעור נכשלה, אנא נסה שוב."
+msgstr "שמירת העדפות ההתראות נכשלה, אנא נסה שוב"
 
 #: src/components/dms/MessageItem.tsx:225
 msgid "Failed to send"
@@ -2464,16 +2435,12 @@ msgid "Failed to submit appeal, please try again."
 msgstr "הגשת הערעור נכשלה, אנא נסה שוב."
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:223
-#, fuzzy
-#| msgid "Failed to submit appeal, please try again."
 msgid "Failed to toggle thread mute, please try again"
-msgstr "הגשת הערעור נכשלה, אנא נסה שוב."
+msgstr "שינוי מצב ההשתקה של השרשור נכשלה, אנא נסה שוב"
 
 #: src/components/FeedCard.tsx:273
-#, fuzzy
-#| msgid "Failed to update settings"
 msgid "Failed to update feeds"
-msgstr "עדכון ההגדרות נכשל"
+msgstr "עדכון הפידים נכשל"
 
 #: src/components/dms/MessagesNUX.tsx:60 src/screens/Messages/Settings.tsx:35
 msgid "Failed to update settings"
@@ -2495,10 +2462,8 @@ msgid "Feed by {0}"
 msgstr "פיד מאת {0}"
 
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:55
-#, fuzzy
-#| msgid "Feed offline"
 msgid "Feed toggle"
-msgstr "פיד לא זמין"
+msgstr "שינוי מצב הפיד"
 
 #: src/view/shell/desktop/RightNav.tsx:70 src/view/shell/Drawer.tsx:346
 msgid "Feedback"
@@ -2521,10 +2486,8 @@ msgstr ""
 "למידע נוסף."
 
 #: src/components/FeedCard.tsx:270
-#, fuzzy
-#| msgid "User list updated"
 msgid "Feeds updated!"
-msgstr "רשימת משתמשים עודכנה"
+msgstr "פידים עודכנו!"
 
 #: src/view/com/modals/ChangeHandle.tsx:475
 msgid "File Contents"
@@ -2604,10 +2567,8 @@ msgid "Follow {name}"
 msgstr "עקוב {name}"
 
 #: src/components/ProgressGuide/List.tsx:54
-#, fuzzy
-#| msgid "Follow Account"
 msgid "Follow 7 accounts"
-msgstr "עקוב אחרי החשבון"
+msgstr "עקוב אחרי 7 חשבונות"
 
 #: src/view/com/profile/ProfileMenu.tsx:246
 #: src/view/com/profile/ProfileMenu.tsx:257
@@ -2616,14 +2577,10 @@ msgstr "עקוב אחרי החשבון"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:416
 #: src/screens/StarterPack/StarterPackScreen.tsx:423
-#, fuzzy
-#| msgid "Follow Back"
 msgid "Follow all"
-msgstr "עקוב בחזרה"
+msgstr "עקוב אחרי כולם"
 
 #: src/view/com/profile/FollowButton.tsx:79
-#, fuzzy
-#| msgid "Follow Back"
 msgctxt "action"
 msgid "Follow Back"
 msgstr "עקוב בחזרה"
@@ -2641,10 +2598,8 @@ msgstr ""
 "עקוב אחר חשבונות נוספים כדי להתחבר לתחומי העניין שלך ולבנות את הרשת שלך."
 
 #: src/components/KnownFollowers.tsx:231
-#, fuzzy
-#| msgid "Followed by {0}"
 msgid "Followed by <0>{0}</0>"
-msgstr "נעקב אחרי {0}"
+msgstr "נעקב אחרי <0>{0}</0>"
 
 #: src/components/KnownFollowers.tsx:217
 msgid "Followed by <0>{0}</0> and {1, plural, one {# other} other {# others}}"
@@ -2668,13 +2623,11 @@ msgstr "משתמשים נעקבים"
 
 #: src/view/com/notifications/FeedItem.tsx:207
 msgid "followed you"
-msgstr "עוקבים אחריך"
+msgstr "עוקב אחריך"
 
 #: src/view/com/notifications/FeedItem.tsx:205
-#, fuzzy
-#| msgid "followed you"
 msgid "followed you back"
-msgstr "עוקבים אחריך"
+msgstr "עוקב אחריך בחזרה"
 
 #: src/view/screens/ProfileFollowers.tsx:29
 #: src/view/screens/ProfileFollowers.tsx:30
@@ -2687,10 +2640,8 @@ msgstr ""
 
 #: src/screens/Profile/KnownFollowers.tsx:108
 #: src/screens/Profile/KnownFollowers.tsx:118
-#, fuzzy
-#| msgid "Follows you"
 msgid "Followers you know"
-msgstr "עוקב אחריך"
+msgstr "עוקבים שאתה מכיר"
 
 #. User is following this account, click to unfollow
 #: src/components/ProfileCard.tsx:350
@@ -2800,10 +2751,8 @@ msgid "Get Started"
 msgstr ""
 
 #: src/components/ProgressGuide/List.tsx:33
-#, fuzzy
-#| msgid "Moderation states"
 msgid "Getting started"
-msgstr "מצב העדפות תוכן"
+msgstr "מתחילים"
 
 #: src/components/MediaPreview.tsx:122
 msgid "GIF"
@@ -2888,7 +2837,7 @@ msgstr ""
 
 #: src/lib/moderation/useReportOptions.ts:34
 msgid "Harassment, trolling, or intolerance"
-msgstr ""
+msgstr "הטרדה, טרולינג או חוסר סובלנות"
 
 #: src/Navigation.tsx:333
 msgid "Hashtag"
@@ -2917,10 +2866,8 @@ msgid "Here is your app password."
 msgstr ""
 
 #: src/components/ListCard.tsx:128
-#, fuzzy
-#| msgid "Added to list"
 msgid "Hidden list"
-msgstr "נוסף לרשימות"
+msgstr "רשימה מוסתרת"
 
 #: src/components/moderation/ContentHider.tsx:116
 #: src/components/moderation/LabelPreference.tsx:134
@@ -3104,10 +3051,8 @@ msgstr "טקסט חלופי לתמונה"
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:247
 #: src/components/StarterPack/ShareDialog.tsx:76
-#, fuzzy
-#| msgid "Saved to your camera roll"
 msgid "Image saved to your camera roll!"
-msgstr "נשמר לגלריה שלך"
+msgstr "התמונה נשמרה בגלריה שלך!"
 
 #: src/lib/moderation/useReportOptions.ts:49
 msgid "Impersonation or false claims about identity or affiliation"
@@ -3183,10 +3128,8 @@ msgid "Invalid username or password"
 msgstr ""
 
 #: src/components/intents/VerifyEmailIntentDialog.tsx:82
-#, fuzzy
-#| msgid "Send verification email"
 msgid "Invalid Verification Code"
-msgstr "שלח אימייל אימות"
+msgstr "קוד אימות לא תקין"
 
 #: src/view/com/modals/InviteCodes.tsx:94
 msgid "Invite a Friend"
@@ -3228,10 +3171,8 @@ msgid ""
 msgstr ""
 
 #: src/view/com/composer/Composer.tsx:1126
-#, fuzzy
-#| msgid "You: {0}"
 msgid "Job ID: {0}"
-msgstr "אתה: {0}"
+msgstr "מזהה עבודה: {0}"
 
 #: src/view/com/auth/SplashScreen.web.tsx:164
 msgid "Jobs"
@@ -3241,16 +3182,12 @@ msgstr ""
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:212
 #: src/screens/StarterPack/StarterPackScreen.tsx:443
 #: src/screens/StarterPack/StarterPackScreen.tsx:454
-#, fuzzy
-#| msgid "Bluesky"
 msgid "Join Bluesky"
-msgstr "בלוסקיי"
+msgstr "הצטרפו לבלוסקיי"
 
 #: src/components/StarterPack/QrCode.tsx:56
-#, fuzzy
-#| msgid "Unmute conversation"
 msgid "Join the conversation"
-msgstr "ביטול השתקת הדיון"
+msgstr "הצטרפו לשיחה"
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:492
 msgid "Joined {0}"
@@ -3377,15 +3314,13 @@ msgid "Light"
 msgstr "בהיר"
 
 #: src/components/ProgressGuide/List.tsx:48
-#, fuzzy
-#| msgid "Likes on this post"
 msgid "Like 10 posts"
-msgstr "לייקים על הפוסט הזה"
+msgstr "עשו לייק ל-10 פוסטים"
 
 #: src/state/shell/progress-guide.tsx:157
 #: src/state/shell/progress-guide.tsx:162
 msgid "Like 10 posts to train the Discover feed"
-msgstr ""
+msgstr "עשו לייק ל-10 פוסטים כדי לאמן את פיד ה-Discover"
 
 #: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:267
 #: src/view/screens/ProfileFeed.tsx:575
@@ -3440,16 +3375,12 @@ msgid "List deleted"
 msgstr "רשימה נמחקה"
 
 #: src/screens/List/ListHiddenScreen.tsx:126
-#, fuzzy
-#| msgid "This post has been deleted."
 msgid "List has been hidden"
-msgstr "הפוסט הזה נמחק."
+msgstr "רשימה הוסתרה"
 
 #: src/view/screens/ProfileList.tsx:159
-#, fuzzy
-#| msgid "List deleted"
 msgid "List Hidden"
-msgstr "רשימה נמחקה"
+msgstr "רשימה מוסתרת"
 
 #: src/view/screens/ProfileList.tsx:386
 msgid "List muted"
@@ -3483,26 +3414,24 @@ msgstr ""
 
 #: src/view/screens/Search/Explore.tsx:219
 msgid "Load more suggested feeds"
-msgstr ""
+msgstr "הצג עוד פידים מוצעים"
 
 #: src/view/screens/Search/Explore.tsx:217
-#, fuzzy
-#| msgid "Suggested Follows"
 msgid "Load more suggested follows"
-msgstr "עוקבים מוצעים"
+msgstr "הצג עוד עוקבים מוצעים"
 
 #: src/view/screens/Notifications.tsx:219
 msgid "Load new notifications"
-msgstr ""
+msgstr "הצג עוד עדכונים"
 
 #: src/screens/Profile/Sections/Feed.tsx:94 src/view/com/feeds/FeedPage.tsx:136
 #: src/view/screens/ProfileFeed.tsx:495 src/view/screens/ProfileList.tsx:805
 msgid "Load new posts"
-msgstr ""
+msgstr "הצג עוד פוסטים"
 
 #: src/view/com/composer/text-input/mobile/Autocomplete.tsx:99
 msgid "Loading..."
-msgstr ""
+msgstr "מעלה..."
 
 #: src/Navigation.tsx:256
 msgid "Log"
@@ -3510,12 +3439,12 @@ msgstr ""
 
 #: src/screens/Deactivated.tsx:214 src/screens/Deactivated.tsx:220
 msgid "Log in or sign up"
-msgstr ""
+msgstr "התחבר או הירשם"
 
 #: src/screens/SignupQueued.tsx:155 src/screens/SignupQueued.tsx:158
 #: src/screens/SignupQueued.tsx:184 src/screens/SignupQueued.tsx:187
 msgid "Log out"
-msgstr ""
+msgstr "התנתק"
 
 #: src/screens/Moderation/index.tsx:476
 msgid "Logged-out visibility"
@@ -3551,10 +3480,8 @@ msgid ""
 msgstr ""
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:254
-#, fuzzy
-#| msgid "Delete for me"
 msgid "Make one for me"
-msgstr "מחק בשבילי"
+msgstr "צור אחד בשבילי"
 
 #: src/view/com/modals/LinkWarning.tsx:79
 msgid "Make sure this is where you intend to go!"
@@ -3622,10 +3549,8 @@ msgid "Misleading Account"
 msgstr "חשבונות מוליכים שולל"
 
 #: src/lib/moderation/useReportOptions.ts:67
-#, fuzzy
-#| msgid "Misleading Account"
 msgid "Misleading Post"
-msgstr "חשבונות מוליכים שולל"
+msgstr "פוסט מטעה"
 
 #: src/screens/Settings/AppearanceSettings.tsx:78
 msgid "Mode"
@@ -3656,11 +3581,11 @@ msgstr "רשימת ניהול על ידך"
 
 #: src/view/com/modals/CreateOrEditList.tsx:185
 msgid "Moderation list created"
-msgstr ""
+msgstr "רשימת ניהול נוצרה"
 
 #: src/view/com/modals/CreateOrEditList.tsx:171
 msgid "Moderation list updated"
-msgstr ""
+msgstr "רשימת ניהול עודכנה"
 
 #: src/screens/Moderation/index.tsx:249
 msgid "Moderation lists"
@@ -3671,8 +3596,6 @@ msgid "Moderation Lists"
 msgstr "רשימת העדפות"
 
 #: src/components/moderation/LabelPreference.tsx:247
-#, fuzzy
-#| msgid "Moderation settings"
 msgid "moderation settings"
 msgstr "הגדרת העדפות"
 
@@ -3723,8 +3646,6 @@ msgid "Mute"
 msgstr "השתק"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:389
-#, fuzzy
-#| msgid "Mute"
 msgctxt "video"
 msgid "Mute"
 msgstr "השתק"
@@ -3751,42 +3672,40 @@ msgid "Mute conversation"
 msgstr "השתק את השיחה"
 
 #: src/components/dialogs/MutedWords.tsx:253
-#, fuzzy
-#| msgid "Mute"
 msgid "Mute in:"
-msgstr "השתק"
+msgstr "השתק ב:"
 
 #: src/view/screens/ProfileList.tsx:734
 msgid "Mute list"
-msgstr ""
+msgstr "רשימת השתקה"
 
 #: src/view/screens/ProfileList.tsx:729
 msgid "Mute these accounts?"
-msgstr ""
+msgstr "להשתיק חשבונות אלה?"
 
 #: src/components/dialogs/MutedWords.tsx:185
 msgid "Mute this word for 24 hours"
-msgstr ""
+msgstr "השתק מילה זאת ל 24 שעות"
 
 #: src/components/dialogs/MutedWords.tsx:224
 msgid "Mute this word for 30 days"
-msgstr ""
+msgstr "השתק מילה זאת ל 30 יום"
 
 #: src/components/dialogs/MutedWords.tsx:209
 msgid "Mute this word for 7 days"
-msgstr ""
+msgstr "השתק מילה זאת ל 7 יום"
 
 #: src/components/dialogs/MutedWords.tsx:258
 msgid "Mute this word in post text and tags"
-msgstr ""
+msgstr "השתקת מילה זאת בפוסטים של טקסט ותגיות"
 
 #: src/components/dialogs/MutedWords.tsx:274
 msgid "Mute this word in tags only"
-msgstr ""
+msgstr "השתקת מילה זאת רק בתגיות"
 
 #: src/components/dialogs/MutedWords.tsx:170
 msgid "Mute this word until you unmute it"
-msgstr ""
+msgstr "השתקת מילה זאת עד שאתה תבטל את ההשתקה"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:465
 #: src/view/com/util/forms/PostDropdownBtn.tsx:471
@@ -3811,6 +3730,8 @@ msgid ""
 "Muted accounts have their posts removed from your feed and from your "
 "notifications. Mutes are completely private."
 msgstr ""
+"הפוסטים של החשבונות המושתקים מוסרים מהפיד שלך והמעדכונים. השתקות הן פרטיות "
+"לגמרי."
 
 #: src/lib/moderation/useModerationCauseDescription.ts:90
 msgid "Muted by \"{0}\""
@@ -4122,22 +4043,16 @@ msgid "Nothing here"
 msgstr "שום דבר כאן"
 
 #: src/view/screens/NotificationsSettings.tsx:54
-#, fuzzy
-#| msgid "Notifications"
 msgid "Notification filters"
-msgstr "עדכונים"
+msgstr "סינון עדכונים"
 
 #: src/Navigation.tsx:348 src/view/screens/Notifications.tsx:119
-#, fuzzy
-#| msgid "Notification sounds"
 msgid "Notification settings"
-msgstr "צלילי עדכונים"
+msgstr "הגדרות עדכונים"
 
 #: src/view/screens/NotificationsSettings.tsx:39
-#, fuzzy
-#| msgid "Notification Sounds"
 msgid "Notification Settings"
-msgstr "צלילי עדכונים"
+msgstr "הגדרות עדכונים"
 
 #: src/screens/Messages/Settings.tsx:124
 msgid "Notification sounds"
@@ -4157,8 +4072,6 @@ msgid "Notifications"
 msgstr "עדכונים"
 
 #: src/lib/hooks/useTimeAgo.ts:122
-#, fuzzy
-#| msgid "Now"
 msgid "now"
 msgstr "עכשיו"
 
@@ -4182,25 +4095,27 @@ msgstr ""
 #: src/components/dialogs/GifSelect.tsx:257
 #: src/view/com/util/ErrorBoundary.tsx:55
 msgid "Oh no!"
-msgstr ""
+msgstr "אוי לא!"
 
 #: src/screens/Onboarding/StepInterests/index.tsx:138
 msgid "Oh no! Something went wrong."
-msgstr ""
+msgstr "אוי לא! משהו השתבש."
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:175
 msgid ""
 "Oh no! We weren't able to generate an image for you to share. Rest assured, "
 "we're glad you're here 🦋"
 msgstr ""
+"אוי לא! לא הצלחנו ליצור תמונה בשבילך לשיתוף. תהיו בטוחים, אנחנו שמחים שאתם "
+"כאן 🦋"
 
 #: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:339
 msgid "OK"
-msgstr ""
+msgstr "בסדר"
 
 #: src/screens/Login/PasswordUpdatedForm.tsx:44
 msgid "Okay"
-msgstr ""
+msgstr "בסדר"
 
 #: src/view/screens/PreferencesThreads.tsx:72
 msgid "Oldest replies first"
@@ -4223,10 +4138,8 @@ msgid "Only .jpg and .png files are supported"
 msgstr ""
 
 #: src/components/WhoCanReply.tsx:217
-#, fuzzy
-#| msgid "Only {0} can reply"
 msgid "Only {0} can reply."
-msgstr "רק {0} יכול להגיב"
+msgstr "רק {0} יכול להגיב."
 
 #: src/screens/Signup/StepHandle.tsx:152
 msgid "Only contains letters, numbers, and hyphens"
@@ -4326,10 +4239,8 @@ msgid "Opens additional details for a debug entry"
 msgstr ""
 
 #: src/view/screens/Settings/index.tsx:476
-#, fuzzy
-#| msgid "Opens chat settings"
 msgid "Opens appearance settings"
-msgstr "פתח את הגדרות שיחה"
+msgstr "פתח את הגדרות המראה"
 
 #: src/view/com/composer/photos/OpenCameraBtn.tsx:74
 msgid "Opens camera on device"
@@ -4444,10 +4355,8 @@ msgid "Opens this profile"
 msgstr "פתח את הפרופיל הזה"
 
 #: src/view/com/composer/videos/SelectVideoBtn.tsx:95
-#, fuzzy
-#| msgid "Opens this profile"
 msgid "Opens video picker"
-msgstr "פתח את הפרופיל הזה"
+msgstr "פתח את בוחר הוידאו"
 
 #: src/view/com/util/forms/DropdownButton.tsx:293
 msgid "Option {0} of {numItems}"
@@ -4460,7 +4369,7 @@ msgstr ""
 
 #: src/components/dialogs/MutedWords.tsx:299
 msgid "Options:"
-msgstr ""
+msgstr "אפשרויות:"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:388
 msgid "Or combine these options:"
@@ -4483,10 +4392,8 @@ msgid "Other account"
 msgstr "חשבון אחר"
 
 #: src/view/screens/Settings/index.tsx:379
-#, fuzzy
-#| msgid "Other account"
 msgid "Other accounts"
-msgstr "חשבון אחר"
+msgstr "חשבונות אחרים"
 
 #: src/view/com/composer/select-language/SelectLangBtn.tsx:92
 msgid "Other..."
@@ -4500,18 +4407,18 @@ msgstr ""
 
 #: src/components/Lists.tsx:216 src/view/screens/NotFound.tsx:45
 msgid "Page not found"
-msgstr ""
+msgstr "דף לא נמצא"
 
 #: src/view/screens/NotFound.tsx:42
 msgid "Page Not Found"
-msgstr ""
+msgstr "דף לא נמצא"
 
 #: src/screens/Login/LoginForm.tsx:213
 #: src/screens/Signup/StepInfo/index.tsx:162
 #: src/view/com/modals/DeleteAccount.tsx:257
 #: src/view/com/modals/DeleteAccount.tsx:264
 msgid "Password"
-msgstr ""
+msgstr "סיסמא"
 
 #: src/view/com/modals/ChangePassword.tsx:143
 msgid "Password Changed"
@@ -4529,26 +4436,24 @@ msgstr ""
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoEmbedInnerNative.tsx:150
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:366
 msgid "Pause"
-msgstr ""
+msgstr "הפסקה"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:319
-#, fuzzy
-#| msgid "Select an emoji"
 msgid "Pause video"
-msgstr "בחר אימוג'י"
+msgstr "הפסק וידאו"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:171
 #: src/view/screens/Search/Search.tsx:369
 msgid "People"
-msgstr ""
+msgstr "אנשים"
 
 #: src/Navigation.tsx:180
 msgid "People followed by @{0}"
-msgstr ""
+msgstr "אנשים ש @{0} עוקב אחריהם"
 
 #: src/Navigation.tsx:173
 msgid "People following @{0}"
-msgstr ""
+msgstr "אנשים שעוקבים אחרי @{0}"
 
 #: src/view/com/lightbox/Lightbox.tsx:70
 msgid "Permission to access camera roll is required."
@@ -4596,31 +4501,29 @@ msgstr "נשמר לפידים שלך"
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoEmbedInnerNative.tsx:150
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:367
 msgid "Play"
-msgstr ""
+msgstr "ניגון"
 
 #: src/view/com/util/post-embeds/ExternalGifEmbed.tsx:131
 msgid "Play {0}"
-msgstr ""
+msgstr "ניגון {0}"
 
 #: src/view/com/util/post-embeds/GifEmbed.tsx:45
 msgid "Play or pause the GIF"
-msgstr ""
+msgstr "נגן או הפסק את הגיף"
 
 #: src/view/com/util/post-embeds/VideoEmbed.tsx:110
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:320
-#, fuzzy
-#| msgid "Select an emoji"
 msgid "Play video"
-msgstr "בחר אימוג'י"
+msgstr "נגן וידאו"
 
 #: src/view/com/util/post-embeds/ExternalPlayerEmbed.tsx:59
 #: src/view/com/util/post-embeds/ExternalPlayerEmbed.tsx:60
 msgid "Play Video"
-msgstr ""
+msgstr "נגן וידאו"
 
 #: src/view/com/util/post-embeds/ExternalGifEmbed.tsx:130
 msgid "Plays the GIF"
-msgstr ""
+msgstr "מנגן את הגיף"
 
 #: src/screens/Signup/state.ts:217
 msgid "Please choose your handle."
@@ -4735,10 +4638,8 @@ msgid "Post Hidden by You"
 msgstr ""
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:283
-#, fuzzy
-#| msgid "Moderation settings"
 msgid "Post interaction settings"
-msgstr "הגדרת העדפות"
+msgstr "הגדרות אינטראקציה של פוסטים"
 
 #: src/view/com/composer/select-language/SelectLangBtn.tsx:88
 msgid "Post language"
@@ -4768,6 +4669,9 @@ msgid ""
 "avoiding common words that appear in many posts, since it can result in no "
 "posts being shown."
 msgstr ""
+"ניתן להשתיק פוסטים על סמך הטקסט שלהם, התגים שלהם או שניהם. אנו ממליצים "
+"להימנע ממילים נפוצות המופיעות בפוסטים רבים, מכיוון שהדבר עלול לגרום לכך שלא "
+"יוצגו פוסטים."
 
 #: src/view/com/posts/FeedErrorMessage.tsx:68
 msgid "Posts hidden"
@@ -4778,10 +4682,8 @@ msgid "Potentially Misleading Link"
 msgstr ""
 
 #: src/state/queries/notifications/settings.ts:44
-#, fuzzy
-#| msgid "Thread Preferences"
 msgid "Preference saved"
-msgstr "העדפות שרשור"
+msgstr "ההעדפות נשמרו"
 
 #: src/screens/Messages/Conversation/MessageListError.tsx:19
 msgid "Press to attempt reconnection"
@@ -4814,10 +4716,8 @@ msgid "Prioritize Your Follows"
 msgstr "תן עדיפות לעוקבים שלך"
 
 #: src/view/screens/NotificationsSettings.tsx:57
-#, fuzzy
-#| msgid "Notifications"
 msgid "Priority notifications"
-msgstr "עדכונים"
+msgstr "עדיפות עדכונים"
 
 #: src/view/screens/Settings/index.tsx:620
 #: src/view/shell/desktop/RightNav.tsx:81
@@ -4885,10 +4785,8 @@ msgid "QR code has been downloaded!"
 msgstr ""
 
 #: src/components/StarterPack/QrCodeDialog.tsx:107
-#, fuzzy
-#| msgid "Saved to your camera roll"
 msgid "QR code saved to your camera roll!"
-msgstr "נשמר לגלריה שלך"
+msgstr "קוד QR נשמר בגלריה שלך!"
 
 #: src/view/com/util/post-ctrls/RepostButton.tsx:125
 #: src/view/com/util/post-ctrls/RepostButton.tsx:152
@@ -4910,30 +4808,24 @@ msgstr ""
 #: src/view/com/util/post-ctrls/RepostButton.tsx:151
 #: src/view/com/util/post-ctrls/RepostButton.web.tsx:84
 #: src/view/com/util/post-ctrls/RepostButton.web.tsx:91
-#, fuzzy
-#| msgid "Replies"
 msgid "Quote posts disabled"
-msgstr "תגובות"
+msgstr "ציטוט פוסטים מבוטל"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:311
 msgid "Quote posts enabled"
 msgstr "ציטוט פוסט מאופשר"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:295
-#, fuzzy
-#| msgid "Chat settings"
 msgid "Quote settings"
-msgstr "הגדרת שיחה"
+msgstr "הגדרת ציטוט"
 
 #: src/screens/Post/PostQuotes.tsx:31 src/screens/Post/PostQuotes.tsx:32
 msgid "Quotes"
-msgstr ""
+msgstr "ציטוטים"
 
 #: src/view/com/post-thread/PostThreadItem.tsx:230
-#, fuzzy
-#| msgid "Reposts of this post"
 msgid "Quotes of this post"
-msgstr "פרסם/ה מחדש את הפוסט הזה"
+msgstr "ציטוטים של הפוסט הזה"
 
 #: src/view/screens/PreferencesThreads.tsx:80
 msgid "Random (aka \"Poster's Roulette\")"
@@ -4957,16 +4849,12 @@ msgid "Read the Bluesky blog"
 msgstr ""
 
 #: src/screens/Signup/StepInfo/Policies.tsx:59
-#, fuzzy
-#| msgid "Privacy Policy"
 msgid "Read the Bluesky Privacy Policy"
-msgstr "מדיניות הפרטיות"
+msgstr "קראו את מדיניות הפרטיות של בלוסקיי"
 
 #: src/screens/Signup/StepInfo/Policies.tsx:49
-#, fuzzy
-#| msgid "Terms of Service"
 msgid "Read the Bluesky Terms of Service"
-msgstr "תנאי השירות"
+msgstr "קראו את תנאי השירות של בלוסקיי"
 
 #: src/components/dms/ReportDialog.tsx:174
 msgid "Reason:"
@@ -4981,10 +4869,8 @@ msgid "Reconnect"
 msgstr ""
 
 #: src/view/screens/Notifications.tsx:146
-#, fuzzy
-#| msgid "Notifications"
 msgid "Refresh notifications"
-msgstr "עדכונים"
+msgstr "ריענון עדכונים"
 
 #: src/screens/Messages/List/index.tsx:200
 msgid "Reload conversations"
@@ -5011,10 +4897,8 @@ msgid "Remove account"
 msgstr "הסר חשבון"
 
 #: src/view/com/composer/ExternalEmbedRemoveBtn.tsx:28
-#, fuzzy
-#| msgid "Remove account"
 msgid "Remove attachment"
-msgstr "הסר חשבון"
+msgstr "הסר מצורפים"
 
 #: src/view/com/util/UserAvatar.tsx:393
 msgid "Remove Avatar"
@@ -5050,16 +4934,12 @@ msgid "Remove from my feeds?"
 msgstr "להסיר מהפידים שלי?"
 
 #: src/view/com/util/AccountDropdownBtn.tsx:53
-#, fuzzy
-#| msgid "Account removed from quick access"
 msgid "Remove from quick access?"
-msgstr "החשבון הוסר מגישה מהירה"
+msgstr "להסיר מגישה מהירה?"
 
 #: src/screens/List/ListHiddenScreen.tsx:156
-#, fuzzy
-#| msgid "Remove from my feeds?"
 msgid "Remove from saved feeds"
-msgstr "להסיר מהפידים שלי?"
+msgstr "הסרה מפידים שמורים"
 
 #: src/view/com/composer/photos/Gallery.tsx:174
 msgid "Remove image"
@@ -5087,26 +4967,20 @@ msgid "Remove repost"
 msgstr ""
 
 #: src/view/com/composer/videos/SubtitleDialog.tsx:264
-#, fuzzy
-#| msgid "Remove profile"
 msgid "Remove subtitle file"
-msgstr "הסר פרופיל"
+msgstr "הסרת קובץ כתוביות"
 
 #: src/view/com/posts/FeedErrorMessage.tsx:211
 msgid "Remove this feed from your saved feeds"
 msgstr "הסר את הפיד הזה מהפידים השמורים שלך"
 
 #: src/view/com/util/post-embeds/QuoteEmbed.tsx:109
-#, fuzzy
-#| msgid "Remove Avatar"
 msgid "Removed by author"
-msgstr "הסר תמונת פרופיל"
+msgstr "הוסר על ידי הכותב"
 
 #: src/view/com/util/post-embeds/QuoteEmbed.tsx:107
-#, fuzzy
-#| msgid "reposted your post"
 msgid "Removed by you"
-msgstr "פרסם/ה מחדש את הפוסט שלך"
+msgstr "הוסר על ידך"
 
 #: src/view/com/modals/ListAddRemoveUsers.tsx:200
 #: src/view/com/modals/UserAddRemoveLists.tsx:164
@@ -5119,10 +4993,8 @@ msgstr ""
 
 #: src/screens/List/ListHiddenScreen.tsx:94
 #: src/screens/List/ListHiddenScreen.tsx:160
-#, fuzzy
-#| msgid "Removed from your feeds"
 msgid "Removed from saved feeds"
-msgstr "להסיר מהפידים שלך"
+msgstr "הוסא מהפידים השמורים"
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:44
 #: src/view/screens/ProfileFeed.tsx:192 src/view/screens/ProfileList.tsx:376
@@ -5134,10 +5006,8 @@ msgid "Removes quoted post"
 msgstr "מסיר שיתוף הציטוט"
 
 #: src/view/com/composer/ExternalEmbedRemoveBtn.tsx:29
-#, fuzzy
-#| msgid "Remove account"
 msgid "Removes the attachment"
-msgstr "הסר חשבון"
+msgstr "מסיר את המצורפים"
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:129
 #: src/view/com/posts/FeedShutdownMsg.tsx:133
@@ -5149,16 +5019,12 @@ msgid "Replies"
 msgstr "תגובות"
 
 #: src/components/WhoCanReply.tsx:69
-#, fuzzy
-#| msgid "Replies"
 msgid "Replies disabled"
-msgstr "תגובות"
+msgstr "תגובות מבוטלות"
 
 #: src/components/WhoCanReply.tsx:215
-#, fuzzy
-#| msgid "Replies"
 msgid "Replies to this post are disabled."
-msgstr "תגובות"
+msgstr "תגובות לפוסט הזה מבוטלות."
 
 #: src/view/com/composer/Composer.tsx:644
 msgctxt "action"
@@ -5176,10 +5042,8 @@ msgid "Reply Hidden by You"
 msgstr ""
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:355
-#, fuzzy
-#| msgid "Accessibility settings"
 msgid "Reply settings"
-msgstr "הגדרות נגישות"
+msgstr "הגדרת תגובות"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:340
 msgid "Reply settings are chosen by the author of the thread"
@@ -5196,27 +5060,22 @@ msgid "Reply to a blocked post"
 msgstr "מגיב להודעה חסומה."
 
 #: src/view/com/posts/FeedItem.tsx:513
-#, fuzzy
-#| msgctxt "description"
-#| msgid "Reply to a blocked post"
 msgctxt "description"
 msgid "Reply to a post"
-msgstr "מגיב להודעה חסומה."
+msgstr "הגב להודעה"
 
 #: src/view/com/post/Post.tsx:194 src/view/com/posts/FeedItem.tsx:517
 msgctxt "description"
 msgid "Reply to you"
-msgstr ""
+msgstr "מגיב לך"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:332
-#, fuzzy
-#| msgid "User list updated"
 msgid "Reply visibility updated"
-msgstr "רשימת משתמשים עודכנה"
+msgstr "נראות התגובות עודכנה"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:331
 msgid "Reply was successfully hidden"
-msgstr ""
+msgstr "תגובה הוסתרה בהצלחה"
 
 #: src/components/dms/MessageMenu.tsx:132
 #: src/components/dms/MessagesListBlockedFooter.tsx:77
@@ -5362,16 +5221,12 @@ msgid "Resend email"
 msgstr "שלח מחדש את האימייל"
 
 #: src/components/intents/VerifyEmailIntentDialog.tsx:130
-#, fuzzy
-#| msgid "Resend email"
 msgid "Resend Email"
-msgstr "שלח מחדש את האימייל"
+msgstr "שליחה מחדש של האימייל"
 
 #: src/components/intents/VerifyEmailIntentDialog.tsx:123
-#, fuzzy
-#| msgid "Send verification email"
 msgid "Resend Verification Email"
-msgstr "שלח אימייל אימות"
+msgstr "שליחה מחדש של אימייל אימות"
 
 #: src/view/com/modals/ChangePassword.tsx:186
 msgid "Reset code"
@@ -5457,7 +5312,7 @@ msgstr ""
 #: src/view/com/modals/CreateOrEditList.tsx:334
 msgctxt "action"
 msgid "Save"
-msgstr ""
+msgstr "שמירה"
 
 #: src/view/com/modals/AltImage.tsx:132
 msgid "Save alt text"
@@ -5477,10 +5332,8 @@ msgstr ""
 
 #: src/components/StarterPack/ShareDialog.tsx:151
 #: src/components/StarterPack/ShareDialog.tsx:158
-#, fuzzy
-#| msgid "Save birthday"
 msgid "Save image"
-msgstr "שמור את תאריך הלידה"
+msgstr "שמור תמונה"
 
 #: src/view/com/modals/crop-image/CropImage.web.tsx:169
 msgid "Save image crop"
@@ -5653,10 +5506,8 @@ msgid "Select how long to mute this word for."
 msgstr ""
 
 #: src/view/com/composer/videos/SubtitleDialog.tsx:249
-#, fuzzy
-#| msgid "Select languages"
 msgid "Select language..."
-msgstr "בחר שפה"
+msgstr "בחר שפה..."
 
 #: src/view/screens/LanguageSettings.tsx:303
 msgid "Select languages"
@@ -5687,10 +5538,8 @@ msgid "Select the service that hosts your data."
 msgstr ""
 
 #: src/view/com/composer/videos/SelectVideoBtn.tsx:94
-#, fuzzy
-#| msgid "Select an emoji"
 msgid "Select video"
-msgstr "בחר אימוג'י"
+msgstr "בחר וידאו"
 
 #: src/components/dialogs/MutedWords.tsx:242
 msgid "Select what content this mute word should apply to."
@@ -5736,7 +5585,7 @@ msgstr ""
 #: src/view/com/modals/DeleteAccount.tsx:162
 msgctxt "action"
 msgid "Send Email"
-msgstr ""
+msgstr "שלח דוא\"ל"
 
 #: src/view/shell/Drawer.tsx:339
 msgid "Send feedback"
@@ -5873,7 +5722,7 @@ msgstr "שיתוף"
 #: src/view/com/lightbox/Lightbox.tsx:148
 msgctxt "action"
 msgid "Share"
-msgstr ""
+msgstr "שיתוף"
 
 #: src/components/dms/ChatEmptyPill.tsx:37
 msgid "Share a cool story!"
@@ -5898,10 +5747,8 @@ msgid "Share image externally"
 msgstr ""
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:639
-#, fuzzy
-#| msgid "Save birthday"
 msgid "Share image in post"
-msgstr "שמור את תאריך הלידה"
+msgstr "שתף תמונה בפוסט"
 
 #: src/components/StarterPack/ShareDialog.tsx:124
 #: src/components/StarterPack/ShareDialog.tsx:131
@@ -5936,10 +5783,8 @@ msgid "Share your favorite feed!"
 msgstr ""
 
 #: src/Navigation.tsx:251
-#, fuzzy
-#| msgid "Thread Preferences"
 msgid "Shared Preferences Tester"
-msgstr "העדפות שרשור"
+msgstr "בודק העדפות משותפות"
 
 #: src/view/com/modals/LinkWarning.tsx:92
 msgid "Shares the linked website"
@@ -6161,10 +6006,8 @@ msgid "Something went wrong, please try again."
 msgstr "משהו השתבש. אנא נסו שוב."
 
 #: src/components/Lists.tsx:200 src/view/screens/NotificationsSettings.tsx:46
-#, fuzzy
-#| msgid "Something went wrong"
 msgid "Something went wrong!"
-msgstr "משהו השתבש"
+msgstr "משהו השתבש!"
 
 #: src/App.native.tsx:102 src/App.web.tsx:88
 msgid "Sorry! Your session expired. Please log in again."
@@ -6318,11 +6161,11 @@ msgstr "תיעוד מערכת"
 
 #: src/components/TagMenu/index.tsx:89
 msgid "Tag menu: {displayTag}"
-msgstr ""
+msgstr "תפריט תגיות: {displayTag}"
 
 #: src/components/dialogs/MutedWords.tsx:282
 msgid "Tags only"
-msgstr ""
+msgstr "תגיות בלבד"
 
 #: src/view/com/modals/crop-image/CropImage.web.tsx:135
 msgid "Tall"
@@ -6334,20 +6177,20 @@ msgstr ""
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoEmbedInnerNative.tsx:145
 msgid "Tap to enter full screen"
-msgstr ""
+msgstr "לחץ כדי להיכנס למסך מלא"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoEmbedInnerNative.tsx:151
 msgid "Tap to play or pause"
-msgstr ""
+msgstr "לחץ כדי לנגן או לעצור"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoEmbedInnerNative.tsx:164
 msgid "Tap to toggle sound"
-msgstr ""
+msgstr "לחץ כדי להפעיל או לבטל את ההשתקה"
 
 #: src/view/com/util/images/AutoSizedImage.tsx:219
 #: src/view/com/util/images/AutoSizedImage.tsx:239
 msgid "Tap to view full image"
-msgstr ""
+msgstr "לחץ כדי להיכנס לתמונה מלאה"
 
 #: src/state/shell/progress-guide.tsx:166
 msgid "Task complete - 10 likes!"
@@ -6371,7 +6214,7 @@ msgstr ""
 
 #: src/components/dialogs/nuxs/TenMillion/index.tsx:518
 msgid "Ten Million"
-msgstr ""
+msgstr "עשרה מיליון"
 
 #: src/view/shell/desktop/RightNav.tsx:90
 msgid "Terms"
@@ -6392,7 +6235,7 @@ msgstr ""
 
 #: src/components/dialogs/MutedWords.tsx:266
 msgid "Text & tags"
-msgstr ""
+msgstr "טקסט ותגיות"
 
 #: src/components/moderation/LabelsOnMeDialog.tsx:257
 #: src/screens/Messages/Conversation/ChatDisabled.tsx:108
@@ -6456,10 +6299,8 @@ msgid "The Copyright Policy has been moved to <0/>"
 msgstr ""
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:102
-#, fuzzy
-#| msgid "Discover New Feeds"
 msgid "The Discover feed"
-msgstr "גלה פידים חדשים"
+msgstr "פיד הגילוי"
 
 #: src/state/shell/progress-guide.tsx:167
 #: src/state/shell/progress-guide.tsx:172
@@ -6775,10 +6616,8 @@ msgid ""
 msgstr ""
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:637
-#, fuzzy
-#| msgid "This post will be hidden from feeds."
 msgid "This post will be hidden from feeds and threads. This cannot be undone."
-msgstr "פוסט זה יוסתר מהפידים."
+msgstr "פוסט זה יוסתר מהפידים והשרשורים. אי אפשר לבטל את זה."
 
 #: src/view/com/composer/useExternalLinkFetch.ts:67
 msgid "This post's author has disabled quote posts."
@@ -6846,10 +6685,8 @@ msgid ""
 msgstr ""
 
 #: src/view/com/util/AccountDropdownBtn.tsx:55
-#, fuzzy
-#| msgid "Account removed from quick access"
 msgid "This will remove @{0} from the quick access list."
-msgstr "החשבון הוסר מגישה מהירה"
+msgstr "פעולה זו תסיר את @{0} מרשימת הגישה המהירה."
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:689
 msgid ""
@@ -6927,11 +6764,11 @@ msgstr "תרגום"
 #: src/view/com/util/error/ErrorScreen.tsx:82
 msgctxt "action"
 msgid "Try again"
-msgstr ""
+msgstr "נסו שוב"
 
 #: src/screens/Onboarding/state.ts:100
 msgid "TV"
-msgstr ""
+msgstr "טלוויזיה"
 
 #: src/view/screens/Settings/index.tsx:711
 msgid "Two-factor authentication"
@@ -6939,11 +6776,11 @@ msgstr "אימות דו-שלבי"
 
 #: src/screens/Messages/Conversation/MessageInput.tsx:141
 msgid "Type your message here"
-msgstr ""
+msgstr "כתוב את ההודעה שלך כאן"
 
 #: src/view/com/modals/ChangeHandle.tsx:422
 msgid "Type:"
-msgstr ""
+msgstr "סוג:"
 
 #: src/view/screens/ProfileList.tsx:591
 msgid "Un-block list"
@@ -6978,7 +6815,7 @@ msgstr ""
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:193
 msgctxt "action"
 msgid "Unblock"
-msgstr ""
+msgstr "ביטול חסימה"
 
 #: src/components/dms/ConvoMenu.tsx:188 src/components/dms/ConvoMenu.tsx:192
 msgid "Unblock account"
@@ -7003,7 +6840,7 @@ msgstr ""
 #: src/view/com/profile/FollowButton.tsx:61
 msgctxt "action"
 msgid "Unfollow"
-msgstr ""
+msgstr "ביטול מעקב"
 
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:208
 msgid "Unfollow {0}"
@@ -7025,8 +6862,6 @@ msgid "Unmute"
 msgstr "בטל השתקה"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:388
-#, fuzzy
-#| msgid "Unmute"
 msgctxt "video"
 msgid "Unmute"
 msgstr "בטל השתקה"
@@ -7054,10 +6889,8 @@ msgid "Unmute thread"
 msgstr ""
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoWebControls.tsx:317
-#, fuzzy
-#| msgid "Unmute"
 msgid "Unmute video"
-msgstr "בטל השתקה"
+msgstr "בטל השתקת וידאו"
 
 #: src/view/screens/ProfileFeed.tsx:292 src/view/screens/ProfileList.tsx:673
 msgid "Unpin"
@@ -7081,24 +6914,20 @@ msgstr "בטל הרשמה"
 
 #: src/screens/List/ListHiddenScreen.tsx:184
 #: src/screens/List/ListHiddenScreen.tsx:194
-#, fuzzy
-#| msgid "Unsubscribe"
 msgid "Unsubscribe from list"
-msgstr "בטל הרשמה"
+msgstr "בטל הרשמה מהרשימה"
 
 #: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:196
 msgid "Unsubscribe from this labeler"
 msgstr ""
 
 #: src/screens/List/ListHiddenScreen.tsx:86
-#, fuzzy
-#| msgid "Unsubscribe"
 msgid "Unsubscribed from list"
-msgstr "בטל הרשמה"
+msgstr "בטל הרשמה מהרשימה"
 
 #: src/state/queries/video/video.ts:245
 msgid "Unsupported video type: {mimeType}"
-msgstr ""
+msgstr "סוג וידאו לא נתמך {mimeType}"
 
 #: src/lib/moderation/useReportOptions.ts:77
 #: src/lib/moderation/useReportOptions.ts:90
@@ -7252,10 +7081,8 @@ msgid "Users"
 msgstr "משתמשים"
 
 #: src/components/WhoCanReply.tsx:258
-#, fuzzy
-#| msgid "users followed by <0/>"
 msgid "users followed by <0>@{0}</0>"
-msgstr "משתמשים שעוקב אחריו <0/>"
+msgstr "משתמשים ש<0>@{0}</0> עוקב אחריו"
 
 #: src/components/dms/MessagesNUX.tsx:140
 #: src/components/dms/MessagesNUX.tsx:143 src/screens/Messages/Settings.tsx:84
@@ -7338,16 +7165,12 @@ msgid "Video not found."
 msgstr ""
 
 #: src/view/com/composer/videos/SubtitleDialog.tsx:101
-#, fuzzy
-#| msgid "Moderation settings"
 msgid "Video settings"
-msgstr "הגדרת העדפות"
+msgstr "הגדרת וידאו"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/VideoEmbedInnerNative.tsx:93
-#, fuzzy
-#| msgid "You: {0}"
 msgid "Video: {0}"
-msgstr "אתה: {0}"
+msgstr "וידאו: {0}"
 
 #: src/view/com/composer/videos/SelectVideoBtn.tsx:65
 #: src/view/com/composer/videos/VideoPreview.web.tsx:44
@@ -7364,16 +7187,12 @@ msgid "View {0}'s profile"
 msgstr "צפה בפרופיל של {0}"
 
 #: src/components/dms/MessagesListHeader.tsx:160
-#, fuzzy
-#| msgid "View {0}'s profile"
 msgid "View {displayName}'s profile"
-msgstr "צפה בפרופיל של {0}"
+msgstr "צפה בפרופיל של {displayName}"
 
 #: src/components/ProfileHoverCard/index.web.tsx:430
-#, fuzzy
-#| msgid "View {0}'s profile"
 msgid "View blocked user's profile"
-msgstr "צפה בפרופיל של {0}"
+msgstr "אתה חסמת את הפרופיל המשתמש"
 
 #: src/view/screens/Settings/ExportCarDialog.tsx:97
 msgid "View blogpost for more details"
@@ -7420,10 +7239,8 @@ msgid "View users who like this feed"
 msgstr "צפה במשתמשים שאוהבים את הפיד הזה"
 
 #: src/screens/Moderation/index.tsx:274
-#, fuzzy
-#| msgid "Blocked accounts"
 msgid "View your blocked accounts"
-msgstr "חשבון חסום"
+msgstr "צפו ברשימת החסומים שלכם"
 
 #: src/view/com/home/HomeHeaderLayout.web.tsx:79
 #: src/view/com/home/HomeHeaderLayoutMobile.tsx:86
@@ -7431,21 +7248,17 @@ msgid "View your feeds and explore more"
 msgstr ""
 
 #: src/screens/Moderation/index.tsx:244
-#, fuzzy
-#| msgid "Moderation lists"
 msgid "View your moderation lists"
-msgstr "רשימת העדפות"
+msgstr "צפו ברשימת העדפות"
 
 #: src/screens/Moderation/index.tsx:259
-#, fuzzy
-#| msgid "Reactivate your account"
 msgid "View your muted accounts"
-msgstr "צור חשבון"
+msgstr "צפו ברשימת החשבונות שלכם"
 
 #: src/view/com/modals/LinkWarning.tsx:89
 #: src/view/com/modals/LinkWarning.tsx:95
 msgid "Visit Site"
-msgstr "בקר אתר"
+msgstr "בקר את האתר"
 
 #: src/components/moderation/LabelPreference.tsx:135
 #: src/lib/moderation/useLabelBehaviorDescription.ts:17
