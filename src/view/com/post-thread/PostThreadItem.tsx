@@ -488,7 +488,7 @@ let PostThreadItemLoaded = ({
             style={{
               flexDirection: 'row',
               gap: 10,
-              paddingLeft: 8,
+              paddingRight: 8,
               height: isThreadedChildAdjacentTop ? 8 : 16,
             }}>
             <View style={{width: 38}}>
