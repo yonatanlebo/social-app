@@ -61,7 +61,7 @@ export function AppLanguageDropdown() {
         style={[
           a.absolute,
           a.inset_0,
-          {left: 'auto'},
+          {Right: 'auto'},
           {pointerEvents: 'none'},
           a.align_center,
           a.justify_center,

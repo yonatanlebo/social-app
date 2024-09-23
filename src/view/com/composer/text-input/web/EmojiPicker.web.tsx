@@ -28,7 +28,7 @@ export type Emoji = {
 
 export interface EmojiPickerPosition {
   top: number
-  left: number
+  right: number
   right: number
   bottom: number
 }
@@ -57,13 +57,13 @@ export function EmojiPicker({state, close, pinToTop}: IProps) {
     if (pinToTop) {
       return {
         top: state.pos.top - PICKER_HEIGHT + HEIGHT_OFFSET - 10,
-        left: state.pos.left,
+        right: state.pos.right,
       }
     }
 
     const fitsBelow = state.pos.top + PICKER_HEIGHT < height
     const fitsAbove = PICKER_HEIGHT < state.pos.top
-    const placeOnLeft = PICKER_WIDTH < state.pos.left
+    const placeOnright = PICKER_WIDTH < state.pos.right
     const screenYMiddle = height / 2 - PICKER_HEIGHT / 2
 
     if (fitsBelow) {
@@ -77,8 +77,8 @@ export function EmojiPicker({state, close, pinToTop}: IProps) {
     } else {
       return {
         top: screenYMiddle,
-        left: placeOnLeft ? state.pos.left - PICKER_WIDTH : undefined,
-        right: !placeOnLeft
+        right: placeOnright ? state.pos.right - PICKER_WIDTH : undefined,
+        right: !placeOnright
           ? width - state.pos.right - PICKER_WIDTH
           : undefined,
       }
@@ -136,7 +136,7 @@ export function EmojiPicker({state, close, pinToTop}: IProps) {
           a.align_center,
           {
             top: 0,
-            left: 0,
+            right: 0,
             right: 0,
           },
         ]}>
