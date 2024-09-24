@@ -251,7 +251,7 @@ export function LanguageSettingsScreen(_props: Props) {
               style={{
                 position: 'absolute',
                 top: 1,
-                right: 1,
+                left: 1,
                 bottom: 1,
                 width: 40,
                 backgroundColor: pal.viewLight.backgroundColor,
