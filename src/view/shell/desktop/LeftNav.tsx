@@ -431,12 +431,12 @@ export function DesktopLeftNav() {
 }
 
 const styles = StyleSheet.create({
-  rightNav: {
+  leftNav: {
     // @ts-ignore web only
     position: 'fixed',
     top: 10,
     // @ts-ignore web only
-    right: 'calc(50vw - 300px - 220px - 20px)',
+    left: 'calc(50vw - 300px - 220px - 20px)',
     width: 220,
     // @ts-ignore web only
     maxHeight: 'calc(100vh - 10px)',
@@ -464,7 +464,7 @@ const styles = StyleSheet.create({
   backBtn: {
     position: 'absolute',
     top: 12,
-    left: 12,
+    right: 12,
     width: 30,
     height: 30,
   },
