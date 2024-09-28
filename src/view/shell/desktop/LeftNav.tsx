@@ -220,7 +220,7 @@ function NavItem({count, href, icon, iconFilled, label}: NavItemProps) {
               a.text_center,
               {
                 top: '-10%',
-                left: count.length === 1 ? '50%' : '40%',
+                right: count.length === 1 ? '50%' : '40%',
                 backgroundColor: t.palette.primary_500,
                 color: t.palette.white,
                 lineHeight: a.text_sm.fontSize,
@@ -231,7 +231,7 @@ function NavItem({count, href, icon, iconFilled, label}: NavItemProps) {
               isTablet && [
                 {
                   top: '10%',
-                  left: count.length === 1 ? '50%' : '40%',
+                  right: count.length === 1 ? '50%' : '40%',
                 },
               ],
             ]}>
@@ -436,7 +436,7 @@ const styles = StyleSheet.create({
     position: 'fixed',
     top: 10,
     // @ts-ignore web only
-    left: 'calc(50vw - 300px - 220px - 20px)',
+    right: 'calc(50vw - 300px - 220px - 20px)',
     width: 220,
     // @ts-ignore web only
     maxHeight: 'calc(100vh - 10px)',
@@ -444,8 +444,8 @@ const styles = StyleSheet.create({
   },
   rightNavTablet: {
     top: 0,
-    left: 0,
-    right: 'auto',
+    left: 'auto',
+    right: 0,
     borderRightWidth: 1,
     height: '100%',
     width: 76,
