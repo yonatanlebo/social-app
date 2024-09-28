@@ -345,8 +345,8 @@ export function DesktopLeftNav() {
   return (
     <View
       style={[
-        styles.leftNav,
-        isTablet && styles.leftNavTablet,
+        styles.rightNav,
+        isTablet && styles.rightNavTablet,
         pal.view,
         pal.border,
       ]}>
@@ -431,7 +431,7 @@ export function DesktopLeftNav() {
 }
 
 const styles = StyleSheet.create({
-  leftNav: {
+  rightNav: {
     // @ts-ignore web only
     position: 'fixed',
     top: 10,
@@ -442,7 +442,7 @@ const styles = StyleSheet.create({
     maxHeight: 'calc(100vh - 10px)',
     overflowY: 'auto',
   },
-  leftNavTablet: {
+  rightNavTablet: {
     top: 0,
     left: 0,
     right: 'auto',
