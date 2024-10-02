@@ -238,7 +238,7 @@ msgstr "<0>{0}</0> {1, plural, one {עוקב} other {עוקבים}}"
 
 #: src/view/shell/Drawer.tsx:124
 msgid "<0>{0}</0> {1, plural, one {following} other {following}}"
-msgstr ""
+msgstr "<0>{0}</0> {1, plural, one {עוקב} other {עוקב}}"
 
 #: src/screens/StarterPack/Wizard/index.tsx:507
 msgid "<0>{0}</0> and<1> </1><2>{1} </2>are included in your starter pack"
@@ -2517,7 +2517,7 @@ msgstr ""
 
 #: src/view/screens/PreferencesFollowingFeed.tsx:51
 msgid "Fine-tune the content you see on your Following feed."
-msgstr "התאם את התוכן שאתה רואה בפיד של מי שאתה עוקב אחריהם"
+msgstr "התאם את התוכן שאתה רואה בפיד של מי שאתה עוקב אחריהם."
 
 #: src/view/screens/PreferencesThreads.tsx:54
 msgid "Fine-tune the discussion threads."
@@ -7899,100 +7899,847 @@ msgstr ""
 msgid "Your user handle"
 msgstr ""
 
-msgid ""
-"{value, plural, =0 {Show all replies} one {Show replies with at least # "
-"like} other {Show replies with at least # likes}}"
+msgid "<0>{0}</0> following"
 msgstr ""
 
-msgid "<0>{0} </0>and<1> </1><2>{1} </2>are included in your starter pack"
+msgid "<0>{followers} </0><1>{pluralizedFollowers}</1>"
 msgstr ""
 
-msgid ""
-"Add people to your starter pack that you think others will enjoy following"
+msgid "<0>Choose your</0><1>Recommended</1><2>Feeds</2>"
 msgstr ""
 
-msgid "Adjust the number of likes a reply must have to be shown in your feed."
+msgid "<0>Follow some</0><1>Recommended</1><2>Users</2>"
 msgstr ""
 
-msgid "An error occured"
+msgid "<0>Welcome to</0><1>Bluesky</1>"
 msgstr ""
 
-msgid "Chat with {chatId}"
+msgid "A help tooltip"
 msgstr ""
 
-msgid "Choose \"Everybody\" or \"Nobody\""
+msgid "Add link card"
 msgstr ""
 
-msgid "Clear all legacy storage data"
+msgid "Add link card:"
 msgstr ""
 
-msgid "Clear all legacy storage data (restart after this)"
+msgid "Added"
 msgstr ""
 
-msgid "Clears all legacy storage data"
-msgstr ""
-
-msgid "Could not compress video"
-msgstr ""
-
-msgid "Either choose \"Everybody\" or \"Nobody\""
-msgstr ""
-
-msgid "Enable this setting to only see replies between people you follow."
-msgstr ""
-
-msgid "Go back to previous screen"
-msgstr ""
-
-msgid "Legacy storage cleared, you need to restart the app now."
-msgstr ""
-
-msgid "Mute in tags only"
-msgstr ""
-
-msgid "Posts can be muted based on their text, their tags, or both."
-msgstr ""
-
-msgid "Removes default thumbnail from {0}"
-msgstr ""
-
-msgid "See what's next"
-msgstr ""
-
-msgid "Sets color theme to dark"
-msgstr ""
-
-msgid "Sets color theme to light"
-msgstr ""
-
-msgid "Sets color theme to system setting"
-msgstr ""
-
-msgid "Sets dark theme to the dark theme"
-msgstr ""
-
-msgid "Sets dark theme to the dim theme"
+msgid "Appeal submitted."
 msgstr ""
 
 msgid ""
-"This will delete {0} from your muted words. You can always add it back later."
-msgstr ""
-"פעולה זו תמחק את {0} מהמילים המושתקות שלך. אתה תמיד יכול להוסיף אותו בחזרה "
-"מאוחר יותר."
-
-msgid "Toggle between muted word options."
-msgstr ""
-
-msgid "Videos cannot be larger than 50MB"
+"Are you sure you want to delete this message? The message will be deleted "
+"for you, but not for other participants."
 msgstr ""
 
 msgid ""
-"We recommend avoiding common words that appear in many posts, since it can "
-"result in no posts being shown."
+"Are you sure you want to leave this conversation? Your messages will be "
+"deleted for you, but not for other participants."
 msgstr ""
 
-msgid "You may only add up to 50 feeds"
+msgid "Based on your interest in {interestsText}"
 msgstr ""
 
-msgid "You may only add up to 50 profiles"
+msgid "Bluesky is flexible."
 msgstr ""
+
+msgid "Bluesky is public."
+msgstr ""
+
+msgid ""
+"Check out some recommended feeds. Tap + to add them to your list of pinned "
+"feeds."
+msgstr ""
+
+msgid "Check out some recommended users. Follow them to see similar users."
+msgstr ""
+
+msgid "Choose at least {0} more"
+msgstr ""
+
+msgid "Choose the algorithms that power your experience with custom feeds."
+msgstr ""
+
+msgid "Click here to add one."
+msgstr ""
+
+msgid "Click here to open tag menu for #{tag}"
+msgstr ""
+
+msgid "Compressing..."
+msgstr ""
+
+msgid "Configure content filtering setting for category: {0}"
+msgstr ""
+
+msgid "Continue to the next step"
+msgstr ""
+
+msgid "Continue to the next step without following any accounts"
+msgstr ""
+
+msgid "Could not load profiles. Please try again later."
+msgstr ""
+
+msgid "Creates a card with a thumbnail. The card links to {url}"
+msgstr ""
+
+msgid "Discover learns which posts you like as you browse."
+msgstr ""
+
+msgid "Dismiss"
+msgstr ""
+
+msgid ""
+"Due to Apple policies, adult content can only be enabled on the web after "
+"completing sign up."
+msgstr ""
+
+msgid ""
+"End of onboarding tour window. Do not move forward. Instead, go backward for "
+"more options, or press to skip."
+msgstr ""
+
+msgid ""
+"Feeds are created by users to curate content. Choose some feeds that you "
+"find interesting."
+msgstr ""
+
+msgid "Feeds can be topical as well!"
+msgstr ""
+
+msgid "Find more feeds and accounts to follow in the Explore page."
+msgstr ""
+
+msgid "Find users with the search tool on the right"
+msgstr ""
+
+msgid "Finish tour and begin using the application"
+msgstr ""
+
+msgid "Follow selected accounts and continue to the next step"
+msgstr ""
+
+msgid ""
+"Follow some users to get started. We can recommend you more users based on "
+"who you find interesting."
+msgstr ""
+
+msgid "Following shows the latest posts from people you follow."
+msgstr ""
+
+msgid "Go to @{queryMaybeHandle}"
+msgstr ""
+
+msgid "Go to the next step of the tour"
+msgstr ""
+
+msgid "Here are some accounts for you to follow"
+msgstr ""
+
+msgid ""
+"Here are some popular topical feeds. You can choose to follow as many as you "
+"like."
+msgstr ""
+
+msgid ""
+"Here are some topical feeds based on your interests: {interestsText}. You "
+"can choose to follow as many as you like."
+msgstr ""
+
+msgid "Input the password tied to {identifier}"
+msgstr ""
+
+msgid "label has been placed on this {labelTarget}"
+msgstr ""
+
+msgid "labels have been placed on this {labelTarget}"
+msgstr ""
+
+msgid "Liked by {count} {0}"
+msgstr ""
+
+msgid "Liked by {likeCount} {0}"
+msgstr ""
+
+msgid "Looks like you're missing a following feed."
+msgstr ""
+
+msgid "Never lose access to your followers and data."
+msgstr ""
+
+msgctxt "action"
+msgid "Next"
+msgstr "הבא"
+
+msgid "No search results found for \"{searchText}\"."
+msgstr ""
+
+msgid "Not Applicable."
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "on {str}"
+msgstr ""
+
+msgid "Onboarding tour step {0}: {1}"
+msgstr ""
+
+msgid "Opens an expanded list of users in this notification"
+msgstr ""
+
+msgid "Opens screen to edit Saved Feeds"
+msgstr ""
+
+msgid "Press to Retry"
+msgstr ""
+
+msgid "Quick tip"
+msgstr ""
+
+msgid "Removes the image preview"
+msgstr ""
+
+msgid "Retry."
+msgstr ""
+
+msgid "Search for someone to start a conversation with."
+msgstr ""
+
+msgid "Select some accounts below to follow"
+msgstr ""
+
+msgid "Select topical feeds to follow from the list below"
+msgstr ""
+
+msgid "Select what you want to see (or not see), and we’ll handle the rest."
+msgstr ""
+
+msgid "Select your primary algorithmic feeds"
+msgstr ""
+
+msgid "Select your secondary algorithmic feeds"
+msgstr ""
+
+msgid "Show follows similar to {0}"
+msgstr ""
+
+msgid "Show quote-posts in Following feed"
+msgstr ""
+
+msgid "Show quotes in Following"
+msgstr ""
+
+msgid "Show replies in Following"
+msgstr ""
+
+msgid "Show replies in Following feed"
+msgstr ""
+
+msgid "Show replies with at least {value} {0}"
+msgstr ""
+
+msgid "Show reposts in Following"
+msgstr ""
+
+msgid "Source:"
+msgstr ""
+
+msgid ""
+"Start of onboarding tour window. Do not move backward. Instead, go forward "
+"for more options, or press to skip."
+msgstr ""
+
+msgid "Step"
+msgstr ""
+
+msgid "Switch between feeds to control your experience."
+msgstr ""
+
+msgid "the author"
+msgstr ""
+
+msgid "There are many feeds to try:"
+msgstr ""
+
+msgid "There was an issue connecting to the chat."
+msgstr ""
+
+msgid "There was an issue syncing your preferences with the server"
+msgstr ""
+
+msgid "These are popular accounts you might like:"
+msgstr ""
+
+msgid "This chat was disconnected due to a network error."
+msgstr ""
+
+msgid "This feed is empty!"
+msgstr ""
+
+msgid "This warning is only available for posts with media attached."
+msgstr ""
+
+msgid "Unlike"
+msgstr ""
+
+msgid ""
+"We're sorry! You can only subscribe to ten labelers, and you've reached your "
+"limit of ten."
+msgstr ""
+
+msgid "Welcome to <0>Bluesky</0>"
+msgstr ""
+
+msgid "You can change these settings later."
+msgstr ""
+
+msgid "You don't have any saved feeds!"
+msgstr ""
+
+msgid "You must be 18 years or older to enable adult content"
+msgstr ""
+
+msgid "You're in control"
+msgstr ""
+
+msgid "Your default feed is \"Following\""
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "{0, plural, one {# label has been placed on this account} other {# "
+#~| "labels have been placed on this account}}"
+#~ msgid ""
+#~ "{0, plural, one {# label has been placed on this account} other {# labels "
+#~ "has been placed on this account}}"
+#~ msgstr ""
+#~ "{0, plural, one {# תווית הוצבה על התוכן הזה} other {# תוויות הוצבו על "
+#~ "התוכן הזה}}"
+
+#, fuzzy
+#~| msgid ""
+#~| "{0, plural, one {# label has been placed on this content} other {# "
+#~| "labels have been placed on this content}}"
+#~ msgid ""
+#~ "{0, plural, one {# label has been placed on this content} other {# labels "
+#~ "has been placed on this content}}"
+#~ msgstr ""
+#~ "{0, plural, one {# תווית הוצבה על החשבון הזה} other {# תוויות הוצבו על "
+#~ "החשבון הזה}}"
+
+#, fuzzy
+#~| msgid "{0, plural, one {# month} other {# months}}"
+#~ msgid "{0, plural, one {and # other} other {and # others}}"
+#~ msgstr "{0, plural, one {# חודש} other {# חודשים}}"
+
+#, fuzzy
+#~| msgid "Saved to your feeds"
+#~ msgid "{0} your feeds"
+#~ msgstr "נשמר לפידים שלך"
+
+#, fuzzy
+#~| msgid "{0, plural, one {# day} other {# days}}"
+#~ msgid "{diff, plural, one {day} other {days}}"
+#~ msgstr "{0, plural, one {# יום} other {# ימים}}"
+
+#, fuzzy
+#~| msgid "{0, plural, one {# hour} other {# hours}}"
+#~ msgid "{diff, plural, one {hour} other {hours}}"
+#~ msgstr "{0, plural, one {# שעה} other {# שעות}}"
+
+#, fuzzy
+#~| msgid "{0, plural, one {# minute} other {# minutes}}"
+#~ msgid "{diff, plural, one {minute} other {minutes}}"
+#~ msgstr "{0, plural, one {# דקה} other {# דקות}}"
+
+#, fuzzy
+#~| msgid "{0, plural, one {# month} other {# months}}"
+#~ msgid "{diff, plural, one {month} other {months}}"
+#~ msgstr "{0, plural, one {# חודש} other {# חודשים}}"
+
+#, fuzzy
+#~| msgid "{0, plural, one {# second} other {# seconds}}"
+#~ msgid "{diffSeconds, plural, one {second} other {seconds}}"
+#~ msgstr "{0, plural, one {# חודש} other {# חודשים}}"
+
+#, fuzzy
+#~| msgid "<0>{0}</0> members"
+#~ msgid "<0/> members"
+#~ msgstr "<0>{0}</0> משתתפים"
+
+#, fuzzy
+#~| msgctxt "profiles"
+#~| msgid ""
+#~| "<0>{0}, </0><1>{1}, </1>and {2, plural, one {# other} other {# others}} "
+#~| "are included in your starter pack"
+#~ msgid ""
+#~ "<0>{0}, </0><1>{1}, </1>and {2} {3, plural, one {other} other {others}} "
+#~ "are included in your starter pack"
+#~ msgstr ""
+#~ "<0>{0}, </0><1>{1}, </1>ו {2, plural, one {# אחר} other {# אחרים}} "
+#~ "כלול/ים ברשימת ההתחלה שלך"
+
+#, fuzzy
+#~| msgid "{following} following"
+#~ msgid "<0>{following} </0><1>following</1>"
+#~ msgstr "{following} עוקב"
+
+#, fuzzy
+#~| msgid "Account"
+#~ msgid "account"
+#~ msgstr "חשבון"
+
+#, fuzzy
+#~| msgid "Add alt text"
+#~ msgid "Add ALT text"
+#~ msgstr "הוסף טקסט חלופי"
+
+#, fuzzy
+#~| msgid "Allow new messages from"
+#~ msgid "Allow messages from"
+#~ msgstr "אפשר שיחות חדשות מ"
+
+#, fuzzy
+#~| msgid "An error occurred while saving the image!"
+#~ msgid "An error occurred while saving the image."
+#~ msgstr "אירעה בעיה בזמן ניסיון שמירת התמונה!"
+
+#, fuzzy
+#~| msgid "An error occurred while loading the video. Please try again."
+#~ msgid ""
+#~ "An error occurred while trying to delete the message. Please try again."
+#~ msgstr "אירעה בעיה בזמן ניסיון העלאת הוידאו. אנא נסה שוב."
+
+#, fuzzy
+#~| msgid "Are you sure you want to delete this starter pack?"
+#~ msgid "Are you sure you want delete this starter pack?"
+#~ msgstr "האם אתה בטוח שאתה רוצה למחוק את חבילת ההתחלה הזאת?"
+
+#, fuzzy
+#~| msgid "Bluesky"
+#~ msgid "Bluesky is open."
+#~ msgstr "בלוסקיי"
+
+#, fuzzy
+#~| msgid "By {0}"
+#~ msgid "by {0}"
+#~ msgstr "על ידי {0}"
+
+#, fuzzy
+#~| msgid "Post by @{0}"
+#~ msgid "by @{0}"
+#~ msgstr "פוסט על ידי @{0}"
+
+#, fuzzy
+#~| msgid "Choose for me"
+#~ msgid "Choose 3 or more:"
+#~ msgstr "בחר בשבילי"
+
+#, fuzzy
+#~| msgid "Edit who can reply"
+#~ msgid "Choose who can reply"
+#~ msgstr "ערוך את מי יכול להגיב"
+
+#, fuzzy
+#~| msgid "Choose for me"
+#~ msgid "Choose your main feeds"
+#~ msgstr "בחר בשבילי"
+
+#, fuzzy
+#~| msgid "Hide the content"
+#~ msgid "content"
+#~ msgstr "הסתר את התכן"
+
+#, fuzzy
+#~| msgid "Account unmuted"
+#~ msgid "Could not unmute chat"
+#~ msgstr "בוטלה ההשתקה של החשבון"
+
+#, fuzzy
+#~| msgid "Create an account"
+#~ msgid "Create QR code"
+#~ msgstr "צור חשבון"
+
+#, fuzzy
+#~| msgid "Dark theme"
+#~ msgid "Dark Theme"
+#~ msgstr "תבנית כהה"
+
+#, fuzzy
+#~| msgid "Delete my account"
+#~ msgid "Delete Account"
+#~ msgstr "מחק את החשבון שלי"
+
+#, fuzzy
+#~| msgid "Disable autoplay for videos and GIFs"
+#~ msgid "Disable autoplay for GIFs"
+#~ msgstr "ביטול ניגון אוטומטי של גיפים"
+
+#, fuzzy
+#~| msgid "Disable subtitles"
+#~ msgid "Disable haptics"
+#~ msgstr "ביטול כתוביות"
+
+#, fuzzy
+#~| msgid "Disable subtitles"
+#~ msgid "Disable vibrations"
+#~ msgstr "ביטול כתוביות"
+
+#, fuzzy
+#~| msgid "Saved Feeds"
+#~ msgid "Edit Saved Feeds"
+#~ msgstr "פידים שמורים"
+
+#, fuzzy
+#~| msgid "Enable adult content"
+#~ msgid "Enable Adult Content"
+#~ msgstr "הפעל תוכן למבוגרים"
+
+#, fuzzy
+#~| msgid "Enable adult content"
+#~ msgid "Enable adult content in your feeds"
+#~ msgstr "הפעל תוכן למבוגרים"
+
+#, fuzzy
+#~| msgid "Added to list"
+#~ msgid "End of list"
+#~ msgstr "נוסף לרשימות"
+
+#, fuzzy
+#~| msgid "Failed to load past messages"
+#~ msgid "Failed to load past messages."
+#~ msgstr "טעינת הודעות ישנות נכשלה"
+
+#, fuzzy
+#~| msgid "Failed to load suggested feeds"
+#~ msgid "Failed to load recommended feeds"
+#~ msgstr "כשל בהעלאת פידים מוצעים"
+
+#, fuzzy
+#~| msgid "Failed to load past messages"
+#~ msgid "Failed to send message(s)."
+#~ msgstr "טעינת הודעות ישנות נכשלה"
+
+#, fuzzy
+#~| msgid "Feed toggle"
+#~ msgid "Feed offline"
+#~ msgstr "שינוי מצב הפיד"
+
+#, fuzzy
+#~| msgid "Join Bluesky"
+#~ msgid "Find users on Bluesky"
+#~ msgstr "הצטרפו לבלוסקיי"
+
+#, fuzzy
+#~| msgid "Similar accounts"
+#~ msgid "Finding similar accounts..."
+#~ msgstr "חשבונות דומים"
+
+#, fuzzy
+#~| msgid "Follow all"
+#~ msgid "Follow All"
+#~ msgstr "עקוב אחרי כולם"
+
+#, fuzzy
+#~| msgid "followed you"
+#~ msgid "Followed by"
+#~ msgstr "עוקב אחריך"
+
+#, fuzzy
+#~| msgid "Followed by <0>{0}</0>"
+#~ msgid "Followed by {0}"
+#~ msgstr "נעקב אחרי <0>{0}</0>"
+
+#, fuzzy
+#~| msgid "Followed users"
+#~ msgid "Followed users only"
+#~ msgstr "משתמשים נעקבים"
+
+#, fuzzy
+#~| msgid "Hide this post?"
+#~ msgid "Hide post"
+#~ msgstr "להסתיר את הפוסט הזה?"
+
+#, fuzzy
+#~| msgid "Show replies by people you follow before all other replies."
+#~ msgid "It shows posts from the people you follow as they happen."
+#~ msgstr "הצג תשובות של אנשים שאתה עוקב אחריהם לפני כל התשובות האחרות."
+
+#, fuzzy
+#~| msgid "Likes"
+#~ msgid "Like"
+#~ msgstr "אוהבים"
+
+#, fuzzy
+#~| msgid "Feed by {0}"
+#~ msgid "Liked by {0} {1}"
+#~ msgstr "פיד מאת {0}"
+
+#, fuzzy
+#~| msgid "Message settings"
+#~ msgid "Messaging settings"
+#~ msgstr "הגדרות הודעה"
+
+#, fuzzy
+#~| msgid "Text & tags"
+#~ msgid "Mute in text & tags"
+#~ msgstr "טקסט ותגיות"
+
+#, fuzzy
+#~| msgid "Notifications"
+#~ msgid "Mute notifications"
+#~ msgstr "עדכונים"
+
+#, fuzzy
+#~| msgid "Mute"
+#~ msgid "Muted"
+#~ msgstr "השתק"
+
+#, fuzzy
+#~| msgid "Everybody can reply"
+#~ msgid "Nobody can reply"
+#~ msgstr "כולם יכולים להגיב"
+
+#, fuzzy
+#~| msgctxt "action"
+#~| msgid "Done"
+#~ msgid "on"
+#~ msgstr "סיום"
+
+#, fuzzy
+#~| msgid "Only {0} can reply."
+#~ msgid "Only {0} can reply"
+#~ msgstr "רק {0} יכול להגיב."
+
+#, fuzzy
+#~| msgid "Opens chat settings"
+#~ msgid "Opens the message settings page"
+#~ msgstr "פתח את הגדרות שיחה"
+
+#, fuzzy
+#~| msgid "Notification sounds"
+#~ msgid "Play notification sounds"
+#~ msgstr "צלילי עדכונים"
+
+#, fuzzy
+#~| msgid "Quotes"
+#~ msgctxt "action"
+#~ msgid "Quote post"
+#~ msgstr "ציטוטים"
+
+#, fuzzy
+#~| msgid "Show Quote Posts"
+#~ msgctxt "action"
+#~ msgid "Quote Post"
+#~ msgstr "הצג פוסטים מצוטטים"
+
+#, fuzzy
+#~| msgid "Reason:"
+#~ msgid "Reason: {0}"
+#~ msgstr "סיבות: {0}"
+
+#, fuzzy
+#~| msgid "Add recommended feeds"
+#~ msgid "Recommended Feeds"
+#~ msgstr "הוסף פידים מומלצים"
+
+#, fuzzy
+#~| msgid "Add recommended feeds"
+#~ msgid "Recommended Users"
+#~ msgstr "הוסף פידים מומלצים"
+
+#, fuzzy
+#~| msgid "Remove profile"
+#~ msgid "Remove image preview"
+#~ msgstr "הסר פרופיל"
+
+#, fuzzy
+#~| msgid "Replies to this post are disabled."
+#~ msgid "Replies on this thread are disabled"
+#~ msgstr "תגובות לפוסט הזה מבוטלות."
+
+#, fuzzy
+#~| msgid "Replies to this post are disabled."
+#~ msgid "Replies to this thread are disabled"
+#~ msgstr "תגובות לפוסט הזה מבוטלות."
+
+#, fuzzy
+#~| msgid "Replies"
+#~ msgid "Reply Filters"
+#~ msgstr "תגובות"
+
+#, fuzzy
+#~| msgctxt "description"
+#~| msgid "Reply to <0><1/></0>"
+#~ msgctxt "description"
+#~ msgid "Reply to <0/>"
+#~ msgstr "מגיב ל <0><1/></0>"
+
+#, fuzzy
+#~| msgid "Report Account"
+#~ msgid "Report account"
+#~ msgstr "דיווח על החשבון"
+
+#, fuzzy
+#~| msgid "Reposted by {0}"
+#~ msgid "Reposted by <0/>"
+#~ msgstr "פורסם מחדש על ידי {0}"
+
+#, fuzzy
+#~| msgid "Saved to your camera roll"
+#~ msgid "Saved to your camera roll."
+#~ msgstr "נשמר לגלריה שלך"
+
+#, fuzzy
+#~| msgid "Remove profile"
+#~ msgid "See profile"
+#~ msgstr "הסר פרופיל"
+
+#, fuzzy
+#~| msgid "Show Replies"
+#~ msgid "Show all replies"
+#~ msgstr "הצג תגובות"
+
+#, fuzzy
+#~| msgid "Shows posts from {0} in your feed"
+#~ msgid "Show re-posts in Following feed"
+#~ msgstr "הצג פוסטים מ-{0} בפיד שלך"
+
+#, fuzzy
+#~| msgid "Followed users"
+#~ msgid "Show users"
+#~ msgstr "משתמשים נעקבים"
+
+#, fuzzy
+#~| msgid "Enable subtitles"
+#~ msgid "Some subtitle"
+#~ msgstr "הפעל כתוביות"
+
+#, fuzzy
+#~| msgid "Source: <0>{sourceName}</0>"
+#~ msgid "Source: <0>{0}</0>"
+#~ msgstr "מקור: <0>{sourceName}</0>"
+
+#, fuzzy
+#~| msgid "Status Page"
+#~ msgid "Status page"
+#~ msgstr "דף מידע"
+
+#, fuzzy
+#~| msgid "Subscribe to this labeler"
+#~ msgid "Subscribe to the {0} feed"
+#~ msgstr "הירשמו למתווג הזה"
+
+#, fuzzy
+#~| msgid "Suggested for you"
+#~ msgid "Suggested Follows"
+#~ msgstr "מוצע בשבילך"
+
+#, fuzzy
+#~| msgid "Hashtag"
+#~ msgid "tag"
+#~ msgstr "תגית"
+
+#, fuzzy
+#~| msgid "Tap to view full image"
+#~ msgid "Tap to view fully"
+#~ msgstr "לחץ כדי להיכנס לתמונה מלאה"
+
+#, fuzzy
+#~| msgid "Alt text"
+#~ msgid "text"
+#~ msgstr "טקסט חלופי"
+
+#, fuzzy
+#~| msgid "This label was applied by <0>{0}</0>."
+#~ msgid "This appeal will be sent to <0>{0}</0>."
+#~ msgstr "תווית זו הושמה על ידי <0>{0}</0>."
+
+#, fuzzy
+#~| msgid "This label was applied by you."
+#~ msgid "This label was applied by {0}."
+#~ msgstr "תווית זו הושמה על ידיך."
+
+#, fuzzy
+#~| msgid "This label was applied by you."
+#~ msgid "This label was applied by you"
+#~ msgstr "תווית זו הושמה על ידיך."
+
+#, fuzzy
+#~| msgid ""
+#~| "This post will be hidden from feeds and threads. This cannot be undone."
+#~ msgid "This post will be hidden from feeds."
+#~ msgstr "פוסט זה יוסתר מהפידים והשרשורים. אי אפשר לבטל את זה."
+
+#~ msgid ""
+#~ "This will delete {0} from your muted words. You can always add it back "
+#~ "later."
+#~ msgstr ""
+#~ "פעולה זו תמחק את {0} מהמילים המושתקות שלך. אתה תמיד יכול להוסיף אותו "
+#~ "בחזרה מאוחר יותר."
+
+#, fuzzy
+#~| msgid "Chat settings"
+#~ msgid "Thread settings updated"
+#~ msgstr "הגדרת שיחה"
+
+#, fuzzy
+#~| msgctxt "action"
+#~| msgid "Unfollow"
+#~ msgid "Unfollow"
+#~ msgstr "ביטול מעקב"
+
+#, fuzzy
+#~| msgid "Load new notifications"
+#~ msgid "Unmute notifications"
+#~ msgstr "הצג עוד עדכונים"
+
+#, fuzzy
+#~| msgid "Unmute"
+#~ msgid "Unmuted"
+#~ msgstr "בטל השתקה"
+
+#, fuzzy
+#~| msgid "Unwanted Sexual Content"
+#~ msgid "Unwanted sexual content"
+#~ msgstr "תוכן מיני לא רצוי"
+
+#, fuzzy
+#~| msgid "users followed by <0>@{0}</0>"
+#~ msgid "users followed by <0/>"
+#~ msgstr "משתמשים ש<0>@{0}</0> עוקב אחריו"
+
+#, fuzzy
+#~| msgid "By {0}"
+#~ msgid "Verify {0}"
+#~ msgstr "על ידי {0}"
+
+#, fuzzy
+#~| msgid "Video: {0}"
+#~ msgid "Version {0}"
+#~ msgstr "וידאו: {0}"
+
+#, fuzzy
+#~| msgid "The Discover feed"
+#~ msgid "We recommend our \"Discover\" feed:"
+#~ msgstr "פיד הגילוי"
+
+#, fuzzy
+#~| msgid "Who can reply"
+#~ msgid "Who can reply dialog"
+#~ msgstr "מי יכול להגיב"
+
+#, fuzzy
+#~| msgid "Who can reply"
+#~ msgid "Who can reply?"
+#~ msgstr "מי יכול להגיב"
+
+#, fuzzy
+#~| msgid "You have no conversations yet. Start one!"
+#~ msgid "You have no messages yet. Start a conversation with someone!"
+#~ msgstr "אין לך עדיין שיחות. התחל אחת!"
