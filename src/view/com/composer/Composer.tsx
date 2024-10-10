@@ -65,7 +65,6 @@ import {useDialogStateControlContext} from '#/state/dialogs'
 import {emitPostCreated} from '#/state/events'
 import {ComposerImage, pasteImage} from '#/state/gallery'
 import {useModalControls} from '#/state/modals'
-import {useModals} from '#/state/modals'
 import {useRequireAltTextEnabled} from '#/state/preferences'
 import {
   toPostLanguages,
@@ -108,17 +107,15 @@ import {Button, ButtonIcon, ButtonText} from '#/components/Button'
 import {CircleInfo_Stroke2_Corner0_Rounded as CircleInfo} from '#/components/icons/CircleInfo'
 import {EmojiArc_Stroke2_Corner0_Rounded as EmojiSmile} from '#/components/icons/Emoji'
 import {TimesLarge_Stroke2_Corner0_Rounded as X} from '#/components/icons/Times'
-import {createPortalGroup} from '#/components/Portal'
 import * as Prompt from '#/components/Prompt'
 import {Text as NewText} from '#/components/Typography'
+import {BottomSheetPortalProvider} from '../../../../modules/bottom-sheet'
 import {
   composerReducer,
   createComposerState,
   MAX_IMAGES,
 } from './state/composer'
 import {NO_VIDEO, NoVideoState, processVideo, VideoState} from './state/video'
-
-const Portal = createPortalGroup()
 
 type CancelRef = {
   onPressCancel: () => void
@@ -146,7 +143,6 @@ export const ComposePost = ({
   const queryClient = useQueryClient()
   const currentDid = currentAccount!.did
   const {data: currentProfile} = useProfileQuery({did: currentDid})
-  const {isModalActive} = useModals()
   const {closeComposer} = useComposerControls()
   const pal = usePalette('default')
   const {isMobile} = useWebMediaQueries()
@@ -302,22 +298,6 @@ export const ComposePost = ({
       backHandler.remove()
     }
   }, [onPressCancel, closeAllDialogs, closeAllModals])
-
-  // listen to escape key on desktop web
-  const onEscape = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onPressCancel()
-      }
-    },
-    [onPressCancel],
-  )
-  useEffect(() => {
-    if (isWeb && !isModalActive) {
-      window.addEventListener('keydown', onEscape)
-      return () => window.removeEventListener('keydown', onEscape)
-    }
-  }, [onEscape, isModalActive])
 
   const onNewLink = useCallback((uri: string) => {
     dispatch({type: 'embed_add_uri', uri})
@@ -540,7 +520,7 @@ export const ComposePost = ({
   const keyboardVerticalOffset = useKeyboardVerticalOffset()
 
   return (
-    <Portal.Provider>
+    <BottomSheetPortalProvider>
       <KeyboardAvoidingView
         testID="composePostView"
         behavior={isIOS ? 'padding' : 'height'}
@@ -684,11 +664,7 @@ export const ComposePost = ({
               />
             </View>
 
-            <Gallery
-              images={images}
-              dispatch={dispatch}
-              Portal={Portal.Portal}
-            />
+            <Gallery images={images} dispatch={dispatch} />
 
             {extGif && (
               <View style={a.relative} key={extGif.url}>
@@ -702,7 +678,6 @@ export const ComposePost = ({
                   gif={extGif}
                   altText={extGifAlt ?? ''}
                   onSubmit={handleChangeGifAltText}
-                  Portal={Portal.Portal}
                 />
               </View>
             )}
@@ -762,7 +737,6 @@ export const ComposePost = ({
                         },
                       })
                     }}
-                    Portal={Portal.Portal}
                   />
                 </Animated.View>
               )}
@@ -800,7 +774,6 @@ export const ComposePost = ({
                 })
               }}
               style={bottomBarAnimatedStyle}
-              Portal={Portal.Portal}
             />
           )}
           <View
@@ -837,7 +810,6 @@ export const ComposePost = ({
                     onClose={focusTextInput}
                     onSelectGif={onSelectGif}
                     disabled={hasMedia}
-                    Portal={Portal.Portal}
                   />
                   {!isMobile ? (
                     <Button
@@ -867,11 +839,9 @@ export const ComposePost = ({
           onConfirm={onClose}
           confirmButtonCta={_(msg`Discard`)}
           confirmButtonColor="negative"
-          Portal={Portal.Portal}
         />
       </KeyboardAvoidingView>
-      <Portal.Outlet />
-    </Portal.Provider>
+    </BottomSheetPortalProvider>
   )
 }
 

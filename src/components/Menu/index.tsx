@@ -91,11 +91,10 @@ export function Outer({
       <Dialog.Handle />
       {/* Re-wrap with context since Dialogs are portal-ed to root */}
       <Context.Provider value={context}>
-        <Dialog.ScrollableInner label={_(msg`Menu`)} style={[a.pt_sm]}>
+        <Dialog.ScrollableInner label={_(msg`Menu`)} style={[a.py_sm]}>
           <View style={[a.gap_lg]}>
             {children}
             {isNative && showCancel && <Cancel />}
-            <View style={[{height: a.pb_lg.paddingBottom}]} />
           </View>
         </Dialog.ScrollableInner>
       </Context.Provider>

@@ -23,25 +23,22 @@ import {ErrorScreen} from '#/view/com/util/error/ErrorScreen'
 import {ErrorBoundary} from '#/view/com/util/ErrorBoundary'
 import {ListMethods} from '#/view/com/util/List'
 import {atoms as a, ios, native, useBreakpoints, useTheme} from '#/alf'
+import {Button, ButtonIcon, ButtonText} from '#/components/Button'
 import * as Dialog from '#/components/Dialog'
 import * as TextField from '#/components/forms/TextField'
 import {useThrottledValue} from '#/components/hooks/useThrottledValue'
 import {ArrowLeft_Stroke2_Corner0_Rounded as Arrow} from '#/components/icons/Arrow'
 import {MagnifyingGlass2_Stroke2_Corner0_Rounded as Search} from '#/components/icons/MagnifyingGlass2'
-import {Button, ButtonIcon, ButtonText} from '../Button'
-import {ListFooter, ListMaybePlaceholder} from '../Lists'
-import {PortalComponent} from '../Portal'
+import {ListFooter, ListMaybePlaceholder} from '#/components/Lists'
 
 export function GifSelectDialog({
   controlRef,
   onClose,
   onSelectGif: onSelectGifProp,
-  Portal,
 }: {
   controlRef: React.RefObject<{open: () => void}>
   onClose: () => void
   onSelectGif: (gif: Gif) => void
-  Portal?: PortalComponent
 }) {
   const control = Dialog.useDialogControl()
 
@@ -65,7 +62,6 @@ export function GifSelectDialog({
     <Dialog.Outer
       control={control}
       onClose={onClose}
-      Portal={Portal}
       nativeOptions={{
         bottomInset: 0,
         // use system corner radius on iOS
