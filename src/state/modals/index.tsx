@@ -4,12 +4,6 @@ import {AppBskyActorDefs, AppBskyGraphDefs} from '@atproto/api'
 
 import {useNonReactiveCallback} from '#/lib/hooks/useNonReactiveCallback'
 
-export interface EditProfileModal {
-  name: 'edit-profile'
-  profile: AppBskyActorDefs.ProfileViewDetailed
-  onUpdate?: () => void
-}
-
 export interface CreateOrEditListModal {
   name: 'create-or-edit-list'
   purpose?: string
@@ -46,13 +40,6 @@ export interface CropImageModal {
 
 export interface DeleteAccountModal {
   name: 'delete-account'
-}
-
-export interface SelfLabelModal {
-  name: 'self-label'
-  labels: string[]
-  hasMedia: boolean
-  onChange: (labels: string[]) => void
 }
 
 export interface ChangeHandleModal {
@@ -111,7 +98,6 @@ export type Modal =
   | AddAppPasswordModal
   | ChangeHandleModal
   | DeleteAccountModal
-  | EditProfileModal
   | VerifyEmailModal
   | ChangeEmailModal
   | ChangePasswordModal
@@ -127,7 +113,6 @@ export type Modal =
 
   // Posts
   | CropImageModal
-  | SelfLabelModal
 
   // Bluesky access
   | WaitlistModal
