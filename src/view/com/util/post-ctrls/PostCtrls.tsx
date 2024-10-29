@@ -119,7 +119,7 @@ let PostCtrls = ({
     try {
       setIsToggleLikeIcon(true)
       if (!post.viewer?.like) {
-        playHaptic()
+        playHaptic('Light')
         sendInteraction({
           item: post.uri,
           event: 'app.bsky.feed.defs#interactionLike',
@@ -199,27 +199,15 @@ let PostCtrls = ({
       feedContext,
     })
     openComposer({
-      quote: {
-        uri: post.uri,
-        cid: post.cid,
-        text: record.text,
-        author: post.author,
-        indexedAt: post.indexedAt,
-      },
-      quoteCount: post.quoteCount,
+      quote: post,
       onPost: onPostReply,
     })
   }, [
     _,
     sendInteraction,
-    post.uri,
-    post.cid,
-    post.author,
-    post.indexedAt,
-    post.quoteCount,
+    post,
     feedContext,
     openComposer,
-    record.text,
     onPostReply,
     isBlocked,
   ])
@@ -262,6 +250,7 @@ let PostCtrls = ({
           style={btnStyle}
           onPress={() => {
             if (!post.viewer?.replyDisabled) {
+              playHaptic('Light')
               requireAuth(() => onPressReply())
             }
           }}
