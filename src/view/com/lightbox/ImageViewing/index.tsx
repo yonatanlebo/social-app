@@ -32,6 +32,7 @@ import Animated, {
   useSharedValue,
   withDecay,
   withSpring,
+  WithSpringConfig,
 } from 'react-native-reanimated'
 import {
   Edge,
@@ -62,8 +63,18 @@ const EDGES =
     ? (['top', 'bottom', 'left', 'right'] satisfies Edge[])
     : (['left', 'right'] satisfies Edge[]) // iOS, so no top/bottom safe area
 
-const SLOW_SPRING = {stiffness: 120}
-const FAST_SPRING = {stiffness: 700}
+const SLOW_SPRING: WithSpringConfig = {
+  mass: isIOS ? 1.5 : 1,
+  damping: 300,
+  stiffness: 800,
+  restDisplacementThreshold: 0.01,
+}
+const FAST_SPRING: WithSpringConfig = {
+  mass: isIOS ? 1.5 : 1,
+  damping: 150,
+  stiffness: 900,
+  restDisplacementThreshold: 0.01,
+}
 
 export default function ImageViewRoot({
   lightbox: nextLightbox,
@@ -433,7 +444,7 @@ function LightboxImage({
       if (openProgress.value !== 1 || isFlyingAway.value) {
         return
       }
-      if (Math.abs(e.velocityY) > 1000) {
+      if (Math.abs(e.velocityY) > 200) {
         isFlyingAway.value = true
         if (dismissSwipeTranslateY.value === 0) {
           // HACK: If the initial value is 0, withDecay() animation doesn't start.
@@ -442,7 +453,7 @@ function LightboxImage({
         }
         dismissSwipeTranslateY.value = withDecay({
           velocity: e.velocityY,
-          velocityFactor: Math.max(3000 / Math.abs(e.velocityY), 1), // Speed up if it's too slow.
+          velocityFactor: Math.max(3500 / Math.abs(e.velocityY), 1), // Speed up if it's too slow.
           deceleration: 1, // Danger! This relies on the reaction below stopping it.
         })
       } else {
@@ -706,7 +717,7 @@ function interpolateTransform(
   }
 }
 
-function withClampedSpring(value: any, {stiffness}: {stiffness: number}) {
+function withClampedSpring(value: any, config: WithSpringConfig) {
   'worklet'
-  return withSpring(value, {overshootClamping: true, stiffness})
+  return withSpring(value, {...config, overshootClamping: true})
 }
