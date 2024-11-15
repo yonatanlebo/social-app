@@ -242,7 +242,7 @@ msgstr "<0>{0}</0> {1, plural, one {עוקב} other {עוקב}}"
 
 #: src/screens/StarterPack/Wizard/index.tsx:516
 msgid "<0>{0}</0> and<1> </1><2>{1} </2>are included in your starter pack"
-msgstr ""
+msgstr "<0>{0}</0>  ו <1> </1><2>{1} </2> נמצאים ברשימת ההתחלה שלך"
 
 #: src/screens/StarterPack/Wizard/index.tsx:509
 msgid "<0>{0}</0> is included in your starter pack"
@@ -254,7 +254,7 @@ msgstr "<0>{0}</0> משתתפים"
 
 #: src/components/dms/DateDivider.tsx:69
 msgid "<0>{date}</0> at {time}"
-msgstr ""
+msgstr "<0>{date}</0> ב {time}"
 
 #: src/screens/StarterPack/Wizard/index.tsx:466
 msgid "<0>You</0> and<1> </1><2>{0} </2>are included in your starter pack"
@@ -356,7 +356,7 @@ msgstr "הוסף"
 
 #: src/screens/StarterPack/Wizard/index.tsx:577
 msgid "Add {0} more to continue"
-msgstr ""
+msgstr "הוסף {0} כדי להמשיך"
 
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:59
 msgid "Add {displayName} to starter pack"
@@ -451,7 +451,7 @@ msgstr "תוכן למבוגרים"
 
 #: src/screens/Moderation/index.tsx:366
 msgid "Adult content can only be enabled via the Web at <0>bsky.app</0>."
-msgstr ""
+msgstr "ניתן להפעיל תוכן למבוגרים בלבד דרך האינטרנט בכתובת <0>bsky.app</0>."
 
 #: src/components/moderation/LabelPreference.tsx:241
 msgid "Adult content is disabled."
@@ -459,10 +459,8 @@ msgstr "תוכן למבוגרים מבוטל."
 
 #: src/view/com/composer/labels/LabelsBtn.tsx:140
 #: src/view/com/composer/labels/LabelsBtn.tsx:194
-#, fuzzy
-#| msgid "Adult Content"
 msgid "Adult Content labels"
-msgstr "תוכן למבוגרים"
+msgstr "תוויות תוכן למבוגרים"
 
 #: src/screens/Moderation/index.tsx:410 src/view/screens/Settings/index.tsx:653
 msgid "Advanced"
@@ -483,7 +481,7 @@ msgstr "כל הפידים ששמרת, במקום אחד."
 #: src/view/com/modals/AddAppPasswords.tsx:188
 #: src/view/com/modals/AddAppPasswords.tsx:195
 msgid "Allow access to your direct messages"
-msgstr ""
+msgstr "אפשר גישה להודעות פרטיות"
 
 #: src/screens/Messages/Settings.tsx:64 src/screens/Messages/Settings.tsx:67
 msgid "Allow new messages from"
@@ -535,7 +533,7 @@ msgstr ""
 #: src/view/com/composer/GifAltText.tsx:179
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:139
 msgid "Alt text will be truncated. Limit: {0} characters."
-msgstr ""
+msgstr "טקסט חלופי ייקטע. מגבלה: {0} תווים."
 
 #: src/view/com/modals/VerifyEmail.tsx:132
 #: src/view/screens/Settings/DisableEmail2FADialog.tsx:95
@@ -553,22 +551,18 @@ msgstr ""
 "להזין למטה."
 
 #: src/components/dialogs/VerifyEmailDialog.tsx:77
-#, fuzzy
-#| msgid ""
-#| "An email has been sent to {0}. It includes a confirmation code which you "
-#| "can enter below."
 msgid ""
 "An email has been sent! Please enter the confirmation code included in the "
 "email below."
-msgstr "הודעת דואר אלקטרוני נשלחה אל {0}. הוא כולל קוד אישור שתוכל להזין למטה."
+msgstr "מייל נשלח! אנא הזן את קוד האישור הכלול בדוא\"ל למטה."
 
 #: src/components/dialogs/GifSelect.tsx:266
 msgid "An error has occurred"
-msgstr ""
+msgstr "אירעה שגיאה"
 
 #: src/view/com/util/post-embeds/VideoEmbedInner/web-controls/VideoControls.tsx:422
 msgid "An error occurred"
-msgstr ""
+msgstr "אירעה שגיאה"
 
 #: src/view/com/composer/state/video.ts:412
 msgid "An error occurred while compressing the video."
@@ -627,12 +621,12 @@ msgstr "אירעה בעיה, אנא נסה שוב."
 
 #: src/screens/Onboarding/StepInterests/index.tsx:185
 msgid "an unknown error occurred"
-msgstr ""
+msgstr "אירעה שגיאה לא ידועה"
 
 #: src/components/moderation/ModerationDetailsDialog.tsx:158
 #: src/components/moderation/ModerationDetailsDialog.tsx:154
 msgid "an unknown labeler"
-msgstr ""
+msgstr "יוצר תוויות לא ידוע"
 
 #: src/components/WhoCanReply.tsx:295
 #: src/view/com/notifications/FeedItem.tsx:231
@@ -654,10 +648,8 @@ msgstr "התנהגות אנטי חברתית"
 
 #: src/view/screens/Search/Search.tsx:347
 #: src/view/screens/Search/Search.tsx:348
-#, fuzzy
-#| msgid "App Language"
 msgid "Any language"
-msgstr "שפת אפליקציה"
+msgstr "כל שפה"
 
 #: src/view/com/composer/threadgate/ThreadgateBtn.tsx:49
 msgid "Anybody can interact"
@@ -729,7 +721,7 @@ msgstr "הגדרות מראה"
 #: src/screens/Feeds/NoSavedFeedsOfAnyType.tsx:47
 #: src/screens/Home/NoFeedsPinned.tsx:93
 msgid "Apply default recommended feeds"
-msgstr ""
+msgstr "החל פידים מומלצים כברירת מחדל"
 
 #: src/view/screens/AppPasswords.tsx:283
 msgid "Are you sure you want to delete the app password \"{name}\"?"
@@ -740,22 +732,24 @@ msgid ""
 "Are you sure you want to delete this message? The message will be deleted "
 "for you, but not for the other participant."
 msgstr ""
+"האם אתה בטוח שברצונך למחוק הודעה זו? ההודעה תימחק עבורך, אך לא עבור המשתתף "
+"השני."
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:632
 msgid "Are you sure you want to delete this starter pack?"
 msgstr "האם אתה בטוח שאתה רוצה למחוק את חבילת ההתחלה הזאת?"
 
 #: src/screens/Profile/Header/EditProfileDialog.tsx:82
-#, fuzzy
-#| msgid "Are you sure you want to remove this from your feeds?"
 msgid "Are you sure you want to discard your changes?"
-msgstr "האם אתה בטוח שברצונך להסיר את זה מהפידים שלך?"
+msgstr "האם אתה בטוח שברצונך לבטל את השינויים שלך?"
 
 #: src/components/dms/LeaveConvoPrompt.tsx:48
 msgid ""
 "Are you sure you want to leave this conversation? Your messages will be "
 "deleted for you, but not for the other participant."
 msgstr ""
+"האם אתה בטוח שברצונך לעזוב את השיחה הזו? ההודעות שלך יימחקו עבורך, אך לא "
+"עבור המשתתף האחר."
 
 #: src/view/com/feeds/FeedSourceCard.tsx:313
 msgid "Are you sure you want to remove {0} from your feeds?"
@@ -787,7 +781,7 @@ msgstr "עירום אומנותי או לא אירוטי."
 
 #: src/screens/Signup/StepHandle.tsx:173
 msgid "At least 3 characters"
-msgstr ""
+msgstr "לפחות 3 תווים"
 
 #: src/components/dms/MessagesListHeader.tsx:75
 #: src/components/moderation/LabelsOnMeDialog.tsx:290
@@ -912,16 +906,12 @@ msgid "Bluesky"
 msgstr "בלוסקיי"
 
 #: src/view/com/auth/server-input/index.tsx:151
-#, fuzzy
-#| msgid ""
-#| "Bluesky is an open network where you can choose your hosting provider. "
-#| "Custom hosting is now available in beta for developers."
 msgid ""
 "Bluesky is an open network where you can choose your hosting provider. If "
 "you're a developer, you can host your own server."
 msgstr ""
-"בלוסקיי היא רשת פתוחה שבה תוכלו לבחור את ספק האירוח שלכם. אירוח מותאם אישית "
-"זמין כעת בגרסת בטא למפתחים."
+"בלוסקיי היא רשת פתוחה שבה אתה יכול לבחור את ספק האירוח שלך. אם אתה מפתח, אתה "
+"יכול לארח שרת משלך."
 
 #: src/components/ProgressGuide/List.tsx:55
 msgid "Bluesky is better with friends!"
@@ -1110,10 +1100,8 @@ msgid "Change"
 msgstr "שינוי"
 
 #: src/components/dialogs/VerifyEmailDialog.tsx:147
-#, fuzzy
-#| msgid "Email address"
 msgid "Change email address"
-msgstr "כתובת דואר אלקטרוני"
+msgstr "שינוי כתובת דואר אלקטרוני"
 
 #: src/view/screens/Settings/index.tsx:685
 msgid "Change handle"
@@ -2645,7 +2633,7 @@ msgstr "עקוב"
 #: src/view/com/profile/FollowButton.tsx:70
 msgctxt "action"
 msgid "Follow"
-msgstr "עקוב"
+msgstr "לעקוב"
 
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:208
 #: src/view/com/post-thread/PostThreadFollowBtn.tsx:114
@@ -2986,7 +2974,7 @@ msgstr "הסתר"
 #: src/view/com/notifications/FeedItem.tsx:477
 msgctxt "action"
 msgid "Hide"
-msgstr "הסתרה"
+msgstr "להסתיר"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:543
 #: src/view/com/util/forms/PostDropdownBtn.tsx:549
@@ -5227,7 +5215,7 @@ msgstr "מגיב ל <0><1/></0>"
 #: src/view/com/posts/FeedItem.tsx:535
 msgctxt "description"
 msgid "Reply to a blocked post"
-msgstr "מגיב להודעה חסומה."
+msgstr "מגיב לפוסט חסום"
 
 #: src/view/com/posts/FeedItem.tsx:537
 msgctxt "description"
@@ -8092,19 +8080,18 @@ msgstr ""
 msgid "Your user handle"
 msgstr ""
 
-msgid ""
-"Failed to save post interaction settings. Your post was created but users "
-"may be able to interact with it."
-msgstr ""
-
-msgid ""
-"No self-labels can be applied to this post because it contains no media."
+msgid "Closes post composer and discards post draft"
 msgstr ""
 
 #, fuzzy
 #~| msgid "Loading..."
 #~ msgid "Posting..."
 #~ msgstr "מעלה..."
+
+#, fuzzy
+#~| msgid "Publish reply"
+#~ msgid "Publish post"
+#~ msgstr "פרסם תגובה"
 
 #~ msgid "Publish reply"
 #~ msgstr "פרסם תגובה"
