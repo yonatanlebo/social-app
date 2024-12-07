@@ -332,7 +332,7 @@ export function DesktopLeftNav() {
       role="navigation"
       style={[
         a.px_xl,
-        styles.leftNav,
+        styles.rightNav,
         isTablet && styles.leftNavTablet,
         pal.border,
       ]}>
