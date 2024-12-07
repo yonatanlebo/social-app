@@ -196,7 +196,7 @@ function NavItem({count, href, icon, iconFilled, label}: NavItemProps) {
                 a.leading_tight,
                 {
                   top: '-10%',
-                  left: count.length === 1 ? 12 : 8,
+                  right: count.length === 1 ? 12 : 8,
                   backgroundColor: t.palette.primary_500,
                   color: t.palette.white,
                   lineHeight: a.text_sm.fontSize,
@@ -333,7 +333,7 @@ export function DesktopLeftNav() {
       style={[
         a.px_xl,
         styles.rightNav,
-        isTablet && styles.leftNavTablet,
+        isTablet && styles.rightNavTablet,
         pal.border,
       ]}>
       {hasSession ? (
@@ -503,10 +503,10 @@ const styles = StyleSheet.create({
     maxHeight: 'calc(100vh - 10px)',
     overflowY: 'auto',
   },
-  leftNavTablet: {
+  rightNavTablet: {
     top: 0,
-    left: 0,
-    right: 'auto',
+    right: 0,
+    left: 'auto',
     borderRightWidth: 1,
     height: '100%',
     width: 76,
@@ -519,7 +519,7 @@ const styles = StyleSheet.create({
   profileCard: {
     marginVertical: 10,
     width: 90,
-    paddingLeft: 12,
+    paddingright: 12,
   },
   profileCardTablet: {
     width: 70,
