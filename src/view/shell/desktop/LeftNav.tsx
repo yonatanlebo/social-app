@@ -332,7 +332,7 @@ export function DesktopLeftNav() {
       role="navigation"
       style={[
         a.px_xl,
-        styles.leftNav,
+        styles.rightNav,
         isTablet && styles.leftNavTablet,
         pal.border,
       ]}>
@@ -483,12 +483,12 @@ export function DesktopLeftNav() {
 }
 
 const styles = StyleSheet.create({
-  leftNav: {
+  rightNav: {
     // @ts-ignore web only
     position: 'fixed',
     top: 10,
     // @ts-ignore web only
-    left: '50%',
+    right: '50%',
     transform: [
       {
         translateX: -300,

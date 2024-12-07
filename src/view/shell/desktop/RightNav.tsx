@@ -118,11 +118,11 @@ export function DesktopRightNav({routeName}: {routeName: string}) {
 }
 
 const styles = StyleSheet.create({
-  rightNav: {
+  leftNav: {
     // @ts-ignore web only
     position: 'fixed',
     // @ts-ignore web only
-    left: '50%',
+    right: '50%',
     transform: [
       {
         translateX: 300,
