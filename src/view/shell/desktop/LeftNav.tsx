@@ -17,7 +17,7 @@ import {CommonNavigatorParams} from '#/lib/routes/types'
 import {isInvalidHandle} from '#/lib/strings/handles'
 import {emitSoftReset} from '#/state/events'
 import {useFetchHandle} from '#/state/queries/handle'
-import {useUnreadMessageCount} from '#/state/queries/messages/list-converations'
+import {useUnreadMessageCount} from '#/state/queries/messages/list-conversations'
 import {useUnreadNotifications} from '#/state/queries/notifications/unread'
 import {useProfileQuery} from '#/state/queries/profile'
 import {useSession} from '#/state/session'
@@ -196,7 +196,7 @@ function NavItem({count, href, icon, iconFilled, label}: NavItemProps) {
                 a.leading_tight,
                 {
                   top: '-10%',
-                  right: count.length === 1 ? 12 : 8,
+                  left: count.length === 1 ? 12 : 8,
                   backgroundColor: t.palette.primary_500,
                   color: t.palette.white,
                   lineHeight: a.text_sm.fontSize,
@@ -332,8 +332,8 @@ export function DesktopLeftNav() {
       role="navigation"
       style={[
         a.px_xl,
-        styles.rightNav,
-        isTablet && styles.rightNavTablet,
+        styles.leftNav,
+        isTablet && styles.leftNavTablet,
         pal.border,
       ]}>
       {hasSession ? (
@@ -483,12 +483,12 @@ export function DesktopLeftNav() {
 }
 
 const styles = StyleSheet.create({
-  rightNav: {
+  leftNav: {
     // @ts-ignore web only
     position: 'fixed',
     top: 10,
     // @ts-ignore web only
-    right: '50%',
+    left: '50%',
     transform: [
       {
         translateX: -300,
@@ -503,10 +503,10 @@ const styles = StyleSheet.create({
     maxHeight: 'calc(100vh - 10px)',
     overflowY: 'auto',
   },
-  rightNavTablet: {
+  leftNavTablet: {
     top: 0,
-    right: 0,
-    left: 'auto',
+    left: 0,
+    right: 'auto',
     borderRightWidth: 1,
     height: '100%',
     width: 76,
@@ -519,7 +519,7 @@ const styles = StyleSheet.create({
   profileCard: {
     marginVertical: 10,
     width: 90,
-    paddingright: 12,
+    paddingLeft: 12,
   },
   profileCardTablet: {
     width: 70,
