@@ -2,7 +2,6 @@ import {View} from 'react-native'
 import {Trans} from '@lingui/macro'
 
 import {isWeb} from '#/platform/detection'
-import {useTrendingSettings} from '#/state/preferences/trending'
 import {
   DEFAULT_LIMIT as RECOMMENDATIONS_COUNT,
   useTrendingTopics,
@@ -19,8 +18,7 @@ import {Text} from '#/components/Typography'
 
 export function ExploreRecommendations() {
   const {enabled} = useTrendingConfig()
-  const {trendingDisabled} = useTrendingSettings()
-  return enabled && !trendingDisabled ? <Inner /> : null
+  return enabled ? <Inner /> : null
 }
 
 function Inner() {
@@ -33,9 +31,10 @@ function Inner() {
     <>
       <View
         style={[
+          a.flex_row,
           isWeb
-            ? [a.flex_row, a.px_lg, a.py_lg, a.pt_2xl, a.gap_md]
-            : [{flexDirection: 'row-reverse'}, a.p_lg, a.pt_2xl, a.gap_md],
+            ? [a.px_lg, a.py_lg, a.pt_2xl, a.gap_md]
+            : [a.p_lg, a.pt_2xl, a.gap_md],
           a.border_b,
           t.atoms.border_contrast_low,
         ]}>
