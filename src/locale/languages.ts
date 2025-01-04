@@ -1,4 +1,4 @@
-interface Language {
+export interface Language {
   code3: string
   code2: string
   name: string
@@ -10,6 +10,7 @@ export enum AppLanguage {
   ast = 'ast',
   ca = 'ca',
   de = 'de',
+  el = 'el',
   en_GB = 'en-GB',
   es = 'es',
   fi = 'fi',
@@ -33,10 +34,9 @@ export enum AppLanguage {
   tr = 'tr',
   uk = 'uk',
   vi = 'vi',
-  zh_CN = 'zh-CN',
-  zh_HK = 'zh-HK',
-  zh_TW = 'zh-TW',
-  he = 'he',
+  zh_CN = 'zh-Hans-CN',
+  zh_HK = 'zh-Hant-HK',
+  zh_TW = 'zh-Hant-TW',
 }
 
 interface AppLanguageConfig {
@@ -50,6 +50,7 @@ export const APP_LANGUAGES: AppLanguageConfig[] = [
   {code2: AppLanguage.ast, name: 'Asturianu – Asturian'},
   {code2: AppLanguage.ca, name: 'Català – Catalan'},
   {code2: AppLanguage.de, name: 'Deutsch – German'},
+  {code2: AppLanguage.el, name: 'Ελληνικά – Greek'},
   {code2: AppLanguage.en_GB, name: 'English (UK)'},
   {code2: AppLanguage.es, name: 'Español – Spanish'},
   {code2: AppLanguage.fi, name: 'Suomi – Finnish'},
@@ -76,7 +77,6 @@ export const APP_LANGUAGES: AppLanguageConfig[] = [
   {code2: AppLanguage.zh_CN, name: '简体中文 – Simplified Chinese'},
   {code2: AppLanguage.zh_TW, name: '繁體中文 – Traditional Chinese'},
   {code2: AppLanguage.zh_HK, name: '粵文 – Cantonese'},
-  {code2: AppLanguage.he, name: 'עברית – Hebrew'},
 ]
 
 export const LANGUAGES: Language[] = [
