@@ -214,34 +214,25 @@ msgstr ""
 "אהבו את הפיד שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:223
-#, fuzzy
-#| msgid ""
-#| "{0, plural, one {{formattedCount} other} other {{formattedCount} others}}"
 msgid ""
 "{firstAuthorLink} and <0>{additionalAuthorsCount, plural, one "
 "{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "liked your post"
-msgstr "{0, plural, one {{formattedCount} אחר} other {{formattedCount} אחרים}}"
+msgstr ""
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:247
-#, fuzzy
-#| msgid ""
-#| "{0, plural, one {{formattedCount} other} other {{formattedCount} others}}"
 msgid ""
 "{firstAuthorLink} and <0>{additionalAuthorsCount, plural, one "
 "{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "reposted your post"
-msgstr "{0, plural, one {{formattedCount} אחר} other {{formattedCount} אחרים}}"
+msgstr ""
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:351
-#, fuzzy
-#| msgid ""
-#| "{0, plural, one {{formattedCount} other} other {{formattedCount} others}}"
 msgid ""
 "{firstAuthorLink} and <0>{additionalAuthorsCount, plural, one "
 "{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "signed up with your starter pack"
-msgstr "{0, plural, one {{formattedCount} אחר} other {{formattedCount} אחרים}}"
+msgstr ""
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:313
 msgid "{firstAuthorLink} followed you"
@@ -3147,8 +3138,8 @@ msgid ""
 "Followed by <0>{0}</0>, <1>{1}</1>, and {2, plural, one {# other} other {# "
 "others}}"
 msgstr ""
-"במעקב על ידי <0>{0}</0>, <1>{1}</1>, ו {2, plural, one {# אחר} other {# "
-"אחרים}}"
+"Followed by <0>{0}</0>, <1>{1}</1>, and {2, plural, one {# other} other {# "
+"others}}"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:403
 msgid "Followed users"
@@ -3952,10 +3943,8 @@ msgid "Liked By"
 msgstr "אהבו את זה"
 
 #: src/components/FeedCard.tsx:213 src/view/com/feeds/FeedSourceCard.tsx:303
-#, fuzzy
-#| msgid "{0, plural, one {# hour} other {# hours}}"
 msgid "Liked by {0, plural, one {# user} other {# users}}"
-msgstr "{0, plural, one {# שעה} other {# שעות}}"
+msgstr "לייק על ידי {0, plural, one {# משתמש} other {# משתמשים}}"
 
 #: src/components/LabelingServiceCard/index.tsx:96
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:489
@@ -4158,17 +4147,15 @@ msgstr ""
 
 #: src/components/WhoCanReply.tsx:254
 msgid "mentioned users"
-msgstr "משתמשים מוזכרים"
+msgstr "מתויגים"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:393
 msgid "Mentioned users"
-msgstr "משתמשים מוזכרים"
+msgstr "מתויגים"
 
 #: src/view/screens/Notifications.tsx:99
-#, fuzzy
-#| msgid "Mentioned users"
 msgid "Mentions"
-msgstr "משתמשים מוזכרים"
+msgstr "תיוגים"
 
 #: src/components/Menu/index.tsx:96 src/view/screens/Search/Search.tsx:863
 msgid "Menu"
