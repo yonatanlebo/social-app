@@ -107,11 +107,11 @@ msgstr "{0, plural, one {מצוטט} other {מצוטטים}}"
 
 #: src/view/com/post-thread/PostThreadItem.tsx:413
 msgid "{0, plural, one {repost} other {reposts}}"
-msgstr "{0, plural, one {שיתוף מחדש} other {שיתפו מחדש}}"
+msgstr "{0, plural, one {שיתוף} other {שיתופים}}"
 
 #: src/screens/Settings/Settings.tsx:422
 msgid "{0}"
-msgstr "{0}"
+msgstr ""
 
 #. Pattern: {wordValue} in tags
 #: src/components/dialogs/MutedWords.tsx:475
@@ -219,6 +219,9 @@ msgid ""
 "{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "liked your post"
 msgstr ""
+"{firstAuthorLink} ו <0>{additionalAuthorsCount, plural, one "
+"{{formattedAuthorsCount} other} אחר {{formattedAuthorsCount} אחרים}}</0> "
+"אהבו את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:247
 msgid ""
@@ -226,6 +229,9 @@ msgid ""
 "{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "reposted your post"
 msgstr ""
+"{firstAuthorLink} ו <0>{additionalAuthorsCount, plural, one "
+"{{formattedAuthorsCount} other} אחר {{formattedAuthorsCount} אחרים}}</0> "
+"שיתפו מחדש את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:351
 msgid ""
@@ -233,32 +239,29 @@ msgid ""
 "{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "signed up with your starter pack"
 msgstr ""
+"{firstAuthorLink} ו <0>{additionalAuthorsCount, plural, one "
+"{{formattedAuthorsCount} other} אחר {{formattedAuthorsCount} אחרים}}</0> "
+"נרשמו עם חבילת ההתחלה שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:313
 msgid "{firstAuthorLink} followed you"
-msgstr ""
+msgstr "{firstAuthorLink} עוקב אחריך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:290
 msgid "{firstAuthorLink} followed you back"
 msgstr "{firstAuthorLink} עוקב אחריך בחזרה"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:339
-#, fuzzy
-#| msgid "liked your custom feed"
 msgid "{firstAuthorLink} liked your custom feed"
-msgstr "אהבו את הפיד המותאם אישית שלך"
+msgstr "{firstAuthorLink} אהבו את הפיד המותאם אישית שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:235
-#, fuzzy
-#| msgid "liked your post"
 msgid "{firstAuthorLink} liked your post"
-msgstr "אהב את הפוסט שלך"
+msgstr "{firstAuthorLink} אהב את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:259
-#, fuzzy
-#| msgid "reposted your post"
 msgid "{firstAuthorLink} reposted your post"
-msgstr "פרסם/ה מחדש את הפוסט שלך"
+msgstr "{firstAuthorLink} פרסם/ה מחדש את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:363
 msgid "{firstAuthorLink} signed up with your starter pack"
@@ -651,7 +654,7 @@ msgstr "נוסף לעדכונים שלי"
 
 #: src/view/com/composer/labels/LabelsBtn.tsx:160
 msgid "Adult"
-msgstr ""
+msgstr "מבוגרים"
 
 #: src/components/moderation/ContentHider.tsx:113
 #: src/lib/moderation/useGlobalLabelStrings.ts:34
@@ -679,7 +682,7 @@ msgstr "מתקדם"
 
 #: src/view/screens/Notifications.tsx:86
 msgid "All"
-msgstr ""
+msgstr "הכל"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:381
 msgid "All accounts have been followed!"
@@ -699,10 +702,8 @@ msgid "Allow new messages from"
 msgstr "אפשר שיחות חדשות מ"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:314
-#, fuzzy
-#| msgid "Show Quote Posts"
 msgid "Allow quote posts"
-msgstr "הצג פוסטים מצוטטים"
+msgstr "אפשר פוסטים מצוטטים"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:359
 msgid "Allow replies from:"
@@ -881,10 +882,8 @@ msgid "App Language"
 msgstr "שפת אפליקציה"
 
 #: src/screens/Settings/components/AddAppPasswordDialog.tsx:122
-#, fuzzy
-#| msgid "App Passwords"
 msgid "App Password"
-msgstr "סיסמאות לאפליקציה"
+msgstr "סיסמאות אפליקציה"
 
 #: src/screens/Settings/AppPasswords.tsx:147
 msgid "App password deleted"
@@ -1617,10 +1616,8 @@ msgstr ""
 
 #: src/view/com/composer/text-input/web/EmojiPicker.web.tsx:137
 #: src/view/com/composer/text-input/web/EmojiPicker.web.tsx:173
-#, fuzzy
-#| msgid "Opens video picker"
 msgid "Close emoji picker"
-msgstr "פתח את בוחר הוידאו"
+msgstr "סגור את בחירת האמוג'י"
 
 #: src/components/dialogs/GifSelect.tsx:169
 msgid "Close GIF dialog"
@@ -3138,8 +3135,6 @@ msgid ""
 "Followed by <0>{0}</0>, <1>{1}</1>, and {2, plural, one {# other} other {# "
 "others}}"
 msgstr ""
-"Followed by <0>{0}</0>, <1>{1}</1>, and {2, plural, one {# other} other {# "
-"others}}"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:403
 msgid "Followed users"
