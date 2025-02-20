@@ -200,7 +200,7 @@ msgid ""
 "followed you"
 msgstr ""
 "{firstAuthorLink} ו <0>{additionalAuthorsCount, plural, one "
-"{{formattedAuthorsCount} other} אחר {{formattedAuthorsCount} others}}</0> "
+"{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "עוקבים אחריך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:327
@@ -210,7 +210,7 @@ msgid ""
 "liked your custom feed"
 msgstr ""
 "{firstAuthorLink} ו <0>{additionalAuthorsCount, plural, one "
-"{{formattedAuthorsCount} other} אחר {{formattedAuthorsCount} אחרים}}</0> "
+"{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "אהבו את הפיד שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:223
@@ -220,7 +220,7 @@ msgid ""
 "liked your post"
 msgstr ""
 "{firstAuthorLink} ו <0>{additionalAuthorsCount, plural, one "
-"{{formattedAuthorsCount} other} אחר {{formattedAuthorsCount} אחרים}}</0> "
+"{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "אהבו את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:247
@@ -230,7 +230,7 @@ msgid ""
 "reposted your post"
 msgstr ""
 "{firstAuthorLink} ו <0>{additionalAuthorsCount, plural, one "
-"{{formattedAuthorsCount} other} אחר {{formattedAuthorsCount} אחרים}}</0> "
+"{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "שיתפו מחדש את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:351
@@ -240,7 +240,7 @@ msgid ""
 "signed up with your starter pack"
 msgstr ""
 "{firstAuthorLink} ו <0>{additionalAuthorsCount, plural, one "
-"{{formattedAuthorsCount} other} אחר {{formattedAuthorsCount} אחרים}}</0> "
+"{{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
 "נרשמו עם חבילת ההתחלה שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:313
