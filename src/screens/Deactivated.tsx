@@ -96,7 +96,7 @@ export function Deactivated() {
       }
 
       logger.error(e, {
-        context: 'Failed to activate account',
+        message: 'Failed to activate account',
       })
     } finally {
       setPending(false)
@@ -106,6 +106,7 @@ export function Deactivated() {
   return (
     <View style={[a.util_screen_outer, a.flex_1]}>
       <Layout.Content
+        ignoreTabletLayoutOffset
         contentContainerStyle={[
           a.px_2xl,
           {

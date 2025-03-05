@@ -1,5 +1,12 @@
 import React, {memo, useMemo} from 'react'
-import {Image, Pressable, StyleSheet, View} from 'react-native'
+import {
+  Image,
+  Pressable,
+  StyleProp,
+  StyleSheet,
+  View,
+  ViewStyle,
+} from 'react-native'
 import {Image as RNImage} from 'react-native-image-crop-picker'
 import Svg, {Circle, Path, Rect} from 'react-native-svg'
 import {ModerationUI} from '@atproto/api'
@@ -48,6 +55,7 @@ interface UserAvatarProps extends BaseUserAvatarProps {
   moderation?: ModerationUI
   usePlainRNImage?: boolean
   onLoad?: () => void
+  style?: StyleProp<ViewStyle>
 }
 
 interface EditableUserAvatarProps extends BaseUserAvatarProps {
@@ -58,6 +66,7 @@ interface PreviewableUserAvatarProps extends BaseUserAvatarProps {
   moderation?: ModerationUI
   profile: bsky.profile.AnyProfileView
   disableHoverCard?: boolean
+  disableNavigation?: boolean
   onBeforePress?: () => void
 }
 
@@ -180,6 +189,7 @@ let UserAvatar = ({
   moderation,
   usePlainRNImage = false,
   onLoad,
+  style,
 }: UserAvatarProps): React.ReactNode => {
   const pal = usePalette('default')
   const backgroundColor = pal.colors.backgroundLight
@@ -217,9 +227,19 @@ let UserAvatar = ({
     )
   }, [moderation?.alert, size, pal])
 
+  const containerStyle = useMemo(() => {
+    return [
+      {
+        width: size,
+        height: size,
+      },
+      style,
+    ]
+  }, [size, style])
+
   return avatar &&
     !((moderation?.blur && isAndroid) /* android crashes with blur */) ? (
-    <View style={{width: size, height: size}}>
+    <View style={containerStyle}>
       {usePlainRNImage ? (
         <Image
           accessibilityIgnoresInvertColors
@@ -244,17 +264,11 @@ let UserAvatar = ({
           onLoad={onLoad}
         />
       )}
-      <MediaInsetBorder
-        style={[
-          {
-            borderRadius: aviStyle.borderRadius,
-          },
-        ]}
-      />
+      <MediaInsetBorder style={[{borderRadius: aviStyle.borderRadius}]} />
       {alert}
     </View>
   ) : (
-    <View style={{width: size, height: size}}>
+    <View style={containerStyle}>
       <DefaultAvatar type={type} shape={finalShape} size={size} />
       {alert}
     </View>
@@ -420,6 +434,7 @@ let PreviewableUserAvatar = ({
   moderation,
   profile,
   disableHoverCard,
+  disableNavigation,
   onBeforePress,
   ...rest
 }: PreviewableUserAvatarProps): React.ReactNode => {
@@ -431,23 +446,31 @@ let PreviewableUserAvatar = ({
     precacheProfile(queryClient, profile)
   }, [profile, queryClient, onBeforePress])
 
+  const avatarEl = (
+    <UserAvatar
+      avatar={profile.avatar}
+      moderation={moderation}
+      type={profile.associated?.labeler ? 'labeler' : 'user'}
+      {...rest}
+    />
+  )
+
   return (
     <ProfileHoverCard did={profile.did} disable={disableHoverCard}>
-      <Link
-        label={_(msg`${profile.displayName || profile.handle}'s avatar`)}
-        accessibilityHint={_(msg`Opens this profile`)}
-        to={makeProfileLink({
-          did: profile.did,
-          handle: profile.handle,
-        })}
-        onPress={onPress}>
-        <UserAvatar
-          avatar={profile.avatar}
-          moderation={moderation}
-          type={profile.associated?.labeler ? 'labeler' : 'user'}
-          {...rest}
-        />
-      </Link>
+      {disableNavigation ? (
+        avatarEl
+      ) : (
+        <Link
+          label={_(msg`${profile.displayName || profile.handle}'s avatar`)}
+          accessibilityHint={_(msg`Opens this profile`)}
+          to={makeProfileLink({
+            did: profile.did,
+            handle: profile.handle,
+          })}
+          onPress={onPress}>
+          {avatarEl}
+        </Link>
+      )}
     </ProfileHoverCard>
   )
 }
