@@ -8,7 +8,7 @@ msgstr ""
 "Language: he\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-03-09 10:56\n"
+"PO-Revision-Date: 2025-03-09 12:12\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
@@ -83,7 +83,8 @@ msgstr "{0, plural, one {# חודש} other {# חודשים}}"
 #: src/view/shell/bottom-bar/BottomBar.tsx:241
 #: src/view/shell/Drawer.tsx:454
 msgid "{0, plural, one {# unread item} other {# unread items}}"
-msgstr ""
+msgstr " \n"
+"{0, plural, one {# פריט שלא נקרא} other {# פריטים שלא נקראו}}"
 
 #. How many months have passed, displayed in a narrow form
 #: src/lib/hooks/useTimeAgo.ts:182
@@ -137,7 +138,7 @@ msgstr "{0} מתוך {1}"
 #. Accessibility label describing how many characters the user has entered out of a 50-character limit in a text input field
 #: src/screens/StarterPack/Wizard/StepDetails.tsx:55
 msgid "{0} out of 50"
-msgstr ""
+msgstr "{0} מתוך 50"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:485
 msgid "{0} people have used this starter pack!"
@@ -177,7 +178,7 @@ msgstr "{0} שניות"
 
 #: src/view/shell/desktop/LeftNav.tsx:382
 msgid "{count, plural, one {# unread item} other {# unread items}}"
-msgstr ""
+msgstr "{count, plural, one {# שיתף מחדש} other {# שיתפו מחדש}}"
 
 #: src/lib/generate-starterpack.ts:111
 #: src/screens/StarterPack/Wizard/index.tsx:178
@@ -234,51 +235,51 @@ msgstr "{firstAuthorLink} פרסם/ה מחדש את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:367
 msgid "{firstAuthorLink} signed up with your starter pack"
-msgstr ""
+msgstr "{firstAuthorLink} signed up with your starter pack"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:298
 msgid "{firstAuthorName} and {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}} followed you"
-msgstr ""
+msgstr "{firstAuthorName} ו {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} two {{formattedAuthorsCount} others} many {{formattedAuthorsCount} others} other {{formattedAuthorsCount} others}} עוקבים אחריך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:324
 msgid "{firstAuthorName} and {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}} liked your custom feed"
-msgstr ""
+msgstr "{firstAuthorName} ו {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} two {{formattedAuthorsCount} others} many {{formattedAuthorsCount} others} other {{formattedAuthorsCount} others}} אהבו את הפיד המותאם אישית שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:217
 msgid "{firstAuthorName} and {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}} liked your post"
-msgstr ""
+msgstr "{firstAuthorName} ו {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} two {{formattedAuthorsCount} others} many {{formattedAuthorsCount} others} other {{formattedAuthorsCount} others}} אהבו את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:241
 msgid "{firstAuthorName} and {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}} reposted your post"
-msgstr ""
+msgstr "{firstAuthorName} ו {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} two {{formattedAuthorsCount} others} many {{formattedAuthorsCount} others} other {{formattedAuthorsCount} others}} שיתפו מחדש את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:348
 msgid "{firstAuthorName} and {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}} signed up with your starter pack"
-msgstr ""
+msgstr "{firstAuthorName} ו {additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} two {{formattedAuthorsCount} others} many {{formattedAuthorsCount} others} other {{formattedAuthorsCount} others}} נרשמו עם חבילת ההתחלה שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:303
 msgid "{firstAuthorName} followed you"
-msgstr ""
+msgstr "{firstAuthorName} עוקב אחריך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:293
 msgid "{firstAuthorName} followed you back"
-msgstr ""
+msgstr "{firstAuthorName} עוקב אחריך בחזרה"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:329
 msgid "{firstAuthorName} liked your custom feed"
-msgstr ""
+msgstr "{firstAuthorName} אהב את הפיד המותאם אישית שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:222
 msgid "{firstAuthorName} liked your post"
-msgstr ""
+msgstr "{firstAuthorName} אהב את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:246
 msgid "{firstAuthorName} reposted your post"
-msgstr ""
+msgstr "{firstAuthorName} פרסם/ה מחדש את הפוסט שלך"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:353
 msgid "{firstAuthorName} signed up with your starter pack"
-msgstr ""
+msgstr "{firstAuthorName} נרשם עם חבילת ההתחלה שלך"
 
 #: src/components/ProfileHoverCard/index.web.tsx:508
 #: src/screens/Profile/Header/Metrics.tsx:49
@@ -291,7 +292,7 @@ msgstr "{handle} לא ניתן לשלוח הודעות"
 
 #: src/view/shell/bottom-bar/BottomBarWeb.tsx:270
 msgid "{notificationCount, plural, one {# unread item} other {# unread items}}"
-msgstr ""
+msgstr "{notificationCount, plural, one {# פריט שלא נקרא} two {# פריטים שלא נקראו} many {# פריטים שלא נקראו} other {# פריטים שלא נקראו}}"
 
 #: src/components/NewskieDialog.tsx:116
 msgid "{profileName} joined Bluesky {0} ago"
@@ -325,7 +326,7 @@ msgstr "<0>{0}</0>  ו <1> </1><2>{1} </2> נמצאים ברשימת ההתחל�
 
 #: src/screens/StarterPack/Wizard/index.tsx:483
 msgid "<0>{0}</0> is included in your starter pack"
-msgstr ""
+msgstr "<0>{0}</0> כלול בחבילת ההתחלה שלך"
 
 #: src/components/WhoCanReply.tsx:296
 msgid "<0>{0}</0> members"
@@ -337,11 +338,11 @@ msgstr "<0>{date}</0> ב {time}"
 
 #: src/screens/Settings/NotificationSettings.tsx:85
 msgid "<0>Experimental:</0> When this preference is enabled, you'll only receive reply and quote notifications from users you follow. We'll continue to add more controls here over time."
-msgstr ""
+msgstr "<0>נסיוני:</0> כאשר העדפה זו מופעלת, תקבל רק התראות על תשובות וציטוט ממשתמשים שאתה עוקב אחריהם. נמשיך להוסיף כאן פקדים נוספים עם הזמן."
 
 #: src/screens/StarterPack/Wizard/index.tsx:440
 msgid "<0>You</0> and<1> </1><2>{0} </2>are included in your starter pack"
-msgstr ""
+msgstr "<0>אתה</0> ו<1> </1><2>{0} </2>נמצאים ברשימת ההתחלה שלך"
 
 #: src/screens/Profile/Header/Handle.tsx:52
 msgid "⚠Invalid Handle"
@@ -368,21 +369,21 @@ msgstr "7 ימים"
 #: src/screens/Settings/Settings.tsx:215
 #: src/screens/Settings/Settings.tsx:218
 msgid "About"
-msgstr ""
+msgstr "אודות"
 
 #. Accept a chat request
 #: src/screens/Messages/components/RequestButtons.tsx:235
 msgid "Accept"
-msgstr ""
+msgstr "קבל"
 
 #: src/screens/Messages/components/RequestButtons.tsx:225
 msgid "Accept chat request"
-msgstr ""
+msgstr "קבל בקשה להתחיל שיחה"
 
 #. Accept a chat request
 #: src/screens/Messages/components/RequestListItem.tsx:42
 msgid "Accept Request"
-msgstr ""
+msgstr "קבל את הבקשה"
 
 #: src/screens/Settings/AccessibilitySettings.tsx:46
 #: src/screens/Settings/Settings.tsx:191
@@ -407,18 +408,18 @@ msgstr "חשבון"
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:375
 msgctxt "toast"
 msgid "Account blocked"
-msgstr ""
+msgstr "חשבון נחסם"
 
 #: src/view/com/profile/ProfileMenu.tsx:154
 msgctxt "toast"
 msgid "Account followed"
-msgstr ""
+msgstr "חשבון במעקב"
 
 #: src/view/com/profile/ProfileMenu.tsx:117
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:398
 msgctxt "toast"
 msgid "Account muted"
-msgstr ""
+msgstr "חשבון מושתק"
 
 #: src/components/moderation/ModerationDetailsDialog.tsx:103
 #: src/lib/moderation/useModerationCauseDescription.ts:98
@@ -441,18 +442,18 @@ msgstr "החשבון הוסר מגישה מהירה"
 #: src/view/com/profile/ProfileMenu.tsx:131
 msgctxt "toast"
 msgid "Account unblocked"
-msgstr ""
+msgstr "חשבון לא חסום"
 
 #: src/view/com/profile/ProfileMenu.tsx:166
 msgctxt "toast"
 msgid "Account unfollowed"
-msgstr ""
+msgstr "חשבון לא במעקב"
 
 #: src/view/com/profile/ProfileMenu.tsx:107
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:388
 msgctxt "toast"
 msgid "Account unmuted"
-msgstr ""
+msgstr "חשבון לא מושתק"
 
 #: src/components/dialogs/MutedWords.tsx:328
 #: src/view/com/modals/ListAddRemoveUsers.tsx:269
@@ -502,11 +503,11 @@ msgstr "הוסף טקסט חלופי (אפשרות)"
 #: src/view/shell/desktop/LeftNav.tsx:280
 #: src/view/shell/desktop/LeftNav.tsx:284
 msgid "Add another account"
-msgstr ""
+msgstr "הוסף חשבון נוסף"
 
 #: src/view/com/composer/Composer.tsx:743
 msgid "Add another post"
-msgstr ""
+msgstr "הוסף פוסט נוסף"
 
 #: src/screens/Settings/components/AddAppPasswordDialog.tsx:102
 msgid "Add app password"
