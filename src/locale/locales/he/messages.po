@@ -8,7 +8,7 @@ msgstr ""
 "Language: he\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-03-16 20:27\n"
+"PO-Revision-Date: 2025-03-16 21:27\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
@@ -522,7 +522,7 @@ msgstr "הוספת סיסמת אפליקציה"
 #: src/components/moderation/ReportDialog/index.tsx:392
 #: src/components/moderation/ReportDialog/index.tsx:396
 msgid "Add more details (optional)"
-msgstr ""
+msgstr "הוסף עוד מידע (לא חובה)"
 
 #: src/components/dialogs/MutedWords.tsx:321
 msgid "Add mute word with chosen settings"
