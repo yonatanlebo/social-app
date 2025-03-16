@@ -8,7 +8,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-03-09 12:12\n"
+"PO-Revision-Date: 2025-03-16 19:28\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -560,13 +560,10 @@ msgstr "crwdns239:0crwdne239:0"
 msgid "Add this feed to your feeds"
 msgstr "crwdns241:0crwdne241:0"
 
+#: src/view/com/profile/ProfileMenu.tsx:273
 #: src/view/com/profile/ProfileMenu.tsx:276
 msgid "Add to lists"
 msgstr "crwdns243:0crwdne243:0"
-
-#: src/view/com/profile/ProfileMenu.tsx:273
-msgid "Add to Lists"
-msgstr "crwdns245:0crwdne245:0"
 
 #: src/view/com/feeds/FeedSourceCard.tsx:269
 msgid "Add to my feeds"
@@ -987,7 +984,7 @@ msgstr "crwdns419:0crwdne419:0"
 msgid "Back"
 msgstr "crwdns421:0crwdne421:0"
 
-#: src/screens/Messages/Inbox.tsx:233
+#: src/screens/Messages/Inbox.tsx:238
 msgid "Back to Chats"
 msgstr "crwdns423:0crwdne423:0"
 
@@ -1318,9 +1315,9 @@ msgid "Cancels opening the linked website"
 msgstr "crwdns555:0crwdne555:0"
 
 #: src/state/shell/composer/index.tsx:82
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:118
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:159
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:195
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:121
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:162
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:198
 msgid "Cannot interact with a blocked user"
 msgstr "crwdns557:0crwdne557:0"
 
@@ -1423,14 +1420,14 @@ msgid "Chat request inbox"
 msgstr "crwdns599:0crwdne599:0"
 
 #: src/screens/Messages/components/InboxPreview.tsx:64
-#: src/screens/Messages/Inbox.tsx:72
+#: src/screens/Messages/Inbox.tsx:77
 msgid "Chat requests"
 msgstr "crwdns601:0crwdne601:0"
 
 #: src/components/dms/ConvoMenu.tsx:75
 #: src/components/dms/MessageMenu.tsx:83
 #: src/Navigation.tsx:413
-#: src/screens/Messages/ChatList.tsx:327
+#: src/screens/Messages/ChatList.tsx:328
 msgid "Chat settings"
 msgstr "crwdns603:0crwdne603:0"
 
@@ -1443,8 +1440,8 @@ msgctxt "toast"
 msgid "Chat unmuted"
 msgstr "crwdns607:0crwdne607:0"
 
-#: src/screens/Messages/ChatList.tsx:343
-#: src/screens/Messages/ChatList.tsx:367
+#: src/screens/Messages/ChatList.tsx:344
+#: src/screens/Messages/ChatList.tsx:368
 msgid "Chats"
 msgstr "crwdns609:0crwdne609:0"
 
@@ -1835,7 +1832,7 @@ msgstr "crwdns775:0crwdne775:0"
 #: src/lib/sharing.ts:41
 #: src/view/com/modals/InviteCodes.tsx:153
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:246
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:394
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:397
 msgid "Copied to clipboard"
 msgstr "crwdns777:0crwdne777:0"
 
@@ -2946,8 +2943,8 @@ msgstr "crwdns1257:0crwdne1257:0"
 msgid "Failed to delete starter pack"
 msgstr "crwdns1259:0crwdne1259:0"
 
-#: src/screens/Messages/ChatList.tsx:242
-#: src/screens/Messages/Inbox.tsx:182
+#: src/screens/Messages/ChatList.tsx:243
+#: src/screens/Messages/Inbox.tsx:187
 msgid "Failed to load conversations"
 msgstr "crwdns1261:0crwdne1261:0"
 
@@ -2973,8 +2970,8 @@ msgstr "crwdns1269:0crwdne1269:0"
 msgid "Failed to load suggested follows"
 msgstr "crwdns1271:0crwdne1271:0"
 
-#: src/screens/Messages/Inbox.tsx:290
-#: src/screens/Messages/Inbox.tsx:313
+#: src/screens/Messages/Inbox.tsx:295
+#: src/screens/Messages/Inbox.tsx:318
 msgid "Failed to mark all requests as read"
 msgstr "crwdns1273:0crwdne1273:0"
 
@@ -3058,7 +3055,7 @@ msgstr "crwdns1307:0crwdne1307:0"
 #: src/Navigation.tsx:428
 #: src/screens/StarterPack/StarterPackScreen.tsx:185
 #: src/view/screens/Feeds.tsx:508
-#: src/view/screens/Profile.tsx:225
+#: src/view/screens/Profile.tsx:227
 #: src/view/screens/SavedFeeds.tsx:96
 #: src/view/screens/Search/Search.tsx:531
 #: src/view/shell/desktop/LeftNav.tsx:651
@@ -3353,7 +3350,7 @@ msgstr "crwdns1431:0crwdne1431:0"
 msgid "Getting started"
 msgstr "crwdns1433:0crwdne1433:0"
 
-#: src/components/MediaPreview.tsx:108
+#: src/components/MediaPreview.tsx:116
 msgid "GIF"
 msgstr "crwdns1435:0crwdne1435:0"
 
@@ -3369,7 +3366,7 @@ msgstr "crwdns1439:0crwdne1439:0"
 #: src/components/Layout/Header/index.tsx:126
 #: src/components/moderation/ScreenHider.tsx:154
 #: src/components/moderation/ScreenHider.tsx:163
-#: src/screens/Messages/Inbox.tsx:223
+#: src/screens/Messages/Inbox.tsx:228
 #: src/screens/Profile/ProfileFeed/index.tsx:89
 #: src/screens/VideoFeed/components/Header.tsx:163
 #: src/screens/VideoFeed/index.tsx:1108
@@ -3724,7 +3721,7 @@ msgid "Inappropriate messages or explicit links"
 msgstr "crwdns1581:0crwdne1581:0"
 
 #. Title message shown in chat requests inbox when it's empty
-#: src/screens/Messages/Inbox.tsx:203
+#: src/screens/Messages/Inbox.tsx:208
 msgid "Inbox zero!"
 msgstr "crwdns1583:0crwdne1583:0"
 
@@ -3860,7 +3857,7 @@ msgid "Labeled by the author."
 msgstr "crwdns1645:0crwdne1645:0"
 
 #: src/view/com/composer/labels/LabelsBtn.tsx:75
-#: src/view/screens/Profile.tsx:218
+#: src/view/screens/Profile.tsx:220
 msgid "Labels"
 msgstr "crwdns1647:0crwdne1647:0"
 
@@ -4000,7 +3997,7 @@ msgstr "crwdns1705:0crwdne1705:0"
 msgid "Like"
 msgstr "crwdns1707:0crwdne1707:0"
 
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:312
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:315
 msgid "Like ({0, plural, one {# like} other {# likes}})"
 msgstr "crwdns1709:00={0}crwdne1709:0"
 
@@ -4045,7 +4042,7 @@ msgstr "crwdns1723:00={0}crwdne1723:0"
 msgid "Liked by {likeCount, plural, one {# user} other {# users}}"
 msgstr "crwdns1725:0likeCount={likeCount}crwdne1725:0"
 
-#: src/view/screens/Profile.tsx:224
+#: src/view/screens/Profile.tsx:226
 msgid "Likes"
 msgstr "crwdns1727:0crwdne1727:0"
 
@@ -4118,8 +4115,8 @@ msgstr "crwdns1757:0crwdne1757:0"
 
 #: src/Navigation.tsx:140
 #: src/view/screens/Lists.tsx:62
-#: src/view/screens/Profile.tsx:219
-#: src/view/screens/Profile.tsx:227
+#: src/view/screens/Profile.tsx:221
+#: src/view/screens/Profile.tsx:229
 #: src/view/shell/desktop/LeftNav.tsx:669
 #: src/view/shell/Drawer.tsx:501
 msgid "Lists"
@@ -4210,9 +4207,9 @@ msgstr "crwdns1797:0crwdne1797:0"
 msgid "Manage your muted words and tags"
 msgstr "crwdns1799:0crwdne1799:0"
 
-#: src/screens/Messages/Inbox.tsx:300
-#: src/screens/Messages/Inbox.tsx:319
-#: src/screens/Messages/Inbox.tsx:326
+#: src/screens/Messages/Inbox.tsx:305
+#: src/screens/Messages/Inbox.tsx:324
+#: src/screens/Messages/Inbox.tsx:331
 msgid "Mark all as read"
 msgstr "crwdns1801:0crwdne1801:0"
 
@@ -4221,12 +4218,12 @@ msgstr "crwdns1801:0crwdne1801:0"
 msgid "Mark as read"
 msgstr "crwdns1803:0crwdne1803:0"
 
-#: src/screens/Messages/Inbox.tsx:287
-#: src/screens/Messages/Inbox.tsx:310
+#: src/screens/Messages/Inbox.tsx:292
+#: src/screens/Messages/Inbox.tsx:315
 msgid "Marked all as read"
 msgstr "crwdns1805:0crwdne1805:0"
 
-#: src/view/screens/Profile.tsx:222
+#: src/view/screens/Profile.tsx:224
 msgid "Media"
 msgstr "crwdns1807:0crwdne1807:0"
 
@@ -4558,8 +4555,8 @@ msgid "New"
 msgstr "crwdns1949:0crwdne1949:0"
 
 #: src/components/dms/dialogs/NewChatDialog.tsx:65
-#: src/screens/Messages/ChatList.tsx:350
-#: src/screens/Messages/ChatList.tsx:357
+#: src/screens/Messages/ChatList.tsx:351
+#: src/screens/Messages/ChatList.tsx:358
 msgid "New chat"
 msgstr "crwdns1951:0crwdne1951:0"
 
@@ -4593,7 +4590,7 @@ msgstr "crwdns1963:0crwdne1963:0"
 #: src/screens/Profile/ProfileFeed/index.tsx:238
 #: src/view/screens/Feeds.tsx:549
 #: src/view/screens/Notifications.tsx:165
-#: src/view/screens/Profile.tsx:505
+#: src/view/screens/Profile.tsx:507
 #: src/view/screens/ProfileList.tsx:253
 #: src/view/screens/ProfileList.tsx:286
 msgid "New post"
@@ -4787,7 +4784,7 @@ msgstr "crwdns2041:0crwdne2041:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:406
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:774
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:358
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:361
 msgid "Note about sharing"
 msgstr "crwdns2043:0crwdne2043:0"
 
@@ -4795,7 +4792,7 @@ msgstr "crwdns2043:0crwdne2043:0"
 msgid "Note: Bluesky is an open and public network. This setting only limits the visibility of your content on the Bluesky app and website, and other apps may not respect this setting. Your content may still be shown to logged-out users by other apps and websites."
 msgstr "crwdns2045:0crwdne2045:0"
 
-#: src/screens/Messages/ChatList.tsx:263
+#: src/screens/Messages/ChatList.tsx:264
 msgid "Nothing here"
 msgstr "crwdns2047:0crwdne2047:0"
 
@@ -5484,7 +5481,7 @@ msgid "Post unpinned"
 msgstr "crwdns2357:0crwdne2357:0"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:186
-#: src/view/screens/Profile.tsx:220
+#: src/view/screens/Profile.tsx:222
 msgid "Posts"
 msgstr "crwdns2359:0crwdne2359:0"
 
@@ -5571,7 +5568,7 @@ msgid "Processing..."
 msgstr "crwdns2393:0crwdne2393:0"
 
 #: src/view/screens/DebugMod.tsx:920
-#: src/view/screens/Profile.tsx:359
+#: src/view/screens/Profile.tsx:361
 msgid "profile"
 msgstr "crwdns2395:0crwdne2395:0"
 
@@ -5718,8 +5715,8 @@ msgstr "crwdns2455:0crwdne2455:0"
 msgid "Reject chat request"
 msgstr "crwdns2457:0crwdne2457:0"
 
-#: src/screens/Messages/ChatList.tsx:246
-#: src/screens/Messages/Inbox.tsx:186
+#: src/screens/Messages/ChatList.tsx:247
+#: src/screens/Messages/Inbox.tsx:191
 msgid "Reload conversations"
 msgstr "crwdns2459:0crwdne2459:0"
 
@@ -5790,6 +5787,7 @@ msgid "Remove from quick access?"
 msgstr "crwdns2483:0crwdne2483:0"
 
 #: src/screens/List/ListHiddenScreen.tsx:170
+#: src/screens/List/ListHiddenScreen.tsx:174
 msgid "Remove from saved feeds"
 msgstr "crwdns2485:0crwdne2485:0"
 
@@ -5845,7 +5843,6 @@ msgid "Removed from my feeds"
 msgstr "crwdns2509:0crwdne2509:0"
 
 #: src/screens/List/ListHiddenScreen.tsx:94
-#: src/screens/List/ListHiddenScreen.tsx:174
 msgid "Removed from saved feeds"
 msgstr "crwdns2511:0crwdne2511:0"
 
@@ -5868,7 +5865,7 @@ msgstr "crwdns2517:0crwdne2517:0"
 msgid "Replace with Discover"
 msgstr "crwdns2519:0crwdne2519:0"
 
-#: src/view/screens/Profile.tsx:221
+#: src/view/screens/Profile.tsx:223
 msgid "Replies"
 msgstr "crwdns2521:0crwdne2521:0"
 
@@ -5885,7 +5882,7 @@ msgctxt "action"
 msgid "Reply"
 msgstr "crwdns2527:0crwdne2527:0"
 
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:264
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:267
 msgid "Reply ({0, plural, one {# reply} other {# replies}})"
 msgstr "crwdns2529:00={0}crwdne2529:0"
 
@@ -6148,9 +6145,9 @@ msgstr "crwdns2633:0crwdne2633:0"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:334
 #: src/screens/Login/LoginForm.tsx:323
 #: src/screens/Login/LoginForm.tsx:330
-#: src/screens/Messages/ChatList.tsx:252
+#: src/screens/Messages/ChatList.tsx:253
 #: src/screens/Messages/components/MessageListError.tsx:25
-#: src/screens/Messages/Inbox.tsx:192
+#: src/screens/Messages/Inbox.tsx:197
 #: src/screens/Onboarding/StepInterests/index.tsx:217
 #: src/screens/Onboarding/StepInterests/index.tsx:220
 #: src/screens/Signup/BackNextButtons.tsx:53
@@ -6615,7 +6612,7 @@ msgstr "crwdns2829:0crwdne2829:0"
 #: src/view/com/profile/ProfileMenu.tsx:225
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:481
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:490
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:347
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:350
 #: src/view/screens/ProfileList.tsx:506
 msgid "Share"
 msgstr "crwdns2831:0crwdne2831:0"
@@ -6635,7 +6632,7 @@ msgstr "crwdns2837:0crwdne2837:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:411
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:779
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:363
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:366
 msgid "Share anyway"
 msgstr "crwdns2839:0crwdne2839:0"
 
@@ -6942,8 +6939,8 @@ msgstr "crwdns2961:0crwdne2961:0"
 msgid "Something wrong? Let us know."
 msgstr "crwdns2963:0crwdne2963:0"
 
-#: src/App.native.tsx:121
-#: src/App.web.tsx:97
+#: src/App.native.tsx:122
+#: src/App.web.tsx:98
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "crwdns2965:0crwdne2965:0"
 
@@ -7022,7 +7019,7 @@ msgstr "crwdns2995:0crwdne2995:0"
 msgid "Starter pack is invalid"
 msgstr "crwdns2997:0crwdne2997:0"
 
-#: src/view/screens/Profile.tsx:226
+#: src/view/screens/Profile.tsx:228
 msgid "Starter Packs"
 msgstr "crwdns2999:0crwdne2999:0"
 
@@ -7332,8 +7329,8 @@ msgid "The Privacy Policy has been moved to <0/>"
 msgstr "crwdns3129:0crwdne3129:0"
 
 #: src/view/com/composer/state/video.ts:395
-msgid "The selected video is larger than 50MB."
-msgstr "crwdns3131:0crwdne3131:0"
+msgid "The selected video is larger than 100 MB."
+msgstr "crwdns3900:0crwdne3900:0"
 
 #: src/lib/strings/errors.ts:18
 msgid "The server appears to be experiencing issues. Please try again in a few moments."
@@ -7597,7 +7594,7 @@ msgid "This post has been deleted."
 msgstr "crwdns3245:0crwdne3245:0"
 
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:776
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:360
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:363
 msgid "This post is only visible to logged-in users. It won't be visible to people who aren't signed in."
 msgstr "crwdns3247:0crwdne3247:0"
 
@@ -7876,7 +7873,7 @@ msgstr "crwdns3365:0crwdne3365:0"
 msgid "Unlike"
 msgstr "crwdns3367:0crwdne3367:0"
 
-#: src/view/com/util/post-ctrls/PostCtrls.tsx:306
+#: src/view/com/util/post-ctrls/PostCtrls.tsx:309
 msgid "Unlike ({0, plural, one {# like} other {# likes}})"
 msgstr "crwdns3369:00={0}crwdne3369:0"
 
@@ -8251,7 +8248,7 @@ msgstr "crwdns3531:0crwdne3531:0"
 msgid "Video: {0}"
 msgstr "crwdns3533:0{0}crwdne3533:0"
 
-#: src/view/screens/Profile.tsx:223
+#: src/view/screens/Profile.tsx:225
 msgid "Videos"
 msgstr "crwdns3535:0crwdne3535:0"
 
@@ -8521,8 +8518,8 @@ msgid "Who can reply"
 msgstr "crwdns3655:0crwdne3655:0"
 
 #: src/screens/Home/NoFeedsPinned.tsx:79
-#: src/screens/Messages/ChatList.tsx:230
-#: src/screens/Messages/Inbox.tsx:171
+#: src/screens/Messages/ChatList.tsx:231
+#: src/screens/Messages/Inbox.tsx:176
 msgid "Whoops!"
 msgstr "crwdns3657:0crwdne3657:0"
 
@@ -8682,7 +8679,7 @@ msgstr "crwdns3725:0crwdne3725:0"
 msgid "You don't follow any users who follow @{name}."
 msgstr "crwdns3727:0{name}crwdne3727:0"
 
-#: src/screens/Messages/Inbox.tsx:215
+#: src/screens/Messages/Inbox.tsx:220
 msgid "You don't have any chat requests at the moment."
 msgstr "crwdns3729:0crwdne3729:0"
 
@@ -8736,7 +8733,7 @@ msgstr "crwdns3749:0crwdne3749:0"
 msgid "You have muted this user"
 msgstr "crwdns3751:0crwdne3751:0"
 
-#: src/screens/Messages/ChatList.tsx:273
+#: src/screens/Messages/ChatList.tsx:274
 msgid "You have no conversations yet. Start one!"
 msgstr "crwdns3753:0crwdne3753:0"
 
