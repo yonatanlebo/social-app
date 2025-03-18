@@ -8,7 +8,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-03-16 19:28\n"
+"PO-Revision-Date: 2025-03-18 22:51\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -7385,7 +7385,7 @@ msgstr "crwdns3153:0crwdne3153:0"
 msgid "There was an issue fetching notifications. Tap here to try again."
 msgstr "crwdns3155:0crwdne3155:0"
 
-#: src/view/com/posts/PostFeed.tsx:592
+#: src/view/com/posts/PostFeed.tsx:607
 msgid "There was an issue fetching posts. Tap here to try again."
 msgstr "crwdns3157:0crwdne3157:0"
 
