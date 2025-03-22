@@ -8,7 +8,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-03-20 21:54\n"
+"PO-Revision-Date: 2025-03-22 10:35\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -894,7 +894,7 @@ msgstr "crwdns383:0crwdne383:0"
 msgid "Are you sure you want to delete the app password \"{0}\"?"
 msgstr "crwdns385:0{0}crwdne385:0"
 
-#: src/components/dms/MessageMenu.tsx:152
+#: src/components/dms/MessageContextMenu.tsx:142
 msgid "Are you sure you want to delete this message? The message will be deleted for you, but not for the other participant."
 msgstr "crwdns387:0crwdne387:0"
 
@@ -1425,7 +1425,6 @@ msgid "Chat requests"
 msgstr "crwdns601:0crwdne601:0"
 
 #: src/components/dms/ConvoMenu.tsx:75
-#: src/components/dms/MessageMenu.tsx:83
 #: src/Navigation.tsx:413
 #: src/screens/Messages/ChatList.tsx:328
 msgid "Chat settings"
@@ -1596,6 +1595,11 @@ msgstr "crwdns675:0crwdne675:0"
 #: src/view/com/lightbox/Lightbox.web.tsx:109
 msgid "Close image viewer"
 msgstr "crwdns677:0crwdne677:0"
+
+#: src/components/ContextMenu/Backdrop.ios.tsx:43
+#: src/components/ContextMenu/Backdrop.tsx:39
+msgid "Close menu"
+msgstr "crwdns3901:0crwdne3901:0"
 
 #: src/components/Menu/index.tsx:298
 msgid "Close this dialog"
@@ -1827,7 +1831,7 @@ msgstr "crwdns773:0crwdne773:0"
 msgid "Copied build version to clipboard"
 msgstr "crwdns775:0crwdne775:0"
 
-#: src/components/dms/MessageMenu.tsx:57
+#: src/components/dms/MessageContextMenu.tsx:52
 #: src/lib/sharing.ts:25
 #: src/lib/sharing.ts:41
 #: src/view/com/modals/InviteCodes.tsx:153
@@ -1895,8 +1899,8 @@ msgstr "crwdns801:0crwdne801:0"
 msgid "Copy link to post"
 msgstr "crwdns803:0crwdne803:0"
 
-#: src/components/dms/MessageMenu.tsx:112
-#: src/components/dms/MessageMenu.tsx:114
+#: src/components/dms/MessageContextMenu.tsx:103
+#: src/components/dms/MessageContextMenu.tsx:106
 msgid "Copy message text"
 msgstr "crwdns805:0crwdne805:0"
 
@@ -2076,7 +2080,7 @@ msgstr "crwdns879:0crwdne879:0"
 msgid "Default icons"
 msgstr "crwdns881:0crwdne881:0"
 
-#: src/components/dms/MessageMenu.tsx:154
+#: src/components/dms/MessageContextMenu.tsx:144
 #: src/screens/Messages/components/ChatStatusInfo.tsx:55
 #: src/screens/Settings/AppPasswords.tsx:212
 #: src/screens/StarterPack/StarterPackScreen.tsx:591
@@ -2124,7 +2128,7 @@ msgstr "crwdns897:0crwdne897:0"
 msgid "Delete Conversation"
 msgstr "crwdns899:0crwdne899:0"
 
-#: src/components/dms/MessageMenu.tsx:126
+#: src/components/dms/MessageContextMenu.tsx:117
 msgid "Delete for me"
 msgstr "crwdns901:0crwdne901:0"
 
@@ -2132,11 +2136,11 @@ msgstr "crwdns901:0crwdne901:0"
 msgid "Delete List"
 msgstr "crwdns903:0crwdne903:0"
 
-#: src/components/dms/MessageMenu.tsx:150
+#: src/components/dms/MessageContextMenu.tsx:140
 msgid "Delete message"
 msgstr "crwdns905:0crwdne905:0"
 
-#: src/components/dms/MessageMenu.tsx:124
+#: src/components/dms/MessageContextMenu.tsx:115
 msgid "Delete message for me"
 msgstr "crwdns907:0crwdne907:0"
 
@@ -2931,7 +2935,7 @@ msgctxt "toast"
 msgid "Failed to delete chat"
 msgstr "crwdns1253:0crwdne1253:0"
 
-#: src/components/dms/MessageMenu.tsx:75
+#: src/components/dms/MessageContextMenu.tsx:70
 msgid "Failed to delete message"
 msgstr "crwdns1255:0crwdne1255:0"
 
@@ -3506,7 +3510,7 @@ msgstr "crwdns1491:0crwdne1491:0"
 #: src/components/interstitials/TrendingVideos.tsx:140
 #: src/components/moderation/ContentHider.tsx:200
 #: src/components/moderation/LabelPreference.tsx:135
-#: src/components/moderation/PostHider.tsx:122
+#: src/components/moderation/PostHider.tsx:124
 #: src/lib/moderation/useLabelBehaviorDescription.ts:15
 #: src/lib/moderation/useLabelBehaviorDescription.ts:20
 #: src/lib/moderation/useLabelBehaviorDescription.ts:25
@@ -3626,8 +3630,8 @@ msgstr "crwdns1539:0crwdne1539:0"
 
 #: src/screens/Settings/ThreadPreferences.tsx:67
 #: src/screens/Settings/ThreadPreferences.tsx:70
-#: src/view/com/post-thread/PostThread.tsx:656
-#: src/view/com/post-thread/PostThread.tsx:661
+#: src/view/com/post-thread/PostThread.tsx:655
+#: src/view/com/post-thread/PostThread.tsx:660
 msgid "Hot replies first"
 msgstr "crwdns1541:0crwdne1541:0"
 
@@ -4050,8 +4054,8 @@ msgstr "crwdns1727:0crwdne1727:0"
 msgid "Likes on this post"
 msgstr "crwdns1729:0crwdne1729:0"
 
-#: src/view/com/post-thread/PostThread.tsx:630
-#: src/view/com/post-thread/PostThread.tsx:635
+#: src/view/com/post-thread/PostThread.tsx:629
+#: src/view/com/post-thread/PostThread.tsx:634
 msgid "Linear"
 msgstr "crwdns1731:0crwdne1731:0"
 
@@ -4251,7 +4255,7 @@ msgstr "crwdns1817:0crwdne1817:0"
 msgid "Message {0}"
 msgstr "crwdns1819:0{0}crwdne1819:0"
 
-#: src/components/dms/MessageMenu.tsx:73
+#: src/components/dms/MessageContextMenu.tsx:68
 msgctxt "toast"
 msgid "Message deleted"
 msgstr "crwdns1821:0crwdne1821:0"
@@ -4259,6 +4263,10 @@ msgstr "crwdns1821:0crwdne1821:0"
 #: src/screens/Messages/components/ChatListItem.tsx:190
 msgid "Message deleted"
 msgstr "crwdns1823:0crwdne1823:0"
+
+#: src/components/dms/MessageContextMenu.tsx:83
+msgid "Message from @{0}: {1}"
+msgstr "crwdns3903:0{0}crwdnd3903:0{1}crwdne3903:0"
 
 #: src/view/com/posts/PostFeedErrorMessage.tsx:201
 msgid "Message from server: {0}"
@@ -4272,6 +4280,10 @@ msgstr "crwdns1827:0crwdne1827:0"
 #: src/screens/Messages/components/MessageInput.web.tsx:60
 msgid "Message is too long"
 msgstr "crwdns1829:0crwdne1829:0"
+
+#: src/components/dms/MessageContextMenu.tsx:81
+msgid "Message options"
+msgstr "crwdns3905:0crwdne3905:0"
 
 #: src/Navigation.tsx:642
 msgid "Messages"
@@ -4373,8 +4385,8 @@ msgid "Most-liked first"
 msgstr "crwdns1871:0crwdne1871:0"
 
 #: src/screens/Settings/ThreadPreferences.tsx:91
-#: src/view/com/post-thread/PostThread.tsx:686
-#: src/view/com/post-thread/PostThread.tsx:691
+#: src/view/com/post-thread/PostThread.tsx:685
+#: src/view/com/post-thread/PostThread.tsx:690
 msgid "Most-liked replies first"
 msgstr "crwdns1873:0crwdne1873:0"
 
@@ -4616,8 +4628,8 @@ msgstr "crwdns1973:0crwdne1973:0"
 
 #: src/screens/Settings/ThreadPreferences.tsx:83
 #: src/screens/Settings/ThreadPreferences.tsx:86
-#: src/view/com/post-thread/PostThread.tsx:676
-#: src/view/com/post-thread/PostThread.tsx:681
+#: src/view/com/post-thread/PostThread.tsx:675
+#: src/view/com/post-thread/PostThread.tsx:680
 msgid "Newest replies first"
 msgstr "crwdns1975:0crwdne1975:0"
 
@@ -4869,8 +4881,8 @@ msgstr "crwdns2077:0crwdne2077:0"
 
 #: src/screens/Settings/ThreadPreferences.tsx:75
 #: src/screens/Settings/ThreadPreferences.tsx:78
-#: src/view/com/post-thread/PostThread.tsx:666
-#: src/view/com/post-thread/PostThread.tsx:671
+#: src/view/com/post-thread/PostThread.tsx:665
+#: src/view/com/post-thread/PostThread.tsx:670
 msgid "Oldest replies first"
 msgstr "crwdns2079:0crwdne2079:0"
 
@@ -4967,7 +4979,7 @@ msgstr "crwdns2119:0crwdne2119:0"
 msgid "Open link to {niceUrl}"
 msgstr "crwdns2121:0{niceUrl}crwdne2121:0"
 
-#: src/components/dms/ActionsWrapper.tsx:90
+#: src/components/dms/ActionsWrapper.tsx:57
 msgid "Open message options"
 msgstr "crwdns2123:0crwdne2123:0"
 
@@ -5645,8 +5657,8 @@ msgstr "crwdns2425:0crwdne2425:0"
 
 #: src/screens/Settings/ThreadPreferences.tsx:99
 #: src/screens/Settings/ThreadPreferences.tsx:102
-#: src/view/com/post-thread/PostThread.tsx:696
-#: src/view/com/post-thread/PostThread.tsx:701
+#: src/view/com/post-thread/PostThread.tsx:695
+#: src/view/com/post-thread/PostThread.tsx:700
 msgid "Random (aka \"Poster's Roulette\")"
 msgstr "crwdns2427:0crwdne2427:0"
 
@@ -5904,7 +5916,7 @@ msgstr "crwdns2535:0crwdne2535:0"
 msgid "Reply settings are chosen by the author of the thread"
 msgstr "crwdns2537:0crwdne2537:0"
 
-#: src/view/com/post-thread/PostThread.tsx:652
+#: src/view/com/post-thread/PostThread.tsx:651
 msgid "Reply sorting"
 msgstr "crwdns2539:0crwdne2539:0"
 
@@ -5939,7 +5951,7 @@ msgstr "crwdns2549:0crwdne2549:0"
 msgid "Reply was successfully hidden"
 msgstr "crwdns2551:0crwdne2551:0"
 
-#: src/components/dms/MessageMenu.tsx:134
+#: src/components/dms/MessageContextMenu.tsx:125
 #: src/components/dms/MessagesListBlockedFooter.tsx:85
 #: src/components/dms/MessagesListBlockedFooter.tsx:92
 msgid "Report"
@@ -5973,7 +5985,7 @@ msgstr "crwdns2561:0crwdne2561:0"
 msgid "Report List"
 msgstr "crwdns2563:0crwdne2563:0"
 
-#: src/components/dms/MessageMenu.tsx:132
+#: src/components/dms/MessageContextMenu.tsx:123
 msgid "Report message"
 msgstr "crwdns2565:0crwdne2565:0"
 
@@ -6682,7 +6694,7 @@ msgstr "crwdns2859:0crwdne2859:0"
 
 #: src/components/moderation/ContentHider.tsx:200
 #: src/components/moderation/LabelPreference.tsx:137
-#: src/components/moderation/PostHider.tsx:122
+#: src/components/moderation/PostHider.tsx:124
 msgid "Show"
 msgstr "crwdns2861:0crwdne2861:0"
 
@@ -6749,7 +6761,7 @@ msgstr "crwdns2885:0crwdne2885:0"
 msgid "Show replies"
 msgstr "crwdns2887:0crwdne2887:0"
 
-#: src/view/com/post-thread/PostThread.tsx:626
+#: src/view/com/post-thread/PostThread.tsx:625
 msgid "Show replies as"
 msgstr "crwdns2889:0crwdne2889:0"
 
@@ -6939,8 +6951,8 @@ msgstr "crwdns2961:0crwdne2961:0"
 msgid "Something wrong? Let us know."
 msgstr "crwdns2963:0crwdne2963:0"
 
-#: src/App.native.tsx:122
-#: src/App.web.tsx:98
+#: src/App.native.tsx:123
+#: src/App.web.tsx:99
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "crwdns2965:0crwdne2965:0"
 
@@ -7156,6 +7168,11 @@ msgstr "crwdns3053:0crwdne3053:0"
 msgid "Tags only"
 msgstr "crwdns3055:0crwdne3055:0"
 
+#: src/components/ContextMenu/Backdrop.ios.tsx:44
+#: src/components/ContextMenu/Backdrop.tsx:40
+msgid "Tap to close context menu"
+msgstr "crwdns3907:0crwdne3907:0"
+
 #: src/components/ProgressGuide/Toast.tsx:156
 msgid "Tap to dismiss"
 msgstr "crwdns3057:0crwdne3057:0"
@@ -7339,6 +7356,10 @@ msgstr "crwdns3133:0crwdne3133:0"
 #: src/screens/StarterPack/StarterPackScreen.tsx:722
 msgid "The starter pack that you are trying to view is invalid. You may delete this starter pack instead."
 msgstr "crwdns3135:0crwdne3135:0"
+
+#: src/components/ContextMenu/index.tsx:305
+msgid "The subject of the context menu"
+msgstr "crwdns3909:0crwdne3909:0"
 
 #: src/view/screens/Support.tsx:37
 msgid "The support form has been moved. If you need help, please <0/> or visit {HELP_DESK_URL} to get in touch with us."
@@ -7667,8 +7688,8 @@ msgstr "crwdns3279:0{0}crwdne3279:0"
 msgid "This will remove your post from this quote post for all users, and replace it with a placeholder."
 msgstr "crwdns3281:0crwdne3281:0"
 
-#: src/view/com/post-thread/PostThread.tsx:610
-#: src/view/com/post-thread/PostThread.tsx:613
+#: src/view/com/post-thread/PostThread.tsx:609
+#: src/view/com/post-thread/PostThread.tsx:612
 msgid "Thread options"
 msgstr "crwdns3283:0crwdne3283:0"
 
@@ -7681,8 +7702,8 @@ msgstr "crwdns3285:0crwdne3285:0"
 msgid "Thread Preferences"
 msgstr "crwdns3287:0crwdne3287:0"
 
-#: src/view/com/post-thread/PostThread.tsx:640
-#: src/view/com/post-thread/PostThread.tsx:645
+#: src/view/com/post-thread/PostThread.tsx:639
+#: src/view/com/post-thread/PostThread.tsx:644
 msgid "Threaded"
 msgstr "crwdns3289:0crwdne3289:0"
 
@@ -7740,8 +7761,8 @@ msgstr "crwdns3313:0crwdne3313:0"
 msgid "Topic"
 msgstr "crwdns3315:0crwdne3315:0"
 
-#: src/components/dms/MessageMenu.tsx:105
-#: src/components/dms/MessageMenu.tsx:107
+#: src/components/dms/MessageContextMenu.tsx:96
+#: src/components/dms/MessageContextMenu.tsx:98
 #: src/view/com/post-thread/PostThreadItem.tsx:778
 #: src/view/com/post-thread/PostThreadItem.tsx:781
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:451
