@@ -8,7 +8,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-03-28 17:10\n"
+"PO-Revision-Date: 2025-03-30 21:13\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -142,6 +142,14 @@ msgstr "crwdns55:0{0}crwdne55:0"
 #: src/screens/StarterPack/StarterPackScreen.tsx:485
 msgid "{0} people have used this starter pack!"
 msgstr "crwdns57:0{0}crwdne57:0"
+
+#: src/components/dms/MessageItem.tsx:143
+msgid "{0} reacted {1}"
+msgstr "crwdns3911:0{0}crwdnd3911:0{1}crwdne3911:0"
+
+#: src/screens/Messages/components/ChatListItem.tsx:216
+msgid "{0} reacted {1} to {2}"
+msgstr "crwdns3913:0{0}crwdnd3913:0{1}crwdnd3913:0{2}crwdne3913:0"
 
 #: src/view/com/util/UserAvatar.tsx:464
 msgid "{0}'s avatar"
@@ -363,6 +371,11 @@ msgstr "crwdns161:0crwdne161:0"
 msgid "7 days"
 msgstr "crwdns163:0crwdne163:0"
 
+#. If last message does not contain text, fall back to "{user} reacted to {a message}"
+#: src/screens/Messages/components/ChatListItem.tsx:197
+msgid "a message"
+msgstr "crwdns3915:0crwdne3915:0"
+
 #: src/Navigation.tsx:383
 #: src/screens/Settings/AboutSettings.tsx:34
 #: src/screens/Settings/Settings.tsx:215
@@ -518,6 +531,10 @@ msgstr "crwdns219:0crwdne219:0"
 msgid "Add App Password"
 msgstr "crwdns221:0crwdne221:0"
 
+#: src/components/dms/EmojiReactionPicker.web.tsx:35
+msgid "Add emoji reaction"
+msgstr "crwdns3917:0crwdne3917:0"
+
 #: src/components/moderation/ReportDialog/index.tsx:392
 #: src/components/moderation/ReportDialog/index.tsx:396
 msgid "Add more details (optional)"
@@ -539,6 +556,10 @@ msgstr "crwdns229:0crwdne229:0"
 #: src/view/screens/ProfileList.tsx:943
 msgid "Add people"
 msgstr "crwdns231:0crwdne231:0"
+
+#: src/components/dms/EmojiPopup.android.tsx:55
+msgid "Add Reaction"
+msgstr "crwdns3919:0crwdne3919:0"
 
 #: src/screens/Home/NoFeedsPinned.tsx:99
 msgid "Add recommended feeds"
@@ -894,7 +915,7 @@ msgstr "crwdns383:0crwdne383:0"
 msgid "Are you sure you want to delete the app password \"{0}\"?"
 msgstr "crwdns385:0{0}crwdne385:0"
 
-#: src/components/dms/MessageContextMenu.tsx:142
+#: src/components/dms/MessageContextMenu.tsx:178
 msgid "Are you sure you want to delete this message? The message will be deleted for you, but not for the other participant."
 msgstr "crwdns387:0crwdne387:0"
 
@@ -1244,7 +1265,7 @@ msgstr "crwdns535:0crwdne535:0"
 msgid "Camera"
 msgstr "crwdns537:0crwdne537:0"
 
-#: src/components/Menu/index.tsx:304
+#: src/components/Menu/index.tsx:306
 #: src/components/Prompt.tsx:130
 #: src/components/Prompt.tsx:132
 #: src/screens/Deactivated.tsx:158
@@ -1530,7 +1551,7 @@ msgstr "crwdns649:0crwdne649:0"
 msgid "Click to open tag menu for {tag}"
 msgstr "crwdns651:0{tag}crwdne651:0"
 
-#: src/components/dms/MessageItem.tsx:229
+#: src/components/dms/MessageItem.tsx:317
 msgid "Click to retry failed message"
 msgstr "crwdns653:0crwdne653:0"
 
@@ -1596,12 +1617,13 @@ msgstr "crwdns675:0crwdne675:0"
 msgid "Close image viewer"
 msgstr "crwdns677:0crwdne677:0"
 
-#: src/components/ContextMenu/Backdrop.ios.tsx:43
-#: src/components/ContextMenu/Backdrop.tsx:39
+#: src/components/ContextMenu/Backdrop.ios.tsx:53
+#: src/components/ContextMenu/Backdrop.ios.tsx:79
+#: src/components/ContextMenu/Backdrop.tsx:45
 msgid "Close menu"
 msgstr "crwdns3901:0crwdne3901:0"
 
-#: src/components/Menu/index.tsx:298
+#: src/components/Menu/index.tsx:300
 msgid "Close this dialog"
 msgstr "crwdns679:0crwdne679:0"
 
@@ -1786,7 +1808,7 @@ msgstr "crwdns753:0crwdne753:0"
 msgid "Content warnings"
 msgstr "crwdns755:0crwdne755:0"
 
-#: src/components/Menu/index.web.tsx:83
+#: src/components/Menu/index.web.tsx:85
 msgid "Context menu backdrop, click to close the menu."
 msgstr "crwdns757:0crwdne757:0"
 
@@ -1831,7 +1853,7 @@ msgstr "crwdns773:0crwdne773:0"
 msgid "Copied build version to clipboard"
 msgstr "crwdns775:0crwdne775:0"
 
-#: src/components/dms/MessageContextMenu.tsx:52
+#: src/components/dms/MessageContextMenu.tsx:55
 #: src/lib/sharing.ts:25
 #: src/lib/sharing.ts:41
 #: src/view/com/modals/InviteCodes.tsx:153
@@ -1899,8 +1921,8 @@ msgstr "crwdns801:0crwdne801:0"
 msgid "Copy link to post"
 msgstr "crwdns803:0crwdne803:0"
 
-#: src/components/dms/MessageContextMenu.tsx:103
-#: src/components/dms/MessageContextMenu.tsx:106
+#: src/components/dms/MessageContextMenu.tsx:139
+#: src/components/dms/MessageContextMenu.tsx:142
 msgid "Copy message text"
 msgstr "crwdns805:0crwdne805:0"
 
@@ -2080,7 +2102,7 @@ msgstr "crwdns879:0crwdne879:0"
 msgid "Default icons"
 msgstr "crwdns881:0crwdne881:0"
 
-#: src/components/dms/MessageContextMenu.tsx:144
+#: src/components/dms/MessageContextMenu.tsx:180
 #: src/screens/Messages/components/ChatStatusInfo.tsx:55
 #: src/screens/Settings/AppPasswords.tsx:212
 #: src/screens/StarterPack/StarterPackScreen.tsx:591
@@ -2128,7 +2150,7 @@ msgstr "crwdns897:0crwdne897:0"
 msgid "Delete Conversation"
 msgstr "crwdns899:0crwdne899:0"
 
-#: src/components/dms/MessageContextMenu.tsx:117
+#: src/components/dms/MessageContextMenu.tsx:153
 msgid "Delete for me"
 msgstr "crwdns901:0crwdne901:0"
 
@@ -2136,11 +2158,11 @@ msgstr "crwdns901:0crwdne901:0"
 msgid "Delete List"
 msgstr "crwdns903:0crwdne903:0"
 
-#: src/components/dms/MessageContextMenu.tsx:140
+#: src/components/dms/MessageContextMenu.tsx:176
 msgid "Delete message"
 msgstr "crwdns905:0crwdne905:0"
 
-#: src/components/dms/MessageContextMenu.tsx:115
+#: src/components/dms/MessageContextMenu.tsx:151
 msgid "Delete message for me"
 msgstr "crwdns907:0crwdne907:0"
 
@@ -2388,6 +2410,10 @@ msgstr "crwdns1003:0crwdne1003:0"
 #: src/view/com/modals/lang-settings/ConfirmLanguagesButton.tsx:42
 msgid "Done{extraText}"
 msgstr "crwdns1005:0{extraText}crwdne1005:0"
+
+#: src/components/dms/MessageItem.tsx:161
+msgid "Double tap or long press the message to add a reaction"
+msgstr "crwdns3921:0crwdne3921:0"
 
 #: src/components/Dialog/index.tsx:324
 msgid "Double tap to close the dialog"
@@ -2908,6 +2934,11 @@ msgctxt "toast"
 msgid "Failed to accept chat"
 msgstr "crwdns1241:0crwdne1241:0"
 
+#: src/components/dms/ActionsWrapper.web.tsx:67
+#: src/components/dms/MessageContextMenu.tsx:93
+msgid "Failed to add emoji reaction"
+msgstr "crwdns3923:0crwdne3923:0"
+
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:568
 msgid "Failed to change handle. Please try again."
 msgstr "crwdns1243:0crwdne1243:0"
@@ -2935,7 +2966,7 @@ msgctxt "toast"
 msgid "Failed to delete chat"
 msgstr "crwdns1253:0crwdne1253:0"
 
-#: src/components/dms/MessageContextMenu.tsx:70
+#: src/components/dms/MessageContextMenu.tsx:73
 msgid "Failed to delete message"
 msgstr "crwdns1255:0crwdne1255:0"
 
@@ -2983,6 +3014,11 @@ msgstr "crwdns1273:0crwdne1273:0"
 msgid "Failed to pin post"
 msgstr "crwdns1275:0crwdne1275:0"
 
+#: src/components/dms/ActionsWrapper.web.tsx:61
+#: src/components/dms/MessageContextMenu.tsx:87
+msgid "Failed to remove emoji reaction"
+msgstr "crwdns3925:0crwdne3925:0"
+
 #: src/view/com/lightbox/Lightbox.tsx:46
 msgid "Failed to save image: {0}"
 msgstr "crwdns1277:0{0}crwdne1277:0"
@@ -2995,7 +3031,7 @@ msgstr "crwdns1279:0crwdne1279:0"
 msgid "Failed to save settings. Please try again."
 msgstr "crwdns1281:0crwdne1281:0"
 
-#: src/components/dms/MessageItem.tsx:222
+#: src/components/dms/MessageItem.tsx:310
 msgid "Failed to send"
 msgstr "crwdns1283:0crwdne1283:0"
 
@@ -3409,7 +3445,7 @@ msgstr "crwdns1447:0crwdne1447:0"
 msgid "Go Home"
 msgstr "crwdns1449:0crwdne1449:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:294
+#: src/screens/Messages/components/ChatListItem.tsx:343
 msgid "Go to conversation with {0}"
 msgstr "crwdns1451:0{0}crwdne1451:0"
 
@@ -4247,7 +4283,7 @@ msgstr "crwdns1813:0crwdne1813:0"
 msgid "Mentions"
 msgstr "crwdns1815:0crwdne1815:0"
 
-#: src/components/Menu/index.tsx:103
+#: src/components/Menu/index.tsx:105
 msgid "Menu"
 msgstr "crwdns1817:0crwdne1817:0"
 
@@ -4255,7 +4291,7 @@ msgstr "crwdns1817:0crwdne1817:0"
 msgid "Message {0}"
 msgstr "crwdns1819:0{0}crwdne1819:0"
 
-#: src/components/dms/MessageContextMenu.tsx:68
+#: src/components/dms/MessageContextMenu.tsx:71
 msgctxt "toast"
 msgid "Message deleted"
 msgstr "crwdns1821:0crwdne1821:0"
@@ -4264,7 +4300,7 @@ msgstr "crwdns1821:0crwdne1821:0"
 msgid "Message deleted"
 msgstr "crwdns1823:0crwdne1823:0"
 
-#: src/components/dms/MessageContextMenu.tsx:83
+#: src/components/dms/MessageContextMenu.tsx:119
 msgid "Message from @{0}: {1}"
 msgstr "crwdns3903:0{0}crwdnd3903:0{1}crwdne3903:0"
 
@@ -4281,7 +4317,7 @@ msgstr "crwdns1827:0crwdne1827:0"
 msgid "Message is too long"
 msgstr "crwdns1829:0crwdne1829:0"
 
-#: src/components/dms/MessageContextMenu.tsx:81
+#: src/components/dms/MessageContextMenu.tsx:117
 msgid "Message options"
 msgstr "crwdns3905:0crwdne3905:0"
 
@@ -4841,7 +4877,7 @@ msgstr "crwdns2059:0crwdne2059:0"
 msgid "now"
 msgstr "crwdns2061:0crwdne2061:0"
 
-#: src/components/dms/MessageItem.tsx:186
+#: src/components/dms/MessageItem.tsx:274
 msgid "Now"
 msgstr "crwdns2063:0crwdne2063:0"
 
@@ -4952,8 +4988,8 @@ msgstr "crwdns2107:0{name}crwdne2107:0"
 msgid "Open avatar creator"
 msgstr "crwdns2109:0crwdne2109:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:302
-#: src/screens/Messages/components/ChatListItem.tsx:303
+#: src/screens/Messages/components/ChatListItem.tsx:351
+#: src/screens/Messages/components/ChatListItem.tsx:352
 msgid "Open conversation options"
 msgstr "crwdns2111:0crwdne2111:0"
 
@@ -4979,7 +5015,7 @@ msgstr "crwdns2119:0crwdne2119:0"
 msgid "Open link to {niceUrl}"
 msgstr "crwdns2121:0{niceUrl}crwdne2121:0"
 
-#: src/components/dms/ActionsWrapper.tsx:57
+#: src/components/dms/ActionsWrapper.tsx:35
 msgid "Open message options"
 msgstr "crwdns2123:0crwdne2123:0"
 
@@ -5671,6 +5707,10 @@ msgstr "crwdns2429:0crwdne2429:0"
 msgid "Re-attach quote"
 msgstr "crwdns2431:0crwdne2431:0"
 
+#: src/components/dms/EmojiReactionPicker.tsx:83
+msgid "React with {emoji}"
+msgstr "crwdns3927:0{emoji}crwdne3927:0"
+
 #: src/screens/Deactivated.tsx:141
 msgid "Reactivate your account"
 msgstr "crwdns2433:0crwdne2433:0"
@@ -5951,7 +5991,7 @@ msgstr "crwdns2549:0crwdne2549:0"
 msgid "Reply was successfully hidden"
 msgstr "crwdns2551:0crwdne2551:0"
 
-#: src/components/dms/MessageContextMenu.tsx:125
+#: src/components/dms/MessageContextMenu.tsx:161
 #: src/components/dms/MessagesListBlockedFooter.tsx:85
 #: src/components/dms/MessagesListBlockedFooter.tsx:92
 msgid "Report"
@@ -5985,7 +6025,7 @@ msgstr "crwdns2561:0crwdne2561:0"
 msgid "Report List"
 msgstr "crwdns2563:0crwdne2563:0"
 
-#: src/components/dms/MessageContextMenu.tsx:123
+#: src/components/dms/MessageContextMenu.tsx:159
 msgid "Report message"
 msgstr "crwdns2565:0crwdne2565:0"
 
@@ -6150,7 +6190,7 @@ msgstr "crwdns2631:0crwdne2631:0"
 msgid "Retries the last action, which errored out"
 msgstr "crwdns2633:0crwdne2633:0"
 
-#: src/components/dms/MessageItem.tsx:233
+#: src/components/dms/MessageItem.tsx:321
 #: src/components/Error.tsx:65
 #: src/components/Lists.tsx:110
 #: src/components/moderation/ReportDialog/index.tsx:221
@@ -6918,6 +6958,14 @@ msgstr "crwdns2947:0crwdne2947:0"
 msgid "Some people can reply"
 msgstr "crwdns2949:0crwdne2949:0"
 
+#: src/components/dms/MessageItem.tsx:148
+msgid "Someone reacted {0}"
+msgstr "crwdns3929:0{0}crwdne3929:0"
+
+#: src/screens/Messages/components/ChatListItem.tsx:226
+msgid "Someone reacted {0} to {1}"
+msgstr "crwdns3931:0{0}crwdnd3931:0{1}crwdne3931:0"
+
 #: src/components/moderation/ReportDialog/index.tsx:76
 msgid "Something wasn't quite right with the data you're trying to report. Please contact support."
 msgstr "crwdns2951:0crwdne2951:0"
@@ -7168,8 +7216,9 @@ msgstr "crwdns3053:0crwdne3053:0"
 msgid "Tags only"
 msgstr "crwdns3055:0crwdne3055:0"
 
-#: src/components/ContextMenu/Backdrop.ios.tsx:44
-#: src/components/ContextMenu/Backdrop.tsx:40
+#: src/components/ContextMenu/Backdrop.ios.tsx:54
+#: src/components/ContextMenu/Backdrop.ios.tsx:80
+#: src/components/ContextMenu/Backdrop.tsx:46
 msgid "Tap to close context menu"
 msgstr "crwdns3907:0crwdne3907:0"
 
@@ -7357,7 +7406,7 @@ msgstr "crwdns3133:0crwdne3133:0"
 msgid "The starter pack that you are trying to view is invalid. You may delete this starter pack instead."
 msgstr "crwdns3135:0crwdne3135:0"
 
-#: src/components/ContextMenu/index.tsx:412
+#: src/components/ContextMenu/index.tsx:433
 msgid "The subject of the context menu"
 msgstr "crwdns3909:0crwdne3909:0"
 
@@ -7528,7 +7577,7 @@ msgstr "crwdns3201:0crwdne3201:0"
 msgid "This content is not viewable without a Bluesky account."
 msgstr "crwdns3203:0crwdne3203:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:296
+#: src/screens/Messages/components/ChatListItem.tsx:345
 msgid "This conversation is with a deleted or a deactivated account. Press for options"
 msgstr "crwdns3205:0crwdne3205:0"
 
@@ -7761,8 +7810,8 @@ msgstr "crwdns3313:0crwdne3313:0"
 msgid "Topic"
 msgstr "crwdns3315:0crwdne3315:0"
 
-#: src/components/dms/MessageContextMenu.tsx:96
-#: src/components/dms/MessageContextMenu.tsx:98
+#: src/components/dms/MessageContextMenu.tsx:132
+#: src/components/dms/MessageContextMenu.tsx:134
 #: src/view/com/post-thread/PostThreadItem.tsx:778
 #: src/view/com/post-thread/PostThreadItem.tsx:781
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:451
@@ -8839,6 +8888,14 @@ msgstr "crwdns3791:0crwdne3791:0"
 #: src/screens/Deactivated.tsx:128
 msgid "You previously deactivated @{0}."
 msgstr "crwdns3793:0{0}crwdne3793:0"
+
+#: src/components/dms/MessageItem.tsx:135
+msgid "You reacted {0}"
+msgstr "crwdns3933:0{0}crwdne3933:0"
+
+#: src/screens/Messages/components/ChatListItem.tsx:205
+msgid "You reacted {0} to {1}"
+msgstr "crwdns3935:0{0}crwdnd3935:0{1}crwdne3935:0"
 
 #: src/screens/Settings/Settings.tsx:257
 #: src/view/shell/desktop/LeftNav.tsx:206
