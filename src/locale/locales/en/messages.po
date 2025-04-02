@@ -8,7 +8,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-03-30 21:13\n"
+"PO-Revision-Date: 2025-04-02 18:03\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -116,6 +116,11 @@ msgstr "crwdns43:00={0}crwdne43:0"
 msgid "{0, plural, one {repost} other {reposts}}"
 msgstr "crwdns45:00={0}crwdne45:0"
 
+#. Number of users (always at least 25) who have joined Bluesky using a specific starter pack
+#: src/screens/StarterPack/StarterPackScreen.tsx:485
+msgid "{0, plural, other {# people have}} used this starter pack!"
+msgstr "crwdns3937:00={0}crwdne3937:0"
+
 #. Pattern: {wordValue} in tags
 #: src/components/dialogs/MutedWords.tsx:475
 msgid "{0} <0>in <1>tags</1></0>"
@@ -139,15 +144,11 @@ msgstr "crwdns53:0{0}crwdnd53:0{1}crwdne53:0"
 msgid "{0} out of 50"
 msgstr "crwdns55:0{0}crwdne55:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:485
-msgid "{0} people have used this starter pack!"
-msgstr "crwdns57:0{0}crwdne57:0"
-
 #: src/components/dms/MessageItem.tsx:143
 msgid "{0} reacted {1}"
 msgstr "crwdns3911:0{0}crwdnd3911:0{1}crwdne3911:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:216
+#: src/screens/Messages/components/ChatListItem.tsx:226
 msgid "{0} reacted {1} to {2}"
 msgstr "crwdns3913:0{0}crwdnd3913:0{1}crwdnd3913:0{2}crwdne3913:0"
 
@@ -297,6 +298,11 @@ msgstr "crwdns125:0{following}crwdne125:0"
 msgid "{handle} can't be messaged"
 msgstr "crwdns127:0{handle}crwdne127:0"
 
+#. Number of users (always at least 50) who have joined Bluesky using a specific starter pack
+#: src/components/StarterPack/StarterPackCard.tsx:98
+msgid "{joinedAllTimeCount, plural, other {# users have}} joined!"
+msgstr "crwdns3939:0joinedAllTimeCount={joinedAllTimeCount}crwdne3939:0"
+
 #: src/view/shell/bottom-bar/BottomBarWeb.tsx:270
 msgid "{notificationCount, plural, one {# unread item} other {# unread items}}"
 msgstr "crwdns129:0notificationCount={notificationCount}crwdne129:0"
@@ -372,7 +378,7 @@ msgid "7 days"
 msgstr "crwdns163:0crwdne163:0"
 
 #. If last message does not contain text, fall back to "{user} reacted to {a message}"
-#: src/screens/Messages/components/ChatListItem.tsx:197
+#: src/screens/Messages/components/ChatListItem.tsx:205
 msgid "a message"
 msgstr "crwdns3915:0crwdne3915:0"
 
@@ -486,8 +492,8 @@ msgstr "crwdns203:0{displayName}crwdne203:0"
 msgid "Add a content warning"
 msgstr "crwdns205:0crwdne205:0"
 
-#: src/view/screens/ProfileList.tsx:917
-#: src/view/screens/ProfileList.tsx:935
+#: src/view/screens/ProfileList.tsx:916
+#: src/view/screens/ProfileList.tsx:934
 msgid "Add a user to this list"
 msgstr "crwdns207:0crwdne207:0"
 
@@ -498,7 +504,7 @@ msgstr "crwdns209:0crwdne209:0"
 
 #: src/view/com/composer/GifAltText.tsx:76
 #: src/view/com/composer/GifAltText.tsx:144
-#: src/view/com/composer/GifAltText.tsx:207
+#: src/view/com/composer/GifAltText.tsx:210
 #: src/view/com/composer/photos/Gallery.tsx:169
 #: src/view/com/composer/photos/Gallery.tsx:216
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:88
@@ -552,8 +558,8 @@ msgstr "crwdns227:0crwdne227:0"
 msgid "Add new post"
 msgstr "crwdns229:0crwdne229:0"
 
-#: src/view/screens/ProfileList.tsx:925
-#: src/view/screens/ProfileList.tsx:943
+#: src/view/screens/ProfileList.tsx:924
+#: src/view/screens/ProfileList.tsx:942
 msgid "Add people"
 msgstr "crwdns231:0crwdne231:0"
 
@@ -706,8 +712,8 @@ msgstr "crwdns295:0crwdne295:0"
 
 #: src/view/com/composer/GifAltText.tsx:179
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:139
-msgid "Alt text will be truncated. Limit: {0} characters."
-msgstr "crwdns297:0{0}crwdne297:0"
+msgid "Alt text will be truncated. {MAX_ALT_TEXT, plural, other {Limit: {0} characters.}}"
+msgstr "crwdns3941:0MAX_ALT_TEXT={MAX_ALT_TEXT}crwdnd3941:00={0}crwdne3941:0"
 
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:93
 #: src/view/com/modals/VerifyEmail.tsx:132
@@ -734,7 +740,7 @@ msgstr "crwdns307:0crwdne307:0"
 msgid "An error occurred while compressing the video."
 msgstr "crwdns309:0crwdne309:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:331
+#: src/components/StarterPack/ProfileStarterPacks.tsx:336
 msgid "An error occurred while generating your starter pack. Want to try again?"
 msgstr "crwdns311:0crwdne311:0"
 
@@ -919,7 +925,7 @@ msgstr "crwdns385:0{0}crwdne385:0"
 msgid "Are you sure you want to delete this message? The message will be deleted for you, but not for the other participant."
 msgstr "crwdns387:0crwdne387:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:638
+#: src/screens/StarterPack/StarterPackScreen.tsx:641
 msgid "Are you sure you want to delete this starter pack?"
 msgstr "crwdns389:0crwdne389:0"
 
@@ -968,7 +974,7 @@ msgstr "crwdns409:0crwdne409:0"
 msgid "Artistic or non-erotic nudity."
 msgstr "crwdns411:0crwdne411:0"
 
-#: src/screens/Signup/StepHandle.tsx:190
+#: src/screens/Signup/StepHandle.tsx:194
 msgid "At least 3 characters"
 msgstr "crwdns413:0crwdne413:0"
 
@@ -1018,13 +1024,13 @@ msgstr "crwdns425:0crwdne425:0"
 msgid "Before creating a post, you must first verify your email."
 msgstr "crwdns427:0crwdne427:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:338
+#: src/components/StarterPack/ProfileStarterPacks.tsx:343
 msgid "Before creating a starter pack, you must first verify your email."
 msgstr "crwdns429:0crwdne429:0"
 
 #: src/components/dms/dialogs/NewChatDialog.tsx:79
 #: src/components/dms/MessageProfileButton.tsx:110
-#: src/screens/Messages/Conversation.tsx:212
+#: src/screens/Messages/Conversation.tsx:221
 msgid "Before you may message another user, you must first verify your email."
 msgstr "crwdns431:0crwdne431:0"
 
@@ -1060,7 +1066,7 @@ msgstr "crwdns439:0crwdne439:0"
 msgid "Block Account?"
 msgstr "crwdns441:0crwdne441:0"
 
-#: src/view/screens/ProfileList.tsx:662
+#: src/view/screens/ProfileList.tsx:661
 msgid "Block accounts"
 msgstr "crwdns443:0crwdne443:0"
 
@@ -1072,7 +1078,7 @@ msgstr "crwdns445:0crwdne445:0"
 msgid "Block and/or delete this conversation"
 msgstr "crwdns447:0crwdne447:0"
 
-#: src/view/screens/ProfileList.tsx:782
+#: src/view/screens/ProfileList.tsx:781
 msgid "Block list"
 msgstr "crwdns449:0crwdne449:0"
 
@@ -1080,7 +1086,7 @@ msgstr "crwdns449:0crwdne449:0"
 msgid "Block or report"
 msgstr "crwdns451:0crwdne451:0"
 
-#: src/view/screens/ProfileList.tsx:777
+#: src/view/screens/ProfileList.tsx:776
 msgid "Block these accounts?"
 msgstr "crwdns453:0crwdne453:0"
 
@@ -1123,7 +1129,7 @@ msgstr "crwdns469:0crwdne469:0"
 msgid "Blocking does not prevent this labeler from placing labels on your account."
 msgstr "crwdns471:0crwdne471:0"
 
-#: src/view/screens/ProfileList.tsx:779
+#: src/view/screens/ProfileList.tsx:778
 msgid "Blocking is public. Blocked accounts cannot reply in your threads, mention you, or otherwise interact with you."
 msgstr "crwdns473:0crwdne473:0"
 
@@ -1166,7 +1172,7 @@ msgstr "crwdns489:0crwdne489:0"
 msgid "Bluesky Social Terms of Service"
 msgstr "crwdns491:0crwdne491:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:298
+#: src/components/StarterPack/ProfileStarterPacks.tsx:303
 msgid "Bluesky will choose a set of recommended accounts from people in your network."
 msgstr "crwdns493:0crwdne493:0"
 
@@ -1195,23 +1201,23 @@ msgstr "crwdns503:0crwdne503:0"
 msgid "Books"
 msgstr "crwdns505:0crwdne505:0"
 
-#: src/components/FeedInterstitials.tsx:372
+#: src/components/FeedInterstitials.tsx:373
 msgid "Browse more accounts on the Explore page"
 msgstr "crwdns507:0crwdne507:0"
 
-#: src/components/FeedInterstitials.tsx:509
+#: src/components/FeedInterstitials.tsx:511
 msgid "Browse more feeds on the Explore page"
 msgstr "crwdns509:0crwdne509:0"
 
 #: src/components/FeedInterstitials.tsx:353
 #: src/components/FeedInterstitials.tsx:356
-#: src/components/FeedInterstitials.tsx:490
-#: src/components/FeedInterstitials.tsx:493
+#: src/components/FeedInterstitials.tsx:492
+#: src/components/FeedInterstitials.tsx:495
 msgid "Browse more suggestions"
 msgstr "crwdns511:0crwdne511:0"
 
-#: src/components/FeedInterstitials.tsx:380
-#: src/components/FeedInterstitials.tsx:518
+#: src/components/FeedInterstitials.tsx:381
+#: src/components/FeedInterstitials.tsx:520
 msgid "Browse more suggestions on the Explore page"
 msgstr "crwdns513:0crwdne513:0"
 
@@ -1413,7 +1419,7 @@ msgid "Changes app icon"
 msgstr "crwdns589:0crwdne589:0"
 
 #: src/components/forms/HostingProvider.tsx:50
-#: src/components/forms/HostingProvider.tsx:70
+#: src/components/forms/HostingProvider.tsx:68
 msgid "Changes hosting provider"
 msgstr "crwdns591:0crwdne591:0"
 
@@ -1486,7 +1492,7 @@ msgstr "crwdns617:0crwdne617:0"
 msgid "Choose Feeds"
 msgstr "crwdns619:0crwdne619:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:306
+#: src/components/StarterPack/ProfileStarterPacks.tsx:311
 msgid "Choose for me"
 msgstr "crwdns621:0crwdne621:0"
 
@@ -1566,6 +1572,7 @@ msgstr "crwdns657:0crwdne657:0"
 #: src/components/dialogs/GifSelect.tsx:281
 #: src/components/dialogs/VerifyEmailDialog.tsx:289
 #: src/components/dms/dialogs/SearchablePeopleList.tsx:269
+#: src/components/dms/EmojiPopup.android.tsx:58
 #: src/components/dms/ReportDialog.tsx:381
 #: src/components/dms/ReportDialog.tsx:390
 #: src/components/NewskieDialog.tsx:146
@@ -1837,7 +1844,7 @@ msgctxt "toast"
 msgid "Conversation deleted"
 msgstr "crwdns767:0crwdne767:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:189
+#: src/screens/Messages/components/ChatListItem.tsx:191
 msgid "Conversation deleted"
 msgstr "crwdns769:0crwdne769:0"
 
@@ -1912,7 +1919,7 @@ msgstr "crwdns797:0crwdne797:0"
 msgid "Copy Link"
 msgstr "crwdns799:0crwdne799:0"
 
-#: src/view/screens/ProfileList.tsx:506
+#: src/view/screens/ProfileList.tsx:505
 msgid "Copy link to list"
 msgstr "crwdns801:0crwdne801:0"
 
@@ -1958,7 +1965,7 @@ msgstr "crwdns817:0crwdne817:0"
 msgid "Could not load feed"
 msgstr "crwdns819:0crwdne819:0"
 
-#: src/view/screens/ProfileList.tsx:1022
+#: src/view/screens/ProfileList.tsx:1021
 msgid "Could not load list"
 msgstr "crwdns821:0crwdne821:0"
 
@@ -1970,7 +1977,7 @@ msgstr "crwdns823:0crwdne823:0"
 msgid "Could not process your video"
 msgstr "crwdns825:0crwdne825:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:288
+#: src/components/StarterPack/ProfileStarterPacks.tsx:293
 msgid "Create"
 msgstr "crwdns827:0crwdne827:0"
 
@@ -1978,13 +1985,13 @@ msgstr "crwdns827:0crwdne827:0"
 msgid "Create a QR code for a starter pack"
 msgstr "crwdns829:0crwdne829:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:173
-#: src/components/StarterPack/ProfileStarterPacks.tsx:269
+#: src/components/StarterPack/ProfileStarterPacks.tsx:178
+#: src/components/StarterPack/ProfileStarterPacks.tsx:274
 #: src/Navigation.tsx:443
 msgid "Create a starter pack"
 msgstr "crwdns831:0crwdne831:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:250
+#: src/components/StarterPack/ProfileStarterPacks.tsx:255
 msgid "Create a starter pack for me"
 msgstr "crwdns833:0crwdne833:0"
 
@@ -2012,7 +2019,7 @@ msgstr "crwdns839:0crwdne839:0"
 msgid "Create an avatar instead"
 msgstr "crwdns841:0crwdne841:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:180
+#: src/components/StarterPack/ProfileStarterPacks.tsx:185
 msgid "Create another"
 msgstr "crwdns843:0crwdne843:0"
 
@@ -2105,11 +2112,11 @@ msgstr "crwdns881:0crwdne881:0"
 #: src/components/dms/MessageContextMenu.tsx:180
 #: src/screens/Messages/components/ChatStatusInfo.tsx:55
 #: src/screens/Settings/AppPasswords.tsx:212
-#: src/screens/StarterPack/StarterPackScreen.tsx:591
-#: src/screens/StarterPack/StarterPackScreen.tsx:669
-#: src/screens/StarterPack/StarterPackScreen.tsx:741
+#: src/screens/StarterPack/StarterPackScreen.tsx:594
+#: src/screens/StarterPack/StarterPackScreen.tsx:672
+#: src/screens/StarterPack/StarterPackScreen.tsx:744
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:750
-#: src/view/screens/ProfileList.tsx:761
+#: src/view/screens/ProfileList.tsx:760
 msgid "Delete"
 msgstr "crwdns883:0crwdne883:0"
 
@@ -2154,9 +2161,9 @@ msgstr "crwdns899:0crwdne899:0"
 msgid "Delete for me"
 msgstr "crwdns901:0crwdne901:0"
 
-#: src/view/screens/ProfileList.tsx:549
-msgid "Delete List"
-msgstr "crwdns903:0crwdne903:0"
+#: src/view/screens/ProfileList.tsx:548
+msgid "Delete list"
+msgstr "crwdns3943:0crwdne3943:0"
 
 #: src/components/dms/MessageContextMenu.tsx:176
 msgid "Delete message"
@@ -2176,16 +2183,16 @@ msgstr "crwdns909:0crwdne909:0"
 msgid "Delete post"
 msgstr "crwdns911:0crwdne911:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:585
-#: src/screens/StarterPack/StarterPackScreen.tsx:732
+#: src/screens/StarterPack/StarterPackScreen.tsx:588
+#: src/screens/StarterPack/StarterPackScreen.tsx:735
 msgid "Delete starter pack"
 msgstr "crwdns913:0crwdne913:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:635
+#: src/screens/StarterPack/StarterPackScreen.tsx:638
 msgid "Delete starter pack?"
 msgstr "crwdns915:0crwdne915:0"
 
-#: src/view/screens/ProfileList.tsx:756
+#: src/view/screens/ProfileList.tsx:755
 msgid "Delete this list?"
 msgstr "crwdns917:0crwdne917:0"
 
@@ -2206,7 +2213,7 @@ msgstr "crwdns923:0crwdne923:0"
 msgid "Deleted post."
 msgstr "crwdns925:0crwdne925:0"
 
-#: src/screens/Profile/Header/EditProfileDialog.tsx:344
+#: src/screens/Profile/Header/EditProfileDialog.tsx:347
 #: src/view/com/modals/CreateOrEditList.tsx:280
 #: src/view/com/modals/CreateOrEditList.tsx:301
 #: src/view/com/modals/EditProfile.tsx:193
@@ -2214,13 +2221,13 @@ msgstr "crwdns925:0crwdne925:0"
 msgid "Description"
 msgstr "crwdns927:0crwdne927:0"
 
-#: src/screens/Profile/Header/EditProfileDialog.tsx:364
+#: src/screens/Profile/Header/EditProfileDialog.tsx:367
 msgid "Description is too long"
 msgstr "crwdns929:0crwdne929:0"
 
-#: src/screens/Profile/Header/EditProfileDialog.tsx:365
-msgid "Description is too long. The maximum number of characters is {DESCRIPTION_MAX_GRAPHEMES}."
-msgstr "crwdns931:0{DESCRIPTION_MAX_GRAPHEMES}crwdne931:0"
+#: src/screens/Profile/Header/EditProfileDialog.tsx:368
+msgid "Description is too long. {DESCRIPTION_MAX_GRAPHEMES, plural, other {The maximum number of characters is #.}}"
+msgstr "crwdns3945:0DESCRIPTION_MAX_GRAPHEMES={DESCRIPTION_MAX_GRAPHEMES}crwdne3945:0"
 
 #: src/view/com/composer/GifAltText.tsx:150
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:114
@@ -2340,7 +2347,7 @@ msgstr "crwdns981:0crwdne981:0"
 
 #: src/screens/Profile/Header/EditProfileDialog.tsx:314
 #: src/screens/Profile/Header/EditProfileDialog.tsx:320
-#: src/screens/Profile/Header/EditProfileDialog.tsx:351
+#: src/screens/Profile/Header/EditProfileDialog.tsx:354
 #: src/view/com/modals/EditProfile.tsx:187
 msgid "Display name"
 msgstr "crwdns983:0crwdne983:0"
@@ -2354,8 +2361,8 @@ msgid "Display name is too long"
 msgstr "crwdns987:0crwdne987:0"
 
 #: src/screens/Profile/Header/EditProfileDialog.tsx:334
-msgid "Display name is too long. The maximum number of characters is {DISPLAY_NAME_MAX_GRAPHEMES}."
-msgstr "crwdns989:0{DISPLAY_NAME_MAX_GRAPHEMES}crwdne989:0"
+msgid "Display name is too long. {DISPLAY_NAME_MAX_GRAPHEMES, plural, other {The maximum number of characters is #.}}"
+msgstr "crwdns3947:0DISPLAY_NAME_MAX_GRAPHEMES={DISPLAY_NAME_MAX_GRAPHEMES}crwdne3947:0"
 
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:373
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:375
@@ -2485,7 +2492,7 @@ msgid "Each code works once. You'll receive more invite codes periodically."
 msgstr "crwdns1039:0crwdne1039:0"
 
 #: src/screens/Settings/AccountSettings.tsx:112
-#: src/screens/StarterPack/StarterPackScreen.tsx:580
+#: src/screens/StarterPack/StarterPackScreen.tsx:583
 #: src/screens/StarterPack/Wizard/index.tsx:534
 #: src/screens/StarterPack/Wizard/index.tsx:541
 msgid "Edit"
@@ -2516,7 +2523,7 @@ msgstr "crwdns1049:0crwdne1049:0"
 msgid "Edit interaction settings"
 msgstr "crwdns1051:0crwdne1051:0"
 
-#: src/view/screens/ProfileList.tsx:537
+#: src/view/screens/ProfileList.tsx:536
 msgid "Edit list details"
 msgstr "crwdns1053:0crwdne1053:0"
 
@@ -2554,7 +2561,7 @@ msgstr "crwdns1065:0crwdne1065:0"
 msgid "Edit Profile"
 msgstr "crwdns1067:0crwdne1067:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:572
+#: src/screens/StarterPack/StarterPackScreen.tsx:575
 msgid "Edit starter pack"
 msgstr "crwdns1069:0crwdne1069:0"
 
@@ -2974,7 +2981,7 @@ msgstr "crwdns1255:0crwdne1255:0"
 msgid "Failed to delete post, please try again"
 msgstr "crwdns1257:0crwdne1257:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:703
+#: src/screens/StarterPack/StarterPackScreen.tsx:706
 msgid "Failed to delete starter pack"
 msgstr "crwdns1259:0crwdne1259:0"
 
@@ -3373,7 +3380,7 @@ msgstr "crwdns1423:0crwdne1423:0"
 msgid "Gallery"
 msgstr "crwdns1425:0crwdne1425:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:295
+#: src/components/StarterPack/ProfileStarterPacks.tsx:300
 msgid "Generate a starter pack"
 msgstr "crwdns1427:0crwdne1427:0"
 
@@ -3413,7 +3420,7 @@ msgstr "crwdns1439:0crwdne1439:0"
 #: src/screens/VideoFeed/index.tsx:1112
 #: src/view/com/auth/LoggedOut.tsx:72
 #: src/view/screens/NotFound.tsx:57
-#: src/view/screens/ProfileList.tsx:1031
+#: src/view/screens/ProfileList.tsx:1030
 msgid "Go back"
 msgstr "crwdns1441:0crwdne1441:0"
 
@@ -3422,9 +3429,9 @@ msgstr "crwdns1441:0crwdne1441:0"
 #: src/screens/Profile/ErrorState.tsx:62
 #: src/screens/Profile/ErrorState.tsx:66
 #: src/screens/Profile/ProfileFeed/index.tsx:94
-#: src/screens/StarterPack/StarterPackScreen.tsx:754
+#: src/screens/StarterPack/StarterPackScreen.tsx:757
 #: src/view/screens/NotFound.tsx:56
-#: src/view/screens/ProfileList.tsx:1036
+#: src/view/screens/ProfileList.tsx:1035
 msgid "Go Back"
 msgstr "crwdns1443:0crwdne1443:0"
 
@@ -3445,7 +3452,7 @@ msgstr "crwdns1447:0crwdne1447:0"
 msgid "Go Home"
 msgstr "crwdns1449:0crwdne1449:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:343
+#: src/screens/Messages/components/ChatListItem.tsx:355
 msgid "Go to conversation with {0}"
 msgstr "crwdns1451:0{0}crwdne1451:0"
 
@@ -3708,7 +3715,7 @@ msgstr "crwdns1555:0crwdne1555:0"
 msgid "If you are not yet an adult according to the laws of your country, your parent or legal guardian must read these Terms on your behalf."
 msgstr "crwdns1557:0crwdne1557:0"
 
-#: src/view/screens/ProfileList.tsx:758
+#: src/view/screens/ProfileList.tsx:757
 msgid "If you delete this list, you won't be able to recover it."
 msgstr "crwdns1559:0crwdne1559:0"
 
@@ -4009,7 +4016,7 @@ msgstr "crwdns1693:0crwdne1693:0"
 msgid "left to go."
 msgstr "crwdns1695:0crwdne1695:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:311
+#: src/components/StarterPack/ProfileStarterPacks.tsx:316
 msgid "Let me choose"
 msgstr "crwdns1697:0crwdne1697:0"
 
@@ -4103,7 +4110,7 @@ msgstr "crwdns1733:0crwdne1733:0"
 msgid "List Avatar"
 msgstr "crwdns1735:0crwdne1735:0"
 
-#: src/view/screens/ProfileList.tsx:431
+#: src/view/screens/ProfileList.tsx:430
 msgctxt "toast"
 msgid "List blocked"
 msgstr "crwdns1737:0crwdne1737:0"
@@ -4121,7 +4128,7 @@ msgstr "crwdns1741:0crwdne1741:0"
 msgid "List by you"
 msgstr "crwdns1743:0crwdne1743:0"
 
-#: src/view/screens/ProfileList.tsx:478
+#: src/view/screens/ProfileList.tsx:477
 msgctxt "toast"
 msgid "List deleted"
 msgstr "crwdns1745:0crwdne1745:0"
@@ -4130,11 +4137,11 @@ msgstr "crwdns1745:0crwdne1745:0"
 msgid "List has been hidden"
 msgstr "crwdns1747:0crwdne1747:0"
 
-#: src/view/screens/ProfileList.tsx:173
+#: src/view/screens/ProfileList.tsx:172
 msgid "List Hidden"
 msgstr "crwdns1749:0crwdne1749:0"
 
-#: src/view/screens/ProfileList.tsx:395
+#: src/view/screens/ProfileList.tsx:394
 msgctxt "toast"
 msgid "List muted"
 msgstr "crwdns1751:0crwdne1751:0"
@@ -4143,12 +4150,12 @@ msgstr "crwdns1751:0crwdne1751:0"
 msgid "List Name"
 msgstr "crwdns1753:0crwdne1753:0"
 
-#: src/view/screens/ProfileList.tsx:449
+#: src/view/screens/ProfileList.tsx:448
 msgctxt "toast"
 msgid "List unblocked"
 msgstr "crwdns1755:0crwdne1755:0"
 
-#: src/view/screens/ProfileList.tsx:413
+#: src/view/screens/ProfileList.tsx:412
 msgctxt "toast"
 msgid "List unmuted"
 msgstr "crwdns1757:0crwdne1757:0"
@@ -4185,7 +4192,7 @@ msgstr "crwdns1769:0crwdne1769:0"
 #: src/screens/Profile/ProfileFeed/index.tsx:221
 #: src/screens/Profile/Sections/Feed.tsx:98
 #: src/view/com/feeds/FeedPage.tsx:155
-#: src/view/screens/ProfileList.tsx:871
+#: src/view/screens/ProfileList.tsx:870
 msgid "Load new posts"
 msgstr "crwdns1771:0crwdne1771:0"
 
@@ -4230,7 +4237,7 @@ msgstr "crwdns1789:0crwdne1789:0"
 msgid "Looks like you're missing a following feed. <0>Click here to add one.</0>"
 msgstr "crwdns1791:0crwdne1791:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:264
+#: src/components/StarterPack/ProfileStarterPacks.tsx:269
 msgid "Make one for me"
 msgstr "crwdns1793:0crwdne1793:0"
 
@@ -4296,7 +4303,7 @@ msgctxt "toast"
 msgid "Message deleted"
 msgstr "crwdns1821:0crwdne1821:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:190
+#: src/screens/Messages/components/ChatListItem.tsx:192
 msgid "Message deleted"
 msgstr "crwdns1823:0crwdne1823:0"
 
@@ -4412,7 +4419,7 @@ msgstr "crwdns1867:0crwdne1867:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:194
 #: src/view/com/profile/ProfileMenu.tsx:200
-#: src/view/screens/ProfileList.tsx:743
+#: src/view/screens/ProfileList.tsx:742
 msgid "More options"
 msgstr "crwdns1869:0crwdne1869:0"
 
@@ -4452,7 +4459,7 @@ msgstr "crwdns1881:0{tag}crwdne1881:0"
 msgid "Mute account"
 msgstr "crwdns1883:0crwdne1883:0"
 
-#: src/view/screens/ProfileList.tsx:650
+#: src/view/screens/ProfileList.tsx:649
 msgid "Mute accounts"
 msgstr "crwdns1885:0crwdne1885:0"
 
@@ -4465,11 +4472,11 @@ msgstr "crwdns1887:0crwdne1887:0"
 msgid "Mute in:"
 msgstr "crwdns1889:0crwdne1889:0"
 
-#: src/view/screens/ProfileList.tsx:772
+#: src/view/screens/ProfileList.tsx:771
 msgid "Mute list"
 msgstr "crwdns1891:0crwdne1891:0"
 
-#: src/view/screens/ProfileList.tsx:767
+#: src/view/screens/ProfileList.tsx:766
 msgid "Mute these accounts?"
 msgstr "crwdns1893:0crwdne1893:0"
 
@@ -4528,7 +4535,7 @@ msgstr "crwdns1917:0{0}crwdne1917:0"
 msgid "Muted words & tags"
 msgstr "crwdns1919:0crwdne1919:0"
 
-#: src/view/screens/ProfileList.tsx:769
+#: src/view/screens/ProfileList.tsx:768
 msgid "Muting is private. Muted accounts can interact with you, but you will not see their posts or receive notifications from them."
 msgstr "crwdns1921:0crwdne1921:0"
 
@@ -4565,7 +4572,7 @@ msgstr "crwdns1931:0crwdne1931:0"
 msgid "Nature"
 msgstr "crwdns1933:0crwdne1933:0"
 
-#: src/components/StarterPack/StarterPackCard.tsx:130
+#: src/components/StarterPack/StarterPackCard.tsx:132
 msgid "Navigate to {0}"
 msgstr "crwdns1935:0{0}crwdne1935:0"
 
@@ -4639,8 +4646,8 @@ msgstr "crwdns1963:0crwdne1963:0"
 #: src/view/screens/Feeds.tsx:549
 #: src/view/screens/Notifications.tsx:165
 #: src/view/screens/Profile.tsx:507
-#: src/view/screens/ProfileList.tsx:253
-#: src/view/screens/ProfileList.tsx:286
+#: src/view/screens/ProfileList.tsx:252
+#: src/view/screens/ProfileList.tsx:285
 msgid "New post"
 msgstr "crwdns1965:0crwdne1965:0"
 
@@ -4724,8 +4731,8 @@ msgid "No longer following {0}"
 msgstr "crwdns1993:0{0}crwdne1993:0"
 
 #: src/screens/Signup/StepHandle.tsx:184
-msgid "No longer than {MAX_SERVICE_HANDLE_LENGTH} characters"
-msgstr "crwdns1995:0{MAX_SERVICE_HANDLE_LENGTH}crwdne1995:0"
+msgid "No longer than {MAX_SERVICE_HANDLE_LENGTH, plural, other {# characters}}"
+msgstr "crwdns3949:0MAX_SERVICE_HANDLE_LENGTH={MAX_SERVICE_HANDLE_LENGTH}crwdne3949:0"
 
 #: src/screens/Messages/components/ChatListItem.tsx:134
 msgid "No messages yet"
@@ -4967,8 +4974,8 @@ msgid "Oops, something went wrong!"
 msgstr "crwdns2101:0crwdne2101:0"
 
 #: src/components/Lists.tsx:173
-#: src/components/StarterPack/ProfileStarterPacks.tsx:320
-#: src/components/StarterPack/ProfileStarterPacks.tsx:329
+#: src/components/StarterPack/ProfileStarterPacks.tsx:325
+#: src/components/StarterPack/ProfileStarterPacks.tsx:334
 #: src/screens/Settings/AppPasswords.tsx:59
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:104
 #: src/screens/Settings/NotificationSettings.tsx:54
@@ -4988,8 +4995,8 @@ msgstr "crwdns2107:0{name}crwdne2107:0"
 msgid "Open avatar creator"
 msgstr "crwdns2109:0crwdne2109:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:351
-#: src/screens/Messages/components/ChatListItem.tsx:352
+#: src/screens/Messages/components/ChatListItem.tsx:363
+#: src/screens/Messages/components/ChatListItem.tsx:364
 msgid "Open conversation options"
 msgstr "crwdns2111:0crwdne2111:0"
 
@@ -5011,6 +5018,10 @@ msgstr "crwdns2117:0crwdne2117:0"
 msgid "Open feed options menu"
 msgstr "crwdns2119:0crwdne2119:0"
 
+#: src/components/dms/EmojiPopup.android.tsx:28
+msgid "Open full emoji list"
+msgstr "crwdns3951:0crwdne3951:0"
+
 #: src/view/com/util/post-embeds/ExternalLinkEmbed.tsx:79
 msgid "Open link to {niceUrl}"
 msgstr "crwdns2121:0{niceUrl}crwdne2121:0"
@@ -5031,7 +5042,7 @@ msgstr "crwdns2127:0crwdne2127:0"
 msgid "Open post options menu"
 msgstr "crwdns2129:0crwdne2129:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:558
+#: src/screens/StarterPack/StarterPackScreen.tsx:561
 msgid "Open starter pack menu"
 msgstr "crwdns2131:0crwdne2131:0"
 
@@ -5231,6 +5242,7 @@ msgid "Pause video"
 msgstr "crwdns2221:0crwdne2221:0"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:184
+#: src/view/screens/ProfileList.tsx:166
 #: src/view/screens/Search/Search.tsx:525
 msgid "People"
 msgstr "crwdns2223:0crwdne2223:0"
@@ -5282,7 +5294,7 @@ msgstr "crwdns2243:0crwdne2243:0"
 msgid "Pin the trending videos feed to your home screen for easy access"
 msgstr "crwdns2245:0crwdne2245:0"
 
-#: src/view/screens/ProfileList.tsx:707
+#: src/view/screens/ProfileList.tsx:706
 msgid "Pin to home"
 msgstr "crwdns2247:0crwdne2247:0"
 
@@ -5308,7 +5320,7 @@ msgstr "crwdns2255:0{0}crwdne2255:0"
 msgid "Pinned Feeds"
 msgstr "crwdns2257:0crwdne2257:0"
 
-#: src/view/screens/ProfileList.tsx:354
+#: src/view/screens/ProfileList.tsx:353
 msgid "Pinned to your feeds"
 msgstr "crwdns2259:0crwdne2259:0"
 
@@ -5530,6 +5542,7 @@ msgstr "crwdns2357:0crwdne2357:0"
 
 #: src/screens/StarterPack/StarterPackScreen.tsx:186
 #: src/view/screens/Profile.tsx:222
+#: src/view/screens/ProfileList.tsx:166
 msgid "Posts"
 msgstr "crwdns2359:0crwdne2359:0"
 
@@ -5829,7 +5842,7 @@ msgstr "crwdns2479:0crwdne2479:0"
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:320
 #: src/view/com/feeds/FeedSourceCard.tsx:190
 #: src/view/com/feeds/FeedSourceCard.tsx:268
-#: src/view/screens/ProfileList.tsx:521
+#: src/view/screens/ProfileList.tsx:520
 #: src/view/screens/SavedFeeds.tsx:342
 msgid "Remove from my feeds"
 msgstr "crwdns2481:0crwdne2481:0"
@@ -5900,7 +5913,7 @@ msgstr "crwdns2511:0crwdne2511:0"
 
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:122
 #: src/view/com/posts/FeedShutdownMsg.tsx:44
-#: src/view/screens/ProfileList.tsx:385
+#: src/view/screens/ProfileList.tsx:384
 msgid "Removed from your feeds"
 msgstr "crwdns2513:0crwdne2513:0"
 
@@ -6021,9 +6034,9 @@ msgstr "crwdns2559:0crwdne2559:0"
 msgid "Report feed"
 msgstr "crwdns2561:0crwdne2561:0"
 
-#: src/view/screens/ProfileList.tsx:563
-msgid "Report List"
-msgstr "crwdns2563:0crwdne2563:0"
+#: src/view/screens/ProfileList.tsx:562
+msgid "Report list"
+msgstr "crwdns3953:0crwdne3953:0"
 
 #: src/components/dms/MessageContextMenu.tsx:159
 msgid "Report message"
@@ -6034,8 +6047,8 @@ msgstr "crwdns2565:0crwdne2565:0"
 msgid "Report post"
 msgstr "crwdns2567:0crwdne2567:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:611
 #: src/screens/StarterPack/StarterPackScreen.tsx:614
+#: src/screens/StarterPack/StarterPackScreen.tsx:617
 msgid "Report starter pack"
 msgstr "crwdns2569:0crwdne2569:0"
 
@@ -6094,7 +6107,7 @@ msgstr "crwdns2589:0crwdne2589:0"
 msgid "Repost ({0, plural, one {# repost} other {# reposts}})"
 msgstr "crwdns2591:00={0}crwdne2591:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:553
+#: src/screens/StarterPack/StarterPackScreen.tsx:556
 #: src/view/com/util/post-ctrls/RepostButton.tsx:148
 #: src/view/com/util/post-ctrls/RepostButton.web.tsx:49
 #: src/view/com/util/post-ctrls/RepostButton.web.tsx:104
@@ -6194,7 +6207,7 @@ msgstr "crwdns2633:0crwdne2633:0"
 #: src/components/Error.tsx:65
 #: src/components/Lists.tsx:110
 #: src/components/moderation/ReportDialog/index.tsx:221
-#: src/components/StarterPack/ProfileStarterPacks.tsx:334
+#: src/components/StarterPack/ProfileStarterPacks.tsx:339
 #: src/screens/Login/LoginForm.tsx:323
 #: src/screens/Login/LoginForm.tsx:330
 #: src/screens/Messages/ChatList.tsx:253
@@ -6216,7 +6229,7 @@ msgstr "crwdns2637:0crwdne2637:0"
 
 #: src/components/Error.tsx:73
 #: src/screens/List/ListHiddenScreen.tsx:219
-#: src/screens/StarterPack/StarterPackScreen.tsx:748
+#: src/screens/StarterPack/StarterPackScreen.tsx:751
 msgid "Return to previous page"
 msgstr "crwdns2639:0crwdne2639:0"
 
@@ -6228,7 +6241,7 @@ msgstr "crwdns2641:0crwdne2641:0"
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:540
 #: src/screens/VideoFeed/index.tsx:1109
 #: src/view/screens/NotFound.tsx:60
-#: src/view/screens/ProfileList.tsx:1032
+#: src/view/screens/ProfileList.tsx:1031
 msgid "Returns to previous page"
 msgstr "crwdns2643:0crwdne2643:0"
 
@@ -6243,12 +6256,12 @@ msgstr "crwdns2645:0crwdne2645:0"
 #: src/screens/Profile/Header/EditProfileDialog.tsx:238
 #: src/screens/Profile/Header/EditProfileDialog.tsx:252
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:243
-#: src/view/com/composer/GifAltText.tsx:190
-#: src/view/com/composer/GifAltText.tsx:199
+#: src/view/com/composer/GifAltText.tsx:193
+#: src/view/com/composer/GifAltText.tsx:202
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:77
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:83
-#: src/view/com/composer/photos/ImageAltTextDialog.tsx:150
-#: src/view/com/composer/photos/ImageAltTextDialog.tsx:160
+#: src/view/com/composer/photos/ImageAltTextDialog.tsx:153
+#: src/view/com/composer/photos/ImageAltTextDialog.tsx:163
 #: src/view/com/modals/CreateOrEditList.tsx:317
 #: src/view/com/modals/EditProfile.tsx:219
 #: src/view/screens/SavedFeeds.tsx:109
@@ -6305,7 +6318,7 @@ msgid "Saved to your camera roll"
 msgstr "crwdns2669:0crwdne2669:0"
 
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:131
-#: src/view/screens/ProfileList.tsx:365
+#: src/view/screens/ProfileList.tsx:364
 msgid "Saved to your feeds"
 msgstr "crwdns2671:0crwdne2671:0"
 
@@ -6329,7 +6342,7 @@ msgstr "crwdns2677:0crwdne2677:0"
 msgid "Science"
 msgstr "crwdns2679:0crwdne2679:0"
 
-#: src/view/screens/ProfileList.tsx:989
+#: src/view/screens/ProfileList.tsx:988
 msgid "Scroll to top"
 msgstr "crwdns2681:0crwdne2681:0"
 
@@ -6658,14 +6671,14 @@ msgstr "crwdns2829:0crwdne2829:0"
 #: src/components/StarterPack/QrCodeDialog.tsx:181
 #: src/screens/Hashtag.tsx:126
 #: src/screens/StarterPack/StarterPackScreen.tsx:428
-#: src/screens/StarterPack/StarterPackScreen.tsx:600
+#: src/screens/StarterPack/StarterPackScreen.tsx:603
 #: src/screens/Topic.tsx:102
 #: src/view/com/profile/ProfileMenu.tsx:216
 #: src/view/com/profile/ProfileMenu.tsx:225
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:481
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:490
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:350
-#: src/view/screens/ProfileList.tsx:506
+#: src/view/screens/ProfileList.tsx:505
 msgid "Share"
 msgstr "crwdns2831:0crwdne2831:0"
 
@@ -6690,7 +6703,7 @@ msgstr "crwdns2839:0crwdne2839:0"
 
 #: src/components/StarterPack/ShareDialog.tsx:123
 #: src/components/StarterPack/ShareDialog.tsx:130
-#: src/screens/StarterPack/StarterPackScreen.tsx:604
+#: src/screens/StarterPack/StarterPackScreen.tsx:607
 msgid "Share link"
 msgstr "crwdns2841:0crwdne2841:0"
 
@@ -6950,7 +6963,7 @@ msgstr "crwdns2943:0crwdne2943:0"
 msgid "Software Dev"
 msgstr "crwdns2945:0crwdne2945:0"
 
-#: src/components/FeedInterstitials.tsx:472
+#: src/components/FeedInterstitials.tsx:474
 msgid "Some other feeds you might like"
 msgstr "crwdns2947:0crwdne2947:0"
 
@@ -6962,7 +6975,7 @@ msgstr "crwdns2949:0crwdne2949:0"
 msgid "Someone reacted {0}"
 msgstr "crwdns3929:0{0}crwdne3929:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:226
+#: src/screens/Messages/components/ChatListItem.tsx:236
 msgid "Someone reacted {0} to {1}"
 msgstr "crwdns3931:0{0}crwdnd3931:0{1}crwdne3931:0"
 
@@ -6970,7 +6983,7 @@ msgstr "crwdns3931:0{0}crwdnd3931:0{1}crwdne3931:0"
 msgid "Something wasn't quite right with the data you're trying to report. Please contact support."
 msgstr "crwdns2951:0crwdne2951:0"
 
-#: src/screens/Messages/Conversation.tsx:117
+#: src/screens/Messages/Conversation.tsx:126
 msgid "Something went wrong"
 msgstr "crwdns2953:0crwdne2953:0"
 
@@ -7042,13 +7055,13 @@ msgstr "crwdns2979:0crwdne2979:0"
 msgid "Start a new chat"
 msgstr "crwdns2981:0crwdne2981:0"
 
-#: src/view/screens/ProfileList.tsx:839
-#: src/view/screens/ProfileList.tsx:960
+#: src/view/screens/ProfileList.tsx:838
+#: src/view/screens/ProfileList.tsx:959
 msgid "Start adding people"
 msgstr "crwdns2983:0crwdne2983:0"
 
-#: src/view/screens/ProfileList.tsx:846
-#: src/view/screens/ProfileList.tsx:967
+#: src/view/screens/ProfileList.tsx:845
+#: src/view/screens/ProfileList.tsx:966
 msgid "Start adding people!"
 msgstr "crwdns2985:0crwdne2985:0"
 
@@ -7075,7 +7088,7 @@ msgstr "crwdns2993:0crwdne2993:0"
 msgid "Starter pack by you"
 msgstr "crwdns2995:0crwdne2995:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:712
+#: src/screens/StarterPack/StarterPackScreen.tsx:715
 msgid "Starter pack is invalid"
 msgstr "crwdns2997:0crwdne2997:0"
 
@@ -7083,7 +7096,7 @@ msgstr "crwdns2997:0crwdne2997:0"
 msgid "Starter Packs"
 msgstr "crwdns2999:0crwdne2999:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:242
+#: src/components/StarterPack/ProfileStarterPacks.tsx:247
 msgid "Starter packs let you easily share your favorite feeds and people with your friends."
 msgstr "crwdns3001:0crwdne3001:0"
 
@@ -7126,7 +7139,7 @@ msgstr "crwdns3015:0crwdne3015:0"
 msgid "Submit report"
 msgstr "crwdns3017:0crwdne3017:0"
 
-#: src/view/screens/ProfileList.tsx:734
+#: src/view/screens/ProfileList.tsx:733
 msgid "Subscribe"
 msgstr "crwdns3019:0crwdne3019:0"
 
@@ -7142,7 +7155,7 @@ msgstr "crwdns3023:0crwdne3023:0"
 msgid "Subscribe to this labeler"
 msgstr "crwdns3025:0crwdne3025:0"
 
-#: src/view/screens/ProfileList.tsx:730
+#: src/view/screens/ProfileList.tsx:729
 msgid "Subscribe to this list"
 msgstr "crwdns3027:0crwdne3027:0"
 
@@ -7247,7 +7260,7 @@ msgstr "crwdns3065:0crwdne3065:0"
 msgid "Tell a joke!"
 msgstr "crwdns3067:0crwdne3067:0"
 
-#: src/screens/Profile/Header/EditProfileDialog.tsx:352
+#: src/screens/Profile/Header/EditProfileDialog.tsx:355
 msgid "Tell us a bit about yourself"
 msgstr "crwdns3069:0crwdne3069:0"
 
@@ -7402,7 +7415,7 @@ msgstr "crwdns3900:0crwdne3900:0"
 msgid "The server appears to be experiencing issues. Please try again in a few moments."
 msgstr "crwdns3133:0crwdne3133:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:722
+#: src/screens/StarterPack/StarterPackScreen.tsx:725
 msgid "The starter pack that you are trying to view is invalid. You may delete this starter pack instead."
 msgstr "crwdns3135:0crwdne3135:0"
 
@@ -7435,8 +7448,8 @@ msgid "There was an issue connecting to Tenor."
 msgstr "crwdns3147:0crwdne3147:0"
 
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:173
-#: src/view/screens/ProfileList.tsx:368
-#: src/view/screens/ProfileList.tsx:387
+#: src/view/screens/ProfileList.tsx:367
+#: src/view/screens/ProfileList.tsx:386
 #: src/view/screens/SavedFeeds.tsx:85
 msgid "There was an issue contacting the server"
 msgstr "crwdns3149:0crwdne3149:0"
@@ -7467,8 +7480,8 @@ msgstr "crwdns3159:0crwdne3159:0"
 msgid "There was an issue fetching your app passwords"
 msgstr "crwdns3161:0crwdne3161:0"
 
-#: src/view/com/feeds/ProfileFeedgens.tsx:155
-#: src/view/com/lists/ProfileLists.tsx:154
+#: src/view/com/feeds/ProfileFeedgens.tsx:151
+#: src/view/com/lists/ProfileLists.tsx:150
 msgid "There was an issue fetching your lists. Tap here to try again."
 msgstr "crwdns3163:0crwdne3163:0"
 
@@ -7512,10 +7525,10 @@ msgstr "crwdns3173:0{0}crwdne3173:0"
 #: src/screens/List/ListHiddenScreen.tsx:63
 #: src/screens/List/ListHiddenScreen.tsx:77
 #: src/screens/List/ListHiddenScreen.tsx:99
-#: src/view/screens/ProfileList.tsx:404
-#: src/view/screens/ProfileList.tsx:422
-#: src/view/screens/ProfileList.tsx:440
-#: src/view/screens/ProfileList.tsx:458
+#: src/view/screens/ProfileList.tsx:403
+#: src/view/screens/ProfileList.tsx:421
+#: src/view/screens/ProfileList.tsx:439
+#: src/view/screens/ProfileList.tsx:457
 msgid "There was an issue. Please check your internet connection and try again."
 msgstr "crwdns3175:0crwdne3175:0"
 
@@ -7577,7 +7590,7 @@ msgstr "crwdns3201:0crwdne3201:0"
 msgid "This content is not viewable without a Bluesky account."
 msgstr "crwdns3203:0crwdne3203:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:345
+#: src/screens/Messages/components/ChatListItem.tsx:357
 msgid "This conversation is with a deleted or a deactivated account. Press for options"
 msgstr "crwdns3205:0crwdne3205:0"
 
@@ -7599,7 +7612,7 @@ msgstr "crwdns3213:0crwdne3213:0"
 
 #: src/components/StarterPack/Main/PostsList.tsx:36
 #: src/screens/Profile/ProfileFeed/index.tsx:189
-#: src/view/screens/ProfileList.tsx:836
+#: src/view/screens/ProfileList.tsx:835
 msgid "This feed is empty."
 msgstr "crwdns3215:0crwdne3215:0"
 
@@ -7643,7 +7656,7 @@ msgstr "crwdns3233:0{0}crwdne3233:0"
 msgid "This list – created by you – contains possible violations of Bluesky's community guidelines in its name or description."
 msgstr "crwdns3235:0crwdne3235:0"
 
-#: src/view/screens/ProfileList.tsx:955
+#: src/view/screens/ProfileList.tsx:954
 msgid "This list is empty."
 msgstr "crwdns3237:0crwdne3237:0"
 
@@ -7854,14 +7867,6 @@ msgstr "crwdns3331:0crwdne3331:0"
 msgid "Type:"
 msgstr "crwdns3333:0crwdne3333:0"
 
-#: src/view/screens/ProfileList.tsx:613
-msgid "Un-block list"
-msgstr "crwdns3335:0crwdne3335:0"
-
-#: src/view/screens/ProfileList.tsx:598
-msgid "Un-mute list"
-msgstr "crwdns3337:0crwdne3337:0"
-
 #: src/lib/strings/errors.ts:11
 msgid "Unable to connect. Please check your internet connection and try again."
 msgstr "crwdns3339:0crwdne3339:0"
@@ -7876,7 +7881,7 @@ msgstr "crwdns3339:0crwdne3339:0"
 msgid "Unable to contact your service. Please check your Internet connection."
 msgstr "crwdns3341:0crwdne3341:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:654
+#: src/screens/StarterPack/StarterPackScreen.tsx:657
 msgid "Unable to delete"
 msgstr "crwdns3343:0crwdne3343:0"
 
@@ -7887,7 +7892,7 @@ msgstr "crwdns3343:0crwdne3343:0"
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:197
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:283
 #: src/view/com/profile/ProfileMenu.tsx:399
-#: src/view/screens/ProfileList.tsx:716
+#: src/view/screens/ProfileList.tsx:715
 msgid "Unblock"
 msgstr "crwdns3345:0crwdne3345:0"
 
@@ -7907,6 +7912,10 @@ msgstr "crwdns3349:0crwdne3349:0"
 #: src/view/com/profile/ProfileMenu.tsx:381
 msgid "Unblock Account?"
 msgstr "crwdns3351:0crwdne3351:0"
+
+#: src/view/screens/ProfileList.tsx:612
+msgid "Unblock list"
+msgstr "crwdns3955:0crwdne3955:0"
 
 #: src/view/com/util/post-ctrls/RepostButton.web.tsx:72
 #: src/view/com/util/post-ctrls/RepostButton.web.tsx:76
@@ -7953,7 +7962,7 @@ msgctxt "video"
 msgid "Unmute"
 msgstr "crwdns3371:0crwdne3371:0"
 
-#: src/view/screens/ProfileList.tsx:723
+#: src/view/screens/ProfileList.tsx:722
 msgid "Unmute"
 msgstr "crwdns3373:0crwdne3373:0"
 
@@ -7973,6 +7982,10 @@ msgstr "crwdns3377:0crwdne3377:0"
 msgid "Unmute conversation"
 msgstr "crwdns3379:0crwdne3379:0"
 
+#: src/view/screens/ProfileList.tsx:597
+msgid "Unmute list"
+msgstr "crwdns3957:0crwdne3957:0"
+
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:536
 #: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:540
 msgid "Unmute thread"
@@ -7982,7 +7995,7 @@ msgstr "crwdns3381:0crwdne3381:0"
 msgid "Unmute video"
 msgstr "crwdns3383:0crwdne3383:0"
 
-#: src/view/screens/ProfileList.tsx:707
+#: src/view/screens/ProfileList.tsx:706
 msgid "Unpin"
 msgstr "crwdns3385:0crwdne3385:0"
 
@@ -8001,7 +8014,7 @@ msgstr "crwdns3389:0crwdne3389:0"
 msgid "Unpin from profile"
 msgstr "crwdns3391:0crwdne3391:0"
 
-#: src/view/screens/ProfileList.tsx:578
+#: src/view/screens/ProfileList.tsx:577
 msgid "Unpin moderation list"
 msgstr "crwdns3393:0crwdne3393:0"
 
@@ -8009,7 +8022,7 @@ msgstr "crwdns3393:0crwdne3393:0"
 msgid "Unpinned {0} from Home"
 msgstr "crwdns3395:0{0}crwdne3395:0"
 
-#: src/view/screens/ProfileList.tsx:355
+#: src/view/screens/ProfileList.tsx:354
 msgid "Unpinned from your feeds"
 msgstr "crwdns3397:0crwdne3397:0"
 
@@ -8467,7 +8480,7 @@ msgstr "crwdns3595:0crwdne3595:0"
 msgid "We couldn't find any results for that topic."
 msgstr "crwdns3597:0crwdne3597:0"
 
-#: src/screens/Messages/Conversation.tsx:118
+#: src/screens/Messages/Conversation.tsx:127
 msgid "We couldn't load this conversation"
 msgstr "crwdns3599:0crwdne3599:0"
 
@@ -8520,7 +8533,7 @@ msgstr "crwdns3621:0crwdne3621:0"
 msgid "We're so excited to have you join us!"
 msgstr "crwdns3623:0crwdne3623:0"
 
-#: src/view/screens/ProfileList.tsx:115
+#: src/view/screens/ProfileList.tsx:113
 msgid "We're sorry, but we were unable to resolve this list. If this persists, please contact the list creator, @{handleOrDid}."
 msgstr "crwdns3625:0{handleOrDid}crwdne3625:0"
 
@@ -8668,7 +8681,7 @@ msgstr "crwdns3687:0crwdne3687:0"
 msgid "Yes, deactivate"
 msgstr "crwdns3689:0crwdne3689:0"
 
-#: src/screens/StarterPack/StarterPackScreen.tsx:666
+#: src/screens/StarterPack/StarterPackScreen.tsx:669
 msgid "Yes, delete this starter pack"
 msgstr "crwdns3691:0crwdne3691:0"
 
@@ -8693,8 +8706,8 @@ msgid "You"
 msgstr "crwdns3701:0crwdne3701:0"
 
 #: src/components/forms/HostingProvider.tsx:46
-msgid "You are creating an account on"
-msgstr "crwdns3703:0crwdne3703:0"
+msgid "You are creating an account on <0><1>{0}</1><2/></0>"
+msgstr "crwdns3959:0{0}crwdne3959:0"
 
 #: src/screens/SignupQueued.tsx:157
 msgid "You are in line."
@@ -8807,12 +8820,12 @@ msgstr "crwdns3751:0crwdne3751:0"
 msgid "You have no conversations yet. Start one!"
 msgstr "crwdns3753:0crwdne3753:0"
 
-#: src/view/com/feeds/ProfileFeedgens.tsx:143
+#: src/view/com/feeds/ProfileFeedgens.tsx:139
 msgid "You have no feeds."
 msgstr "crwdns3755:0crwdne3755:0"
 
 #: src/view/com/lists/MyLists.tsx:81
-#: src/view/com/lists/ProfileLists.tsx:139
+#: src/view/com/lists/ProfileLists.tsx:135
 msgid "You have no lists."
 msgstr "crwdns3757:0crwdne3757:0"
 
@@ -8832,7 +8845,7 @@ msgstr "crwdns3763:0crwdne3763:0"
 msgid "You have temporarily reached the limit for video uploads. Please try again later."
 msgstr "crwdns3765:0crwdne3765:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:239
+#: src/components/StarterPack/ProfileStarterPacks.tsx:244
 msgid "You haven't created a starter pack yet!"
 msgstr "crwdns3767:0crwdne3767:0"
 
@@ -8854,10 +8867,10 @@ msgid "You may appeal these labels if you feel they were placed in error."
 msgstr "crwdns3775:0crwdne3775:0"
 
 #: src/screens/StarterPack/Wizard/State.tsx:76
-msgid "You may only add up to {STARTER_PACK_MAX_SIZE} profiles"
-msgstr "crwdns3777:0{STARTER_PACK_MAX_SIZE}crwdne3777:0"
+msgid "You may only add up to {STARTER_PACK_MAX_SIZE, plural, other {{STARTER_PACK_MAX_SIZE} profiles}}"
+msgstr "crwdns3961:0STARTER_PACK_MAX_SIZE={STARTER_PACK_MAX_SIZE}crwdnd3961:0STARTER_PACK_MAX_SIZE={STARTER_PACK_MAX_SIZE}crwdne3961:0"
 
-#: src/screens/StarterPack/Wizard/State.tsx:94
+#: src/screens/StarterPack/Wizard/State.tsx:95
 msgid "You may only add up to 3 feeds"
 msgstr "crwdns3779:0crwdne3779:0"
 
@@ -8869,7 +8882,7 @@ msgstr "crwdns3781:0crwdne3781:0"
 msgid "You must be 13 years of age or older to sign up."
 msgstr "crwdns3783:0crwdne3783:0"
 
-#: src/components/StarterPack/ProfileStarterPacks.tsx:322
+#: src/components/StarterPack/ProfileStarterPacks.tsx:327
 msgid "You must be following at least seven other people to generate a starter pack."
 msgstr "crwdns3785:0crwdne3785:0"
 
@@ -8893,7 +8906,7 @@ msgstr "crwdns3793:0{0}crwdne3793:0"
 msgid "You reacted {0}"
 msgstr "crwdns3933:0{0}crwdne3933:0"
 
-#: src/screens/Messages/components/ChatListItem.tsx:205
+#: src/screens/Messages/components/ChatListItem.tsx:213
 msgid "You reacted {0} to {1}"
 msgstr "crwdns3935:0{0}crwdnd3935:0{1}crwdne3935:0"
 
