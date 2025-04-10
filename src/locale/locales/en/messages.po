@@ -8,7 +8,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-04-02 18:03\n"
+"PO-Revision-Date: 2025-04-10 18:56\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -18,7 +18,8 @@ msgstr ""
 "X-Crowdin-File: /main/src/locale/locales/en/messages.po\n"
 "X-Crowdin-File-ID: 11\n"
 
-#: src/components/ProgressGuide/FollowDialog.tsx:567
+#: src/components/ProgressGuide/FollowDialog.tsx:516
+#: src/screens/Search/modules/ExploreSuggestedAccounts.tsx:127
 msgid "(active)"
 msgstr "crwdns1:0crwdne1:0"
 
@@ -100,7 +101,7 @@ msgstr "crwdns35:00={0}crwdne35:0"
 msgid "{0, plural, one {following} other {following}}"
 msgstr "crwdns37:00={0}crwdne37:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:454
+#: src/view/com/post-thread/PostThreadItem.tsx:459
 msgid "{0, plural, one {like} other {likes}}"
 msgstr "crwdns39:00={0}crwdne39:0"
 
@@ -108,13 +109,17 @@ msgstr "crwdns39:00={0}crwdne39:0"
 msgid "{0, plural, one {post} other {posts}}"
 msgstr "crwdns41:00={0}crwdne41:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:438
+#: src/view/com/post-thread/PostThreadItem.tsx:443
 msgid "{0, plural, one {quote} other {quotes}}"
 msgstr "crwdns43:00={0}crwdne43:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:420
+#: src/view/com/post-thread/PostThreadItem.tsx:425
 msgid "{0, plural, one {repost} other {reposts}}"
 msgstr "crwdns45:00={0}crwdne45:0"
+
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:78
+msgid "{0, plural, other {{1} posts}}"
+msgstr "crwdns3962:00={0}crwdnd3962:01={1}crwdne3962:0"
 
 #. Number of users (always at least 25) who have joined Bluesky using a specific starter pack
 #: src/screens/StarterPack/StarterPackScreen.tsx:485
@@ -299,7 +304,7 @@ msgid "{handle} can't be messaged"
 msgstr "crwdns127:0{handle}crwdne127:0"
 
 #. Number of users (always at least 50) who have joined Bluesky using a specific starter pack
-#: src/components/StarterPack/StarterPackCard.tsx:98
+#: src/components/StarterPack/StarterPackCard.tsx:101
 msgid "{joinedAllTimeCount, plural, other {# users have}} joined!"
 msgstr "crwdns3939:0joinedAllTimeCount={joinedAllTimeCount}crwdne3939:0"
 
@@ -314,6 +319,21 @@ msgstr "crwdns131:0{profileName}crwdnd131:0{0}crwdne131:0"
 #: src/components/NewskieDialog.tsx:111
 msgid "{profileName} joined Bluesky using a starter pack {0} ago"
 msgstr "crwdns133:0{profileName}crwdnd133:0{0}crwdne133:0"
+
+#. The trending topic rank, i.e. "1. March Madness", "2. The Bachelor"
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:107
+msgid "{rank}."
+msgstr "crwdns3964:0{rank}crwdne3964:0"
+
+#. trending topic time spent trending. should be as short as possible to fit in a pill
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:202
+msgid "{type}h ago"
+msgstr "crwdns3966:0{type}crwdne3966:0"
+
+#. Indicates the number of additional profiles are in the Starter Pack e.g. +12
+#: src/screens/Search/components/StarterPackCard.tsx:249
+msgid "+{computedTotal}"
+msgstr "crwdns3968:0{computedTotal}crwdne3968:0"
 
 #: src/screens/StarterPack/Wizard/index.tsx:449
 msgctxt "profiles"
@@ -382,7 +402,7 @@ msgstr "crwdns163:0crwdne163:0"
 msgid "a message"
 msgstr "crwdns3915:0crwdne3915:0"
 
-#: src/Navigation.tsx:383
+#: src/Navigation.tsx:391
 #: src/screens/Settings/AboutSettings.tsx:34
 #: src/screens/Settings/Settings.tsx:215
 #: src/screens/Settings/Settings.tsx:218
@@ -423,7 +443,7 @@ msgstr "crwdns177:0crwdne177:0"
 
 #: src/screens/Messages/components/RequestButtons.tsx:81
 #: src/view/com/profile/ProfileMenu.tsx:141
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:375
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:392
 msgctxt "toast"
 msgid "Account blocked"
 msgstr "crwdns179:0crwdne179:0"
@@ -434,7 +454,7 @@ msgid "Account followed"
 msgstr "crwdns181:0crwdne181:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:117
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:398
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:415
 msgctxt "toast"
 msgid "Account muted"
 msgstr "crwdns183:0crwdne183:0"
@@ -468,7 +488,7 @@ msgid "Account unfollowed"
 msgstr "crwdns195:0crwdne195:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:107
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:388
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:405
 msgctxt "toast"
 msgid "Account unmuted"
 msgstr "crwdns197:0crwdne197:0"
@@ -523,7 +543,7 @@ msgstr "crwdns213:0crwdne213:0"
 msgid "Add another account"
 msgstr "crwdns215:0crwdne215:0"
 
-#: src/view/com/composer/Composer.tsx:744
+#: src/view/com/composer/Composer.tsx:752
 msgid "Add another post"
 msgstr "crwdns217:0crwdne217:0"
 
@@ -554,7 +574,7 @@ msgstr "crwdns225:0crwdne225:0"
 msgid "Add muted words and tags"
 msgstr "crwdns227:0crwdne227:0"
 
-#: src/view/com/composer/Composer.tsx:1261
+#: src/view/com/composer/Composer.tsx:1306
 msgid "Add new post"
 msgstr "crwdns229:0crwdne229:0"
 
@@ -583,7 +603,7 @@ msgstr "crwdns237:0crwdne237:0"
 msgid "Add the following DNS record to your domain:"
 msgstr "crwdns239:0crwdne239:0"
 
-#: src/components/FeedCard.tsx:295
+#: src/components/FeedCard.tsx:305
 msgid "Add this feed to your feeds"
 msgstr "crwdns241:0crwdne241:0"
 
@@ -609,14 +629,14 @@ msgstr "crwdns251:0crwdne251:0"
 msgid "Additional details (limit 300 characters)"
 msgstr "crwdns253:0crwdne253:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:160
+#: src/view/com/composer/labels/LabelsBtn.tsx:159
 msgid "Adult"
 msgstr "crwdns255:0crwdne255:0"
 
 #: src/components/moderation/ContentHider.tsx:113
 #: src/lib/moderation/useGlobalLabelStrings.ts:34
 #: src/lib/moderation/useModerationCauseDescription.ts:148
-#: src/view/com/composer/labels/LabelsBtn.tsx:128
+#: src/view/com/composer/labels/LabelsBtn.tsx:127
 msgid "Adult Content"
 msgstr "crwdns257:0crwdne257:0"
 
@@ -628,8 +648,8 @@ msgstr "crwdns259:0crwdne259:0"
 msgid "Adult content is disabled."
 msgstr "crwdns261:0crwdne261:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:139
-#: src/view/com/composer/labels/LabelsBtn.tsx:197
+#: src/view/com/composer/labels/LabelsBtn.tsx:138
+#: src/view/com/composer/labels/LabelsBtn.tsx:196
 msgid "Adult Content labels"
 msgstr "crwdns263:0crwdne263:0"
 
@@ -645,9 +665,9 @@ msgstr "crwdns267:0crwdne267:0"
 msgid "All accounts have been followed!"
 msgstr "crwdns269:0crwdne269:0"
 
-#: src/view/screens/Search/Search.tsx:370
-#: src/view/screens/Search/Search.tsx:405
-#: src/view/screens/Search/Search.tsx:407
+#: src/screens/Search/components/SearchLanguageDropdown.tsx:64
+#: src/screens/Search/components/SearchLanguageDropdown.tsx:99
+#: src/screens/Search/components/SearchLanguageDropdown.tsx:101
 msgid "All languages"
 msgstr "crwdns271:0crwdne271:0"
 
@@ -740,6 +760,10 @@ msgstr "crwdns307:0crwdne307:0"
 msgid "An error occurred while compressing the video."
 msgstr "crwdns309:0crwdne309:0"
 
+#: src/state/queries/explore-feed-previews.tsx:184
+msgid "An error occurred while fetching the feed."
+msgstr "crwdns3970:0crwdne3970:0"
+
 #: src/components/StarterPack/ProfileStarterPacks.tsx:336
 msgid "An error occurred while generating your starter pack. Want to try again?"
 msgstr "crwdns311:0crwdne311:0"
@@ -785,8 +809,8 @@ msgstr "crwdns329:0crwdne329:0"
 
 #: src/components/hooks/useFollowMethods.ts:35
 #: src/components/hooks/useFollowMethods.ts:50
-#: src/components/ProfileCard.tsx:332
-#: src/components/ProfileCard.tsx:353
+#: src/components/ProfileCard.tsx:339
+#: src/components/ProfileCard.tsx:360
 #: src/view/com/profile/FollowButton.tsx:38
 #: src/view/com/profile/FollowButton.tsx:48
 msgid "An issue occurred, please try again."
@@ -823,7 +847,7 @@ msgstr "crwdns343:0crwdne343:0"
 msgid "Anybody can interact"
 msgstr "crwdns345:0crwdne345:0"
 
-#: src/Navigation.tsx:391
+#: src/Navigation.tsx:399
 #: src/screens/Settings/AppIconSettings/index.tsx:67
 #: src/screens/Settings/AppIconSettings/SettingsListItem.tsx:18
 #: src/screens/Settings/AppIconSettings/SettingsListItem.tsx:23
@@ -908,12 +932,12 @@ msgstr "crwdns377:0crwdne377:0"
 msgid "Apply default recommended feeds"
 msgstr "crwdns379:0crwdne379:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:845
+#: src/view/com/post-thread/PostThreadItem.tsx:865
 msgid "Archived from {0}"
 msgstr "crwdns381:0{0}crwdne381:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:814
-#: src/view/com/post-thread/PostThreadItem.tsx:853
+#: src/view/com/post-thread/PostThreadItem.tsx:834
+#: src/view/com/post-thread/PostThreadItem.tsx:873
 msgid "Archived post"
 msgstr "crwdns383:0crwdne383:0"
 
@@ -921,7 +945,7 @@ msgstr "crwdns383:0crwdne383:0"
 msgid "Are you sure you want to delete the app password \"{0}\"?"
 msgstr "crwdns385:0{0}crwdne385:0"
 
-#: src/components/dms/MessageContextMenu.tsx:178
+#: src/components/dms/MessageContextMenu.tsx:185
 msgid "Are you sure you want to delete this message? The message will be deleted for you, but not for the other participant."
 msgstr "crwdns387:0crwdne387:0"
 
@@ -945,15 +969,15 @@ msgstr "crwdns395:0crwdne395:0"
 msgid "Are you sure you want to remove {0} from your feeds?"
 msgstr "crwdns397:0{0}crwdne397:0"
 
-#: src/components/FeedCard.tsx:312
+#: src/components/FeedCard.tsx:340
 msgid "Are you sure you want to remove this from your feeds?"
 msgstr "crwdns399:0crwdne399:0"
 
-#: src/view/com/composer/Composer.tsx:695
+#: src/view/com/composer/Composer.tsx:703
 msgid "Are you sure you'd like to discard this draft?"
 msgstr "crwdns401:0crwdne401:0"
 
-#: src/view/com/composer/Composer.tsx:872
+#: src/view/com/composer/Composer.tsx:882
 msgid "Are you sure you'd like to discard this post?"
 msgstr "crwdns403:0crwdne403:0"
 
@@ -970,7 +994,7 @@ msgstr "crwdns407:0{suggestedLanguageName}crwdne407:0"
 msgid "Art"
 msgstr "crwdns409:0crwdne409:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:172
+#: src/view/com/composer/labels/LabelsBtn.tsx:171
 msgid "Artistic or non-erotic nudity."
 msgstr "crwdns411:0crwdne411:0"
 
@@ -987,8 +1011,8 @@ msgstr "crwdns415:0crwdne415:0"
 msgid "Autoplay options have moved to the <0>Content and Media settings</0>."
 msgstr "crwdns417:0crwdne417:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:107
-#: src/screens/Settings/ContentAndMediaSettings.tsx:113
+#: src/screens/Settings/ContentAndMediaSettings.tsx:116
+#: src/screens/Settings/ContentAndMediaSettings.tsx:122
 msgid "Autoplay videos and GIFs"
 msgstr "crwdns419:0crwdne419:0"
 
@@ -1020,7 +1044,7 @@ msgstr "crwdns423:0crwdne423:0"
 msgid "Before creating a list, you must first verify your email."
 msgstr "crwdns425:0crwdne425:0"
 
-#: src/view/com/composer/Composer.tsx:621
+#: src/view/com/composer/Composer.tsx:629
 msgid "Before creating a post, you must first verify your email."
 msgstr "crwdns427:0crwdne427:0"
 
@@ -1034,11 +1058,6 @@ msgstr "crwdns429:0crwdne429:0"
 msgid "Before you may message another user, you must first verify your email."
 msgstr "crwdns431:0crwdne431:0"
 
-#: src/screens/Search/components/ExploreTrendingTopics.tsx:74
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:111
-msgid "BETA"
-msgstr "crwdns433:0crwdne433:0"
-
 #: src/components/dialogs/BirthDateSettings.tsx:103
 #: src/screens/Settings/AccountSettings.tsx:109
 msgid "Birthday"
@@ -1046,7 +1065,7 @@ msgstr "crwdns435:0crwdne435:0"
 
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:283
 #: src/view/com/profile/ProfileMenu.tsx:399
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:832
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:849
 msgid "Block"
 msgstr "crwdns437:0crwdne437:0"
 
@@ -1056,13 +1075,13 @@ msgstr "crwdns437:0crwdne437:0"
 #: src/screens/Messages/components/RequestButtons.tsx:136
 #: src/view/com/profile/ProfileMenu.tsx:310
 #: src/view/com/profile/ProfileMenu.tsx:317
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:669
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:671
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:686
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:688
 msgid "Block account"
 msgstr "crwdns439:0crwdne439:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:382
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:827
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:844
 msgid "Block Account?"
 msgstr "crwdns441:0crwdne441:0"
 
@@ -1113,7 +1132,7 @@ msgid "Blocked Accounts"
 msgstr "crwdns463:0crwdne463:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:394
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:829
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:846
 msgid "Blocked accounts cannot reply in your threads, mention you, or otherwise interact with you."
 msgstr "crwdns465:0crwdne465:0"
 
@@ -1146,7 +1165,7 @@ msgstr "crwdns477:0crwdne477:0"
 msgid "Bluesky"
 msgstr "crwdns479:0crwdne479:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:870
+#: src/view/com/post-thread/PostThreadItem.tsx:890
 msgid "Bluesky cannot confirm the authenticity of the claimed date."
 msgstr "crwdns481:0crwdne481:0"
 
@@ -1238,6 +1257,10 @@ msgstr "crwdns519:0{displayName}crwdne519:0"
 msgid "Browse starter pack {displayName}"
 msgstr "crwdns521:0{displayName}crwdne521:0"
 
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:89
+msgid "Browse topic {0}"
+msgstr "crwdns3972:0{0}crwdne3972:0"
+
 #: src/components/TrendingTopics.tsx:232
 msgid "Browse topic {displayName}"
 msgstr "crwdns523:0{displayName}crwdne523:0"
@@ -1248,6 +1271,8 @@ msgstr "crwdns525:0crwdne525:0"
 
 #: src/components/LabelingServiceCard/index.tsx:62
 #: src/components/moderation/ReportDialog/index.tsx:672
+#: src/screens/Search/components/StarterPackCard.tsx:106
+#: src/screens/Search/Explore.tsx:853
 msgid "By {0}"
 msgstr "crwdns527:0{0}crwdne527:0"
 
@@ -1267,6 +1292,10 @@ msgstr "crwdns533:0crwdne533:0"
 msgid "By creating an account you agree to the <0>Terms of Service</0>."
 msgstr "crwdns535:0crwdne535:0"
 
+#: src/screens/Search/components/StarterPackCard.tsx:105
+msgid "By you"
+msgstr "crwdns3974:0crwdne3974:0"
+
 #: src/view/com/composer/photos/OpenCameraBtn.tsx:72
 msgid "Camera"
 msgstr "crwdns537:0crwdne537:0"
@@ -1277,6 +1306,7 @@ msgstr "crwdns537:0crwdne537:0"
 #: src/screens/Deactivated.tsx:158
 #: src/screens/Profile/Header/EditProfileDialog.tsx:220
 #: src/screens/Profile/Header/EditProfileDialog.tsx:228
+#: src/screens/Search/Shell.tsx:349
 #: src/screens/Settings/AppIconSettings/index.tsx:44
 #: src/screens/Settings/AppIconSettings/index.tsx:225
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:76
@@ -1284,7 +1314,8 @@ msgstr "crwdns537:0crwdne537:0"
 #: src/screens/Settings/Settings.tsx:260
 #: src/screens/Takendown.tsx:99
 #: src/screens/Takendown.tsx:102
-#: src/view/com/composer/Composer.tsx:935
+#: src/view/com/composer/Composer.tsx:937
+#: src/view/com/composer/Composer.tsx:948
 #: src/view/com/modals/ChangeEmail.tsx:213
 #: src/view/com/modals/ChangeEmail.tsx:215
 #: src/view/com/modals/ChangePassword.tsx:279
@@ -1299,7 +1330,6 @@ msgstr "crwdns537:0crwdne537:0"
 #: src/view/com/modals/VerifyEmail.tsx:255
 #: src/view/com/modals/VerifyEmail.tsx:261
 #: src/view/com/util/post-ctrls/RepostButton.tsx:213
-#: src/view/screens/Search/Search.tsx:890
 #: src/view/shell/desktop/LeftNav.tsx:209
 msgid "Cancel"
 msgstr "crwdns539:0crwdne539:0"
@@ -1332,8 +1362,8 @@ msgstr "crwdns549:0crwdne549:0"
 msgid "Cancel reactivation and sign out"
 msgstr "crwdns551:0crwdne551:0"
 
+#: src/screens/Search/Shell.tsx:341
 #: src/view/com/modals/ListAddRemoveUsers.tsx:88
-#: src/view/screens/Search/Search.tsx:882
 msgid "Cancel search"
 msgstr "crwdns553:0crwdne553:0"
 
@@ -1419,11 +1449,11 @@ msgid "Changes app icon"
 msgstr "crwdns589:0crwdne589:0"
 
 #: src/components/forms/HostingProvider.tsx:50
-#: src/components/forms/HostingProvider.tsx:68
+#: src/components/forms/HostingProvider.tsx:70
 msgid "Changes hosting provider"
 msgstr "crwdns591:0crwdne591:0"
 
-#: src/Navigation.tsx:408
+#: src/Navigation.tsx:416
 #: src/view/shell/bottom-bar/BottomBar.tsx:205
 #: src/view/shell/desktop/LeftNav.tsx:535
 #: src/view/shell/Drawer.tsx:422
@@ -1441,7 +1471,7 @@ msgctxt "toast"
 msgid "Chat muted"
 msgstr "crwdns597:0crwdne597:0"
 
-#: src/Navigation.tsx:418
+#: src/Navigation.tsx:426
 #: src/screens/Messages/components/InboxPreview.tsx:24
 msgid "Chat request inbox"
 msgstr "crwdns599:0crwdne599:0"
@@ -1452,7 +1482,7 @@ msgid "Chat requests"
 msgstr "crwdns601:0crwdne601:0"
 
 #: src/components/dms/ConvoMenu.tsx:75
-#: src/Navigation.tsx:413
+#: src/Navigation.tsx:421
 #: src/screens/Messages/ChatList.tsx:328
 msgid "Chat settings"
 msgstr "crwdns603:0crwdne603:0"
@@ -1500,10 +1530,6 @@ msgstr "crwdns621:0crwdne621:0"
 msgid "Choose People"
 msgstr "crwdns623:0crwdne623:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:115
-msgid "Choose self-labels that are applicable for the media you are posting. If none are selected, this post is suitable for all audiences."
-msgstr "crwdns625:0crwdne625:0"
-
 #: src/screens/Onboarding/StepFinished.tsx:298
 msgid "Choose the algorithms that power your custom feeds."
 msgstr "crwdns627:0crwdne627:0"
@@ -1517,7 +1543,6 @@ msgid "Choose your account provider"
 msgstr "crwdns631:0crwdne631:0"
 
 #: src/view/screens/Feeds.tsx:728
-#: src/view/screens/Search/Explore.tsx:427
 msgid "Choose your own timeline! Feeds built by the community help you find content you love."
 msgstr "crwdns633:0crwdne633:0"
 
@@ -1577,7 +1602,7 @@ msgstr "crwdns657:0crwdne657:0"
 #: src/components/dms/ReportDialog.tsx:390
 #: src/components/NewskieDialog.tsx:146
 #: src/components/NewskieDialog.tsx:153
-#: src/components/ProgressGuide/FollowDialog.tsx:429
+#: src/components/ProgressGuide/FollowDialog.tsx:386
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:117
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:123
 #: src/view/com/modals/ChangePassword.tsx:279
@@ -1638,6 +1663,10 @@ msgstr "crwdns679:0crwdne679:0"
 msgid "Closes password update alert"
 msgstr "crwdns681:0crwdne681:0"
 
+#: src/view/com/composer/Composer.tsx:945
+msgid "Closes post composer and discards post draft"
+msgstr "crwdns3976:0crwdne3976:0"
+
 #: src/view/com/composer/text-input/web/EmojiPicker.web.tsx:138
 #: src/view/com/composer/text-input/web/EmojiPicker.web.tsx:174
 msgid "Closes the emoji picker"
@@ -1691,15 +1720,15 @@ msgstr "crwdns703:0crwdne703:0"
 msgid "Compose new post"
 msgstr "crwdns705:0crwdne705:0"
 
-#: src/view/com/composer/Composer.tsx:838
-msgid "Compose posts up to {MAX_GRAPHEME_LENGTH} characters in length"
-msgstr "crwdns707:0{MAX_GRAPHEME_LENGTH}crwdne707:0"
+#: src/view/com/composer/Composer.tsx:846
+msgid "Compose posts up to {0, plural, other {# characters}} in length"
+msgstr "crwdns3978:00={0}crwdne3978:0"
 
 #: src/view/com/post-thread/PostThreadComposePrompt.tsx:34
 msgid "Compose reply"
 msgstr "crwdns709:0crwdne709:0"
 
-#: src/view/com/composer/Composer.tsx:1644
+#: src/view/com/composer/Composer.tsx:1689
 msgid "Compressing video..."
 msgstr "crwdns711:0crwdne711:0"
 
@@ -1768,7 +1797,7 @@ msgstr "crwdns733:0crwdne733:0"
 msgid "Contact support"
 msgstr "crwdns735:0crwdne735:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:50
+#: src/screens/Settings/ContentAndMediaSettings.tsx:51
 msgid "Content & Media"
 msgstr "crwdns737:0crwdne737:0"
 
@@ -1790,7 +1819,7 @@ msgstr "crwdns743:0crwdne743:0"
 msgid "Content filters"
 msgstr "crwdns745:0crwdne745:0"
 
-#: src/screens/Search/components/ExploreRecommendations.tsx:57
+#: src/screens/Search/modules/ExploreRecommendations.tsx:59
 msgid "Content from across the network we think you might like."
 msgstr "crwdns747:0crwdne747:0"
 
@@ -1860,11 +1889,11 @@ msgstr "crwdns773:0crwdne773:0"
 msgid "Copied build version to clipboard"
 msgstr "crwdns775:0crwdne775:0"
 
-#: src/components/dms/MessageContextMenu.tsx:55
+#: src/components/dms/MessageContextMenu.tsx:56
 #: src/lib/sharing.ts:25
 #: src/lib/sharing.ts:41
 #: src/view/com/modals/InviteCodes.tsx:153
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:246
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:250
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:397
 msgid "Copied to clipboard"
 msgstr "crwdns777:0crwdne777:0"
@@ -1891,8 +1920,8 @@ msgstr "crwdns785:0crwdne785:0"
 msgid "Copy at:// URI"
 msgstr "crwdns787:0crwdne787:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:731
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:733
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:748
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:750
 msgid "Copy author DID"
 msgstr "crwdns789:0crwdne789:0"
 
@@ -1923,23 +1952,23 @@ msgstr "crwdns799:0crwdne799:0"
 msgid "Copy link to list"
 msgstr "crwdns801:0crwdne801:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:481
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:490
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:498
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:507
 msgid "Copy link to post"
 msgstr "crwdns803:0crwdne803:0"
 
-#: src/components/dms/MessageContextMenu.tsx:139
-#: src/components/dms/MessageContextMenu.tsx:142
+#: src/components/dms/MessageContextMenu.tsx:146
+#: src/components/dms/MessageContextMenu.tsx:149
 msgid "Copy message text"
 msgstr "crwdns805:0crwdne805:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:724
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:726
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:741
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:743
 msgid "Copy post at:// URI"
 msgstr "crwdns807:0crwdne807:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:459
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:461
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:476
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:478
 msgid "Copy post text"
 msgstr "crwdns809:0crwdne809:0"
 
@@ -1987,7 +2016,7 @@ msgstr "crwdns829:0crwdne829:0"
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:178
 #: src/components/StarterPack/ProfileStarterPacks.tsx:274
-#: src/Navigation.tsx:443
+#: src/Navigation.tsx:451
 msgid "Create a starter pack"
 msgstr "crwdns831:0crwdne831:0"
 
@@ -2014,6 +2043,11 @@ msgstr "crwdns837:0crwdne837:0"
 #: src/components/dialogs/Signin.tsx:88
 msgid "Create an account"
 msgstr "crwdns839:0crwdne839:0"
+
+#: src/screens/StarterPack/StarterPackLandingScreen.tsx:303
+#: src/screens/StarterPack/StarterPackLandingScreen.tsx:310
+msgid "Create an account without using this starter pack"
+msgstr "crwdns3980:0crwdne3980:0"
 
 #: src/screens/Onboarding/StepProfile/index.tsx:292
 msgid "Create an avatar instead"
@@ -2109,13 +2143,13 @@ msgstr "crwdns879:0crwdne879:0"
 msgid "Default icons"
 msgstr "crwdns881:0crwdne881:0"
 
-#: src/components/dms/MessageContextMenu.tsx:180
+#: src/components/dms/MessageContextMenu.tsx:187
 #: src/screens/Messages/components/ChatStatusInfo.tsx:55
 #: src/screens/Settings/AppPasswords.tsx:212
 #: src/screens/StarterPack/StarterPackScreen.tsx:594
 #: src/screens/StarterPack/StarterPackScreen.tsx:672
 #: src/screens/StarterPack/StarterPackScreen.tsx:744
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:750
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:767
 #: src/view/screens/ProfileList.tsx:760
 msgid "Delete"
 msgstr "crwdns883:0crwdne883:0"
@@ -2157,7 +2191,7 @@ msgstr "crwdns897:0crwdne897:0"
 msgid "Delete Conversation"
 msgstr "crwdns899:0crwdne899:0"
 
-#: src/components/dms/MessageContextMenu.tsx:153
+#: src/components/dms/MessageContextMenu.tsx:160
 msgid "Delete for me"
 msgstr "crwdns901:0crwdne901:0"
 
@@ -2165,11 +2199,11 @@ msgstr "crwdns901:0crwdne901:0"
 msgid "Delete list"
 msgstr "crwdns3943:0crwdne3943:0"
 
-#: src/components/dms/MessageContextMenu.tsx:176
+#: src/components/dms/MessageContextMenu.tsx:183
 msgid "Delete message"
 msgstr "crwdns905:0crwdne905:0"
 
-#: src/components/dms/MessageContextMenu.tsx:151
+#: src/components/dms/MessageContextMenu.tsx:158
 msgid "Delete message for me"
 msgstr "crwdns907:0crwdne907:0"
 
@@ -2177,9 +2211,9 @@ msgstr "crwdns907:0crwdne907:0"
 msgid "Delete my account"
 msgstr "crwdns909:0crwdne909:0"
 
-#: src/view/com/composer/Composer.tsx:846
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:709
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:711
+#: src/view/com/composer/Composer.tsx:856
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:726
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:728
 msgid "Delete post"
 msgstr "crwdns911:0crwdne911:0"
 
@@ -2196,7 +2230,7 @@ msgstr "crwdns915:0crwdne915:0"
 msgid "Delete this list?"
 msgstr "crwdns917:0crwdne917:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:745
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:762
 msgid "Delete this post?"
 msgstr "crwdns919:0crwdne919:0"
 
@@ -2234,12 +2268,12 @@ msgstr "crwdns3945:0DESCRIPTION_MAX_GRAPHEMES={DESCRIPTION_MAX_GRAPHEMES}crwdne3
 msgid "Descriptive alt text"
 msgstr "crwdns933:0crwdne933:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:613
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:623
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:630
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:640
 msgid "Detach quote"
 msgstr "crwdns935:0crwdne935:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:807
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:824
 msgid "Detach quote post?"
 msgstr "crwdns937:0crwdne937:0"
 
@@ -2289,8 +2323,8 @@ msgid "Disabled"
 msgstr "crwdns955:0crwdne955:0"
 
 #: src/screens/Profile/Header/EditProfileDialog.tsx:84
-#: src/view/com/composer/Composer.tsx:697
-#: src/view/com/composer/Composer.tsx:879
+#: src/view/com/composer/Composer.tsx:705
+#: src/view/com/composer/Composer.tsx:889
 msgid "Discard"
 msgstr "crwdns957:0crwdne957:0"
 
@@ -2298,11 +2332,11 @@ msgstr "crwdns957:0crwdne957:0"
 msgid "Discard changes?"
 msgstr "crwdns959:0crwdne959:0"
 
-#: src/view/com/composer/Composer.tsx:694
+#: src/view/com/composer/Composer.tsx:702
 msgid "Discard draft?"
 msgstr "crwdns961:0crwdne961:0"
 
-#: src/view/com/composer/Composer.tsx:871
+#: src/view/com/composer/Composer.tsx:881
 msgid "Discard post?"
 msgstr "crwdns963:0crwdne963:0"
 
@@ -2311,14 +2345,14 @@ msgstr "crwdns963:0crwdne963:0"
 msgid "Discourage apps from showing my account to logged-out users"
 msgstr "crwdns965:0crwdne965:0"
 
+#: src/screens/Search/Explore.tsx:436
+msgid "Discover Feeds"
+msgstr "crwdns3982:0crwdne3982:0"
+
 #: src/view/com/posts/FollowingEmptyState.tsx:70
 #: src/view/com/posts/FollowingEndOfFeed.tsx:71
 msgid "Discover new custom feeds"
 msgstr "crwdns967:0crwdne967:0"
-
-#: src/view/screens/Search/Explore.tsx:425
-msgid "Discover new feeds"
-msgstr "crwdns969:0crwdne969:0"
 
 #: src/view/screens/Feeds.tsx:725
 msgid "Discover New Feeds"
@@ -2328,13 +2362,17 @@ msgstr "crwdns971:0crwdne971:0"
 msgid "Dismiss"
 msgstr "crwdns973:0crwdne973:0"
 
-#: src/view/com/composer/Composer.tsx:1568
+#: src/view/com/composer/Composer.tsx:1613
 msgid "Dismiss error"
 msgstr "crwdns975:0crwdne975:0"
 
 #: src/components/ProgressGuide/List.tsx:42
 msgid "Dismiss getting started guide"
 msgstr "crwdns977:0crwdne977:0"
+
+#: src/screens/Search/modules/ExploreInterestsCard.tsx:43
+msgid "Dismiss interests"
+msgstr "crwdns3984:0crwdne3984:0"
 
 #: src/components/interstitials/TrendingVideos.tsx:92
 msgid "Dismiss this section"
@@ -2396,8 +2434,8 @@ msgstr "crwdns999:0crwdne999:0"
 #: src/screens/Settings/components/AddAppPasswordDialog.tsx:222
 #: src/view/com/auth/server-input/index.tsx:232
 #: src/view/com/auth/server-input/index.tsx:233
-#: src/view/com/composer/labels/LabelsBtn.tsx:224
-#: src/view/com/composer/labels/LabelsBtn.tsx:231
+#: src/view/com/composer/labels/LabelsBtn.tsx:223
+#: src/view/com/composer/labels/LabelsBtn.tsx:230
 #: src/view/com/composer/videos/SubtitleDialog.tsx:169
 #: src/view/com/composer/videos/SubtitleDialog.tsx:179
 #: src/view/com/modals/CropImage.web.tsx:112
@@ -2518,10 +2556,15 @@ msgstr "crwdns1047:0crwdne1047:0"
 msgid "Edit image"
 msgstr "crwdns1049:0crwdne1049:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:690
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:703
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:707
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:720
 msgid "Edit interaction settings"
 msgstr "crwdns1051:0crwdne1051:0"
+
+#: src/screens/Search/modules/ExploreInterestsCard.tsx:98
+#: src/screens/Search/modules/ExploreInterestsCard.tsx:105
+msgid "Edit interests"
+msgstr "crwdns3986:0crwdne3986:0"
 
 #: src/view/screens/ProfileList.tsx:536
 msgid "Edit list details"
@@ -2581,7 +2624,7 @@ msgstr "crwdns1075:0crwdne1075:0"
 msgid "Edit your profile description"
 msgstr "crwdns1077:0crwdne1077:0"
 
-#: src/Navigation.tsx:448
+#: src/Navigation.tsx:456
 msgid "Edit your starter pack"
 msgstr "crwdns1079:0crwdne1079:0"
 
@@ -2642,8 +2685,8 @@ msgstr "crwdns1103:0crwdne1103:0"
 
 #: src/components/dialogs/Embed.tsx:104
 #: src/components/dialogs/Embed.tsx:108
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:498
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:500
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:515
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:517
 msgid "Embed post"
 msgstr "crwdns1105:0crwdne1105:0"
 
@@ -2694,16 +2737,16 @@ msgstr "crwdns1125:0crwdne1125:0"
 msgid "Enable this source only"
 msgstr "crwdns1127:0crwdne1127:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:123
-#: src/screens/Settings/ContentAndMediaSettings.tsx:137
+#: src/screens/Settings/ContentAndMediaSettings.tsx:132
+#: src/screens/Settings/ContentAndMediaSettings.tsx:146
 msgid "Enable trending topics"
 msgstr "crwdns1129:0crwdne1129:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:158
+#: src/screens/Settings/ContentAndMediaSettings.tsx:167
 msgid "Enable trending videos in your Discover feed"
 msgstr "crwdns1131:0crwdne1131:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:144
+#: src/screens/Settings/ContentAndMediaSettings.tsx:153
 msgid "Enable trending videos in your Discover feed."
 msgstr "crwdns1133:0crwdne1133:0"
 
@@ -2754,6 +2797,10 @@ msgstr "crwdns1153:0crwdne1153:0"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "crwdns1155:0crwdne1155:0"
 
+#: src/screens/Login/LoginForm.tsx:218
+msgid "Enter the username or email address you used when you created your account"
+msgstr "crwdns3988:0crwdne3988:0"
+
 #: src/components/dialogs/BirthDateSettings.tsx:104
 msgid "Enter your birth date"
 msgstr "crwdns1157:0crwdne1157:0"
@@ -2783,7 +2830,11 @@ msgstr "crwdns1167:0crwdne1167:0"
 msgid "Enters full screen"
 msgstr "crwdns1169:0crwdne1169:0"
 
-#: src/view/com/composer/Composer.tsx:1653
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:235
+msgid "Entertainment"
+msgstr "crwdns3990:0crwdne3990:0"
+
+#: src/view/com/composer/Composer.tsx:1698
 #: src/view/com/util/error/ErrorScreen.tsx:42
 msgid "Error"
 msgstr "crwdns1171:0crwdne1171:0"
@@ -2797,9 +2848,12 @@ msgid "Error receiving captcha response."
 msgstr "crwdns1175:0crwdne1175:0"
 
 #: src/screens/Onboarding/StepInterests/index.tsx:183
-#: src/view/screens/Search/Search.tsx:114
 msgid "Error:"
 msgstr "crwdns1177:0crwdne1177:0"
+
+#: src/screens/Search/SearchResults.tsx:131
+msgid "Error: {error}"
+msgstr "crwdns3992:0{error}crwdne3992:0"
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:394
 msgid "Everybody"
@@ -2907,6 +2961,13 @@ msgstr "crwdns1225:0crwdne1225:0"
 msgid "Explicit sexual images."
 msgstr "crwdns1227:0crwdne1227:0"
 
+#: src/Navigation.tsx:640
+#: src/screens/Search/Shell.tsx:307
+#: src/view/shell/desktop/LeftNav.tsx:617
+#: src/view/shell/Drawer.tsx:370
+msgid "Explore"
+msgstr "crwdns3994:0crwdne3994:0"
+
 #: src/screens/Settings/AccountSettings.tsx:137
 #: src/screens/Settings/AccountSettings.tsx:141
 msgid "Export my data"
@@ -2916,8 +2977,8 @@ msgstr "crwdns1229:0crwdne1229:0"
 msgid "Export My Data"
 msgstr "crwdns1231:0crwdne1231:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:83
-#: src/screens/Settings/ContentAndMediaSettings.tsx:86
+#: src/screens/Settings/ContentAndMediaSettings.tsx:84
+#: src/screens/Settings/ContentAndMediaSettings.tsx:87
 msgid "External media"
 msgstr "crwdns1233:0crwdne1233:0"
 
@@ -2942,7 +3003,7 @@ msgid "Failed to accept chat"
 msgstr "crwdns1241:0crwdne1241:0"
 
 #: src/components/dms/ActionsWrapper.web.tsx:67
-#: src/components/dms/MessageContextMenu.tsx:93
+#: src/components/dms/MessageContextMenu.tsx:100
 msgid "Failed to add emoji reaction"
 msgstr "crwdns3923:0crwdne3923:0"
 
@@ -2973,11 +3034,11 @@ msgctxt "toast"
 msgid "Failed to delete chat"
 msgstr "crwdns1253:0crwdne1253:0"
 
-#: src/components/dms/MessageContextMenu.tsx:73
+#: src/components/dms/MessageContextMenu.tsx:80
 msgid "Failed to delete message"
 msgstr "crwdns1255:0crwdne1255:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:206
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:210
 msgid "Failed to delete post, please try again"
 msgstr "crwdns1257:0crwdne1257:0"
 
@@ -2990,8 +3051,8 @@ msgstr "crwdns1259:0crwdne1259:0"
 msgid "Failed to load conversations"
 msgstr "crwdns1261:0crwdne1261:0"
 
-#: src/view/screens/Search/Explore.tsx:463
-#: src/view/screens/Search/Explore.tsx:491
+#: src/screens/Search/Explore.tsx:475
+#: src/screens/Search/Explore.tsx:514
 msgid "Failed to load feeds preferences"
 msgstr "crwdns1263:0crwdne1263:0"
 
@@ -3003,12 +3064,12 @@ msgstr "crwdns1265:0crwdne1265:0"
 msgid "Failed to load past messages"
 msgstr "crwdns1267:0crwdne1267:0"
 
-#: src/view/screens/Search/Explore.tsx:456
-#: src/view/screens/Search/Explore.tsx:484
+#: src/screens/Search/Explore.tsx:468
+#: src/screens/Search/Explore.tsx:507
 msgid "Failed to load suggested feeds"
 msgstr "crwdns1269:0crwdne1269:0"
 
-#: src/view/screens/Search/Explore.tsx:414
+#: src/screens/Search/Explore.tsx:375
 msgid "Failed to load suggested follows"
 msgstr "crwdns1271:0crwdne1271:0"
 
@@ -3022,7 +3083,7 @@ msgid "Failed to pin post"
 msgstr "crwdns1275:0crwdne1275:0"
 
 #: src/components/dms/ActionsWrapper.web.tsx:61
-#: src/components/dms/MessageContextMenu.tsx:87
+#: src/components/dms/MessageContextMenu.tsx:94
 msgid "Failed to remove emoji reaction"
 msgstr "crwdns3925:0crwdne3925:0"
 
@@ -3038,6 +3099,11 @@ msgstr "crwdns1279:0crwdne1279:0"
 msgid "Failed to save settings. Please try again."
 msgstr "crwdns1281:0crwdne1281:0"
 
+#: src/screens/Settings/SettingsInterests.tsx:133
+msgctxt "toast"
+msgid "Failed to save your interests."
+msgstr "crwdns3996:0crwdne3996:0"
+
 #: src/components/dms/MessageItem.tsx:310
 msgid "Failed to send"
 msgstr "crwdns1283:0crwdne1283:0"
@@ -3047,11 +3113,11 @@ msgstr "crwdns1283:0crwdne1283:0"
 msgid "Failed to submit appeal, please try again."
 msgstr "crwdns1285:0crwdne1285:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:235
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:239
 msgid "Failed to toggle thread mute, please try again"
 msgstr "crwdns1287:0crwdne1287:0"
 
-#: src/components/FeedCard.tsx:275
+#: src/components/FeedCard.tsx:285
 msgid "Failed to update feeds"
 msgstr "crwdns1289:0crwdne1289:0"
 
@@ -3074,7 +3140,7 @@ msgstr "crwdns1295:0crwdne1295:0"
 msgid "Feed"
 msgstr "crwdns1297:0crwdne1297:0"
 
-#: src/components/FeedCard.tsx:134
+#: src/components/FeedCard.tsx:139
 #: src/view/com/feeds/FeedSourceCard.tsx:253
 msgid "Feed by {0}"
 msgstr "crwdns1299:0{0}crwdne1299:0"
@@ -3093,18 +3159,18 @@ msgstr "crwdns1303:0crwdne1303:0"
 msgid "Feedback"
 msgstr "crwdns1305:0crwdne1305:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:277
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:286
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:294
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:303
 msgctxt "toast"
 msgid "Feedback sent!"
 msgstr "crwdns1307:0crwdne1307:0"
 
-#: src/Navigation.tsx:428
+#: src/Navigation.tsx:436
+#: src/screens/Search/SearchResults.tsx:68
 #: src/screens/StarterPack/StarterPackScreen.tsx:185
 #: src/view/screens/Feeds.tsx:508
 #: src/view/screens/Profile.tsx:227
 #: src/view/screens/SavedFeeds.tsx:96
-#: src/view/screens/Search/Search.tsx:531
 #: src/view/shell/desktop/LeftNav.tsx:655
 #: src/view/shell/Drawer.tsx:486
 msgid "Feeds"
@@ -3114,13 +3180,13 @@ msgstr "crwdns1309:0crwdne1309:0"
 msgid "Feeds are custom algorithms that users build with a little coding expertise. <0/> for more information."
 msgstr "crwdns1311:0crwdne1311:0"
 
-#: src/components/FeedCard.tsx:272
+#: src/components/FeedCard.tsx:282
 #: src/view/screens/SavedFeeds.tsx:82
 msgctxt "toast"
 msgid "Feeds updated!"
 msgstr "crwdns1313:0crwdne1313:0"
 
-#: src/screens/Search/components/ExploreRecommendations.tsx:63
+#: src/screens/Search/modules/ExploreRecommendations.tsx:65
 msgid "Feeds we think you might like."
 msgstr "crwdns1315:0crwdne1315:0"
 
@@ -3136,11 +3202,11 @@ msgstr "crwdns1319:0crwdne1319:0"
 msgid "Filter from feeds"
 msgstr "crwdns1321:0crwdne1321:0"
 
-#: src/view/screens/Search/Search.tsx:403
+#: src/screens/Search/components/SearchLanguageDropdown.tsx:97
 msgid "Filter search by language"
 msgstr "crwdns1323:0crwdne1323:0"
 
-#: src/view/screens/Search/Search.tsx:376
+#: src/screens/Search/components/SearchLanguageDropdown.tsx:70
 msgid "Filter search by language (currently: {currentLanguageLabel})"
 msgstr "crwdns1325:0{currentLanguageLabel}crwdne1325:0"
 
@@ -3154,13 +3220,13 @@ msgstr "crwdns1327:0crwdne1327:0"
 msgid "Find accounts to follow"
 msgstr "crwdns1329:0crwdne1329:0"
 
-#: src/components/ProgressGuide/FollowDialog.tsx:78
-#: src/components/ProgressGuide/FollowDialog.tsx:88
-#: src/components/ProgressGuide/FollowDialog.tsx:417
+#: src/components/ProgressGuide/FollowDialog.tsx:77
+#: src/components/ProgressGuide/FollowDialog.tsx:87
+#: src/components/ProgressGuide/FollowDialog.tsx:374
 msgid "Find people to follow"
 msgstr "crwdns1331:0crwdne1331:0"
 
-#: src/view/screens/Search/Search.tsx:582
+#: src/screens/Search/Shell.tsx:476
 msgid "Find posts, users, and feeds on Bluesky"
 msgstr "crwdns1333:0crwdne1333:0"
 
@@ -3192,7 +3258,7 @@ msgid "Flexible"
 msgstr "crwdns1345:0crwdne1345:0"
 
 #. User is not following this account, click to follow
-#: src/components/ProfileCard.tsx:365
+#: src/components/ProfileCard.tsx:372
 #: src/components/ProfileHoverCard/index.web.tsx:449
 #: src/components/ProfileHoverCard/index.web.tsx:460
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:234
@@ -3248,10 +3314,6 @@ msgctxt "action"
 msgid "Follow Back"
 msgstr "crwdns1367:0crwdne1367:0"
 
-#: src/view/screens/Search/Explore.tsx:370
-msgid "Follow more accounts to get connected to your interests and build your network."
-msgstr "crwdns1369:0crwdne1369:0"
-
 #: src/components/KnownFollowers.tsx:234
 msgid "Followed by <0>{0}</0>"
 msgstr "crwdns1371:0{0}crwdne1371:0"
@@ -3278,7 +3340,7 @@ msgid "Followers you know"
 msgstr "crwdns1381:0crwdne1381:0"
 
 #. User is following this account, click to unfollow
-#: src/components/ProfileCard.tsx:359
+#: src/components/ProfileCard.tsx:366
 #: src/components/ProfileHoverCard/index.web.tsx:448
 #: src/components/ProfileHoverCard/index.web.tsx:459
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:230
@@ -3289,7 +3351,7 @@ msgstr "crwdns1381:0crwdne1381:0"
 msgid "Following"
 msgstr "crwdns1383:0crwdne1383:0"
 
-#: src/components/ProfileCard.tsx:322
+#: src/components/ProfileCard.tsx:329
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:98
 msgid "Following {0}"
 msgstr "crwdns1385:0{0}crwdne1385:0"
@@ -3302,8 +3364,8 @@ msgstr "crwdns1387:0{handle}crwdne1387:0"
 msgid "Following {name}"
 msgstr "crwdns1389:0{name}crwdne1389:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:75
-#: src/screens/Settings/ContentAndMediaSettings.tsx:78
+#: src/screens/Settings/ContentAndMediaSettings.tsx:76
+#: src/screens/Settings/ContentAndMediaSettings.tsx:79
 msgid "Following feed preferences"
 msgstr "crwdns1391:0crwdne1391:0"
 
@@ -3344,6 +3406,10 @@ msgstr "crwdns1407:0crwdne1407:0"
 #: src/screens/Settings/AppearanceSettings.tsx:142
 msgid "For the best experience, we recommend using the theme font."
 msgstr "crwdns1409:0crwdne1409:0"
+
+#: src/screens/Search/modules/ExploreSuggestedAccounts.tsx:94
+msgid "For You"
+msgstr "crwdns3998:0crwdne3998:0"
 
 #: src/components/dialogs/MutedWords.tsx:178
 msgid "Forever"
@@ -3471,8 +3537,8 @@ msgstr "crwdns1457:0crwdne1457:0"
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:46
 #: src/lib/moderation/useGlobalLabelStrings.ts:50
-#: src/view/com/composer/labels/LabelsBtn.tsx:202
-#: src/view/com/composer/labels/LabelsBtn.tsx:205
+#: src/view/com/composer/labels/LabelsBtn.tsx:201
+#: src/view/com/composer/labels/LabelsBtn.tsx:204
 msgid "Graphic Media"
 msgstr "crwdns1459:0crwdne1459:0"
 
@@ -3508,7 +3574,7 @@ msgstr "crwdns1471:0crwdne1471:0"
 msgid "Harassment, trolling, or intolerance"
 msgstr "crwdns1473:0crwdne1473:0"
 
-#: src/Navigation.tsx:398
+#: src/Navigation.tsx:406
 msgid "Hashtag"
 msgstr "crwdns1475:0crwdne1475:0"
 
@@ -3558,8 +3624,7 @@ msgstr "crwdns1491:0crwdne1491:0"
 #: src/lib/moderation/useLabelBehaviorDescription.ts:20
 #: src/lib/moderation/useLabelBehaviorDescription.ts:25
 #: src/lib/moderation/useLabelBehaviorDescription.ts:30
-#: src/screens/Search/components/ExploreTrendingTopics.tsx:137
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:761
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:778
 #: src/view/shell/desktop/SidebarTrendingTopics.tsx:110
 msgid "Hide"
 msgstr "crwdns1493:0crwdne1493:0"
@@ -3573,38 +3638,40 @@ msgstr "crwdns1495:0crwdne1495:0"
 msgid "Hide customization options"
 msgstr "crwdns1497:0crwdne1497:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:570
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:576
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:587
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:593
 msgid "Hide post for me"
 msgstr "crwdns1499:0crwdne1499:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:587
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:597
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:604
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:614
 msgid "Hide reply for everyone"
 msgstr "crwdns1501:0crwdne1501:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:569
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:575
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:586
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:592
 msgid "Hide reply for me"
 msgstr "crwdns1503:0crwdne1503:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:756
+#: src/screens/Search/modules/ExploreInterestsCard.tsx:110
+msgid "Hide this card"
+msgstr "crwdns4000:0crwdne4000:0"
+
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:773
 msgid "Hide this post?"
 msgstr "crwdns1505:0crwdne1505:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:756
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:817
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:773
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:834
 msgid "Hide this reply?"
 msgstr "crwdns1507:0crwdne1507:0"
 
 #: src/components/interstitials/Trending.tsx:113
-#: src/screens/Search/components/ExploreTrendingTopics.tsx:83
 #: src/view/shell/desktop/SidebarTrendingTopics.tsx:62
 msgid "Hide trending topics"
 msgstr "crwdns1509:0crwdne1509:0"
 
 #: src/components/interstitials/Trending.tsx:129
-#: src/screens/Search/components/ExploreTrendingTopics.tsx:135
 #: src/view/shell/desktop/SidebarTrendingTopics.tsx:108
 msgid "Hide trending topics?"
 msgstr "crwdns1511:0crwdne1511:0"
@@ -3654,8 +3721,8 @@ msgstr "crwdns1531:0crwdne1531:0"
 msgid "Hold up! We’re gradually giving access to video, and you’re still waiting in line. Check back soon!"
 msgstr "crwdns1533:0crwdne1533:0"
 
-#: src/Navigation.tsx:627
-#: src/Navigation.tsx:647
+#: src/Navigation.tsx:635
+#: src/Navigation.tsx:655
 #: src/view/shell/bottom-bar/BottomBar.tsx:162
 #: src/view/shell/desktop/LeftNav.tsx:599
 #: src/view/shell/Drawer.tsx:396
@@ -3670,6 +3737,10 @@ msgstr "crwdns1537:0crwdne1537:0"
 #: src/screens/Login/LoginForm.tsx:184
 msgid "Hosting provider"
 msgstr "crwdns1539:0crwdne1539:0"
+
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:190
+msgid "Hot"
+msgstr "crwdns4002:0crwdne4002:0"
 
 #: src/screens/Settings/ThreadPreferences.tsx:67
 #: src/screens/Settings/ThreadPreferences.tsx:70
@@ -3711,7 +3782,7 @@ msgstr "crwdns1553:0crwdne1553:0"
 msgid "If alt text is long, toggles alt text expanded state"
 msgstr "crwdns1555:0crwdne1555:0"
 
-#: src/screens/Signup/StepInfo/Policies.tsx:110
+#: src/screens/Signup/StepInfo/Policies.tsx:112
 msgid "If you are not yet an adult according to the laws of your country, your parent or legal guardian must read these Terms on your behalf."
 msgstr "crwdns1557:0crwdne1557:0"
 
@@ -3723,7 +3794,7 @@ msgstr "crwdns1559:0crwdne1559:0"
 msgid "If you have your own domain, you can use that as your handle. This lets you self-verify your identity. <0>Learn more here.</0>"
 msgstr "crwdns1561:0crwdne1561:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:747
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:764
 msgid "If you remove this post, you won't be able to recover it."
 msgstr "crwdns1563:0crwdne1563:0"
 
@@ -3796,10 +3867,6 @@ msgstr "crwdns1593:0crwdne1593:0"
 msgid "Input the code which has been emailed to you"
 msgstr "crwdns1595:0crwdne1595:0"
 
-#: src/screens/Login/LoginForm.tsx:218
-msgid "Input the username or email address you used at signup"
-msgstr "crwdns1597:0crwdne1597:0"
-
 #: src/view/com/composer/threadgate/ThreadgateBtn.tsx:49
 msgid "Interaction limited"
 msgstr "crwdns1599:0crwdne1599:0"
@@ -3817,7 +3884,7 @@ msgstr "crwdns1603:0crwdne1603:0"
 msgid "Invalid handle. Please try a different one."
 msgstr "crwdns1605:0crwdne1605:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:283
+#: src/view/com/post-thread/PostThreadItem.tsx:288
 msgid "Invalid or unsupported post record"
 msgstr "crwdns1607:0crwdne1607:0"
 
@@ -3869,7 +3936,7 @@ msgstr "crwdns1629:0crwdne1629:0"
 msgid "It's just you right now! Add more people to your starter pack by searching above."
 msgstr "crwdns1631:0crwdne1631:0"
 
-#: src/view/com/composer/Composer.tsx:1587
+#: src/view/com/composer/Composer.tsx:1632
 msgid "Job ID: {0}"
 msgstr "crwdns1633:0{0}crwdne1633:0"
 
@@ -3943,8 +4010,8 @@ msgid "Larger"
 msgstr "crwdns1663:0crwdne1663:0"
 
 #: src/screens/Hashtag.tsx:95
+#: src/screens/Search/SearchResults.tsx:52
 #: src/screens/Topic.tsx:77
-#: src/view/screens/Search/Search.tsx:515
 msgid "Latest"
 msgstr "crwdns1665:0crwdne1665:0"
 
@@ -4077,7 +4144,7 @@ msgstr "crwdns1719:0crwdne1719:0"
 msgid "Liked By"
 msgstr "crwdns1721:0crwdne1721:0"
 
-#: src/components/FeedCard.tsx:213
+#: src/components/FeedCard.tsx:218
 #: src/view/com/feeds/FeedSourceCard.tsx:303
 msgid "Liked by {0, plural, one {# user} other {# users}}"
 msgstr "crwdns1723:00={0}crwdne1723:0"
@@ -4093,7 +4160,7 @@ msgstr "crwdns1725:0likeCount={likeCount}crwdne1725:0"
 msgid "Likes"
 msgstr "crwdns1727:0crwdne1727:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:218
+#: src/view/com/post-thread/PostThreadItem.tsx:223
 msgid "Likes on this post"
 msgstr "crwdns1729:0crwdne1729:0"
 
@@ -4173,17 +4240,13 @@ msgstr "crwdns1759:0crwdne1759:0"
 msgid "Lists blocking this user:"
 msgstr "crwdns1761:0crwdne1761:0"
 
-#: src/view/screens/Search/Explore.tsx:135
+#: src/screens/Search/Explore.tsx:87
 msgid "Load more"
 msgstr "crwdns1763:0crwdne1763:0"
 
-#: src/view/screens/Search/Explore.tsx:224
+#: src/screens/Search/Explore.tsx:496
 msgid "Load more suggested feeds"
 msgstr "crwdns1765:0crwdne1765:0"
-
-#: src/view/screens/Search/Explore.tsx:222
-msgid "Load more suggested follows"
-msgstr "crwdns1767:0crwdne1767:0"
 
 #: src/view/screens/Notifications.tsx:270
 msgid "Load new notifications"
@@ -4245,8 +4308,8 @@ msgstr "crwdns1793:0crwdne1793:0"
 msgid "Make sure this is where you intend to go!"
 msgstr "crwdns1795:0crwdne1795:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:59
-#: src/screens/Settings/ContentAndMediaSettings.tsx:62
+#: src/screens/Settings/ContentAndMediaSettings.tsx:60
+#: src/screens/Settings/ContentAndMediaSettings.tsx:63
 msgid "Manage saved feeds"
 msgstr "crwdns1797:0crwdne1797:0"
 
@@ -4274,7 +4337,7 @@ msgstr "crwdns1805:0crwdne1805:0"
 msgid "Media"
 msgstr "crwdns1807:0crwdne1807:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:211
+#: src/view/com/composer/labels/LabelsBtn.tsx:210
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "crwdns1809:0crwdne1809:0"
 
@@ -4298,7 +4361,7 @@ msgstr "crwdns1817:0crwdne1817:0"
 msgid "Message {0}"
 msgstr "crwdns1819:0{0}crwdne1819:0"
 
-#: src/components/dms/MessageContextMenu.tsx:71
+#: src/components/dms/MessageContextMenu.tsx:78
 msgctxt "toast"
 msgid "Message deleted"
 msgstr "crwdns1821:0crwdne1821:0"
@@ -4307,7 +4370,7 @@ msgstr "crwdns1821:0crwdne1821:0"
 msgid "Message deleted"
 msgstr "crwdns1823:0crwdne1823:0"
 
-#: src/components/dms/MessageContextMenu.tsx:119
+#: src/components/dms/MessageContextMenu.tsx:126
 msgid "Message from @{0}: {1}"
 msgstr "crwdns3903:0{0}crwdnd3903:0{1}crwdne3903:0"
 
@@ -4324,11 +4387,11 @@ msgstr "crwdns1827:0crwdne1827:0"
 msgid "Message is too long"
 msgstr "crwdns1829:0crwdne1829:0"
 
-#: src/components/dms/MessageContextMenu.tsx:117
+#: src/components/dms/MessageContextMenu.tsx:124
 msgid "Message options"
 msgstr "crwdns3905:0crwdne3905:0"
 
-#: src/Navigation.tsx:642
+#: src/Navigation.tsx:650
 msgid "Messages"
 msgstr "crwdns1831:0crwdne1831:0"
 
@@ -4408,7 +4471,7 @@ msgstr "crwdns1861:0crwdne1861:0"
 msgid "Moderator has chosen to set a general warning on the content."
 msgstr "crwdns1863:0crwdne1863:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:640
+#: src/view/com/post-thread/PostThreadItem.tsx:645
 msgid "More"
 msgstr "crwdns1865:0crwdne1865:0"
 
@@ -4454,8 +4517,8 @@ msgstr "crwdns1881:0{tag}crwdne1881:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:289
 #: src/view/com/profile/ProfileMenu.tsx:296
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:652
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:658
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:669
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:675
 msgid "Mute account"
 msgstr "crwdns1883:0crwdne1883:0"
 
@@ -4504,13 +4567,13 @@ msgstr "crwdns1903:0crwdne1903:0"
 msgid "Mute this word until you unmute it"
 msgstr "crwdns1905:0crwdne1905:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:536
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:540
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:553
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:557
 msgid "Mute thread"
 msgstr "crwdns1907:0crwdne1907:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:550
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:552
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:567
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:569
 msgid "Mute words & tags"
 msgstr "crwdns1909:0crwdne1909:0"
 
@@ -4572,9 +4635,14 @@ msgstr "crwdns1931:0crwdne1931:0"
 msgid "Nature"
 msgstr "crwdns1933:0crwdne1933:0"
 
-#: src/components/StarterPack/StarterPackCard.tsx:132
+#: src/components/StarterPack/StarterPackCard.tsx:130
+#: src/components/StarterPack/StarterPackCard.tsx:161
 msgid "Navigate to {0}"
 msgstr "crwdns1935:0{0}crwdne1935:0"
+
+#: src/components/StarterPack/StarterPackCard.tsx:131
+msgid "Navigate to starter pack"
+msgstr "crwdns4004:0crwdne4004:0"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:166
 #: src/screens/Login/LoginForm.tsx:344
@@ -4602,6 +4670,10 @@ msgstr "crwdns1945:0crwdne1945:0"
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:548
 msgid "Nevermind, create a handle for me"
 msgstr "crwdns1947:0crwdne1947:0"
+
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:195
+msgid "New"
+msgstr "crwdns4006:0crwdne4006:0"
 
 #: src/view/screens/Lists.tsx:74
 #: src/view/screens/ModerationModlists.tsx:74
@@ -4678,6 +4750,7 @@ msgstr "crwdns1975:0crwdne1975:0"
 
 #: src/screens/Onboarding/index.tsx:20
 #: src/screens/Onboarding/state.ts:108
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:237
 msgid "News"
 msgstr "crwdns1977:0crwdne1977:0"
 
@@ -4725,7 +4798,7 @@ msgstr "crwdns1989:0crwdne1989:0"
 msgid "No likes yet"
 msgstr "crwdns1991:0crwdne1991:0"
 
-#: src/components/ProfileCard.tsx:344
+#: src/components/ProfileCard.tsx:351
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:119
 msgid "No longer following {0}"
 msgstr "crwdns1993:0{0}crwdne1993:0"
@@ -4769,9 +4842,13 @@ msgid "No result"
 msgstr "crwdns2011:0crwdne2011:0"
 
 #: src/components/dms/dialogs/SearchablePeopleList.tsx:204
-#: src/components/ProgressGuide/FollowDialog.tsx:235
+#: src/components/ProgressGuide/FollowDialog.tsx:212
 msgid "No results"
 msgstr "crwdns2013:0crwdne2013:0"
+
+#: src/screens/Search/Explore.tsx:715
+msgid "No results for \"{0}\"."
+msgstr "crwdns4008:0{0}crwdne4008:0"
 
 #: src/components/Lists.tsx:189
 msgid "No results found"
@@ -4781,12 +4858,16 @@ msgstr "crwdns2015:0crwdne2015:0"
 msgid "No results found for \"{query}\""
 msgstr "crwdns2017:0{query}crwdne2017:0"
 
+#: src/screens/Search/SearchResults.tsx:248
+#: src/screens/Search/SearchResults.tsx:286
+#: src/screens/Search/SearchResults.tsx:331
 #: src/view/com/modals/ListAddRemoveUsers.tsx:128
-#: src/view/screens/Search/Search.tsx:231
-#: src/view/screens/Search/Search.tsx:269
-#: src/view/screens/Search/Search.tsx:314
 msgid "No results found for {query}"
 msgstr "crwdns2019:0{query}crwdne2019:0"
+
+#: src/screens/Search/Explore.tsx:719
+msgid "No results."
+msgstr "crwdns4010:0crwdne4010:0"
 
 #: src/components/dialogs/GifSelect.tsx:229
 msgid "No search results found for \"{search}\"."
@@ -4838,7 +4919,7 @@ msgid "Not right now"
 msgstr "crwdns2041:0crwdne2041:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:406
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:774
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:791
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:361
 msgid "Note about sharing"
 msgstr "crwdns2043:0crwdne2043:0"
@@ -4855,7 +4936,7 @@ msgstr "crwdns2047:0crwdne2047:0"
 msgid "Notification filters"
 msgstr "crwdns2049:0crwdne2049:0"
 
-#: src/Navigation.tsx:423
+#: src/Navigation.tsx:431
 #: src/view/screens/Notifications.tsx:134
 msgid "Notification settings"
 msgstr "crwdns2051:0crwdne2051:0"
@@ -4872,7 +4953,7 @@ msgstr "crwdns2055:0crwdne2055:0"
 msgid "Notification Sounds"
 msgstr "crwdns2057:0crwdne2057:0"
 
-#: src/Navigation.tsx:637
+#: src/Navigation.tsx:645
 #: src/view/screens/Notifications.tsx:128
 #: src/view/shell/bottom-bar/BottomBar.tsx:236
 #: src/view/shell/desktop/LeftNav.tsx:636
@@ -4888,8 +4969,8 @@ msgstr "crwdns2061:0crwdne2061:0"
 msgid "Now"
 msgstr "crwdns2063:0crwdne2063:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:151
-#: src/view/com/composer/labels/LabelsBtn.tsx:154
+#: src/view/com/composer/labels/LabelsBtn.tsx:150
+#: src/view/com/composer/labels/LabelsBtn.tsx:153
 msgid "Nudity"
 msgstr "crwdns2065:0crwdne2065:0"
 
@@ -4911,14 +4992,16 @@ msgstr "crwdns2071:0crwdne2071:0"
 msgid "Oh no! Something went wrong."
 msgstr "crwdns2073:0crwdne2073:0"
 
+#. Confirm button text.
 #: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:362
+#: src/screens/Search/modules/ExploreInterestsCard.tsx:48
 #: src/screens/Settings/AppIconSettings/index.tsx:48
 #: src/screens/Settings/AppIconSettings/index.tsx:229
 msgid "OK"
 msgstr "crwdns2075:0crwdne2075:0"
 
 #: src/screens/Login/PasswordUpdatedForm.tsx:37
-#: src/view/com/post-thread/PostThreadItem.tsx:875
+#: src/view/com/post-thread/PostThreadItem.tsx:895
 msgid "Okay"
 msgstr "crwdns2077:0crwdne2077:0"
 
@@ -4937,15 +5020,15 @@ msgstr "crwdns2081:0crwdne2081:0"
 msgid "Onboarding reset"
 msgstr "crwdns2083:0crwdne2083:0"
 
-#: src/view/com/composer/Composer.tsx:346
+#: src/view/com/composer/Composer.tsx:354
 msgid "One or more GIFs is missing alt text."
 msgstr "crwdns2085:0crwdne2085:0"
 
-#: src/view/com/composer/Composer.tsx:343
+#: src/view/com/composer/Composer.tsx:351
 msgid "One or more images is missing alt text."
 msgstr "crwdns2087:0crwdne2087:0"
 
-#: src/view/com/composer/Composer.tsx:353
+#: src/view/com/composer/Composer.tsx:361
 msgid "One or more videos is missing alt text."
 msgstr "crwdns2089:0crwdne2089:0"
 
@@ -5005,7 +5088,7 @@ msgid "Open drawer menu"
 msgstr "crwdns2113:0crwdne2113:0"
 
 #: src/screens/Messages/components/MessageInput.web.tsx:181
-#: src/view/com/composer/Composer.tsx:1247
+#: src/view/com/composer/Composer.tsx:1292
 msgid "Open emoji picker"
 msgstr "crwdns2115:0crwdne2115:0"
 
@@ -5037,6 +5120,10 @@ msgstr "crwdns2125:0crwdne2125:0"
 #: src/screens/Moderation/index.tsx:220
 msgid "Open muted words and tags settings"
 msgstr "crwdns2127:0crwdne2127:0"
+
+#: src/screens/Search/components/StarterPackCard.tsx:119
+msgid "Open pack"
+msgstr "crwdns4012:0crwdne4012:0"
 
 #: src/view/com/util/forms/PostDropdownBtn.tsx:70
 msgid "Open post options menu"
@@ -5095,7 +5182,7 @@ msgstr "crwdns2153:0crwdne2153:0"
 msgid "Opens device photo gallery"
 msgstr "crwdns2155:0crwdne2155:0"
 
-#: src/view/com/composer/Composer.tsx:1248
+#: src/view/com/composer/Composer.tsx:1293
 msgid "Opens emoji picker"
 msgstr "crwdns2157:0crwdne2157:0"
 
@@ -5177,7 +5264,7 @@ msgstr "crwdns2193:0crwdne2193:0"
 
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:27
 #: src/lib/moderation/useReportOptions.ts:27
-#: src/view/com/composer/labels/LabelsBtn.tsx:186
+#: src/view/com/composer/labels/LabelsBtn.tsx:185
 msgid "Other"
 msgstr "crwdns2195:0crwdne2195:0"
 
@@ -5241,9 +5328,9 @@ msgstr "crwdns2219:0crwdne2219:0"
 msgid "Pause video"
 msgstr "crwdns2221:0crwdne2221:0"
 
+#: src/screens/Search/SearchResults.tsx:62
 #: src/screens/StarterPack/StarterPackScreen.tsx:184
 #: src/view/screens/ProfileList.tsx:166
-#: src/view/screens/Search/Search.tsx:525
 msgid "People"
 msgstr "crwdns2223:0crwdne2223:0"
 
@@ -5276,23 +5363,18 @@ msgstr "crwdns2235:0crwdne2235:0"
 msgid "Photography"
 msgstr "crwdns2237:0crwdne2237:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:170
+#: src/view/com/composer/labels/LabelsBtn.tsx:169
 msgid "Pictures meant for adults."
 msgstr "crwdns2239:0crwdne2239:0"
-
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:173
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:178
-msgid "Pin"
-msgstr "crwdns2241:0crwdne2241:0"
 
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:515
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:522
 msgid "Pin feed"
 msgstr "crwdns2243:0crwdne2243:0"
 
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:167
-msgid "Pin the trending videos feed to your home screen for easy access"
-msgstr "crwdns2245:0crwdne2245:0"
+#: src/components/FeedCard.tsx:329
+msgid "Pin Feed"
+msgstr "crwdns4014:0crwdne4014:0"
 
 #: src/view/screens/ProfileList.tsx:706
 msgid "Pin to home"
@@ -5302,8 +5384,8 @@ msgstr "crwdns2247:0crwdne2247:0"
 msgid "Pin to Home"
 msgstr "crwdns2249:0crwdne2249:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:427
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:434
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:444
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:451
 msgid "Pin to your profile"
 msgstr "crwdns2251:0crwdne2251:0"
 
@@ -5358,6 +5440,10 @@ msgstr "crwdns2273:0crwdne2273:0"
 #: src/view/com/util/post-embeds/ExternalPlayerEmbed.tsx:59
 msgid "Plays the video"
 msgstr "crwdns2275:0crwdne2275:0"
+
+#: src/view/com/composer/labels/LabelsBtn.tsx:115
+msgid "Please add any content warning labels that are applicable for the media you are posting."
+msgstr "crwdns4016:0crwdne4016:0"
 
 #: src/screens/Signup/state.ts:286
 msgid "Please choose your handle."
@@ -5444,18 +5530,15 @@ msgstr "crwdns2315:0crwdne2315:0"
 
 #: src/screens/Onboarding/index.tsx:34
 #: src/screens/Onboarding/state.ts:111
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:231
 msgid "Politics"
 msgstr "crwdns2317:0crwdne2317:0"
 
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:116
-msgid "Popular videos in your network."
-msgstr "crwdns2319:0crwdne2319:0"
-
-#: src/view/com/composer/labels/LabelsBtn.tsx:157
+#: src/view/com/composer/labels/LabelsBtn.tsx:156
 msgid "Porn"
 msgstr "crwdns2321:0crwdne2321:0"
 
-#: src/view/com/composer/Composer.tsx:963
+#: src/view/com/composer/Composer.tsx:1008
 msgctxt "action"
 msgid "Post"
 msgstr "crwdns2323:0crwdne2323:0"
@@ -5465,12 +5548,12 @@ msgctxt "description"
 msgid "Post"
 msgstr "crwdns2325:0crwdne2325:0"
 
-#: src/view/com/composer/Composer.tsx:961
+#: src/view/com/composer/Composer.tsx:1006
 msgctxt "action"
 msgid "Post All"
 msgstr "crwdns2327:0crwdne2327:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:210
+#: src/view/com/post-thread/PostThreadItem.tsx:215
 msgid "Post by {0}"
 msgstr "crwdns2329:0{0}crwdne2329:0"
 
@@ -5481,7 +5564,7 @@ msgstr "crwdns2329:0{0}crwdne2329:0"
 msgid "Post by @{0}"
 msgstr "crwdns2331:0{0}crwdne2331:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:186
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:190
 msgctxt "toast"
 msgid "Post deleted"
 msgstr "crwdns2333:0crwdne2333:0"
@@ -5619,7 +5702,7 @@ msgstr "crwdns2387:0crwdne2387:0"
 msgid "Privacy Policy"
 msgstr "crwdns2389:0crwdne2389:0"
 
-#: src/view/com/composer/Composer.tsx:1650
+#: src/view/com/composer/Composer.tsx:1695
 msgid "Processing video..."
 msgstr "crwdns2391:0crwdne2391:0"
 
@@ -5658,6 +5741,26 @@ msgstr "crwdns2403:0crwdne2403:0"
 msgid "Public, sharable lists which can be used to drive feeds."
 msgstr "crwdns2405:0crwdne2405:0"
 
+#. Accessibility label for button to publish a single post
+#: src/view/com/composer/Composer.tsx:988
+msgid "Publish post"
+msgstr "crwdns4018:0crwdne4018:0"
+
+#. Accessibility label for button to publish multiple posts in a thread
+#: src/view/com/composer/Composer.tsx:981
+msgid "Publish posts"
+msgstr "crwdns4020:0crwdne4020:0"
+
+#. Accessibility label for button to publish multiple replies in a thread
+#: src/view/com/composer/Composer.tsx:966
+msgid "Publish replies"
+msgstr "crwdns4022:0crwdne4022:0"
+
+#. Accessibility label for button to publish a single reply
+#: src/view/com/composer/Composer.tsx:973
+msgid "Publish reply"
+msgstr "crwdns4024:0crwdne4024:0"
+
 #: src/components/StarterPack/QrCodeDialog.tsx:134
 msgid "QR code copied to your clipboard!"
 msgstr "crwdns2407:0crwdne2407:0"
@@ -5677,11 +5780,11 @@ msgstr "crwdns2411:0crwdne2411:0"
 msgid "Quote post"
 msgstr "crwdns2413:0crwdne2413:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:314
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:331
 msgid "Quote post was re-attached"
 msgstr "crwdns2415:0crwdne2415:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:313
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:330
 msgid "Quote post was successfully detached"
 msgstr "crwdns2417:0crwdne2417:0"
 
@@ -5700,7 +5803,7 @@ msgstr "crwdns2421:0crwdne2421:0"
 msgid "Quotes"
 msgstr "crwdns2423:0crwdne2423:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:244
+#: src/view/com/post-thread/PostThreadItem.tsx:249
 msgid "Quotes of this post"
 msgstr "crwdns2425:0crwdne2425:0"
 
@@ -5715,12 +5818,12 @@ msgstr "crwdns2427:0crwdne2427:0"
 msgid "Rate limit exceeded – you've tried to change your handle too many times in a short period. Please wait a minute before trying again."
 msgstr "crwdns2429:0crwdne2429:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:612
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:622
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:629
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:639
 msgid "Re-attach quote"
 msgstr "crwdns2431:0crwdne2431:0"
 
-#: src/components/dms/EmojiReactionPicker.tsx:83
+#: src/components/dms/EmojiReactionPicker.tsx:85
 msgid "React with {emoji}"
 msgstr "crwdns3927:0{emoji}crwdne3927:0"
 
@@ -5759,11 +5862,11 @@ msgstr "crwdns2445:0crwdne2445:0"
 msgid "Reason:"
 msgstr "crwdns2447:0crwdne2447:0"
 
-#: src/view/screens/Search/Search.tsx:1036
+#: src/screens/Search/components/SearchHistory.tsx:44
 msgid "Recent Searches"
 msgstr "crwdns2449:0crwdne2449:0"
 
-#: src/screens/Search/components/ExploreRecommendations.tsx:52
+#: src/screens/Search/modules/ExploreRecommendations.tsx:54
 msgid "Recommended"
 msgstr "crwdns2451:0crwdne2451:0"
 
@@ -5786,7 +5889,7 @@ msgid "Reload conversations"
 msgstr "crwdns2459:0crwdne2459:0"
 
 #: src/components/dialogs/MutedWords.tsx:438
-#: src/components/FeedCard.tsx:315
+#: src/components/FeedCard.tsx:343
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:102
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:109
 #: src/screens/Settings/Settings.tsx:468
@@ -5801,7 +5904,7 @@ msgstr "crwdns2461:0crwdne2461:0"
 msgid "Remove {displayName} from starter pack"
 msgstr "crwdns2463:0{displayName}crwdne2463:0"
 
-#: src/view/screens/Search/Search.tsx:1110
+#: src/screens/Search/components/SearchHistory.tsx:120
 msgid "Remove {historyItem}"
 msgstr "crwdns2465:0{historyItem}crwdne2465:0"
 
@@ -5856,7 +5959,7 @@ msgstr "crwdns2483:0crwdne2483:0"
 msgid "Remove from saved feeds"
 msgstr "crwdns2485:0crwdne2485:0"
 
-#: src/components/FeedCard.tsx:310
+#: src/components/FeedCard.tsx:338
 #: src/view/com/feeds/FeedSourceCard.tsx:317
 msgid "Remove from your feeds?"
 msgstr "crwdns2487:0crwdne2487:0"
@@ -5869,7 +5972,7 @@ msgstr "crwdns2489:0crwdne2489:0"
 msgid "Remove mute word from your list"
 msgstr "crwdns2491:0crwdne2491:0"
 
-#: src/view/screens/Search/Search.tsx:1084
+#: src/screens/Search/components/SearchHistory.tsx:93
 msgid "Remove profile"
 msgstr "crwdns2493:0crwdne2493:0"
 
@@ -5917,7 +6020,7 @@ msgstr "crwdns2511:0crwdne2511:0"
 msgid "Removed from your feeds"
 msgstr "crwdns2513:0crwdne2513:0"
 
-#: src/view/screens/Search/Search.tsx:1086
+#: src/screens/Search/components/SearchHistory.tsx:95
 msgid "Removes profile from search history"
 msgstr "crwdns2515:0crwdne2515:0"
 
@@ -5942,7 +6045,7 @@ msgstr "crwdns2523:0crwdne2523:0"
 msgid "Replies to this post are disabled."
 msgstr "crwdns2525:0crwdne2525:0"
 
-#: src/view/com/composer/Composer.tsx:959
+#: src/view/com/composer/Composer.tsx:1004
 msgctxt "action"
 msgid "Reply"
 msgstr "crwdns2527:0crwdne2527:0"
@@ -5995,16 +6098,16 @@ msgctxt "description"
 msgid "Reply to you"
 msgstr "crwdns2547:0crwdne2547:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:346
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:363
 msgctxt "toast"
 msgid "Reply visibility updated"
 msgstr "crwdns2549:0crwdne2549:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:345
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:362
 msgid "Reply was successfully hidden"
 msgstr "crwdns2551:0crwdne2551:0"
 
-#: src/components/dms/MessageContextMenu.tsx:161
+#: src/components/dms/MessageContextMenu.tsx:168
 #: src/components/dms/MessagesListBlockedFooter.tsx:85
 #: src/components/dms/MessagesListBlockedFooter.tsx:92
 msgid "Report"
@@ -6038,12 +6141,12 @@ msgstr "crwdns2561:0crwdne2561:0"
 msgid "Report list"
 msgstr "crwdns3953:0crwdne3953:0"
 
-#: src/components/dms/MessageContextMenu.tsx:159
+#: src/components/dms/MessageContextMenu.tsx:166
 msgid "Report message"
 msgstr "crwdns2565:0crwdne2565:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:678
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:680
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:695
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:697
 msgid "Report post"
 msgstr "crwdns2567:0crwdne2567:0"
 
@@ -6131,7 +6234,7 @@ msgstr "crwdns2599:0crwdne2599:0"
 msgid "Reposted by you"
 msgstr "crwdns2601:0crwdne2601:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:223
+#: src/view/com/post-thread/PostThreadItem.tsx:228
 msgid "Reposts of this post"
 msgstr "crwdns2603:0crwdne2603:0"
 
@@ -6349,22 +6452,19 @@ msgstr "crwdns2681:0crwdne2681:0"
 #: src/components/dms/dialogs/SearchablePeopleList.tsx:491
 #: src/components/forms/SearchInput.tsx:34
 #: src/components/forms/SearchInput.tsx:36
-#: src/Navigation.tsx:632
+#: src/screens/Search/Shell.tsx:307
+#: src/screens/Search/Shell.tsx:464
 #: src/view/com/modals/ListAddRemoveUsers.tsx:76
-#: src/view/screens/Search/Search.tsx:570
-#: src/view/screens/Search/Search.tsx:848
 #: src/view/shell/bottom-bar/BottomBar.tsx:182
-#: src/view/shell/desktop/LeftNav.tsx:617
-#: src/view/shell/Drawer.tsx:370
 msgid "Search"
 msgstr "crwdns2683:0crwdne2683:0"
 
 #: src/Navigation.tsx:217
-#: src/screens/Profile/ProfileSearch.tsx:34
+#: src/screens/Profile/ProfileSearch.tsx:37
 msgid "Search @{0}'s posts"
 msgstr "crwdns2685:0{0}crwdne2685:0"
 
-#: src/components/ProgressGuide/FollowDialog.tsx:745
+#: src/components/ProgressGuide/FollowDialog.tsx:683
 msgid "Search by name or interest"
 msgstr "crwdns2687:0crwdne2687:0"
 
@@ -6372,7 +6472,8 @@ msgstr "crwdns2687:0crwdne2687:0"
 msgid "Search feeds"
 msgstr "crwdns2689:0crwdne2689:0"
 
-#: src/components/ProgressGuide/FollowDialog.tsx:575
+#: src/components/ProgressGuide/FollowDialog.tsx:524
+#: src/screens/Search/modules/ExploreSuggestedAccounts.tsx:135
 msgid "Search for \"{interestsDisplayName}\"{activeText}"
 msgstr "crwdns2691:0{interestsDisplayName}crwdnd2691:0{activeText}crwdne2691:0"
 
@@ -6380,7 +6481,7 @@ msgstr "crwdns2691:0{interestsDisplayName}crwdnd2691:0{activeText}crwdne2691:0"
 msgid "Search for \"{query}\""
 msgstr "crwdns2693:0{query}crwdne2693:0"
 
-#: src/view/screens/Search/Search.tsx:982
+#: src/screens/Search/components/AutocompleteResults.tsx:44
 msgid "Search for \"{searchText}\""
 msgstr "crwdns2695:0{searchText}crwdne2695:0"
 
@@ -6388,7 +6489,15 @@ msgstr "crwdns2695:0{searchText}crwdne2695:0"
 msgid "Search for feeds that you want to suggest to others."
 msgstr "crwdns2697:0crwdne2697:0"
 
-#: src/view/screens/Search/Search.tsx:875
+#: src/screens/Search/Explore.tsx:362
+msgid "Search for more accounts"
+msgstr "crwdns4026:0crwdne4026:0"
+
+#: src/screens/Search/Explore.tsx:439
+msgid "Search for more feeds"
+msgstr "crwdns4028:0crwdne4028:0"
+
+#: src/screens/Search/Shell.tsx:334
 msgid "Search for posts, users, or feeds"
 msgstr "crwdns2699:0crwdne2699:0"
 
@@ -6400,7 +6509,7 @@ msgstr "crwdns2701:0crwdne2701:0"
 msgid "Search GIFs"
 msgstr "crwdns2703:0crwdne2703:0"
 
-#: src/screens/Profile/ProfileSearch.tsx:33
+#: src/screens/Profile/ProfileSearch.tsx:36
 msgid "Search my posts"
 msgstr "crwdns2705:0crwdne2705:0"
 
@@ -6410,7 +6519,7 @@ msgid "Search posts"
 msgstr "crwdns2707:0crwdne2707:0"
 
 #: src/components/dms/dialogs/SearchablePeopleList.tsx:511
-#: src/components/ProgressGuide/FollowDialog.tsx:764
+#: src/components/ProgressGuide/FollowDialog.tsx:702
 msgid "Search profiles"
 msgstr "crwdns2709:0crwdne2709:0"
 
@@ -6418,12 +6527,12 @@ msgstr "crwdns2709:0crwdne2709:0"
 msgid "Search Tenor"
 msgstr "crwdns2711:0crwdne2711:0"
 
-#: src/screens/Profile/ProfileSearch.tsx:35
+#: src/screens/Profile/ProfileSearch.tsx:38
 msgid "Search..."
 msgstr "crwdns2713:0crwdne2713:0"
 
 #: src/components/dms/dialogs/SearchablePeopleList.tsx:512
-#: src/components/ProgressGuide/FollowDialog.tsx:765
+#: src/components/ProgressGuide/FollowDialog.tsx:703
 msgid "Searches for profiles"
 msgstr "crwdns2715:0crwdne2715:0"
 
@@ -6545,6 +6654,7 @@ msgid "Select your date of birth"
 msgstr "crwdns2773:0crwdne2773:0"
 
 #: src/screens/Onboarding/StepInterests/index.tsx:192
+#: src/screens/Settings/SettingsInterests.tsx:162
 msgid "Select your interests from the options below"
 msgstr "crwdns2775:0crwdne2775:0"
 
@@ -6615,8 +6725,8 @@ msgstr "crwdns2803:0{title}crwdne2803:0"
 msgid "Send verification email"
 msgstr "crwdns2805:0crwdne2805:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:470
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:473
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:487
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:490
 msgid "Send via direct message"
 msgstr "crwdns2807:0crwdne2807:0"
 
@@ -6660,7 +6770,7 @@ msgctxt "toast"
 msgid "Settings saved"
 msgstr "crwdns2825:0crwdne2825:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:174
+#: src/view/com/composer/labels/LabelsBtn.tsx:173
 msgid "Sexual activity or erotic nudity."
 msgstr "crwdns2827:0crwdne2827:0"
 
@@ -6675,8 +6785,8 @@ msgstr "crwdns2829:0crwdne2829:0"
 #: src/screens/Topic.tsx:102
 #: src/view/com/profile/ProfileMenu.tsx:216
 #: src/view/com/profile/ProfileMenu.tsx:225
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:481
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:490
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:498
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:507
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:350
 #: src/view/screens/ProfileList.tsx:505
 msgid "Share"
@@ -6696,7 +6806,7 @@ msgid "Share a fun fact!"
 msgstr "crwdns2837:0crwdne2837:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:411
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:779
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:796
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:366
 msgid "Share anyway"
 msgstr "crwdns2839:0crwdne2839:0"
@@ -6780,8 +6890,8 @@ msgstr "crwdns2871:0crwdne2871:0"
 msgid "Show hidden replies"
 msgstr "crwdns2873:0crwdne2873:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:520
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:522
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:537
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:539
 msgid "Show less like this"
 msgstr "crwdns2875:0crwdne2875:0"
 
@@ -6789,14 +6899,14 @@ msgstr "crwdns2875:0crwdne2875:0"
 msgid "Show list anyway"
 msgstr "crwdns2877:0crwdne2877:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:600
+#: src/view/com/post-thread/PostThreadItem.tsx:605
 #: src/view/com/post/Post.tsx:243
 #: src/view/com/posts/PostFeedItem.tsx:515
 msgid "Show More"
 msgstr "crwdns2879:0crwdne2879:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:512
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:514
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:529
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:531
 msgid "Show more like this"
 msgstr "crwdns2881:0crwdne2881:0"
 
@@ -6826,8 +6936,8 @@ msgstr "crwdns2891:0crwdne2891:0"
 msgid "Show replies by people you follow before all other replies"
 msgstr "crwdns2893:0crwdne2893:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:586
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:596
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:603
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:613
 msgid "Show reply for everyone"
 msgstr "crwdns2895:0crwdne2895:0"
 
@@ -6849,7 +6959,7 @@ msgstr "crwdns2901:0crwdne2901:0"
 msgid "Show warning and filter from feeds"
 msgstr "crwdns2903:0crwdne2903:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:816
+#: src/view/com/post-thread/PostThreadItem.tsx:836
 msgid "Shows information about when this post was created"
 msgstr "crwdns2905:0crwdne2905:0"
 
@@ -6888,14 +6998,14 @@ msgstr "crwdns2913:0{0}crwdne2913:0"
 msgid "Sign in as..."
 msgstr "crwdns2915:0crwdne2915:0"
 
+#: src/screens/Deactivated.tsx:203
+#: src/screens/Deactivated.tsx:209
+msgid "Sign in or create an account"
+msgstr "crwdns4030:0crwdne4030:0"
+
 #: src/components/dialogs/Signin.tsx:75
 msgid "Sign in or create your account to join the conversation!"
 msgstr "crwdns2917:0crwdne2917:0"
-
-#: src/screens/Deactivated.tsx:203
-#: src/screens/Deactivated.tsx:209
-msgid "Sign in or sign up"
-msgstr "crwdns2919:0crwdne2919:0"
 
 #: src/components/AccountList.tsx:65
 msgid "Sign in to account that is not listed"
@@ -6935,11 +7045,6 @@ msgstr "crwdns2931:0crwdne2931:0"
 #: src/screens/Login/ChooseAccountForm.tsx:53
 msgid "Signed in as @{0}"
 msgstr "crwdns2933:0{0}crwdne2933:0"
-
-#: src/screens/StarterPack/StarterPackLandingScreen.tsx:303
-#: src/screens/StarterPack/StarterPackLandingScreen.tsx:310
-msgid "Signup without a starter pack"
-msgstr "crwdns2935:0crwdne2935:0"
 
 #: src/components/FeedInterstitials.tsx:337
 msgid "Similar accounts"
@@ -7048,6 +7153,7 @@ msgstr "crwdns2977:0crwdne2977:0"
 
 #: src/screens/Onboarding/index.tsx:27
 #: src/screens/Onboarding/state.ts:113
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:229
 msgid "Sports"
 msgstr "crwdns2979:0crwdne2979:0"
 
@@ -7069,13 +7175,13 @@ msgstr "crwdns2985:0crwdne2985:0"
 msgid "Start chat with {displayName}"
 msgstr "crwdns2987:0{displayName}crwdne2987:0"
 
-#: src/Navigation.tsx:433
-#: src/Navigation.tsx:438
+#: src/Navigation.tsx:441
+#: src/Navigation.tsx:446
 #: src/screens/StarterPack/Wizard/index.tsx:186
 msgid "Starter Pack"
 msgstr "crwdns2989:0crwdne2989:0"
 
-#: src/components/StarterPack/StarterPackCard.tsx:87
+#: src/components/StarterPack/StarterPackCard.tsx:90
 msgid "Starter pack by {0}"
 msgstr "crwdns2991:0{0}crwdne2991:0"
 
@@ -7083,7 +7189,7 @@ msgstr "crwdns2991:0{0}crwdne2991:0"
 msgid "Starter pack by <0/>"
 msgstr "crwdns2993:0crwdne2993:0"
 
-#: src/components/StarterPack/StarterPackCard.tsx:86
+#: src/components/StarterPack/StarterPackCard.tsx:89
 #: src/view/com/profile/ProfileSubpageHeader.tsx:180
 msgid "Starter pack by you"
 msgstr "crwdns2995:0crwdne2995:0"
@@ -7092,6 +7198,7 @@ msgstr "crwdns2995:0crwdne2995:0"
 msgid "Starter pack is invalid"
 msgstr "crwdns2997:0crwdne2997:0"
 
+#: src/screens/Search/Explore.tsx:538
 #: src/view/screens/Profile.tsx:228
 msgid "Starter Packs"
 msgstr "crwdns2999:0crwdne2999:0"
@@ -7163,16 +7270,16 @@ msgstr "crwdns3027:0crwdne3027:0"
 msgid "Success!"
 msgstr "crwdns3029:0crwdne3029:0"
 
-#: src/view/screens/Search/Explore.tsx:368
-msgid "Suggested accounts"
-msgstr "crwdns3031:0crwdne3031:0"
+#: src/screens/Search/Explore.tsx:359
+msgid "Suggested Accounts"
+msgstr "crwdns4032:0crwdne4032:0"
 
 #: src/components/FeedInterstitials.tsx:339
 msgid "Suggested for you"
 msgstr "crwdns3033:0crwdne3033:0"
 
-#: src/view/com/composer/labels/LabelsBtn.tsx:145
-#: src/view/com/composer/labels/LabelsBtn.tsx:148
+#: src/view/com/composer/labels/LabelsBtn.tsx:144
+#: src/view/com/composer/labels/LabelsBtn.tsx:147
 msgid "Suggestive"
 msgstr "crwdns3035:0crwdne3035:0"
 
@@ -7468,6 +7575,7 @@ msgstr "crwdns3153:0crwdne3153:0"
 msgid "There was an issue fetching notifications. Tap here to try again."
 msgstr "crwdns3155:0crwdne3155:0"
 
+#: src/screens/Search/Explore.tsx:908
 #: src/view/com/posts/PostFeed.tsx:607
 msgid "There was an issue fetching posts. Tap here to try again."
 msgstr "crwdns3157:0crwdne3157:0"
@@ -7515,9 +7623,9 @@ msgstr "crwdns3171:0crwdne3171:0"
 #: src/view/com/profile/ProfileMenu.tsx:145
 #: src/view/com/profile/ProfileMenu.tsx:158
 #: src/view/com/profile/ProfileMenu.tsx:170
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:379
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:392
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:402
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:396
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:409
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:419
 msgid "There was an issue! {0}"
 msgstr "crwdns3173:0{0}crwdne3173:0"
 
@@ -7664,7 +7772,7 @@ msgstr "crwdns3237:0crwdne3237:0"
 msgid "This moderation service is unavailable. See below for more details. If this issue persists, contact us."
 msgstr "crwdns3239:0crwdne3239:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:856
+#: src/view/com/post-thread/PostThreadItem.tsx:876
 msgid "This post claims to have been created on <0>{0}</0>, but was first seen by Bluesky on <1>{1}</1>."
 msgstr "crwdns3241:0{0}crwdnd3241:0{1}crwdne3241:0"
 
@@ -7672,20 +7780,20 @@ msgstr "crwdns3241:0{0}crwdnd3241:0{1}crwdne3241:0"
 msgid "This post has an unknown type of threadgate on it. Your app may be out of date."
 msgstr "crwdns3243:0crwdne3243:0"
 
-#: src/view/com/post-thread/PostThreadItem.tsx:153
+#: src/view/com/post-thread/PostThreadItem.tsx:158
 msgid "This post has been deleted."
 msgstr "crwdns3245:0crwdne3245:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:776
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:793
 #: src/view/com/util/post-ctrls/PostCtrls.tsx:363
 msgid "This post is only visible to logged-in users. It won't be visible to people who aren't signed in."
 msgstr "crwdns3247:0crwdne3247:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:758
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:775
 msgid "This post will be hidden from feeds and threads. This cannot be undone."
 msgstr "crwdns3249:0crwdne3249:0"
 
-#: src/view/com/composer/Composer.tsx:428
+#: src/view/com/composer/Composer.tsx:436
 msgid "This post's author has disabled quote posts."
 msgstr "crwdns3251:0crwdne3251:0"
 
@@ -7693,7 +7801,7 @@ msgstr "crwdns3251:0crwdne3251:0"
 msgid "This profile is only visible to logged-in users. It won't be visible to people who aren't signed in."
 msgstr "crwdns3253:0crwdne3253:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:819
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:836
 msgid "This reply will be sorted into a hidden section at the bottom of your thread and will mute notifications for subsequent replies - both for yourself and others."
 msgstr "crwdns3255:0crwdne3255:0"
 
@@ -7746,7 +7854,7 @@ msgstr "crwdns3277:0{0}crwdne3277:0"
 msgid "This will remove @{0} from the quick access list."
 msgstr "crwdns3279:0{0}crwdne3279:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:809
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:826
 msgid "This will remove your post from this quote post for all users, and replace it with a placeholder."
 msgstr "crwdns3281:0crwdne3281:0"
 
@@ -7755,8 +7863,8 @@ msgstr "crwdns3281:0crwdne3281:0"
 msgid "Thread options"
 msgstr "crwdns3283:0crwdne3283:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:67
-#: src/screens/Settings/ContentAndMediaSettings.tsx:70
+#: src/screens/Settings/ContentAndMediaSettings.tsx:68
+#: src/screens/Settings/ContentAndMediaSettings.tsx:71
 msgid "Thread preferences"
 msgstr "crwdns3285:0crwdne3285:0"
 
@@ -7814,31 +7922,33 @@ msgid "Toggles the sound"
 msgstr "crwdns3311:0crwdne3311:0"
 
 #: src/screens/Hashtag.tsx:84
+#: src/screens/Search/SearchResults.tsx:42
 #: src/screens/Topic.tsx:71
-#: src/view/screens/Search/Search.tsx:505
 msgid "Top"
 msgstr "crwdns3313:0crwdne3313:0"
 
-#: src/Navigation.tsx:403
+#: src/Navigation.tsx:411
 msgid "Topic"
 msgstr "crwdns3315:0crwdne3315:0"
 
-#: src/components/dms/MessageContextMenu.tsx:132
-#: src/components/dms/MessageContextMenu.tsx:134
-#: src/view/com/post-thread/PostThreadItem.tsx:778
-#: src/view/com/post-thread/PostThreadItem.tsx:781
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:451
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:453
+#: src/components/dms/MessageContextMenu.tsx:139
+#: src/components/dms/MessageContextMenu.tsx:141
+#: src/view/com/post-thread/PostThreadItem.tsx:798
+#: src/view/com/post-thread/PostThreadItem.tsx:801
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:468
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:470
 msgid "Translate"
 msgstr "crwdns3317:0crwdne3317:0"
 
-#: src/screens/Search/components/ExploreTrendingTopics.tsx:69
 #: src/view/shell/desktop/SidebarTrendingTopics.tsx:59
 msgid "Trending"
 msgstr "crwdns3319:0crwdne3319:0"
 
+#: src/screens/Search/Explore.tsx:608
+msgid "Trending topics"
+msgstr "crwdns4034:0crwdne4034:0"
+
 #: src/components/interstitials/TrendingVideos.tsx:88
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:106
 msgid "Trending Videos"
 msgstr "crwdns3321:0crwdne3321:0"
 
@@ -7973,8 +8083,8 @@ msgstr "crwdns3375:0{tag}crwdne3375:0"
 
 #: src/view/com/profile/ProfileMenu.tsx:288
 #: src/view/com/profile/ProfileMenu.tsx:294
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:651
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:657
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:668
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:674
 msgid "Unmute account"
 msgstr "crwdns3377:0crwdne3377:0"
 
@@ -7986,8 +8096,8 @@ msgstr "crwdns3379:0crwdne3379:0"
 msgid "Unmute list"
 msgstr "crwdns3957:0crwdne3957:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:536
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:540
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:553
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:557
 msgid "Unmute thread"
 msgstr "crwdns3381:0crwdne3381:0"
 
@@ -8004,13 +8114,17 @@ msgstr "crwdns3385:0crwdne3385:0"
 msgid "Unpin feed"
 msgstr "crwdns3387:0crwdne3387:0"
 
+#: src/components/FeedCard.tsx:320
+msgid "Unpin Feed"
+msgstr "crwdns4036:0crwdne4036:0"
+
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:305
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:307
 msgid "Unpin from home"
 msgstr "crwdns3389:0crwdne3389:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:426
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:433
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:443
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:450
 msgid "Unpin from profile"
 msgstr "crwdns3391:0crwdne3391:0"
 
@@ -8043,7 +8157,7 @@ msgstr "crwdns3403:0crwdne3403:0"
 msgid "Unsubscribed from list"
 msgstr "crwdns3405:0crwdne3405:0"
 
-#: src/view/com/composer/Composer.tsx:782
+#: src/view/com/composer/Composer.tsx:790
 msgid "Unsupported video type"
 msgstr "crwdns3407:0crwdne3407:0"
 
@@ -8072,12 +8186,12 @@ msgstr "crwdns3415:0{displayName}crwdne3415:0"
 msgid "Update to {domain}"
 msgstr "crwdns3417:0{domain}crwdne3417:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:318
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:335
 msgctxt "toast"
 msgid "Updating quote attachment failed"
 msgstr "crwdns3419:0crwdne3419:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:350
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:367
 msgctxt "toast"
 msgid "Updating reply visibility failed"
 msgstr "crwdns3421:0crwdne3421:0"
@@ -8122,7 +8236,7 @@ msgstr "crwdns3435:0crwdne3435:0"
 msgid "Uploading link thumbnail..."
 msgstr "crwdns3437:0crwdne3437:0"
 
-#: src/view/com/composer/Composer.tsx:1647
+#: src/view/com/composer/Composer.tsx:1692
 msgid "Uploading video..."
 msgstr "crwdns3439:0crwdne3439:0"
 
@@ -8139,8 +8253,8 @@ msgstr "crwdns3443:0crwdne3443:0"
 msgid "Use in-app browser"
 msgstr "crwdns3445:0crwdne3445:0"
 
-#: src/screens/Settings/ContentAndMediaSettings.tsx:93
-#: src/screens/Settings/ContentAndMediaSettings.tsx:99
+#: src/screens/Settings/ContentAndMediaSettings.tsx:102
+#: src/screens/Settings/ContentAndMediaSettings.tsx:108
 msgid "Use in-app browser to open links"
 msgstr "crwdns3447:0crwdne3447:0"
 
@@ -8294,7 +8408,7 @@ msgstr "crwdns3513:0crwdne3513:0"
 msgid "Video failed to process"
 msgstr "crwdns3515:0crwdne3515:0"
 
-#: src/Navigation.tsx:454
+#: src/Navigation.tsx:462
 msgid "Video Feed"
 msgstr "crwdns3517:0crwdne3517:0"
 
@@ -8304,6 +8418,7 @@ msgstr "crwdns3519:0{0}crwdnd3519:0{text}crwdne3519:0"
 
 #: src/screens/Onboarding/index.tsx:39
 #: src/screens/Onboarding/state.ts:103
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:233
 msgid "Video Games"
 msgstr "crwdns3521:0crwdne3521:0"
 
@@ -8323,7 +8438,7 @@ msgstr "crwdns3527:0crwdne3527:0"
 msgid "Video settings"
 msgstr "crwdns3529:0crwdne3529:0"
 
-#: src/view/com/composer/Composer.tsx:1657
+#: src/view/com/composer/Composer.tsx:1702
 msgid "Video uploaded"
 msgstr "crwdns3531:0crwdne3531:0"
 
@@ -8344,7 +8459,7 @@ msgstr "crwdns3537:0crwdne3537:0"
 msgid "View {0}'s avatar"
 msgstr "crwdns3539:0{0}crwdne3539:0"
 
-#: src/components/ProfileCard.tsx:110
+#: src/components/ProfileCard.tsx:115
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:446
 #: src/screens/VideoFeed/index.tsx:769
 #: src/view/com/notifications/NotificationFeedItem.tsx:413
@@ -8388,8 +8503,8 @@ msgstr "crwdns3557:0crwdne3557:0"
 
 #: src/components/interstitials/TrendingVideos.tsx:191
 #: src/components/interstitials/TrendingVideos.tsx:210
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:231
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:250
+#: src/screens/Search/modules/ExploreTrendingVideos.tsx:194
+#: src/screens/Search/modules/ExploreTrendingVideos.tsx:213
 msgid "View more"
 msgstr "crwdns3559:0crwdne3559:0"
 
@@ -8500,6 +8615,10 @@ msgstr "crwdns3605:0crwdne3605:0"
 msgid "We ran out of posts from your follows. Here's the latest from <0/>."
 msgstr "crwdns3607:0crwdne3607:0"
 
+#: src/screens/Settings/SettingsInterests.tsx:155
+msgid "We recommend selecting at least two interests."
+msgstr "crwdns4038:0crwdne4038:0"
+
 #: src/view/com/composer/state/video.ts:417
 msgid "We were unable to determine if you are allowed to upload videos. Please try again."
 msgstr "crwdns3609:0crwdne3609:0"
@@ -8525,7 +8644,7 @@ msgid "We'll use this to help customize your experience."
 msgstr "crwdns3619:0crwdne3619:0"
 
 #: src/components/dms/dialogs/SearchablePeopleList.tsx:92
-#: src/components/ProgressGuide/FollowDialog.tsx:157
+#: src/components/ProgressGuide/FollowDialog.tsx:172
 msgid "We're having network issues, try again"
 msgstr "crwdns3621:0crwdne3621:0"
 
@@ -8541,11 +8660,11 @@ msgstr "crwdns3625:0{handleOrDid}crwdne3625:0"
 msgid "We're sorry, but we weren't able to load your muted words at this time. Please try again."
 msgstr "crwdns3627:0crwdne3627:0"
 
-#: src/view/screens/Search/Search.tsx:205
+#: src/screens/Search/SearchResults.tsx:222
 msgid "We're sorry, but your search could not be completed. Please try again in a few minutes."
 msgstr "crwdns3629:0crwdne3629:0"
 
-#: src/view/com/composer/Composer.tsx:425
+#: src/view/com/composer/Composer.tsx:433
 msgid "We're sorry! The post you are replying to has been deleted."
 msgstr "crwdns3631:0crwdne3631:0"
 
@@ -8574,13 +8693,9 @@ msgstr "crwdns3641:0crwdne3641:0"
 msgid "What do you want to call your starter pack?"
 msgstr "crwdns3643:0crwdne3643:0"
 
-#: src/screens/Search/components/ExploreTrendingTopics.tsx:79
-msgid "What people are posting about."
-msgstr "crwdns3645:0crwdne3645:0"
-
 #: src/view/com/auth/SplashScreen.tsx:38
 #: src/view/com/auth/SplashScreen.web.tsx:99
-#: src/view/com/composer/Composer.tsx:745
+#: src/view/com/composer/Composer.tsx:753
 msgid "What's up?"
 msgstr "crwdns3647:0crwdne3647:0"
 
@@ -8607,7 +8722,7 @@ msgid "Whoops!"
 msgstr "crwdns3657:0crwdne3657:0"
 
 #: src/components/interstitials/TrendingVideos.tsx:127
-#: src/screens/Search/components/ExploreTrendingVideos.tsx:147
+#: src/screens/Search/modules/ExploreTrendingVideos.tsx:108
 msgid "Whoops! Trending videos failed to load."
 msgstr "crwdns3659:0crwdne3659:0"
 
@@ -8654,11 +8769,11 @@ msgstr "crwdns3675:0crwdne3675:0"
 msgid "Write a message"
 msgstr "crwdns3677:0crwdne3677:0"
 
-#: src/view/com/composer/Composer.tsx:836
+#: src/view/com/composer/Composer.tsx:844
 msgid "Write post"
 msgstr "crwdns3679:0crwdne3679:0"
 
-#: src/view/com/composer/Composer.tsx:743
+#: src/view/com/composer/Composer.tsx:751
 #: src/view/com/post-thread/PostThreadComposePrompt.tsx:69
 msgid "Write your reply"
 msgstr "crwdns3681:0crwdne3681:0"
@@ -8685,11 +8800,11 @@ msgstr "crwdns3689:0crwdne3689:0"
 msgid "Yes, delete this starter pack"
 msgstr "crwdns3691:0crwdne3691:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:812
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:829
 msgid "Yes, detach"
 msgstr "crwdns3693:0crwdne3693:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:822
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:839
 msgid "Yes, hide"
 msgstr "crwdns3695:0crwdne3695:0"
 
@@ -8706,8 +8821,8 @@ msgid "You"
 msgstr "crwdns3701:0crwdne3701:0"
 
 #: src/components/forms/HostingProvider.tsx:46
-msgid "You are creating an account on <0><1>{0}</1><2/></0>"
-msgstr "crwdns3959:0{0}crwdne3959:0"
+msgid "You are creating an account on"
+msgstr "crwdns4040:0crwdne4040:0"
 
 #: src/screens/SignupQueued.tsx:157
 msgid "You are in line."
@@ -8720,6 +8835,10 @@ msgstr "crwdns3707:0crwdne3707:0"
 #: src/view/com/profile/ProfileFollows.tsx:94
 msgid "You are not following anyone."
 msgstr "crwdns3709:0crwdne3709:0"
+
+#: src/screens/Search/modules/ExploreInterestsCard.tsx:45
+msgid "You can adjust your interests at any time from \"Content and media\" settings."
+msgstr "crwdns4042:0crwdne4042:0"
 
 #: src/view/com/posts/FollowingEmptyState.tsx:63
 #: src/view/com/posts/FollowingEndOfFeed.tsx:64
@@ -8749,7 +8868,6 @@ msgstr "crwdns3721:0crwdne3721:0"
 
 #: src/components/interstitials/Trending.tsx:130
 #: src/components/interstitials/TrendingVideos.tsx:139
-#: src/screens/Search/components/ExploreTrendingTopics.tsx:136
 #: src/view/shell/desktop/SidebarTrendingTopics.tsx:109
 msgid "You can update this later from your settings."
 msgstr "crwdns3723:0crwdne3723:0"
@@ -8879,8 +8997,8 @@ msgid "You may only select up to 4 images"
 msgstr "crwdns3781:0crwdne3781:0"
 
 #: src/screens/Signup/StepInfo/Policies.tsx:106
-msgid "You must be 13 years of age or older to sign up."
-msgstr "crwdns3783:0crwdne3783:0"
+msgid "You must be 13 years of age or older to create an account."
+msgstr "crwdns4044:0crwdne4044:0"
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:327
 msgid "You must be following at least seven other people to generate a starter pack."
@@ -8915,11 +9033,11 @@ msgstr "crwdns3935:0{0}crwdnd3935:0{1}crwdne3935:0"
 msgid "You will be signed out of all your accounts."
 msgstr "crwdns3795:0crwdne3795:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:228
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:232
 msgid "You will no longer receive notifications for this thread"
 msgstr "crwdns3797:0crwdne3797:0"
 
-#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:224
+#: src/view/com/util/forms/PostDropdownBtnMenuItems.tsx:228
 msgid "You will now receive notifications for this thread"
 msgstr "crwdns3799:0crwdne3799:0"
 
@@ -9084,6 +9202,23 @@ msgstr "crwdns3875:0{0}crwdne3875:0"
 msgid "Your full username will be <0>@{0}</0>"
 msgstr "crwdns3877:0{0}crwdne3877:0"
 
+#: src/Navigation.tsx:383
+#: src/screens/Search/modules/ExploreInterestsCard.tsx:67
+#: src/screens/Settings/ContentAndMediaSettings.tsx:92
+#: src/screens/Settings/ContentAndMediaSettings.tsx:95
+#: src/screens/Settings/SettingsInterests.tsx:39
+msgid "Your interests"
+msgstr "crwdns4046:0crwdne4046:0"
+
+#: src/screens/Settings/SettingsInterests.tsx:124
+msgctxt "toast"
+msgid "Your interests have been updated!"
+msgstr "crwdns4048:0crwdne4048:0"
+
+#: src/screens/Search/modules/ExploreInterestsCard.tsx:94
+msgid "Your interests help us find what you like!"
+msgstr "crwdns4050:0crwdne4050:0"
+
 #: src/components/dialogs/MutedWords.tsx:369
 msgid "Your muted words"
 msgstr "crwdns3879:0crwdne3879:0"
@@ -9096,11 +9231,11 @@ msgstr "crwdns3881:0crwdne3881:0"
 msgid "Your password must be at least 8 characters long."
 msgstr "crwdns3883:0crwdne3883:0"
 
-#: src/view/com/composer/Composer.tsx:485
+#: src/view/com/composer/Composer.tsx:493
 msgid "Your post has been published"
 msgstr "crwdns3885:0crwdne3885:0"
 
-#: src/view/com/composer/Composer.tsx:482
+#: src/view/com/composer/Composer.tsx:490
 msgid "Your posts have been published"
 msgstr "crwdns3887:0crwdne3887:0"
 
@@ -9112,7 +9247,7 @@ msgstr "crwdns3889:0crwdne3889:0"
 msgid "Your profile, posts, feeds, and lists will no longer be visible to other Bluesky users. You can reactivate your account at any time by logging in."
 msgstr "crwdns3891:0crwdne3891:0"
 
-#: src/view/com/composer/Composer.tsx:484
+#: src/view/com/composer/Composer.tsx:492
 msgid "Your reply has been published"
 msgstr "crwdns3893:0crwdne3893:0"
 
@@ -9123,4 +9258,8 @@ msgstr "crwdns3895:0{0}crwdne3895:0"
 #: src/components/dms/ReportDialog.tsx:200
 msgid "Your report will be sent to the Bluesky Moderation Service"
 msgstr "crwdns3897:0crwdne3897:0"
+
+#: src/screens/Settings/SettingsInterests.tsx:53
+msgid "Your selected interests help us serve you content you care about."
+msgstr "crwdns4052:0crwdne4052:0"
 
