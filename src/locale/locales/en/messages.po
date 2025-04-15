@@ -8,7 +8,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: bluesky-social-Hebrew\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-04-10 18:56\n"
+"PO-Revision-Date: 2025-04-15 19:39\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -404,8 +404,8 @@ msgstr "crwdns3915:0crwdne3915:0"
 
 #: src/Navigation.tsx:391
 #: src/screens/Settings/AboutSettings.tsx:34
-#: src/screens/Settings/Settings.tsx:215
 #: src/screens/Settings/Settings.tsx:218
+#: src/screens/Settings/Settings.tsx:221
 msgid "About"
 msgstr "crwdns165:0crwdne165:0"
 
@@ -424,8 +424,8 @@ msgid "Accept Request"
 msgstr "crwdns171:0crwdne171:0"
 
 #: src/screens/Settings/AccessibilitySettings.tsx:46
-#: src/screens/Settings/Settings.tsx:191
 #: src/screens/Settings/Settings.tsx:194
+#: src/screens/Settings/Settings.tsx:197
 msgid "Accessibility"
 msgstr "crwdns173:0crwdne173:0"
 
@@ -436,8 +436,8 @@ msgstr "crwdns175:0crwdne175:0"
 #: src/Navigation.tsx:359
 #: src/screens/Login/LoginForm.tsx:194
 #: src/screens/Settings/AccountSettings.tsx:45
-#: src/screens/Settings/Settings.tsx:153
 #: src/screens/Settings/Settings.tsx:156
+#: src/screens/Settings/Settings.tsx:159
 msgid "Account"
 msgstr "crwdns177:0crwdne177:0"
 
@@ -468,11 +468,11 @@ msgstr "crwdns185:0crwdne185:0"
 msgid "Account Muted by List"
 msgstr "crwdns187:0crwdne187:0"
 
-#: src/screens/Settings/Settings.tsx:430
+#: src/screens/Settings/Settings.tsx:451
 msgid "Account options"
 msgstr "crwdns189:0crwdne189:0"
 
-#: src/screens/Settings/Settings.tsx:466
+#: src/screens/Settings/Settings.tsx:487
 msgid "Account removed from quick access"
 msgstr "crwdns191:0crwdne191:0"
 
@@ -536,8 +536,8 @@ msgstr "crwdns211:0crwdne211:0"
 msgid "Add alt text (optional)"
 msgstr "crwdns213:0crwdne213:0"
 
-#: src/screens/Settings/Settings.tsx:373
-#: src/screens/Settings/Settings.tsx:376
+#: src/screens/Settings/Settings.tsx:394
+#: src/screens/Settings/Settings.tsx:397
 #: src/view/shell/desktop/LeftNav.tsx:281
 #: src/view/shell/desktop/LeftNav.tsx:285
 msgid "Add another account"
@@ -922,8 +922,8 @@ msgstr "crwdns375:0crwdne375:0"
 
 #: src/Navigation.tsx:351
 #: src/screens/Settings/AppearanceSettings.tsx:85
-#: src/screens/Settings/Settings.tsx:183
 #: src/screens/Settings/Settings.tsx:186
+#: src/screens/Settings/Settings.tsx:189
 msgid "Appearance"
 msgstr "crwdns377:0crwdne377:0"
 
@@ -1144,7 +1144,7 @@ msgstr "crwdns467:0crwdne467:0"
 msgid "Blocked post."
 msgstr "crwdns469:0crwdne469:0"
 
-#: src/screens/Profile/Sections/Labels.tsx:173
+#: src/screens/Profile/Sections/Labels.tsx:170
 msgid "Blocking does not prevent this labeler from placing labels on your account."
 msgstr "crwdns471:0crwdne471:0"
 
@@ -1311,7 +1311,7 @@ msgstr "crwdns537:0crwdne537:0"
 #: src/screens/Settings/AppIconSettings/index.tsx:225
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:76
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:83
-#: src/screens/Settings/Settings.tsx:260
+#: src/screens/Settings/Settings.tsx:263
 #: src/screens/Takendown.tsx:99
 #: src/screens/Takendown.tsx:102
 #: src/view/com/composer/Composer.tsx:937
@@ -1448,8 +1448,8 @@ msgstr "crwdns587:0crwdne587:0"
 msgid "Changes app icon"
 msgstr "crwdns589:0crwdne589:0"
 
-#: src/components/forms/HostingProvider.tsx:50
-#: src/components/forms/HostingProvider.tsx:70
+#: src/components/forms/HostingProvider.tsx:49
+#: src/components/forms/HostingProvider.tsx:69
 msgid "Changes hosting provider"
 msgstr "crwdns591:0crwdne591:0"
 
@@ -1554,11 +1554,11 @@ msgstr "crwdns635:0crwdne635:0"
 msgid "Choose your username"
 msgstr "crwdns637:0crwdne637:0"
 
-#: src/screens/Settings/Settings.tsx:351
+#: src/screens/Settings/Settings.tsx:372
 msgid "Clear all storage data"
 msgstr "crwdns639:0crwdne639:0"
 
-#: src/screens/Settings/Settings.tsx:353
+#: src/screens/Settings/Settings.tsx:374
 msgid "Clear all storage data (restart after this)"
 msgstr "crwdns641:0crwdne641:0"
 
@@ -1802,8 +1802,8 @@ msgid "Content & Media"
 msgstr "crwdns737:0crwdne737:0"
 
 #: src/screens/Settings/AccessibilitySettings.tsx:109
-#: src/screens/Settings/Settings.tsx:175
 #: src/screens/Settings/Settings.tsx:178
+#: src/screens/Settings/Settings.tsx:181
 msgid "Content and media"
 msgstr "crwdns739:0crwdne739:0"
 
@@ -2127,7 +2127,7 @@ msgstr "crwdns871:0crwdne871:0"
 msgid "Deactivate account"
 msgstr "crwdns873:0crwdne873:0"
 
-#: src/screens/Settings/Settings.tsx:332
+#: src/screens/Settings/Settings.tsx:353
 msgid "Debug Moderation"
 msgstr "crwdns875:0crwdne875:0"
 
@@ -2176,7 +2176,7 @@ msgstr "crwdns891:0crwdne891:0"
 msgid "Delete chat"
 msgstr "crwdns893:0crwdne893:0"
 
-#: src/screens/Settings/Settings.tsx:339
+#: src/screens/Settings/Settings.tsx:360
 msgid "Delete chat declaration record"
 msgstr "crwdns895:0crwdne895:0"
 
@@ -2287,8 +2287,8 @@ msgctxt "toast"
 msgid "Developer mode enabled"
 msgstr "crwdns941:0crwdne941:0"
 
-#: src/screens/Settings/Settings.tsx:242
 #: src/screens/Settings/Settings.tsx:245
+#: src/screens/Settings/Settings.tsx:248
 msgid "Developer options"
 msgstr "crwdns943:0crwdne943:0"
 
@@ -2756,7 +2756,7 @@ msgstr "crwdns1133:0crwdne1133:0"
 msgid "Enabled"
 msgstr "crwdns1135:0crwdne1135:0"
 
-#: src/screens/Profile/Sections/Feed.tsx:116
+#: src/screens/Profile/Sections/Feed.tsx:113
 msgid "End of feed"
 msgstr "crwdns1137:0crwdne1137:0"
 
@@ -3586,8 +3586,8 @@ msgstr "crwdns1477:0{tag}crwdne1477:0"
 msgid "Having trouble?"
 msgstr "crwdns1479:0crwdne1479:0"
 
-#: src/screens/Settings/Settings.tsx:207
-#: src/screens/Settings/Settings.tsx:211
+#: src/screens/Settings/Settings.tsx:210
+#: src/screens/Settings/Settings.tsx:214
 #: src/view/shell/desktop/RightNav.tsx:120
 #: src/view/shell/desktop/RightNav.tsx:121
 #: src/view/shell/Drawer.tsx:337
@@ -3979,7 +3979,7 @@ msgstr "crwdns1647:0crwdne1647:0"
 msgid "Labels added"
 msgstr "crwdns1649:0crwdne1649:0"
 
-#: src/screens/Profile/Sections/Labels.tsx:163
+#: src/screens/Profile/Sections/Labels.tsx:160
 msgid "Labels are annotations on users and content. They can be used to hide, warn, and categorize the network."
 msgstr "crwdns1651:0crwdne1651:0"
 
@@ -4000,8 +4000,8 @@ msgid "Language Settings"
 msgstr "crwdns1659:0crwdne1659:0"
 
 #: src/screens/Settings/LanguageSettings.tsx:71
-#: src/screens/Settings/Settings.tsx:199
 #: src/screens/Settings/Settings.tsx:202
+#: src/screens/Settings/Settings.tsx:205
 msgid "Languages"
 msgstr "crwdns1661:0crwdne1661:0"
 
@@ -4412,8 +4412,8 @@ msgstr "crwdns1837:0crwdne1837:0"
 
 #: src/Navigation.tsx:145
 #: src/screens/Moderation/index.tsx:89
-#: src/screens/Settings/Settings.tsx:167
 #: src/screens/Settings/Settings.tsx:170
+#: src/screens/Settings/Settings.tsx:173
 msgid "Moderation"
 msgstr "crwdns1839:0crwdne1839:0"
 
@@ -5016,7 +5016,7 @@ msgstr "crwdns2079:0crwdne2079:0"
 msgid "on<0><1/><2><3/></2></0>"
 msgstr "crwdns2081:0crwdne2081:0"
 
-#: src/screens/Settings/Settings.tsx:304
+#: src/screens/Settings/Settings.tsx:325
 msgid "Onboarding reset"
 msgstr "crwdns2083:0crwdne2083:0"
 
@@ -5113,7 +5113,7 @@ msgstr "crwdns2121:0{niceUrl}crwdne2121:0"
 msgid "Open message options"
 msgstr "crwdns2123:0crwdne2123:0"
 
-#: src/screens/Settings/Settings.tsx:330
+#: src/screens/Settings/Settings.tsx:351
 msgid "Open moderation debug page"
 msgstr "crwdns2125:0crwdne2125:0"
 
@@ -5133,12 +5133,12 @@ msgstr "crwdns2129:0crwdne2129:0"
 msgid "Open starter pack menu"
 msgstr "crwdns2131:0crwdne2131:0"
 
-#: src/screens/Settings/Settings.tsx:323
-#: src/screens/Settings/Settings.tsx:337
+#: src/screens/Settings/Settings.tsx:344
+#: src/screens/Settings/Settings.tsx:358
 msgid "Open storybook page"
 msgstr "crwdns2133:0crwdne2133:0"
 
-#: src/screens/Settings/Settings.tsx:316
+#: src/screens/Settings/Settings.tsx:337
 msgid "Open system log"
 msgstr "crwdns2135:0crwdne2135:0"
 
@@ -5200,7 +5200,7 @@ msgstr "crwdns2161:0crwdne2161:0"
 msgid "Opens GIF select dialog"
 msgstr "crwdns2163:0crwdne2163:0"
 
-#: src/screens/Settings/Settings.tsx:208
+#: src/screens/Settings/Settings.tsx:211
 msgid "Opens helpdesk in browser"
 msgstr "crwdns2165:0crwdne2165:0"
 
@@ -5683,8 +5683,8 @@ msgstr "crwdns2381:0crwdne2381:0"
 msgid "Privacy"
 msgstr "crwdns2383:0crwdne2383:0"
 
-#: src/screens/Settings/Settings.tsx:161
 #: src/screens/Settings/Settings.tsx:164
+#: src/screens/Settings/Settings.tsx:167
 msgid "Privacy and security"
 msgstr "crwdns2385:0crwdne2385:0"
 
@@ -5892,7 +5892,7 @@ msgstr "crwdns2459:0crwdne2459:0"
 #: src/components/FeedCard.tsx:343
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:102
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:109
-#: src/screens/Settings/Settings.tsx:468
+#: src/screens/Settings/Settings.tsx:489
 #: src/view/com/feeds/FeedSourceCard.tsx:322
 #: src/view/com/modals/ListAddRemoveUsers.tsx:269
 #: src/view/com/modals/UserAddRemoveLists.tsx:235
@@ -5908,8 +5908,8 @@ msgstr "crwdns2463:0{displayName}crwdne2463:0"
 msgid "Remove {historyItem}"
 msgstr "crwdns2465:0{historyItem}crwdne2465:0"
 
-#: src/screens/Settings/Settings.tsx:447
-#: src/screens/Settings/Settings.tsx:450
+#: src/screens/Settings/Settings.tsx:468
+#: src/screens/Settings/Settings.tsx:471
 msgid "Remove account"
 msgstr "crwdns2467:0crwdne2467:0"
 
@@ -5950,7 +5950,7 @@ msgstr "crwdns2479:0crwdne2479:0"
 msgid "Remove from my feeds"
 msgstr "crwdns2481:0crwdne2481:0"
 
-#: src/screens/Settings/Settings.tsx:460
+#: src/screens/Settings/Settings.tsx:481
 msgid "Remove from quick access?"
 msgstr "crwdns2483:0crwdne2483:0"
 
@@ -6288,8 +6288,8 @@ msgstr "crwdns2623:0crwdne2623:0"
 msgid "Reset Code"
 msgstr "crwdns2625:0crwdne2625:0"
 
-#: src/screens/Settings/Settings.tsx:344
-#: src/screens/Settings/Settings.tsx:346
+#: src/screens/Settings/Settings.tsx:365
+#: src/screens/Settings/Settings.tsx:367
 msgid "Reset onboarding state"
 msgstr "crwdns2627:0crwdne2627:0"
 
@@ -6759,7 +6759,7 @@ msgid "Sets email for password reset"
 msgstr "crwdns2821:0crwdne2821:0"
 
 #: src/Navigation.tsx:173
-#: src/screens/Settings/Settings.tsx:80
+#: src/screens/Settings/Settings.tsx:83
 #: src/view/shell/desktop/LeftNav.tsx:709
 #: src/view/shell/Drawer.tsx:539
 msgid "Settings"
@@ -6963,7 +6963,7 @@ msgstr "crwdns2903:0crwdne2903:0"
 msgid "Shows information about when this post was created"
 msgstr "crwdns2905:0crwdne2905:0"
 
-#: src/screens/Settings/Settings.tsx:104
+#: src/screens/Settings/Settings.tsx:107
 msgid "Shows other accounts you can switch to"
 msgstr "crwdns2907:0crwdne2907:0"
 
@@ -7015,9 +7015,9 @@ msgstr "crwdns2921:0crwdne2921:0"
 msgid "Sign in to Bluesky or create a new account"
 msgstr "crwdns2923:0crwdne2923:0"
 
-#: src/screens/Settings/Settings.tsx:225
-#: src/screens/Settings/Settings.tsx:227
-#: src/screens/Settings/Settings.tsx:259
+#: src/screens/Settings/Settings.tsx:228
+#: src/screens/Settings/Settings.tsx:230
+#: src/screens/Settings/Settings.tsx:262
 #: src/screens/SignupQueued.tsx:93
 #: src/screens/SignupQueued.tsx:96
 #: src/screens/Takendown.tsx:85
@@ -7031,7 +7031,7 @@ msgstr "crwdns2925:0crwdne2925:0"
 msgid "Sign Out"
 msgstr "crwdns2927:0crwdne2927:0"
 
-#: src/screens/Settings/Settings.tsx:256
+#: src/screens/Settings/Settings.tsx:259
 #: src/view/shell/desktop/LeftNav.tsx:205
 msgid "Sign out?"
 msgstr "crwdns2929:0crwdne2929:0"
@@ -7100,7 +7100,7 @@ msgstr "crwdns2955:0crwdne2955:0"
 
 #: src/components/ReportDialog/index.tsx:54
 #: src/screens/Moderation/index.tsx:97
-#: src/screens/Profile/Sections/Labels.tsx:87
+#: src/screens/Profile/Sections/Labels.tsx:121
 msgid "Something went wrong, please try again."
 msgstr "crwdns2957:0crwdne2957:0"
 
@@ -7216,12 +7216,12 @@ msgstr "crwdns3003:0crwdne3003:0"
 msgid "Step {0} of {1}"
 msgstr "crwdns3005:0{0}crwdnd3005:0{1}crwdne3005:0"
 
-#: src/screens/Settings/Settings.tsx:309
+#: src/screens/Settings/Settings.tsx:330
 msgid "Storage cleared, you need to restart the app now."
 msgstr "crwdns3007:0crwdne3007:0"
 
 #: src/Navigation.tsx:266
-#: src/screens/Settings/Settings.tsx:325
+#: src/screens/Settings/Settings.tsx:346
 msgid "Storybook"
 msgstr "crwdns3009:0crwdne3009:0"
 
@@ -7250,7 +7250,7 @@ msgstr "crwdns3017:0crwdne3017:0"
 msgid "Subscribe"
 msgstr "crwdns3019:0crwdne3019:0"
 
-#: src/screens/Profile/Sections/Labels.tsx:201
+#: src/screens/Profile/Sections/Labels.tsx:198
 msgid "Subscribe to @{0} to use these labels:"
 msgstr "crwdns3021:0{0}crwdne3021:0"
 
@@ -7299,9 +7299,9 @@ msgstr "crwdns3039:0crwdne3039:0"
 msgid "Support"
 msgstr "crwdns3041:0crwdne3041:0"
 
-#: src/screens/Settings/Settings.tsx:102
-#: src/screens/Settings/Settings.tsx:116
-#: src/screens/Settings/Settings.tsx:412
+#: src/screens/Settings/Settings.tsx:105
+#: src/screens/Settings/Settings.tsx:119
+#: src/screens/Settings/Settings.tsx:433
 #: src/view/shell/desktop/LeftNav.tsx:243
 msgid "Switch account"
 msgstr "crwdns3043:0crwdne3043:0"
@@ -7328,7 +7328,7 @@ msgstr "crwdns3051:0crwdne3051:0"
 
 #: src/screens/Settings/AboutSettings.tsx:66
 #: src/screens/Settings/AboutSettings.tsx:69
-#: src/screens/Settings/Settings.tsx:318
+#: src/screens/Settings/Settings.tsx:339
 msgid "System log"
 msgstr "crwdns3053:0crwdne3053:0"
 
@@ -7748,7 +7748,7 @@ msgstr "crwdns3225:0crwdne3225:0"
 msgid "This label was applied by you."
 msgstr "crwdns3227:0crwdne3227:0"
 
-#: src/screens/Profile/Sections/Labels.tsx:188
+#: src/screens/Profile/Sections/Labels.tsx:185
 msgid "This labeler hasn't declared what labels it publishes, and may not be active."
 msgstr "crwdns3229:0crwdne3229:0"
 
@@ -7850,7 +7850,7 @@ msgstr "crwdns3275:0crwdne3275:0"
 msgid "This will delete \"{0}\" from your muted words. You can always add it back later."
 msgstr "crwdns3277:0{0}crwdne3277:0"
 
-#: src/screens/Settings/Settings.tsx:462
+#: src/screens/Settings/Settings.tsx:483
 msgid "This will remove @{0} from the quick access list."
 msgstr "crwdns3279:0{0}crwdne3279:0"
 
@@ -8820,7 +8820,7 @@ msgstr "crwdns3699:0crwdne3699:0"
 msgid "You"
 msgstr "crwdns3701:0crwdne3701:0"
 
-#: src/components/forms/HostingProvider.tsx:46
+#: src/components/forms/HostingProvider.tsx:45
 msgid "You are creating an account on"
 msgstr "crwdns4040:0crwdne4040:0"
 
@@ -9028,7 +9028,7 @@ msgstr "crwdns3933:0{0}crwdne3933:0"
 msgid "You reacted {0} to {1}"
 msgstr "crwdns3935:0{0}crwdnd3935:0{1}crwdne3935:0"
 
-#: src/screens/Settings/Settings.tsx:257
+#: src/screens/Settings/Settings.tsx:260
 #: src/view/shell/desktop/LeftNav.tsx:206
 msgid "You will be signed out of all your accounts."
 msgstr "crwdns3795:0crwdne3795:0"
