@@ -7285,7 +7285,7 @@ msgstr "חפש פרופילים"
 
 #: src/screens/Search/Shell.tsx:334
 msgid "Search for posts, users, or feeds"
-msgstr ""
+msgstr "חפש פוסטים, משתמשים או עדכונים"
 
 #: src/components/dialogs/GifSelect.tsx:177
 msgid "Search GIFs"
