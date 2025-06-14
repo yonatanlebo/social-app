@@ -1,0 +1,48 @@
+name: build-and-push-bskyweb
+on:
+  push:
+    branches:
+      - main
+      - jake/bskyweb-additions
+env:
+  REGISTRY: registry.y-force.info
+
+  # github.repository as <account>/<repo>
+  IMAGE_NAME: ${{ social-app }}
+
+jobs:
+  bskyweb-container:
+    if: github.repository == 'registry.y-force.info/social-app'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Docker buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=sha,enable=true,priority=100,prefix=bskyweb:,suffix=,format=long
+
+      - name: Build and push Docker image
+        id: build-and-push
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          file: ./Dockerfile
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
