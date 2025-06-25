@@ -1,6 +1,6 @@
 import React from 'react'
-import {StyleProp, View, ViewStyle} from 'react-native'
-import {ModerationUI} from '@atproto/api'
+import {type StyleProp, View, type ViewStyle} from 'react-native'
+import {type ModerationUI} from '@atproto/api'
 import {msg, Trans} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 
@@ -148,8 +148,8 @@ function ContentHiderActive({
           modui.noOverride
             ? _(msg`Learn more about the moderation applied to this content`)
             : override
-            ? _(msg`Hides the content`)
-            : _(msg`Shows the content`)
+              ? _(msg`Hides the content`)
+              : _(msg`Shows the content`)
         }>
         {state => (
           <View
@@ -169,12 +169,12 @@ function ContentHiderActive({
             <desc.icon
               size="md"
               fill={t.atoms.text_contrast_medium.color}
-              style={{marginLeft: -2}}
+              style={{marginRight: -2}}
             />
             <Text
               style={[
                 a.flex_1,
-                a.text_left,
+                a.text_right,
                 a.font_bold,
                 a.leading_snug,
                 gtMobile && [a.font_bold],
@@ -223,7 +223,7 @@ function ContentHiderActive({
                 a.font_normal,
                 a.leading_snug,
                 t.atoms.text_contrast_medium,
-                a.text_left,
+                a.text_right,
               ]}>
               {desc.sourceType === 'user' ? (
                 <Trans>Labeled by the author.</Trans>
