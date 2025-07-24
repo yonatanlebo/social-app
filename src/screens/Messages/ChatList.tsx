@@ -23,6 +23,8 @@ import {useSession} from '#/state/session'
 import {List, type ListRef} from '#/view/com/util/List'
 import {ChatListLoadingPlaceholder} from '#/view/com/util/LoadingPlaceholder'
 import {atoms as a, useBreakpoints, useTheme} from '#/alf'
+import {AgeRestrictedScreen} from '#/components/ageAssurance/AgeRestrictedScreen'
+import {useAgeAssuranceCopy} from '#/components/ageAssurance/useAgeAssuranceCopy'
 import {Button, ButtonIcon, ButtonText} from '#/components/Button'
 import {type DialogControlProps, useDialogControl} from '#/components/Dialog'
 import {NewChat} from '#/components/dms/dialogs/NewChatDialog'
@@ -64,7 +66,21 @@ function keyExtractor(item: ListItem) {
 }
 
 type Props = NativeStackScreenProps<MessagesTabNavigatorParams, 'Messages'>
-export function MessagesScreen({navigation, route}: Props) {
+
+export function MessagesScreen(props: Props) {
+  const {_} = useLingui()
+  const aaCopy = useAgeAssuranceCopy()
+
+  return (
+    <AgeRestrictedScreen
+      screenTitle={_(msg`Chats`)}
+      infoText={aaCopy.chatsInfoText}>
+      <MessagesScreenInner {...props} />
+    </AgeRestrictedScreen>
+  )
+}
+
+export function MessagesScreenInner({navigation, route}: Props) {
   const {_} = useLingui()
   const t = useTheme()
   const {currentAccount} = useSession()
@@ -148,12 +164,18 @@ export function MessagesScreen({navigation, route}: Props) {
         // filter out convos that are actively being left
         .filter(convo => !leftConvos.includes(convo.id))
 
+      const hasInboxRequests = inboxPreviewConvos?.length > 0
+
       return [
-        {
-          type: 'INBOX',
-          count: inboxPreviewConvos.length,
-          profiles: inboxPreviewConvos.slice(0, 3),
-        },
+        ...(hasInboxRequests
+          ? [
+              {
+                type: 'INBOX' as const,
+                count: inboxPreviewConvos.length,
+                profiles: inboxPreviewConvos.slice(0, 3),
+              },
+            ]
+          : []),
         ...conversations.map(
           convo => ({type: 'CONVERSATION', conversation: convo}) as const,
         ),
@@ -207,16 +229,24 @@ export function MessagesScreen({navigation, route}: Props) {
     return listenSoftReset(onSoftReset)
   }, [onSoftReset, isScreenFocused])
 
-  // Will always have 1 item - the inbox button
-  if (conversations.length < 2) {
+  // NOTE(APiligrim)
+  // Show empty state only if there are no conversations at all
+  const actualConversations = conversations.filter(
+    item => item.type === 'CONVERSATION',
+  )
+  const hasInboxRequests = inboxPreviewConvos?.length > 0
+
+  if (actualConversations.length === 0) {
     return (
       <Layout.Screen>
         <Header newChatControl={newChatControl} />
         <Layout.Center>
-          <InboxPreview
-            count={inboxPreviewConvos.length}
-            profiles={inboxPreviewConvos}
-          />
+          {hasInboxRequests && (
+            <InboxPreview
+              count={inboxPreviewConvos.length}
+              profiles={inboxPreviewConvos}
+            />
+          )}
           {isLoading ? (
             <ChatListLoadingPlaceholder />
           ) : (
