@@ -80,6 +80,7 @@ module.exports = function (_config) {
             'gl',
             'hi',
             'hu',
+            'he',
             'ia',
             'id',
             'it',
