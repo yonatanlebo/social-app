@@ -96,8 +96,8 @@ stats.json
 /ios/
 
 # environment variables
-.env
-.env.*
+#.env
+#.env.*
 
 # Firebase (Android) Google services
 google-services.json
