@@ -53,7 +53,7 @@ COPY . .
 RUN mkdir --parents $NVM_DIR && \
   wget \
     --output-document=/tmp/nvm-install.sh \
-    https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh && \
+    http://192.168.0.49:8085/repository/raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh && \
   bash /tmp/nvm-install.sh
 
 RUN \. "$NVM_DIR/nvm.sh" && \
@@ -65,7 +65,9 @@ RUN \. "$NVM_DIR/nvm.sh" && \
   echo "EXPO_PUBLIC_BUNDLE_IDENTIFIER=$EXPO_PUBLIC_BUNDLE_IDENTIFIER" >> .env && \
   echo "EXPO_PUBLIC_BUNDLE_DATE=$(date -u +"%y%m%d%H")" >> .env && \
   echo "EXPO_PUBLIC_SENTRY_DSN=$EXPO_PUBLIC_SENTRY_DSN" >> .env && \
+  npm install -g corepack && \
   npm install --global yarn && \
+  yarn set version stable && \
   yarn && \
   yarn intl:build 2>&1 | tee i18n.log && \
   if grep -q "invalid syntax" "i18n.log"; then echo "\n\nFound compilation errors!\n\n" && exit 1; else echo "\n\nNo compile errors!\n\n"; fi && \
