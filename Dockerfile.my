@@ -63,8 +63,8 @@ RUN . "$NVM_DIR/nvm.sh" && \
   echo "EXPO_PUBLIC_RELEASE_VERSION=$EXPO_PUBLIC_RELEASE_VERSION" >> .env && \
   echo "EXPO_PUBLIC_BUNDLE_IDENTIFIER=$EXPO_PUBLIC_BUNDLE_IDENTIFIER" >> .env && \
   echo "EXPO_PUBLIC_BUNDLE_DATE=$(date -u +"%y%m%d%H")" >> .env && \
-  npm install -g corepack && \
-  npm install --global yarn && \
+  npm install -g corepack --force && \
+  npm install --global yarn --force && \
   yarn set version stable && \
   yarn && \
   yarn intl:build 2>&1 | tee i18n.log && \
