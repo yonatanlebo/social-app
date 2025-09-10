@@ -47,15 +47,12 @@ RUN mkdir --parents $NVM_DIR && \
     http://192.168.0.49:8085/repository/raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh && \
   bash /tmp/nvm-install.sh
 
-# הגדרות ל-Nexus
 ENV NPM_CONFIG_REGISTRY=http://192.168.0.49:8085/repository/registry.npmjs.org/
 ENV YARN_NPM_REGISTRY_SERVER=http://192.168.0.49:8085/repository/registry.npmjs.org/
 ENV GOPROXY=http://192.168.0.49:8085/repository/proxy.golang.org/
 
-# אם יש לך mirror ל-debian ב-Nexus, שים כאן:
 RUN sed -i 's|deb.debian.org|192.168.0.49:8085/repository/debian/|g' /etc/apt/sources.list
 
-# התקן Node דרך nvm
 RUN . "$NVM_DIR/nvm.sh" && \
     nvm install $NODE_VERSION && \
     nvm use $NODE_VERSION && \
@@ -69,7 +66,6 @@ RUN . "$NVM_DIR/nvm.sh" && \
     npm install --global yarn@4.9.4 --force && \
     yarn set version stable
 
-# בניית הפרויקט
 RUN yarn && \
     yarn intl:build 2>&1 | tee i18n.log && \
     if grep -q "invalid syntax" "i18n.log"; then \
