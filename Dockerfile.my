@@ -63,16 +63,11 @@ RUN . "$NVM_DIR/nvm.sh" && \
     echo "EXPO_PUBLIC_ENV=$EXPO_PUBLIC_ENV" >> .env && \
     echo "EXPO_PUBLIC_RELEASE_VERSION=$EXPO_PUBLIC_RELEASE_VERSION" >> .env && \
     echo "EXPO_PUBLIC_BUNDLE_IDENTIFIER=$EXPO_PUBLIC_BUNDLE_IDENTIFIER" >> .env && \
-    echo "EXPO_PUBLIC_BUNDLE_DATE=$(date -u +"%y%m%d%H")" >> .env
-
-# הפעל Corepack
-RUN corepack enable
-
-# התקן Yarn הגרסה העולמית
-RUN npm install --global yarn@4.9.4 --force
-
-# ודא ש-Yarn מוגדר לגרסה יציבה
-RUN yarn set version stable
+    echo "EXPO_PUBLIC_BUNDLE_DATE=$(date -u +"%y%m%d%H")" >> .env && \
+    npm install -g corepack --force && \
+    corepack enable && \
+    npm install --global yarn@4.9.4 --force && \
+    yarn set version stable
 
 # בניית הפרויקט
 RUN yarn && \
