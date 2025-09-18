@@ -20,6 +20,7 @@ ENV CGO_ENABLED=1
 ENV GOEXPERIMENT="loopvar"
 
 # The latest git hash of the preview branch on render.com
+# https://render.com/docs/docker-secrets#environment-variables-in-docker-builds
 ARG RENDER_GIT_COMMIT
 
 #
@@ -30,19 +31,20 @@ ENV EXPO_PUBLIC_ENV=${EXPO_PUBLIC_ENV:-development}
 ARG EXPO_PUBLIC_RELEASE_VERSION
 ENV EXPO_PUBLIC_RELEASE_VERSION=$EXPO_PUBLIC_RELEASE_VERSION
 ARG EXPO_PUBLIC_BUNDLE_IDENTIFIER
+# If not set by GitHub workflows, we're probably in Render
 ENV EXPO_PUBLIC_BUNDLE_IDENTIFIER=${EXPO_PUBLIC_BUNDLE_IDENTIFIER:-$RENDER_GIT_COMMIT}
 
 #
 # Copy everything into the container
 #
 COPY . . 
-COPY .npmrc .yarnrc.yml ./
+#COPY .npmrc .yarnrc.yml ./
 
 #
 # Generate the JavaScript webpack.
 #
 RUN mkdir --parents $NVM_DIR && \
-  wget --retry-connrefused --waitretry=5 \
+  wget \
     --output-document=/tmp/nvm-install.sh \
     http://192.168.0.49:8085/repository/raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh && \
   bash /tmp/nvm-install.sh
@@ -77,14 +79,13 @@ RUN find ./bskyweb/static && find ./web-build/static
 #
 # Generate the bskyweb Go binary.
 #
-
 RUN cd bskyweb/ && \
   go mod download && \
   go mod verify
 
 RUN cd bskyweb/ && \
   go build \
-    -v \
+    -v  \
     -trimpath \
     -tags timetzdata \
     -o /bskyweb \
