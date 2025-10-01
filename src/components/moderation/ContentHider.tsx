@@ -172,15 +172,15 @@ function ContentHiderActive({
             <desc.icon
               size="md"
               fill={t.atoms.text_contrast_medium.color}
-              style={{marginRight: -2}}
+              style={{marginLeft: -2}}
             />
             <Text
               style={[
                 a.flex_1,
-                a.text_right,
-                a.font_bold,
+                a.text_left,
+                a.font_semi_bold,
                 a.leading_snug,
-                gtMobile && [a.font_bold],
+                gtMobile && [a.font_semi_bold],
                 t.atoms.text_contrast_medium,
                 web({
                   marginBottom: 1,
@@ -192,9 +192,9 @@ function ContentHiderActive({
             {!modui.noOverride && (
               <Text
                 style={[
-                  a.font_bold,
+                  a.font_semi_bold,
                   a.leading_snug,
-                  gtMobile && [a.font_bold],
+                  gtMobile && [a.font_semi_bold],
                   t.atoms.text_contrast_high,
                   web({
                     marginBottom: 1,
@@ -226,7 +226,7 @@ function ContentHiderActive({
                 a.font_normal,
                 a.leading_snug,
                 t.atoms.text_contrast_medium,
-                a.text_right,
+                a.text_left,
               ]}>
               {desc.sourceType === 'user' ? (
                 <Trans>Labeled by the author.</Trans>
