@@ -70,7 +70,7 @@ export function DateField({
 
       {open && (
         // Android implementation of DatePicker currently does not change default button colors according to theme and only takes hex values for buttonColor
-        // Can remove the buttonColor setting if/when this PR is merged: https://github.com/henninghall/react-native-date-picker/pull/871
+        // Can remove the buttonColor setting if/when this PR is merged: http://192.168.0.49:8085/repository/github/henninghall/react-native-date-picker/pull/871
         <DatePicker
           modal
           open

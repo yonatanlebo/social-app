@@ -28,7 +28,7 @@ export type ButtonType =
   | 'secondary-light'
   | 'default-light'
 
-// Augment type for react-native-web (see https://github.com/necolas/react-native-web/issues/1684#issuecomment-766451866)
+// Augment type for react-native-web (see http://192.168.0.49:8085/repository/github/necolas/react-native-web/issues/1684#issuecomment-766451866)
 declare module 'react-native' {
   interface PressableStateCallbackType {
     // @ts-ignore web only

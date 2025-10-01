@@ -405,7 +405,7 @@ function getUploadErrorMessage(e: unknown, _: I18n['_']): string | null {
   }
   logger.error('Error uploading video', {safeMessage: e})
   if (e instanceof ServerError || e instanceof UploadLimitError) {
-    // https://github.com/bluesky-social/tango/blob/lumi/lumi/worker/permissions.go#L77
+    // http://192.168.0.49:8085/repository/github/bluesky-social/tango/blob/lumi/lumi/worker/permissions.go#L77
     switch (e.message) {
       case 'User is not allowed to upload videos':
         return _(msg`You are not allowed to upload videos.`)

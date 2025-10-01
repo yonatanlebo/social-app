@@ -1,5 +1,5 @@
 // Don't remove -force from these because detection is VERY slow on low-end Android.
-// https://github.com/formatjs/formatjs/issues/4463#issuecomment-2176070577
+// http://192.168.0.49:8085/repository/github/formatjs/formatjs/issues/4463#issuecomment-2176070577
 import '@formatjs/intl-locale/polyfill-force'
 import '@formatjs/intl-pluralrules/polyfill-force'
 import '@formatjs/intl-numberformat/polyfill-force'

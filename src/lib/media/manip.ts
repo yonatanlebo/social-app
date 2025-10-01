@@ -235,7 +235,7 @@ async function moveToPermanentPath(path: string, ext: string): Promise<string> {
   /*
   Since this package stores images in a temp directory, we need to move the file to a permanent location.
   Relevant: IOS bug when trying to open a second time:
-  https://github.com/ivpusic/react-native-image-crop-picker/issues/1199
+  http://192.168.0.49:8085/repository/github/ivpusic/react-native-image-crop-picker/issues/1199
   */
   const filename = uuid.v4()
 

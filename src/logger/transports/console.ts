@@ -60,7 +60,7 @@ export const consoleTransport: Transport = (
 /**
  * Color handling copied from Kleur
  *
- * @see https://github.com/lukeed/kleur/blob/fa3454483899ddab550d08c18c028e6db1aab0e5/colors.mjs#L13
+ * @see http://192.168.0.49:8085/repository/github/lukeed/kleur/blob/fa3454483899ddab550d08c18c028e6db1aab0e5/colors.mjs#L13
  */
 const colors: {
   [key: string]: [number, number]

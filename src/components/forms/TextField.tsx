@@ -147,7 +147,7 @@ export type InputProps = Omit<TextInputProps, 'value' | 'onChangeText'> & {
   /**
    * @deprecated Controlled inputs are *strongly* discouraged. Use `defaultValue` instead where possible.
    *
-   * See https://github.com/facebook/react-native-website/pull/4247
+   * See http://192.168.0.49:8085/repository/github/facebook/react-native-website/pull/4247
    */
   value?: string
   onChangeText?: (value: string) => void

@@ -71,7 +71,7 @@ export function MessageInput({
       // Don't submit the form when the Japanese or any other IME is composing
       if (isComposing.current) return
 
-      // see https://github.com/bluesky-social/social-app/issues/4178
+      // see http://192.168.0.49:8085/repository/github/bluesky-social/social-app/issues/4178
       // see https://www.stum.de/2016/06/24/handling-ime-events-in-javascript/
       // see https://lists.w3.org/Archives/Public/www-dom/2010JulSep/att-0182/keyCode-spec.html
       //
@@ -81,7 +81,7 @@ export function MessageInput({
       //
       // Keycode is deprecated, however the alternative seems to only be to compare the timestamp from the
       // onCompositionEnd event to the timestamp of the keydown event, which is not reliable. For example, this hack
-      // uses that method: https://github.com/ProseMirror/prosemirror-view/pull/44. However, from my 500ms resulted in
+      // uses that method: http://192.168.0.49:8085/repository/github/ProseMirror/prosemirror-view/pull/44. However, from my 500ms resulted in
       // far too long of a delay, and a subsequent enter press would often just end up doing nothing. A shorter time
       // frame was also not great, since it was too short to be reliable (i.e. an older system might have a larger
       // time gap between the two events firing.

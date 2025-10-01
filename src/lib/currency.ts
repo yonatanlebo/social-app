@@ -10,8 +10,8 @@ import {useLanguagePrefs} from '#/state/preferences'
  * MIT License
  * Copyright (c) 2017-present, Mathieu Acthernoene
  *
- * @see https://github.com/zoontek/react-native-localize/blob/master/LICENSE
- * @see https://github.com/zoontek/react-native-localize/blob/ee5bf25e0bb8f3b8e4f3fd055f67ad46269c81ea/src/constants.ts
+ * @see http://192.168.0.49:8085/repository/github/zoontek/react-native-localize/blob/master/LICENSE
+ * @see http://192.168.0.49:8085/repository/github/zoontek/react-native-localize/blob/ee5bf25e0bb8f3b8e4f3fd055f67ad46269c81ea/src/constants.ts
  */
 export const countryCodeToCurrency: Record<string, string> = {
   ad: 'eur',

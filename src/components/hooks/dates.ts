@@ -4,7 +4,7 @@
  * Our app supports some languages that are not included in date-fns by
  * default, in which case it will fall back to English.
  *
- * {@link https://github.com/date-fns/date-fns/blob/main/docs/i18n.md}
+ * {@link http://192.168.0.49:8085/repository/github/date-fns/date-fns/blob/main/docs/i18n.md}
  */
 
 import React from 'react'

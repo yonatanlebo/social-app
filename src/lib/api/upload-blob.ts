@@ -55,7 +55,7 @@ async function asBlob(uri: string): Promise<Blob> {
 // HACK
 // React native has a bug that inflates the size of jpegs on upload
 // we get around that by renaming the file ext to .bin
-// see https://github.com/facebook/react-native/issues/27099
+// see http://192.168.0.49:8085/repository/github/facebook/react-native/issues/27099
 // -prf
 async function withSafeFile<T>(
   uri: string,

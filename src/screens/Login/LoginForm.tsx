@@ -238,7 +238,7 @@ export const LoginForm = ({
                 passwordValueRef.current = v
               }}
               onSubmitEditing={onPressNext}
-              blurOnSubmit={false} // HACK: https://github.com/facebook/react-native/issues/21911#issuecomment-558343069 Keyboard blur behavior is now handled in onSubmitEditing
+              blurOnSubmit={false} // HACK: http://192.168.0.49:8085/repository/github/facebook/react-native/issues/21911#issuecomment-558343069 Keyboard blur behavior is now handled in onSubmitEditing
               editable={!isProcessing}
               accessibilityHint={_(msg`Enter your password`)}
             />

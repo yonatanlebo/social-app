@@ -5,7 +5,7 @@
  * Natively, React does not offer a way to set two refs inside the ref property. This is the goal of this small utility.
  * Today a ref can be a function or an object, tomorrow it could be another thing, who knows.
  * This utility handles compatibility for you.
- * This function is inspired by https://github.com/gregberge/react-merge-refs
+ * This function is inspired by http://192.168.0.49:8085/repository/github/gregberge/react-merge-refs
  * @param refs - An array of React refs, which can be either `React.MutableRefObject<T>` or
  * `React.LegacyRef<T>`. These refs are used to store references to DOM elements or React components.
  * The `mergeRefs` function takes in an array of these refs and returns a callback function that

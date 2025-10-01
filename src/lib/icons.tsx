@@ -2,7 +2,7 @@ import {type StyleProp, type TextStyle, type ViewStyle} from 'react-native'
 import Svg, {Ellipse, Line, Path, Rect} from 'react-native-svg'
 
 // Copyright (c) 2020 Refactoring UI Inc.
-// https://github.com/tailwindlabs/heroicons/blob/master/LICENSE
+// http://192.168.0.49:8085/repository/github/tailwindlabs/heroicons/blob/master/LICENSE
 export function MagnifyingGlassIcon({
   style,
   size,
@@ -89,7 +89,7 @@ export function CogIcon({
 }
 
 // Copyright (c) 2020 Refactoring UI Inc.
-// https://github.com/tailwindlabs/heroicons/blob/master/LICENSE
+// http://192.168.0.49:8085/repository/github/tailwindlabs/heroicons/blob/master/LICENSE
 export function UserGroupIcon({
   style,
   size,
@@ -305,7 +305,7 @@ export function HashtagIcon({
 }
 
 // Copyright (c) 2020 Refactoring UI Inc.
-// https://github.com/tailwindlabs/heroicons/blob/master/LICENSE
+// http://192.168.0.49:8085/repository/github/tailwindlabs/heroicons/blob/master/LICENSE
 export function ShieldExclamation({
   style,
   size,

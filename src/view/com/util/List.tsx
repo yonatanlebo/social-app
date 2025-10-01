@@ -68,7 +68,7 @@ let List = React.forwardRef<ListMethods, ListProps>(
     }
 
     // Intentionally destructured outside the main thread closure.
-    // See https://github.com/bluesky-social/social-app/pull/4108.
+    // See http://192.168.0.49:8085/repository/github/bluesky-social/social-app/pull/4108.
     const {
       onBeginDrag: onBeginDragFromContext,
       onEndDrag: onEndDragFromContext,

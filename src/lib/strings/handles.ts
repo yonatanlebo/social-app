@@ -1,5 +1,5 @@
 // Regex from the go implementation
-// https://github.com/bluesky-social/indigo/blob/main/atproto/syntax/handle.go#L10
+// http://192.168.0.49:8085/repository/github/bluesky-social/indigo/blob/main/atproto/syntax/handle.go#L10
 import {forceLTR} from '#/lib/strings/bidi'
 
 const VALIDATE_REGEX =
@@ -47,7 +47,7 @@ export interface IsValidHandle {
   overall: boolean
 }
 
-// More checks from https://github.com/bluesky-social/atproto/blob/main/packages/pds/src/handle/index.ts#L72
+// More checks from http://192.168.0.49:8085/repository/github/bluesky-social/atproto/blob/main/packages/pds/src/handle/index.ts#L72
 export function validateServiceHandle(
   str: string,
   userDomain: string,

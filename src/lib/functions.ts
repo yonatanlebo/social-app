@@ -66,7 +66,7 @@ export function isPlainArray(value: unknown) {
   return Array.isArray(value) && value.length === Object.keys(value).length
 }
 
-// Copied from: https://github.com/jonschlinkert/is-plain-object
+// Copied from: http://192.168.0.49:8085/repository/github/jonschlinkert/is-plain-object
 export function isPlainObject(o: any): o is Object {
   if (!hasObjectPrototype(o)) {
     return false

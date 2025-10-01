@@ -6,7 +6,7 @@
  *
  */
 // Original code copied and simplified from the link below as the codebase is currently not maintained:
-// https://github.com/jobtoday/react-native-image-viewing
+// http://192.168.0.49:8085/repository/github/jobtoday/react-native-image-viewing
 
 import React, {useCallback, useEffect, useMemo, useState} from 'react'
 import {LayoutAnimation, PixelRatio, StyleSheet, View} from 'react-native'
@@ -109,14 +109,14 @@ export default function ImageViewRoot({
 
     const isAnimated = canAnimate(nextLightbox)
 
-    // https://github.com/software-mansion/react-native-reanimated/issues/6677
+    // http://192.168.0.49:8085/repository/github/software-mansion/react-native-reanimated/issues/6677
     rAF_FIXED(() => {
       openProgress.set(() =>
         isAnimated ? withClampedSpring(1, SLOW_SPRING) : 1,
       )
     })
     return () => {
-      // https://github.com/software-mansion/react-native-reanimated/issues/6677
+      // http://192.168.0.49:8085/repository/github/software-mansion/react-native-reanimated/issues/6677
       rAF_FIXED(() => {
         openProgress.set(() =>
           isAnimated ? withClampedSpring(0, SLOW_SPRING) : 0,
@@ -788,7 +788,7 @@ function withClampedSpring(value: any, config: WithSpringConfig) {
 }
 
 // We have to do this because we can't trust RN's rAF to fire in order.
-// https://github.com/facebook/react-native/issues/48005
+// http://192.168.0.49:8085/repository/github/facebook/react-native/issues/48005
 let isFrameScheduled = false
 let pendingFrameCallbacks: Array<() => void> = []
 function rAF_FIXED(callback: () => void) {

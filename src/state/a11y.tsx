@@ -56,7 +56,7 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
        * Always returns true on web. For now, we're using this for mobile a11y,
        * so we reset to false on web.
        *
-       * @see https://github.com/necolas/react-native-web/discussions/2072
+       * @see http://192.168.0.49:8085/repository/github/necolas/react-native-web/discussions/2072
        */
       screenReaderEnabled: isWeb ? false : screenReaderEnabled,
     }

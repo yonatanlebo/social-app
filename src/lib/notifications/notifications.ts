@@ -117,9 +117,9 @@ async function getPushToken() {
  * it fires), so there's a possibility that multiple calls will be made, but
  * that is acceptable.
  *
- * @see https://github.com/expo/expo/issues/28656
- * @see https://github.com/expo/expo/issues/29909
- * @see https://github.com/bluesky-social/social-app/pull/4467
+ * @see http://192.168.0.49:8085/repository/github/expo/expo/issues/28656
+ * @see http://192.168.0.49:8085/repository/github/expo/expo/issues/29909
+ * @see http://192.168.0.49:8085/repository/github/bluesky-social/social-app/pull/4467
  */
 export function useGetAndRegisterPushToken() {
   const {isAgeRestricted} = useAgeAssuranceContext()

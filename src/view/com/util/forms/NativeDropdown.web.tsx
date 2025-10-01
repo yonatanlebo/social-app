@@ -132,7 +132,7 @@ export function NativeDropdown({
           onPointerDown={e => {
             // Prevent false positive that interpret mobile scroll as a tap.
             // This requires the custom onPress handler below to compensate.
-            // https://github.com/radix-ui/primitives/issues/1912
+            // http://192.168.0.49:8085/repository/github/radix-ui/primitives/issues/1912
             e.preventDefault()
           }}
           onPress={() => {
