@@ -297,6 +297,14 @@ export type MetricEvents = {
     recId?: number
     position: number
   }
+  'suggestedUser:seeMore': {
+    logContext:
+      | 'Explore'
+      | 'InterstitialDiscover'
+      | 'InterstitialProfile'
+      | 'Profile'
+      | 'Onboarding'
+  }
   'profile:unfollow': {
     logContext:
       | 'RecommendedFollowsItem'
@@ -481,6 +489,8 @@ export type MetricEvents = {
   'share:press:embed': {}
 
   'thread:click:showOtherReplies': {}
+  'thread:click:hideReplyForMe': {}
+  'thread:click:hideReplyForEveryone': {}
   'thread:preferences:load': {
     [key: string]: any
   }
