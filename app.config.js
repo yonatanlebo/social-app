@@ -247,6 +247,7 @@ module.exports = function (_config) {
               compileSdkVersion: 35,
               targetSdkVersion: 35,
               buildToolsVersion: '35.0.0',
+              buildReactNativeFromSource: IS_PRODUCTION,
             },
           },
         ],
@@ -389,6 +390,13 @@ module.exports = function (_config) {
         ],
         ['expo-screen-orientation', {initialOrientation: 'PORTRAIT_UP'}],
         ['expo-location'],
+        [
+          'expo-contacts',
+          {
+            contactsPermission:
+              'I agree to allow Bluesky to use my contacts for friend discovery until I opt out.',
+          },
+        ],
       ].filter(Boolean),
       extra: {
         eas: {

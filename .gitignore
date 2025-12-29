@@ -96,8 +96,8 @@ stats.json
 /ios/
 
 # environment variables
-#.env
-#.env.*
+.env
+.env.*
 
 # Firebase (Android) Google services
 google-services.json
@@ -119,5 +119,9 @@ src/locale/locales/**/*.js
 
 # ogcard assets
 bskyogcard/src/assets/fonts/noto-*
-install.sh
-new.dockerfile
+
+# bskyweb build output
+bskyweb/static/media/*.webp
+bskyweb/static/media/*.jpg
+bskyweb/static/media/*.png
+bskyweb/static/media/*.svg

@@ -38,7 +38,7 @@ export function Outer({
 }: {
   children: React.ReactNode
   noBottomBorder?: boolean
-  headerRef?: React.MutableRefObject<View | null>
+  headerRef?: React.RefObject<View | null>
   sticky?: boolean
 }) {
   const t = useTheme()
@@ -129,6 +129,7 @@ export function BackButton({onPress, style, ...props}: Partial<ButtonProps>) {
         size="small"
         variant="ghost"
         color="secondary"
+        shape="round"
         onPress={onPressBack}
         hitSlop={HITSLOP_30}
         style={[
@@ -163,7 +164,10 @@ export function MenuButton() {
         shape="square"
         onPress={onPress}
         hitSlop={HITSLOP_30}
-        style={[{marginLeft: -BUTTON_VISUAL_ALIGNMENT_OFFSET}]}>
+        style={[
+          {marginLeft: -BUTTON_VISUAL_ALIGNMENT_OFFSET},
+          a.bg_transparent,
+        ]}>
         <ButtonIcon icon={Menu} size="lg" />
       </Button>
     </Slot>
@@ -180,7 +184,7 @@ export function TitleText({
     <Text
       style={[
         a.text_lg,
-        a.font_bold,
+        a.font_semi_bold,
         a.leading_tight,
         isIOS && align === 'platform' && a.text_center,
         gtMobile && a.text_xl,

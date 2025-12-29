@@ -8,19 +8,21 @@ import {RemoveScrollBar} from 'react-remove-scroll-bar'
 import {useIntentHandler} from '#/lib/hooks/useIntentHandler'
 import {useWebMediaQueries} from '#/lib/hooks/useWebMediaQueries'
 import {type NavigationProp} from '#/lib/routes/types'
-import {useGeolocationStatus} from '#/state/geolocation'
+import {useSession} from '#/state/session'
 import {useIsDrawerOpen, useSetDrawerOpen} from '#/state/shell'
 import {useComposerKeyboardShortcut} from '#/state/shell/composer/useComposerKeyboardShortcut'
 import {useCloseAllActiveElements} from '#/state/util'
 import {Lightbox} from '#/view/com/lightbox/Lightbox'
 import {ModalsContainer} from '#/view/com/modals/Modal'
 import {ErrorBoundary} from '#/view/com/util/ErrorBoundary'
+import {Deactivated} from '#/screens/Deactivated'
+import {Takendown} from '#/screens/Takendown'
 import {atoms as a, select, useTheme} from '#/alf'
 import {AgeAssuranceRedirectDialog} from '#/components/ageAssurance/AgeAssuranceRedirectDialog'
-import {BlockedGeoOverlay} from '#/components/BlockedGeoOverlay'
 import {EmailDialog} from '#/components/dialogs/EmailDialog'
 import {LinkWarningDialog} from '#/components/dialogs/LinkWarning'
 import {MutedWordsDialog} from '#/components/dialogs/MutedWords'
+import {NuxDialogs} from '#/components/dialogs/nuxs'
 import {SigninDialog} from '#/components/dialogs/Signin'
 import {useWelcomeModal} from '#/components/hooks/useWelcomeModal'
 import {
@@ -29,6 +31,9 @@ import {
 } from '#/components/PolicyUpdateOverlay'
 import {Outlet as PortalOutlet} from '#/components/Portal'
 import {WelcomeModal} from '#/components/WelcomeModal'
+import {useAgeAssurance} from '#/ageAssurance'
+import {NoAccessScreen} from '#/ageAssurance/components/NoAccessScreen'
+import {RedirectOverlay} from '#/ageAssurance/components/RedirectOverlay'
 import {FlatNavigator, RoutesContainer} from '#/Navigation'
 import {Composer} from './Composer.web'
 import {DrawerContent} from './Drawer'
@@ -82,6 +87,7 @@ function ShellInner() {
       <AgeAssuranceRedirectDialog />
       <LinkWarningDialog />
       <Lightbox />
+      <NuxDialogs />
 
       {welcomeModalControl.isOpen && (
         <WelcomeModal control={welcomeModalControl} />
@@ -139,15 +145,26 @@ function ShellInner() {
 
 export function Shell() {
   const t = useTheme()
-  const {status: geolocation} = useGeolocationStatus()
+  const aa = useAgeAssurance()
+  const {currentAccount} = useSession()
   return (
     <View style={[a.util_screen_outer, t.atoms.bg]}>
-      {geolocation?.isAgeBlockedGeo ? (
-        <BlockedGeoOverlay />
+      {currentAccount?.status === 'takendown' ? (
+        <Takendown />
+      ) : currentAccount?.status === 'deactivated' ? (
+        <Deactivated />
       ) : (
-        <RoutesContainer>
-          <ShellInner />
-        </RoutesContainer>
+        <>
+          {aa.state.access === aa.Access.None ? (
+            <NoAccessScreen />
+          ) : (
+            <RoutesContainer>
+              <ShellInner />
+            </RoutesContainer>
+          )}
+
+          <RedirectOverlay />
+        </>
       )}
     </View>
   )

@@ -18,7 +18,7 @@ import * as Admonition from '#/components/Admonition'
 import {Button, ButtonIcon, ButtonText} from '#/components/Button'
 import * as Dialog from '#/components/Dialog'
 import {useDelayedLoading} from '#/components/hooks/useDelayedLoading'
-import {ArrowRotateCounterClockwise_Stroke2_Corner0_Rounded as Retry} from '#/components/icons/ArrowRotateCounterClockwise'
+import {ArrowRotateCounterClockwise_Stroke2_Corner0_Rounded as Retry} from '#/components/icons/ArrowRotate'
 import {
   Check_Stroke2_Corner0_Rounded as CheckThin,
   CheckThick_Stroke2_Corner0_Rounded as Check,
@@ -685,7 +685,7 @@ function CategoryCard({
   }, [onSelect, option])
   return (
     <Button
-      testID={`report:option:${option.title}`}
+      testID={`report:category:${option.title}`}
       label={_(msg`Create report for ${option.title}`)}
       onPress={onPress}
       disabled={!onSelect}>

@@ -28,11 +28,10 @@ import {useSession} from '#/state/session'
 import {useLoggedOutViewControls} from '#/state/shell/logged-out'
 import {useShellLayout} from '#/state/shell/shell-layout'
 import {useCloseAllActiveElements} from '#/state/util'
-import {Text} from '#/view/com/util/text/Text'
 import {UserAvatar} from '#/view/com/util/UserAvatar'
 import {Logo} from '#/view/icons/Logo'
 import {Logotype} from '#/view/icons/Logotype'
-import {atoms as a} from '#/alf'
+import {atoms as a, useTheme} from '#/alf'
 import {Button, ButtonText} from '#/components/Button'
 import {useDialogControl} from '#/components/Dialog'
 import {SwitchAccountDialog} from '#/components/dialogs/SwitchAccount'
@@ -45,11 +44,12 @@ import {
   HomeOpen_Stoke2_Corner0_Rounded as Home,
 } from '#/components/icons/HomeOpen'
 import {MagnifyingGlass_Filled_Stroke2_Corner0_Rounded as MagnifyingGlassFilled} from '#/components/icons/MagnifyingGlass'
-import {MagnifyingGlass2_Stroke2_Corner0_Rounded as MagnifyingGlass} from '#/components/icons/MagnifyingGlass2'
+import {MagnifyingGlass_Stroke2_Corner0_Rounded as MagnifyingGlass} from '#/components/icons/MagnifyingGlass'
 import {
   Message_Stroke2_Corner0_Rounded as Message,
   Message_Stroke2_Corner0_Rounded_Filled as MessageFilled,
 } from '#/components/icons/Message'
+import {Text} from '#/components/Typography'
 import {useDemoMode} from '#/storage/hooks/demo-mode'
 import {styles} from './BottomBarStyles'
 
@@ -396,6 +396,8 @@ function Btn({
   accessibilityHint,
   accessibilityLabel,
 }: BtnProps) {
+  const t = useTheme()
+
   return (
     <PressableScale
       testID={testID}
@@ -410,7 +412,12 @@ function Btn({
       accessibilityShowsLargeContentViewer>
       {icon}
       {notificationCount ? (
-        <View style={[styles.notificationCount, a.rounded_full]}>
+        <View
+          style={[
+            styles.notificationCount,
+            a.rounded_full,
+            {backgroundColor: t.palette.primary_500},
+          ]}>
           <Text style={styles.notificationCountLabel}>{notificationCount}</Text>
         </View>
       ) : hasNew ? (

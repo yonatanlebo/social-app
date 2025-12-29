@@ -3,8 +3,10 @@
 import '@formatjs/intl-locale/polyfill-force'
 import '@formatjs/intl-pluralrules/polyfill-force'
 import '@formatjs/intl-numberformat/polyfill-force'
+import '@formatjs/intl-displaynames/polyfill-force'
 import '@formatjs/intl-pluralrules/locale-data/en'
 import '@formatjs/intl-numberformat/locale-data/en'
+import '@formatjs/intl-displaynames/locale-data/en'
 
 import {useEffect} from 'react'
 import {i18n} from '@lingui/core'
@@ -65,6 +67,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/an'),
         import('@formatjs/intl-numberformat/locale-data/es'),
+        import('@formatjs/intl-displaynames/locale-data/es'),
       ])
       break
     }
@@ -73,6 +76,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ast'),
         import('@formatjs/intl-numberformat/locale-data/ast'),
+        import('@formatjs/intl-displaynames/locale-data/ast'),
       ])
       break
     }
@@ -81,6 +85,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ca'),
         import('@formatjs/intl-numberformat/locale-data/ca'),
+        import('@formatjs/intl-displaynames/locale-data/ca'),
       ])
       break
     }
@@ -89,6 +94,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/cy'),
         import('@formatjs/intl-numberformat/locale-data/cy'),
+        import('@formatjs/intl-displaynames/locale-data/cy'),
       ])
       break
     }
@@ -97,6 +103,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/da'),
         import('@formatjs/intl-numberformat/locale-data/da'),
+        import('@formatjs/intl-displaynames/locale-data/da'),
       ])
       break
     }
@@ -105,6 +112,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/de'),
         import('@formatjs/intl-numberformat/locale-data/de'),
+        import('@formatjs/intl-displaynames/locale-data/de'),
       ])
       break
     }
@@ -113,6 +121,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/el'),
         import('@formatjs/intl-numberformat/locale-data/el'),
+        import('@formatjs/intl-displaynames/locale-data/el'),
       ])
       break
     }
@@ -121,6 +130,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/en'),
         import('@formatjs/intl-numberformat/locale-data/en-GB'),
+        import('@formatjs/intl-displaynames/locale-data/en-GB'),
       ])
       break
     }
@@ -129,6 +139,8 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/eo'),
         import('@formatjs/intl-numberformat/locale-data/eo'),
+        // borked, see https://github.com/bluesky-social/social-app/pull/9574
+        // import('@formatjs/intl-displaynames/locale-data/eo'),
       ])
       break
     }
@@ -137,6 +149,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/es'),
         import('@formatjs/intl-numberformat/locale-data/es'),
+        import('@formatjs/intl-displaynames/locale-data/es'),
       ])
       break
     }
@@ -145,6 +158,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/eu'),
         import('@formatjs/intl-numberformat/locale-data/eu'),
+        import('@formatjs/intl-displaynames/locale-data/eu'),
       ])
       break
     }
@@ -153,6 +167,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/fi'),
         import('@formatjs/intl-numberformat/locale-data/fi'),
+        import('@formatjs/intl-displaynames/locale-data/fi'),
       ])
       break
     }
@@ -161,6 +176,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/fr'),
         import('@formatjs/intl-numberformat/locale-data/fr'),
+        import('@formatjs/intl-displaynames/locale-data/fr'),
       ])
       break
     }
@@ -169,6 +185,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/fy'),
         import('@formatjs/intl-numberformat/locale-data/fy'),
+        import('@formatjs/intl-displaynames/locale-data/fy'),
       ])
       break
     }
@@ -177,6 +194,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ga'),
         import('@formatjs/intl-numberformat/locale-data/ga'),
+        import('@formatjs/intl-displaynames/locale-data/ga'),
       ])
       break
     }
@@ -185,6 +203,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/gd'),
         import('@formatjs/intl-numberformat/locale-data/gd'),
+        import('@formatjs/intl-displaynames/locale-data/gd'),
       ])
       break
     }
@@ -193,6 +212,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/gl'),
         import('@formatjs/intl-numberformat/locale-data/gl'),
+        import('@formatjs/intl-displaynames/locale-data/gl'),
       ])
       break
     }
@@ -201,6 +221,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/hi'),
         import('@formatjs/intl-numberformat/locale-data/hi'),
+        import('@formatjs/intl-displaynames/locale-data/hi'),
       ])
       break
     }
@@ -209,6 +230,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/hu'),
         import('@formatjs/intl-numberformat/locale-data/hu'),
+        import('@formatjs/intl-displaynames/locale-data/hu'),
       ])
       break
     }
@@ -217,6 +239,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ia'),
         import('@formatjs/intl-numberformat/locale-data/ia'),
+        import('@formatjs/intl-displaynames/locale-data/ia'),
       ])
       break
     }
@@ -225,6 +248,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/id'),
         import('@formatjs/intl-numberformat/locale-data/id'),
+        import('@formatjs/intl-displaynames/locale-data/id'),
       ])
       break
     }
@@ -233,6 +257,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/it'),
         import('@formatjs/intl-numberformat/locale-data/it'),
+        import('@formatjs/intl-displaynames/locale-data/it'),
       ])
       break
     }
@@ -241,6 +266,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ja'),
         import('@formatjs/intl-numberformat/locale-data/ja'),
+        import('@formatjs/intl-displaynames/locale-data/ja'),
       ])
       break
     }
@@ -249,6 +275,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/km'),
         import('@formatjs/intl-numberformat/locale-data/km'),
+        import('@formatjs/intl-displaynames/locale-data/km'),
       ])
       break
     }
@@ -257,11 +284,17 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ko'),
         import('@formatjs/intl-numberformat/locale-data/ko'),
+        import('@formatjs/intl-displaynames/locale-data/ko'),
       ])
       break
     }
     case AppLanguage.ne: {
       i18n.loadAndActivate({locale, messages: messagesNe})
+      await Promise.all([
+        import('@formatjs/intl-pluralrules/locale-data/ne'),
+        import('@formatjs/intl-numberformat/locale-data/ne'),
+        import('@formatjs/intl-displaynames/locale-data/ne'),
+      ])
       break
     }
     case AppLanguage.nl: {
@@ -269,6 +302,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/nl'),
         import('@formatjs/intl-numberformat/locale-data/nl'),
+        import('@formatjs/intl-displaynames/locale-data/nl'),
       ])
       break
     }
@@ -277,6 +311,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/pl'),
         import('@formatjs/intl-numberformat/locale-data/pl'),
+        import('@formatjs/intl-displaynames/locale-data/pl'),
       ])
       break
     }
@@ -285,6 +320,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/pt'),
         import('@formatjs/intl-numberformat/locale-data/pt'),
+        import('@formatjs/intl-displaynames/locale-data/pt'),
       ])
       break
     }
@@ -293,6 +329,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/pt-PT'),
         import('@formatjs/intl-numberformat/locale-data/pt-PT'),
+        import('@formatjs/intl-displaynames/locale-data/pt-PT'),
       ])
       break
     }
@@ -301,6 +338,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ro'),
         import('@formatjs/intl-numberformat/locale-data/ro'),
+        import('@formatjs/intl-displaynames/locale-data/ro'),
       ])
       break
     }
@@ -309,6 +347,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ru'),
         import('@formatjs/intl-numberformat/locale-data/ru'),
+        import('@formatjs/intl-displaynames/locale-data/ru'),
       ])
       break
     }
@@ -317,6 +356,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/sv'),
         import('@formatjs/intl-numberformat/locale-data/sv'),
+        import('@formatjs/intl-displaynames/locale-data/sv'),
       ])
       break
     }
@@ -325,6 +365,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/th'),
         import('@formatjs/intl-numberformat/locale-data/th'),
+        import('@formatjs/intl-displaynames/locale-data/th'),
       ])
       break
     }
@@ -333,6 +374,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/tr'),
         import('@formatjs/intl-numberformat/locale-data/tr'),
+        import('@formatjs/intl-displaynames/locale-data/tr'),
       ])
       break
     }
@@ -341,6 +383,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/uk'),
         import('@formatjs/intl-numberformat/locale-data/uk'),
+        import('@formatjs/intl-displaynames/locale-data/uk'),
       ])
       break
     }
@@ -349,6 +392,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/vi'),
         import('@formatjs/intl-numberformat/locale-data/vi'),
+        import('@formatjs/intl-displaynames/locale-data/vi'),
       ])
       break
     }
@@ -357,6 +401,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/zh'),
         import('@formatjs/intl-numberformat/locale-data/zh'),
+        import('@formatjs/intl-displaynames/locale-data/zh'),
       ])
       break
     }
@@ -365,6 +410,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/zh'),
         import('@formatjs/intl-numberformat/locale-data/zh'),
+        import('@formatjs/intl-displaynames/locale-data/zh'),
       ])
       break
     }
@@ -373,6 +419,7 @@ export async function dynamicActivate(locale: AppLanguage) {
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/zh'),
         import('@formatjs/intl-numberformat/locale-data/zh'),
+        import('@formatjs/intl-displaynames/locale-data/zh'),
       ])
       break
     }

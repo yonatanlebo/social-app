@@ -13,7 +13,12 @@ export const RELEASE_VERSION: string =
 /**
  * The env the app is running in e.g. development, testflight, production, e2e
  */
-export const ENV: string = process.env.EXPO_PUBLIC_ENV
+export const ENV: string = process.env.EXPO_PUBLIC_ENV as
+  | 'production'
+  | 'testflight'
+  | 'development'
+  | 'e2e'
+  | (string & {})
 
 /**
  * Indicates whether the app is running in TestFlight
@@ -24,6 +29,11 @@ export const IS_TESTFLIGHT = ENV === 'testflight'
  * Indicates whether the app is `__DEV__`
  */
 export const IS_DEV = __DEV__
+
+/**
+ * Indicates whether the app is running in a test environment
+ */
+export const IS_E2E = ENV === 'e2e'
 
 /**
  * Indicates whether the app is `__DEV__` or TestFlight
@@ -95,14 +105,11 @@ export const GCP_PROJECT_ID: number =
     : Number(process.env.EXPO_PUBLIC_GCP_PROJECT_ID)
 
 /**
- * URL for the bapp-config web worker _development_ environment. Can be a
+ * URLs for the app config web worker. Can be a
  * locally running server, see `env.example` for more.
  */
 export const BAPP_CONFIG_DEV_URL = process.env.BAPP_CONFIG_DEV_URL
-
-/**
- * Dev environment passthrough value for bapp-config web worker. Allows local
- * dev access to the web worker running in `development` mode.
- */
-export const BAPP_CONFIG_DEV_BYPASS_SECRET: string =
-  process.env.BAPP_CONFIG_DEV_BYPASS_SECRET
+export const BAPP_CONFIG_PROD_URL = `https://ip.bsky.app`
+export const BAPP_CONFIG_URL = IS_DEV
+  ? (BAPP_CONFIG_DEV_URL ?? BAPP_CONFIG_PROD_URL)
+  : BAPP_CONFIG_PROD_URL

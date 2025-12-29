@@ -10,6 +10,7 @@ import {useLingui} from '@lingui/react'
 import {useQueryClient} from '@tanstack/react-query'
 
 import {useHaptics} from '#/lib/haptics'
+import {useNonReactiveCallback} from '#/lib/hooks/useNonReactiveCallback'
 import {logger} from '#/logger'
 import {isIOS} from '#/platform/detection'
 import {STALE} from '#/state/queries'
@@ -79,13 +80,26 @@ export function PostInteractionSettingsControlledDialog({
 }: PostInteractionSettingsFormProps & {
   control: Dialog.DialogControlProps
 }) {
+  const onClose = useNonReactiveCallback(() => {
+    logger.metric('composer:threadgate:save', {
+      hasChanged: !!rest.isDirty,
+      persist: !!rest.persist,
+      replyOptions:
+        rest.threadgateAllowUISettings?.map(gate => gate.type)?.join(',') ?? '',
+      quotesEnabled: !rest.postgate?.embeddingRules?.find(
+        v => v.$type === embeddingRules.disableRule.$type,
+      ),
+    })
+  })
+
   return (
     <Dialog.Outer
       control={control}
       nativeOptions={{
         preventExpansion: true,
         preventDismiss: rest.isDirty && rest.persist,
-      }}>
+      }}
+      onClose={onClose}>
       <Dialog.Handle />
       <DialogInner {...rest} />
     </Dialog.Outer>
@@ -513,7 +527,6 @@ export function PostInteractionSettingsForm({
                     ? _(msg`Hide lists`)
                     : _(msg`Show lists of users to select from`)
                 }
-                accessibilityHint={_(msg`Toggle showing lists`)}
                 accessibilityRole="togglebutton"
                 hitSlop={0}
                 onPress={() => {
@@ -606,8 +619,8 @@ export function PostInteractionSettingsForm({
         type="checkbox"
         label={
           quotesEnabled
-            ? _(msg`Disable quote posts of this post.`)
-            : _(msg`Enable quote posts of this post.`)
+            ? _(msg`Disable quote posts of this post`)
+            : _(msg`Enable quote posts of this post`)
         }
         value={quotesEnabled}
         onChange={onChangeQuotesEnabled}>

@@ -17,7 +17,7 @@ import {logger} from '#/logger'
 import {type MetricEvents} from '#/logger/metrics'
 import {useLanguagePrefs} from '#/state/preferences/languages'
 import {useModerationOpts} from '#/state/preferences/moderation-opts'
-import {RQKEY_ROOT_PAGINATED as useActorSearchPaginatedQueryKeyRoot} from '#/state/queries/actor-search'
+import {RQKEY_ROOT as useActorSearchQueryKeyRoot} from '#/state/queries/actor-search'
 import {
   type FeedPreviewItem,
   useFeedPreviews,
@@ -308,7 +308,7 @@ export function Explore({
         queryKey: [getSuggestedUsersQueryKeyRoot],
       }),
       qc.resetQueries({
-        queryKey: [useActorSearchPaginatedQueryKeyRoot],
+        queryKey: [useActorSearchQueryKeyRoot],
       }),
       qc.resetQueries({
         queryKey: createGetSuggestedFeedsQueryKey(),
@@ -1030,26 +1030,48 @@ export function Explore({
 
   // track headers and report module viewability
   const alreadyReportedRef = useRef<Map<string, string>>(new Map())
-  const onItemSeen = useCallback((item: ExploreScreenItems) => {
-    let module: MetricEvents['explore:module:seen']['module']
-    if (item.type === 'trendingTopics' || item.type === 'trendingVideos') {
-      module = item.type
-    } else if (item.type === 'profile') {
-      module = 'suggestedAccounts'
-    } else if (item.type === 'feed') {
-      module = 'suggestedFeeds'
-    } else if (item.type === 'starterPack') {
-      module = 'suggestedStarterPacks'
-    } else if (item.type === 'preview:sliceItem') {
-      module = `feed:feedgen|${item.feed.uri}`
-    } else {
-      return
-    }
-    if (!alreadyReportedRef.current.has(module)) {
-      alreadyReportedRef.current.set(module, module)
-      logger.metric('explore:module:seen', {module}, {statsig: false})
-    }
-  }, [])
+  const seenProfilesRef = useRef<Set<string>>(new Set())
+  const onItemSeen = useCallback(
+    (item: ExploreScreenItems) => {
+      let module: MetricEvents['explore:module:seen']['module']
+      if (item.type === 'trendingTopics' || item.type === 'trendingVideos') {
+        module = item.type
+      } else if (item.type === 'profile') {
+        module = 'suggestedAccounts'
+        // Track individual profile seen events
+        if (!seenProfilesRef.current.has(item.profile.did)) {
+          seenProfilesRef.current.add(item.profile.did)
+          const position = suggestedFollowsModule.findIndex(
+            i => i.type === 'profile' && i.profile.did === item.profile.did,
+          )
+          logger.metric(
+            'suggestedUser:seen',
+            {
+              logContext: 'Explore',
+              recId: item.recId,
+              position: position !== -1 ? position - 1 : 0, // -1 to account for header
+              suggestedDid: item.profile.did,
+              category: null,
+            },
+            {statsig: true},
+          )
+        }
+      } else if (item.type === 'feed') {
+        module = 'suggestedFeeds'
+      } else if (item.type === 'starterPack') {
+        module = 'suggestedStarterPacks'
+      } else if (item.type === 'preview:sliceItem') {
+        module = `feed:feedgen|${item.feed.uri}`
+      } else {
+        return
+      }
+      if (!alreadyReportedRef.current.has(module)) {
+        alreadyReportedRef.current.set(module, module)
+        logger.metric('explore:module:seen', {module}, {statsig: false})
+      }
+    },
+    [suggestedFollowsModule],
+  )
 
   return (
     <List

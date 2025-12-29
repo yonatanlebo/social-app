@@ -105,7 +105,8 @@ export type ButtonProps = Pick<
     PressableComponent?: React.ComponentType<PressableProps>
   }
 
-export type ButtonTextProps = TextProps & VariantProps & {disabled?: boolean}
+export type ButtonTextProps = TextProps &
+  VariantProps & {disabled?: boolean; emoji?: boolean}
 
 const Context = React.createContext<VariantProps & ButtonState>({
   hovered: false,
@@ -798,13 +799,14 @@ export function ButtonIcon({
        * also so that we can calculate transforms.
        */
       const iconSize = {
-        '2xs': 8,
         xs: 12,
         sm: 16,
         md: 18,
         lg: 24,
         xl: 28,
+        '2xs': 8,
         '2xl': 32,
+        '3xl': 40,
       }[iconSizeShorthand]
 
       /*

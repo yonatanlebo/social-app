@@ -1,5 +1,11 @@
 import {useMemo} from 'react'
-import {type GestureResponderEvent, View} from 'react-native'
+import {
+  type GestureResponderEvent,
+  type StyleProp,
+  type TextStyle,
+  View,
+  type ViewStyle,
+} from 'react-native'
 import {
   moderateProfile,
   type ModerationOpts,
@@ -48,11 +54,15 @@ export function Default({
   moderationOpts,
   logContext = 'ProfileCard',
   testID,
+  position,
+  contextProfileDid,
 }: {
   profile: bsky.profile.AnyProfileView
   moderationOpts: ModerationOpts
   logContext?: 'ProfileCard' | 'StarterPackProfilesList'
   testID?: string
+  position?: number
+  contextProfileDid?: string
 }) {
   return (
     <Link testID={testID} profile={profile}>
@@ -60,6 +70,8 @@ export function Default({
         profile={profile}
         moderationOpts={moderationOpts}
         logContext={logContext}
+        position={position}
+        contextProfileDid={contextProfileDid}
       />
     </Link>
   )
@@ -69,10 +81,14 @@ export function Card({
   profile,
   moderationOpts,
   logContext = 'ProfileCard',
+  position,
+  contextProfileDid,
 }: {
   profile: bsky.profile.AnyProfileView
   moderationOpts: ModerationOpts
   logContext?: 'ProfileCard' | 'StarterPackProfilesList'
+  position?: number
+  contextProfileDid?: string
 }) {
   return (
     <Outer>
@@ -83,6 +99,8 @@ export function Card({
           profile={profile}
           moderationOpts={moderationOpts}
           logContext={logContext}
+          position={position}
+          contextProfileDid={contextProfileDid}
         />
       </Header>
 
@@ -271,9 +289,13 @@ function InlineNameAndHandle({
 export function Name({
   profile,
   moderationOpts,
+  style,
+  textStyle,
 }: {
   profile: bsky.profile.AnyProfileView
   moderationOpts: ModerationOpts
+  style?: StyleProp<ViewStyle>
+  textStyle?: StyleProp<TextStyle>
 }) {
   const moderation = moderateProfile(profile, moderationOpts)
   const name = sanitizeDisplayName(
@@ -282,7 +304,7 @@ export function Name({
   )
   const verification = useSimpleVerificationState({profile})
   return (
-    <View style={[a.flex_row, a.align_center, a.max_w_full]}>
+    <View style={[a.flex_row, a.align_center, a.max_w_full, style]}>
       <Text
         emoji
         style={[
@@ -291,6 +313,7 @@ export function Name({
           a.leading_snug,
           a.self_start,
           a.flex_shrink,
+          textStyle,
         ]}
         numberOfLines={1}>
         {name}
@@ -307,14 +330,20 @@ export function Name({
   )
 }
 
-export function Handle({profile}: {profile: bsky.profile.AnyProfileView}) {
+export function Handle({
+  profile,
+  textStyle,
+}: {
+  profile: bsky.profile.AnyProfileView
+  textStyle?: StyleProp<TextStyle>
+}) {
   const t = useTheme()
   const handle = sanitizeHandle(profile.handle, '@')
 
   return (
     <Text
       emoji
-      style={[a.leading_snug, t.atoms.text_contrast_medium]}
+      style={[a.leading_snug, t.atoms.text_contrast_medium, textStyle]}
       numberOfLines={1}>
       {handle}
     </Text>
@@ -437,6 +466,8 @@ export type FollowButtonProps = {
   colorInverted?: boolean
   onFollow?: () => void
   withIcon?: boolean
+  position?: number
+  contextProfileDid?: string
 } & Partial<ButtonProps>
 
 export function FollowButton(props: FollowButtonProps) {
@@ -453,6 +484,8 @@ export function FollowButtonInner({
   onFollow,
   colorInverted,
   withIcon = true,
+  position,
+  contextProfileDid,
   ...rest
 }: FollowButtonProps) {
   const {_} = useLingui()
@@ -461,6 +494,8 @@ export function FollowButtonInner({
   const [queueFollow, queueUnfollow] = useProfileFollowMutationQueue(
     profile,
     logContext,
+    position,
+    contextProfileDid,
   )
   const isRound = Boolean(rest.shape && rest.shape === 'round')
 
