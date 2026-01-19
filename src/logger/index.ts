@@ -13,13 +13,15 @@ import {
   type Transport,
 } from '#/logger/types'
 import {enabledLogLevels} from '#/logger/util'
-import {isNative} from '#/platform/detection'
+import {IS_NATIVE} from '#/env'
 import {ENV} from '#/env'
+
+export {type MetricEvents as Metrics} from '#/logger/metrics'
 
 const TRANSPORTS: Transport[] = (function configureTransports() {
   switch (ENV) {
     case 'production': {
-      return [sentryTransport, isNative && bitdriftTransport].filter(
+      return [sentryTransport, IS_NATIVE && bitdriftTransport].filter(
         Boolean,
       ) as Transport[]
     }

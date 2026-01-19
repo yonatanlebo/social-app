@@ -1,7 +1,7 @@
 import React from 'react'
 import {AccessibilityInfo} from 'react-native'
 
-import {isWeb} from '#/platform/detection'
+import {IS_WEB} from '#/env'
 import {PlatformInfo} from '../../modules/expo-bluesky-swiss-army'
 
 const Context = React.createContext({
@@ -58,7 +58,7 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
        *
        * @see http://192.168.0.49:8085/repository/github/necolas/react-native-web/discussions/2072
        */
-      screenReaderEnabled: isWeb ? false : screenReaderEnabled,
+      screenReaderEnabled: IS_WEB ? false : screenReaderEnabled,
     }
   }, [reduceMotionEnabled, screenReaderEnabled])
 
