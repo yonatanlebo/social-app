@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
 "2 : 3);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #. Accessibility label for a category (e.g. Art, Video Games, Sports, etc.) that shows suggested accounts for the user to follow. The tab is currently selected.
 #: src/components/InterestTabs.tsx:325
@@ -638,17 +638,15 @@ msgstr ""
 #. trending topic time spent trending. should be as short as possible to fit in a pill
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:203
 msgid "{type}h ago"
-msgstr ""
+msgstr "לפני {type} שעות"
 
 #: src/components/verification/VerifierDialog.tsx:60
 msgid "{userName} is a trusted verifier"
 msgstr ""
 
 #: src/components/verification/VerificationsDialog.tsx:67
-#, fuzzy
-#| msgid "Email Resent"
 msgid "{userName} is verified"
-msgstr "דואר אלקטרוני נשלח מחדש"
+msgstr "{userName} משתמש מאומת"
 
 #. Possessive, meaning "the verifications of {userName}"
 #: src/components/verification/VerificationsDialog.tsx:69
@@ -5048,7 +5046,7 @@ msgstr ""
 
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:191
 msgid "Hot"
-msgstr ""
+msgstr "חם"
 
 #: src/components/dialogs/InAppBrowserConsent.tsx:62
 #: src/components/dialogs/InAppBrowserConsent.tsx:66
@@ -7123,10 +7121,8 @@ msgstr ""
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:523
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:530
 #: src/screens/SavedFeeds.tsx:351
-#, fuzzy
-#| msgid "End of feed"
 msgid "Pin feed"
-msgstr "קצה הפיד"
+msgstr "הצמדת הפיד"
 
 #: src/components/FeedCard.tsx:329
 #, fuzzy
@@ -11268,22 +11264,16 @@ msgstr ""
 #: src/components/interstitials/TrendingVideos.tsx:220
 #: src/screens/Search/modules/ExploreTrendingVideos.tsx:194
 #: src/screens/Search/modules/ExploreTrendingVideos.tsx:213
-#, fuzzy
-#| msgid "View profile"
 msgid "View more"
-msgstr "צפה בפרופיל"
+msgstr "צפה בעוד"
 
 #: src/components/interstitials/TrendingVideos.tsx:226
-#, fuzzy
-#| msgid "Hide this post?"
 msgid "View more trending videos"
-msgstr "להסתיר את הפוסט הזה?"
+msgstr "צפה בסרטונים פופולריים נוספים"
 
 #: src/view/com/composer/Composer.tsx:541
-#, fuzzy
-#| msgid "New post"
 msgid "View post"
-msgstr "פוסט חדש"
+msgstr "צפה בפוסט"
 
 #: src/components/ProfileHoverCard/index.web.tsx:466
 #: src/components/ProfileHoverCard/index.web.tsx:486
@@ -11310,20 +11300,16 @@ msgid "View users who like this feed"
 msgstr "צפה במשתמשים שאוהבים את הפיד הזה"
 
 #: src/components/VideoPostCard.tsx:399
-#, fuzzy
-#| msgid "Pause video"
 msgid "View video"
-msgstr "הפסק וידאו"
+msgstr "צפה בסרטון"
 
 #: src/screens/Moderation/index.tsx:296
 msgid "View your blocked accounts"
 msgstr "צפו ברשימת החסומים שלכם"
 
 #: src/screens/Moderation/index.tsx:236
-#, fuzzy
-#| msgid "Edit post interaction settings"
 msgid "View your default post interaction settings"
-msgstr "הגדרת העדפות אינטראקציה לפוסטים"
+msgstr "הצג את הגדרות ברירת המחדל של אינטראקציה עם פוסטים"
 
 #: src/view/com/home/HomeHeaderLayout.web.tsx:57
 #: src/view/com/home/HomeHeaderLayoutMobile.tsx:72
