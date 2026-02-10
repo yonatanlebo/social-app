@@ -1,9 +1,9 @@
 import {createContext, useContext, useMemo} from 'react'
 
-import {useGate} from '#/lib/statsig/statsig'
 import {useLanguagePrefs} from '#/state/preferences/languages'
 import {useServiceConfigQuery} from '#/state/queries/service-config'
 import {useSession} from '#/state/session'
+import {useAnalytics} from '#/analytics'
 import {IS_DEV} from '#/env'
 import {device} from '#/storage'
 
@@ -52,10 +52,6 @@ export function Provider({children}: {children: React.ReactNode}) {
       return {enabled: Boolean(cachedEnabled)}
     }
 
-    /*
-     * Doing an extra check here to reduce hits to statsig. If it's disabled on
-     * the server, we can exit early.
-     */
     const enabled = Boolean(config?.topicsEnabled)
 
     // update cache
@@ -89,28 +85,49 @@ const DEFAULT_LIVE_ALLOWED_DOMAINS = [
   'twitch.tv',
   'www.twitch.tv',
   'stream.place',
+  'bluecast.app',
+  'www.bluecast.app',
 ]
 export type LiveNowConfig = {
-  allowedDomains: Set<string>
+  currentAccountAllowedHosts: Set<string>
+  defaultAllowedHosts: Set<string>
+  allowedHostsExceptionsByDid: Map<string, Set<string>>
 }
 export function useLiveNowConfig(): LiveNowConfig {
   const ctx = useContext(LiveNowContext)
   const canGoLive = useCanGoLive()
   const {currentAccount} = useSession()
-  if (!currentAccount?.did || !canGoLive) return {allowedDomains: new Set()}
-  const vip = ctx.find(live => live.did === currentAccount.did)
-  return {
-    allowedDomains: new Set(
-      DEFAULT_LIVE_ALLOWED_DOMAINS.concat(vip ? vip.domains : []),
-    ),
-  }
+  return useMemo(() => {
+    const defaultAllowedHosts = new Set(DEFAULT_LIVE_ALLOWED_DOMAINS)
+    const allowedHostsExceptionsByDid = new Map<string, Set<string>>()
+    for (const live of ctx) {
+      allowedHostsExceptionsByDid.set(
+        live.did,
+        new Set(DEFAULT_LIVE_ALLOWED_DOMAINS.concat(live.domains)),
+      )
+    }
+    if (!currentAccount?.did || !canGoLive)
+      return {
+        currentAccountAllowedHosts: new Set(),
+        defaultAllowedHosts,
+        allowedHostsExceptionsByDid,
+      }
+    const vip = ctx.find(live => live.did === currentAccount.did)
+    return {
+      currentAccountAllowedHosts: new Set(
+        DEFAULT_LIVE_ALLOWED_DOMAINS.concat(vip ? vip.domains : []),
+      ),
+      defaultAllowedHosts,
+      allowedHostsExceptionsByDid,
+    }
+  }, [ctx, currentAccount, canGoLive])
 }
 
 export function useCanGoLive() {
-  const gate = useGate()
+  const ax = useAnalytics()
   const {hasSession} = useSession()
   if (!hasSession) return false
-  return IS_DEV ? true : !gate('disable_live_now_beta')
+  return IS_DEV ? true : !ax.features.enabled(ax.features.LiveNowBetaDisable)
 }
 
 export function useCheckEmailConfirmed() {
