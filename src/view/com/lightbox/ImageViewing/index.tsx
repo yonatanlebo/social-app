@@ -6,8 +6,7 @@
  *
  */
 // Original code copied and simplified from the link below as the codebase is currently not maintained:
-// http://192.168.0.49:8085/repository/github/jobtoday/react-native-image-viewing
-
+// https://github.com/jobtoday/react-native-image-viewing
 import React, {useCallback, useEffect, useMemo, useState} from 'react'
 import {
   LayoutAnimation,
@@ -39,7 +38,7 @@ import Animated, {
 import {SafeAreaView} from 'react-native-safe-area-context'
 import * as ScreenOrientation from 'expo-screen-orientation'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
-import {Trans} from '@lingui/macro'
+import {Trans} from '@lingui/react/macro'
 
 import {type Dimensions} from '#/lib/media/types'
 import {colors, s} from '#/lib/styles'
@@ -112,14 +111,14 @@ export default function ImageViewRoot({
 
     const isAnimated = canAnimate(nextLightbox)
 
-    // http://192.168.0.49:8085/repository/github/software-mansion/react-native-reanimated/issues/6677
+    // https://github.com/software-mansion/react-native-reanimated/issues/6677
     rAF_FIXED(() => {
       openProgress.set(() =>
         isAnimated ? withClampedSpring(1, SLOW_SPRING) : 1,
       )
     })
     return () => {
-      // http://192.168.0.49:8085/repository/github/software-mansion/react-native-reanimated/issues/6677
+      // https://github.com/software-mansion/react-native-reanimated/issues/6677
       rAF_FIXED(() => {
         openProgress.set(() =>
           isAnimated ? withClampedSpring(0, SLOW_SPRING) : 0,
@@ -790,7 +789,7 @@ function withClampedSpring(value: any, config: WithSpringConfig) {
 }
 
 // We have to do this because we can't trust RN's rAF to fire in order.
-// http://192.168.0.49:8085/repository/github/facebook/react-native/issues/48005
+// https://github.com/facebook/react-native/issues/48005
 let isFrameScheduled = false
 let pendingFrameCallbacks: Array<() => void> = []
 function rAF_FIXED(callback: () => void) {
