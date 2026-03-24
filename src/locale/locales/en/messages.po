@@ -3140,7 +3140,7 @@ msgstr ""
 msgid "Developer options"
 msgstr ""
 
-#: src/lib/translation/index.tsx:294
+#: src/lib/translation/index.tsx:297
 msgid "Device failed to translate :("
 msgstr "Device failed to translate :("
 
