@@ -433,6 +433,12 @@ msgstr ""
 msgid "{handle} can't be messaged"
 msgstr ""
 
+#: src/components/dms/InitiateChatFlow.tsx:805
+#: src/components/dms/InitiateChatFlow.tsx:858
+#: src/components/dms/InitiateChatFlow.tsx:897
+msgid "{handle} can’t be messaged"
+msgstr "{handle} can’t be messaged"
+
 #: src/features/liveNow/utils.ts:15
 msgid "{hours, plural, one {# hour {minutesString}} other {# hours {minutesString}}}"
 msgstr ""
@@ -1272,7 +1278,7 @@ msgstr ""
 msgid "An issue not included in these options"
 msgstr ""
 
-#: src/components/dms/dialogs/NewChatDialog.tsx:40
+#: src/components/dms/dialogs/NewChatDialog.tsx:41
 msgid "An issue occurred starting the chat"
 msgstr ""
 
@@ -1544,6 +1550,9 @@ msgstr ""
 msgid "Available"
 msgstr ""
 
+#: src/components/dms/InitiateChatFlow.tsx:485
+#: src/components/dms/InitiateChatFlow.tsx:670
+#: src/components/dms/InitiateChatFlow.tsx:677
 #: src/components/moderation/LabelsOnMeDialog.tsx:334
 #: src/components/moderation/LabelsOnMeDialog.tsx:335
 #: src/screens/Login/ChooseAccountForm.tsx:98
@@ -1602,7 +1611,7 @@ msgstr ""
 msgid "Before you can get notifications for {name}'s posts, you must first verify your email."
 msgstr ""
 
-#: src/components/dms/dialogs/NewChatDialog.tsx:58
+#: src/components/dms/dialogs/NewChatDialog.tsx:66
 #: src/components/dms/MessageProfileButton.tsx:60
 #: src/screens/Messages/ChatList.tsx:376
 #: src/screens/Messages/Conversation.tsx:226
@@ -2280,6 +2289,7 @@ msgstr ""
 #: src/components/dms/AfterReportDialog.tsx:212
 #: src/components/dms/AfterReportDialog.tsx:217
 #: src/components/dms/EmojiPopup.android.tsx:59
+#: src/components/dms/InitiateChatFlow.tsx:510
 #: src/components/NewskieDialog.tsx:169
 #: src/components/NewskieDialog.tsx:175
 #: src/components/Post/Embed/VideoEmbed/GifPresentationControls.tsx:107
@@ -2591,6 +2601,10 @@ msgstr ""
 msgid "Continue thread..."
 msgstr ""
 
+#: src/components/dms/InitiateChatFlow.tsx:437
+msgid "Continue to group name"
+msgstr "Continue to group name"
+
 #: src/screens/Onboarding/StepInterests/index.tsx:90
 #: src/screens/Onboarding/StepProfile/index.tsx:300
 #: src/screens/Onboarding/StepSuggestedAccounts/index.tsx:299
@@ -2800,6 +2814,7 @@ msgstr ""
 #. Text on button to create a new starter pack
 #: src/components/dialogs/StarterPackDialog.tsx:113
 #: src/components/dialogs/StarterPackDialog.tsx:210
+#: src/components/dms/InitiateChatFlow.tsx:446
 #: src/components/StarterPack/ProfileStarterPacks.tsx:329
 msgid "Create"
 msgstr ""
@@ -2868,6 +2883,10 @@ msgstr ""
 #: src/components/StarterPack/ProfileStarterPacks.tsx:214
 msgid "Create another"
 msgstr ""
+
+#: src/components/dms/InitiateChatFlow.tsx:445
+msgid "Create group chat"
+msgstr "Create group chat"
 
 #: src/components/dialogs/lists/CreateListFromStarterPackDialog.tsx:180
 #: src/components/dialogs/lists/CreateListFromStarterPackDialog.tsx:188
@@ -4830,6 +4849,11 @@ msgstr ""
 msgid "Grooming or predatory behavior"
 msgstr ""
 
+#: src/components/dms/InitiateChatFlow.tsx:227
+#: src/components/dms/InitiateChatFlow.tsx:545
+msgid "Group name"
+msgstr "Group name"
+
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:219
 msgid "Hacking or system attacks"
 msgstr ""
@@ -6387,7 +6411,8 @@ msgstr ""
 msgid "New {postsCount, plural, one {post} other {posts}} from {firstAuthorName}"
 msgstr ""
 
-#: src/components/dms/dialogs/NewChatDialog.tsx:71
+#: src/components/dms/dialogs/NewChatDialog.tsx:79
+#: src/components/dms/dialogs/NewChatDialog.tsx:89
 #: src/screens/Messages/ChatList.tsx:408
 #: src/screens/Messages/ChatList.tsx:415
 msgid "New chat"
@@ -6413,6 +6438,16 @@ msgstr ""
 #: src/screens/Settings/NotificationSettings/NewFollowerNotificationSettings.tsx:41
 msgid "New followers"
 msgstr ""
+
+#: src/components/dms/InitiateChatFlow.tsx:226
+#: src/components/dms/InitiateChatFlow.tsx:709
+#: src/components/dms/InitiateChatFlow.tsx:737
+msgid "New group chat"
+msgstr "New group chat"
+
+#: src/components/dms/InitiateChatFlow.tsx:261
+msgid "New group chat with:"
+msgstr "New group chat with:"
 
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:228
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:236
@@ -6484,6 +6519,7 @@ msgstr ""
 
 #: src/components/contacts/screens/ViewMatches.tsx:395
 #: src/components/contacts/screens/ViewMatches.tsx:410
+#: src/components/dms/InitiateChatFlow.tsx:438
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:156
 #: src/screens/Login/SetNewPasswordForm.tsx:186
@@ -6636,6 +6672,7 @@ msgid "No result"
 msgstr ""
 
 #: src/components/dialogs/SearchablePeopleList.tsx:224
+#: src/components/dms/InitiateChatFlow.tsx:334
 #: src/components/ProgressGuide/FollowDialog.tsx:209
 msgid "No results"
 msgstr ""
@@ -8004,6 +8041,10 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
+#: src/components/dms/ChatProfileTabs.tsx:153
+msgid "Remove {displayName} from group chat"
+msgstr "Remove {displayName} from group chat"
+
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:62
 msgid "Remove {displayName} from starter pack"
 msgstr ""
@@ -8738,6 +8779,10 @@ msgstr ""
 msgid "Search for more feeds"
 msgstr ""
 
+#: src/components/dms/InitiateChatFlow.tsx:982
+msgid "Search for people"
+msgstr "Search for people"
+
 #: src/screens/Search/Shell.tsx:380
 msgid "Search for posts, users, or feeds"
 msgstr ""
@@ -8766,6 +8811,7 @@ msgid "Search posts"
 msgstr ""
 
 #: src/components/dialogs/SearchablePeopleList.tsx:535
+#: src/components/dms/InitiateChatFlow.tsx:1002
 #: src/components/ProgressGuide/FollowDialog.tsx:704
 msgid "Search profiles"
 msgstr ""
@@ -8779,6 +8825,7 @@ msgid "Search..."
 msgstr ""
 
 #: src/components/dialogs/SearchablePeopleList.tsx:536
+#: src/components/dms/InitiateChatFlow.tsx:1003
 #: src/components/ProgressGuide/FollowDialog.tsx:705
 msgid "Searches for profiles"
 msgstr ""
@@ -8921,6 +8968,10 @@ msgstr ""
 #: src/components/dialogs/GifSelect.tsx:297
 msgid "Select GIF \"{0}\""
 msgstr ""
+
+#: src/components/dms/InitiateChatFlow.tsx:645
+msgid "Select group chat members"
+msgstr "Select group chat members"
 
 #: src/components/dialogs/MutedWords.tsx:151
 msgid "Select how long to mute this word for."
@@ -9613,7 +9664,7 @@ msgstr ""
 msgid "Start a conversation, and it will appear here."
 msgstr ""
 
-#: src/components/dms/dialogs/NewChatDialog.tsx:81
+#: src/components/dms/dialogs/NewChatDialog.tsx:95
 msgid "Start a new chat"
 msgstr ""
 
@@ -9627,7 +9678,12 @@ msgstr ""
 msgid "Start adding people!"
 msgstr ""
 
+#: src/components/dms/InitiateChatFlow.tsx:646
+msgid "Start chat"
+msgstr "Start chat"
+
 #: src/components/dialogs/SearchablePeopleList.tsx:383
+#: src/components/dms/InitiateChatFlow.tsx:773
 msgid "Start chat with {displayName}"
 msgstr ""
 
@@ -9766,6 +9822,10 @@ msgstr ""
 #: src/components/verification/VerificationCreatePrompt.tsx:37
 msgid "Successfully verified"
 msgstr ""
+
+#: src/components/dms/InitiateChatFlow.tsx:313
+msgid "Suggested"
+msgstr "Suggested"
 
 #: src/screens/Search/Explore.tsx:374
 msgid "Suggested accounts"
@@ -11602,6 +11662,10 @@ msgstr ""
 #: src/components/ProgressGuide/FollowDialog.tsx:183
 msgid "We're having network issues, try again"
 msgstr ""
+
+#: src/components/dms/InitiateChatFlow.tsx:250
+msgid "We’re having network issues, try again"
+msgstr "We’re having network issues, try again"
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:96
 msgid "We’re introducing a new layer of verification on Bluesky — an easy-to-see checkmark."
