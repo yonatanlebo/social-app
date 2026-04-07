@@ -1,10 +1,13 @@
 import {
   type AppBskyActorDefs,
-  type AppBskyUnspeccedGetSuggestedOnboardingUsers,
+  type AppBskyUnspeccedGetSuggestedUsersForSeeMore,
 } from '@atproto/api'
 import {type QueryClient, useQuery} from '@tanstack/react-query'
 
-import {createBskyTopicsHeader} from '#/lib/api/feed/utils'
+import {
+  aggregateUserInterests,
+  createBskyTopicsHeader,
+} from '#/lib/api/feed/utils'
 import {getContentLanguages} from '#/state/preferences/languages'
 import {STALE} from '#/state/queries'
 import {usePreferencesQuery} from '#/state/queries/preferences'
@@ -13,42 +16,33 @@ import {useAgent} from '#/state/session'
 export type QueryProps = {
   category?: string | null
   limit?: number
-  enabled?: boolean
-  overrideInterests: string[]
 }
 
-export const getSuggestedOnboardingUsersQueryKeyRoot =
-  'unspecced-suggested-onboarding-users'
-export const createGetSuggestedOnboardingUsersQueryKey = (
+export const getSuggestedUsersForSeeMoreQueryKeyRoot =
+  'unspecced-suggested-users-for-explore'
+export const createGetSuggestedUsersForSeeMoreQueryKey = (
   props: QueryProps,
-) => [
-  getSuggestedOnboardingUsersQueryKeyRoot,
-  props.category,
-  props.limit,
-  props.overrideInterests.join(','),
-]
+) => [getSuggestedUsersForSeeMoreQueryKeyRoot, props.category, props.limit]
 
-export function useGetSuggestedOnboardingUsersQuery(props: QueryProps) {
+export function useGetSuggestedUsersForSeeMoreQuery(props: QueryProps = {}) {
   const agent = useAgent()
   const {data: preferences} = usePreferencesQuery()
 
   return useQuery({
-    enabled: !!preferences && props.enabled !== false,
     staleTime: STALE.MINUTES.THREE,
-    queryKey: createGetSuggestedOnboardingUsersQueryKey(props),
+    queryKey: createGetSuggestedUsersForSeeMoreQueryKey(props),
     queryFn: async () => {
       const contentLangs = getContentLanguages().join(',')
+      const userInterests = aggregateUserInterests(preferences)
 
-      const overrideInterests = props.overrideInterests.join(',')
-
-      const {data} = await agent.app.bsky.unspecced.getSuggestedOnboardingUsers(
+      const {data} = await agent.app.bsky.unspecced.getSuggestedUsersForSeeMore(
         {
           category: props.category ?? undefined,
-          limit: props.limit || 10,
+          limit: props.limit || 50,
         },
         {
           headers: {
-            ...createBskyTopicsHeader(overrideInterests),
+            ...createBskyTopicsHeader(userInterests),
             'Accept-Language': contentLangs,
           },
         },
@@ -64,9 +58,9 @@ export function* findAllProfilesInQueryData(
   did: string,
 ): Generator<AppBskyActorDefs.ProfileView, void> {
   const responses =
-    queryClient.getQueriesData<AppBskyUnspeccedGetSuggestedOnboardingUsers.OutputSchema>(
+    queryClient.getQueriesData<AppBskyUnspeccedGetSuggestedUsersForSeeMore.OutputSchema>(
       {
-        queryKey: [getSuggestedOnboardingUsersQueryKeyRoot],
+        queryKey: [getSuggestedUsersForSeeMoreQueryKeyRoot],
       },
     )
   for (const [_key, response] of responses) {
