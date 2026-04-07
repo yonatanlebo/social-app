@@ -5,8 +5,8 @@ import {
   type ChatBskyConvoGetLog,
   type ChatBskyConvoSendMessage,
 } from '@atproto/api'
-import {XRPCError} from '@atproto/xrpc'
-import EventEmitter from 'eventemitter3'
+import {XRPCError} from '@atproto/api'
+import {EventEmitter} from 'eventemitter3'
 import {nanoid} from 'nanoid/non-secure'
 
 import {networkRetry} from '#/lib/async/retry'
@@ -845,6 +845,16 @@ export class Convo {
       this.convo = {
         ...this.convo,
         status: 'accepted',
+      }
+    }
+    this.commit()
+  }
+
+  updateMuted(muted: boolean) {
+    if (this.convo) {
+      this.convo = {
+        ...this.convo,
+        muted,
       }
     }
     this.commit()

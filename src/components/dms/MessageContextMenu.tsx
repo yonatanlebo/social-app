@@ -1,5 +1,5 @@
 import {memo, useCallback} from 'react'
-import {LayoutAnimation} from 'react-native'
+import {LayoutAnimation, Platform} from 'react-native'
 import * as Clipboard from 'expo-clipboard'
 import {type ChatBskyConvoDefs, RichText} from '@atproto/api'
 import {msg} from '@lingui/core/macro'
@@ -12,7 +12,6 @@ import {useConvoActive} from '#/state/messages/convo'
 import {useLanguagePrefs} from '#/state/preferences'
 import {unstableCacheProfileView} from '#/state/queries/unstable-profile-cache'
 import {useSession} from '#/state/session'
-import * as Toast from '#/view/com/util/Toast'
 import * as ContextMenu from '#/components/ContextMenu'
 import {type TriggerProps} from '#/components/ContextMenu/types'
 import {AfterReportDialog} from '#/components/dms/AfterReportDialog'
@@ -23,6 +22,7 @@ import {Warning_Stroke2_Corner0_Rounded as Warning} from '#/components/icons/War
 import {ReportDialog} from '#/components/moderation/ReportDialog'
 import * as Prompt from '#/components/Prompt'
 import {usePromptControl} from '#/components/Prompt'
+import * as Toast from '#/components/Toast'
 import {useAnalytics} from '#/analytics'
 import {IS_NATIVE} from '#/env'
 import {EmojiReactionPicker} from './EmojiReactionPicker'
@@ -58,16 +58,20 @@ export let MessageContextMenu = ({
     )
 
     void Clipboard.setStringAsync(str)
-    Toast.show(_(msg`Copied to clipboard`), 'clipboard-check')
+    Toast.show(_(msg`Copied to clipboard`), {
+      type: 'success',
+    })
   }, [_, message.text, message.facets])
 
   const onPressTranslateMessage = useCallback(() => {
     void translate(message.text, langPrefs.primaryLanguage)
 
     ax.metric('translate', {
-      sourceLanguages: [],
-      targetLanguage: langPrefs.primaryLanguage,
+      os: Platform.OS,
+      possibleSourceLanguages: [], // N/A for chats
+      expectedTargetLanguage: langPrefs.primaryLanguage,
       textLength: message.text.length,
+      googleTranslate: true,
     })
   }, [ax, langPrefs.primaryLanguage, message.text, translate])
 
@@ -95,11 +99,11 @@ export let MessageContextMenu = ({
           .catch(() => Toast.show(_(msg`Failed to remove emoji reaction`)))
       } else {
         if (hasReachedReactionLimit(message, currentAccount?.did)) return
-        convo
-          .addReaction(message.id, emoji)
-          .catch(() =>
-            Toast.show(_(msg`Failed to add emoji reaction`), 'xmark'),
-          )
+        convo.addReaction(message.id, emoji).catch(() =>
+          Toast.show(_(msg`Failed to add emoji reaction`), {
+            type: 'error',
+          }),
+        )
       }
     },
     [_, convo, message, currentAccount?.did],

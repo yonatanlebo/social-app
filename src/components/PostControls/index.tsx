@@ -24,11 +24,11 @@ import {
   ProgressGuideAction,
   useProgressGuideControls,
 } from '#/state/shell/progress-guide'
-import * as Toast from '#/view/com/util/Toast'
-import {atoms as a, useBreakpoints} from '#/alf'
+import {atoms as a, useBreakpoints, useTheme} from '#/alf'
 import {Reply as Bubble} from '#/components/icons/Reply'
 import {useFormatPostStatCount} from '#/components/PostControls/util'
 import * as Skele from '#/components/Skeleton'
+import * as Toast from '#/components/Toast'
 import {useAnalytics} from '#/analytics'
 import {BookmarkButton} from './BookmarkButton'
 import {
@@ -74,6 +74,7 @@ let PostControls = ({
   forceGoogleTranslate?: boolean
 }): React.ReactNode => {
   const ax = useAnalytics()
+  const t = useTheme()
   const {t: l} = useLingui()
   const {openComposer} = useOpenComposer()
   const {feedDescriptor} = useFeedFeedbackContext()
@@ -106,7 +107,9 @@ let PostControls = ({
 
   const onPressToggleLike = async () => {
     if (isBlocked) {
-      Toast.show(l`Cannot interact with a blocked user`, 'exclamation-circle')
+      Toast.show(l`Cannot interact with a blocked user`, {
+        type: 'warning',
+      })
       return
     }
 
@@ -135,7 +138,9 @@ let PostControls = ({
 
   const onRepost = async () => {
     if (isBlocked) {
-      Toast.show(l`Cannot interact with a blocked user`, 'exclamation-circle')
+      Toast.show(l`Cannot interact with a blocked user`, {
+        type: 'warning',
+      })
       return
     }
 
@@ -161,7 +166,9 @@ let PostControls = ({
 
   const onQuote = () => {
     if (isBlocked) {
-      Toast.show(l`Cannot interact with a blocked user`, 'exclamation-circle')
+      Toast.show(l`Cannot interact with a blocked user`, {
+        type: 'warning',
+      })
       return
     }
 
@@ -264,6 +271,8 @@ let PostControls = ({
           <PostControlButton
             testID="likeBtn"
             big={big}
+            active={Boolean(post.viewer?.like)}
+            activeColor={t.palette.pink}
             onPress={() => requireAuth(() => onPressToggleLike())}
             label={
               post.viewer?.like
@@ -290,10 +299,14 @@ let PostControls = ({
               hasBeenToggled={hasLikeIconBeenToggled}
             />
             <CountWheel
-              likeCount={post.likeCount ?? 0}
-              big={big}
-              isLiked={Boolean(post.viewer?.like)}
+              count={post.likeCount ?? 0}
+              isToggled={Boolean(post.viewer?.like)}
               hasBeenToggled={hasLikeIconBeenToggled}
+              renderCount={({count}) => (
+                <PostControlButtonText>
+                  {formatPostStatCount(count)}
+                </PostControlButtonText>
+              )}
             />
           </PostControlButton>
         </View>

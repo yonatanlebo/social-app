@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect} from 'react'
+import {useCallback, useEffect} from 'react'
 import {type NativeScrollEvent} from 'react-native'
 import {
   clamp,
@@ -7,7 +7,7 @@ import {
   withSpring,
 } from 'react-native-reanimated'
 import {useSafeAreaInsets} from 'react-native-safe-area-context'
-import EventEmitter from 'eventemitter3'
+import {EventEmitter} from 'eventemitter3'
 
 import {ScrollProvider} from '#/lib/ScrollContext'
 import {useMinimalShellMode} from '#/state/shell'
@@ -25,7 +25,7 @@ export function MainScrollProvider({children}: {children: React.ReactNode}) {
   const startMode = useSharedValue<number | null>(null)
   const didJustRestoreScroll = useSharedValue<boolean>(false)
 
-  const setMode = React.useCallback(
+  const setMode = useCallback(
     (v: boolean) => {
       'worklet'
       headerMode.set(() =>

@@ -1,4 +1,4 @@
-import {memo, useCallback, useMemo} from 'react'
+import {memo, useMemo} from 'react'
 import {Text as RNText, View} from 'react-native'
 import {
   AppBskyFeedDefs,
@@ -9,6 +9,7 @@ import {
 } from '@atproto/api'
 import {Plural, Trans, useLingui} from '@lingui/react/macro'
 
+import {useNonReactiveCallback} from '#/lib/hooks/useNonReactiveCallback'
 import {useOpenComposer} from '#/lib/hooks/useOpenComposer'
 import {makeProfileLink} from '#/lib/routes/links'
 import {sanitizeDisplayName} from '#/lib/strings/display-names'
@@ -47,12 +48,12 @@ import {Embed, PostEmbedViewContext} from '#/components/Post/Embed'
 import {TranslatedPost} from '#/components/Post/Translated'
 import {PostControls, PostControlsSkeleton} from '#/components/PostControls'
 import {useFormatPostStatCount} from '#/components/PostControls/util'
+import {ProfileBadges} from '#/components/ProfileBadges'
 import {ProfileHoverCard} from '#/components/ProfileHoverCard'
 import * as Prompt from '#/components/Prompt'
 import {RichText} from '#/components/RichText'
 import * as Skele from '#/components/Skeleton'
 import {Text} from '#/components/Typography'
-import {VerificationCheckButton} from '#/components/verification/VerificationCheckButton'
 import {WhoCanReply} from '#/components/WhoCanReply'
 import {useAnalytics} from '#/analytics'
 import {useActorStatus} from '#/features/liveNow'
@@ -245,7 +246,7 @@ const ThreadItemAnchorInner = memo(function ThreadItemAnchorInner({
     }
   }, [postSource])
 
-  const onPressReply = useCallback(() => {
+  const onPressReply = useNonReactiveCallback(() => {
     openComposer({
       replyTo: {
         uri: post.uri,
@@ -268,15 +269,7 @@ const ThreadItemAnchorInner = memo(function ThreadItemAnchorInner({
         reqId: postSource.post.reqId,
       })
     }
-  }, [
-    openComposer,
-    post,
-    record,
-    onPostSuccess,
-    moderation,
-    postSource,
-    feedFeedback,
-  ])
+  })
 
   const onOpenAuthor = () => {
     ax.metric('post:clickthroughAuthor', {
@@ -362,7 +355,11 @@ const ThreadItemAnchorInner = memo(function ThreadItemAnchorInner({
                   </Text>
 
                   <View style={[a.pl_xs]}>
-                    <VerificationCheckButton profile={authorShadow} size="md" />
+                    <ProfileBadges
+                      profile={authorShadow}
+                      size="md"
+                      interactive
+                    />
                   </View>
                 </View>
                 <Text
@@ -407,11 +404,7 @@ const ThreadItemAnchorInner = memo(function ThreadItemAnchorInner({
                 shouldProxyLinks={true}
               />
             ) : undefined}
-            <TranslatedPost
-              post={post}
-              postText={record.text}
-              postTextStyle={[a.text_lg]}
-            />
+            <TranslatedPost post={post} postTextStyle={[a.text_lg]} />
             {post.embed && (
               <View style={[a.py_xs]}>
                 <Embed

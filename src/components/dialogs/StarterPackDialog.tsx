@@ -19,6 +19,7 @@ import {
   useListMembershipRemoveMutation,
 } from '#/state/queries/list-memberships'
 import {useProfileQuery} from '#/state/queries/profile'
+import {useSession} from '#/state/session'
 import {atoms as a, native, platform, useTheme} from '#/alf'
 import {AvatarStack} from '#/components/AvatarStack'
 import {Button, ButtonIcon, ButtonText} from '#/components/Button'
@@ -75,7 +76,7 @@ export function StarterPackDialog({
   })
 
   return (
-    <Dialog.Outer control={control}>
+    <Dialog.Outer control={control} nativeOptions={{fullHeight: true}}>
       <Dialog.Handle />
       <StarterPackList
         onStartWizard={wrappedNavToWizard}
@@ -260,6 +261,8 @@ function StarterPackItem({
   const t = useTheme()
   const ax = useAnalytics()
   const {_} = useLingui()
+  const {currentAccount} = useSession()
+  const isSelf = subject?.did === currentAccount?.did
 
   const starterPack = starterPackWithMembership.starterPack
   const isInPack = !!starterPackWithMembership.listItem
@@ -373,11 +376,17 @@ function StarterPackItem({
         label={isInPack ? _(msg`Remove`) : _(msg`Add`)}
         color={isInPack ? 'secondary' : 'primary_subtle'}
         size="tiny"
-        disabled={isPending}
+        disabled={isPending || isSelf}
         onPress={handleToggleMembership}>
         {isPending && <ButtonIcon icon={Loader} />}
         <ButtonText>
-          {isInPack ? <Trans>Remove</Trans> : <Trans>Add</Trans>}
+          {isSelf ? (
+            <Trans>Owner</Trans>
+          ) : isInPack ? (
+            <Trans>Remove</Trans>
+          ) : (
+            <Trans>Add</Trans>
+          )}
         </ButtonText>
       </Button>
     </View>

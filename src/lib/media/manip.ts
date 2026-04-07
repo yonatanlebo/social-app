@@ -15,13 +15,13 @@ import {
 import {manipulateAsync, SaveFormat} from 'expo-image-manipulator'
 import * as MediaLibrary from 'expo-media-library'
 import * as Sharing from 'expo-sharing'
-import {Buffer} from 'buffer'
 
 import {POST_IMG_MAX} from '#/lib/constants'
 import {logger} from '#/logger'
 import {IS_ANDROID, IS_IOS} from '#/env'
 import {type PickerImage} from './picker.shared'
 import {type Dimensions} from './types'
+import {convertCdnPreset} from './util'
 
 export async function compressIfNeeded(
   img: PickerImage,
@@ -94,14 +94,20 @@ export async function shareImageModal({uri}: {uri: string}) {
 
 const ALBUM_NAME = 'Bluesky'
 
+/**
+ * Saves an image to the user's device. Uses the CDN's `download` preset
+ * which uses the JPEG version with the Content-Disposition header set to
+ * `attachment; filename=<filename>`. On native this saves to the media library;
+ * on web it triggers a browser download.
+ */
 export async function saveImageToMediaLibrary({uri}: {uri: string}) {
-  const downloadedPath = await downloadImage(uri, String(uuid.v4()), 15e3)
-  const {uri: jpegUri} = await manipulateAsync(downloadedPath, [], {
-    format: SaveFormat.JPEG,
-    compress: 1.0,
-  })
-  void safeDeleteAsync(downloadedPath)
-  const imagePath = await moveToPermanentPath(jpegUri, '.jpg')
+  const downloadUri = convertCdnPreset(uri, 'download')
+  const downloadedPath = await downloadImage(
+    downloadUri,
+    String(uuid.v4()),
+    20e3,
+  )
+  const imagePath = await moveToPermanentPath(downloadedPath, '.jpg')
 
   // save
   try {
@@ -315,7 +321,12 @@ export async function saveBytesToDisk(
   bytes: Uint8Array,
   type: string,
 ) {
-  const encoded = Buffer.from(bytes).toString('base64')
+  // ideally we'd use `bytes.toBase64()`, but that's only baseline newly available
+  let binary = ''
+  for (const byte of bytes) {
+    binary += String.fromCharCode(byte)
+  }
+  const encoded = btoa(binary)
   return await saveToDevice(filename, encoded, type)
 }
 

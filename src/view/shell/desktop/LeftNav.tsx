@@ -74,6 +74,7 @@ import {CENTER_COLUMN_OFFSET} from '#/components/Layout'
 import * as Menu from '#/components/Menu'
 import * as Prompt from '#/components/Prompt'
 import {Text} from '#/components/Typography'
+import {useAgeAssurance} from '#/ageAssurance'
 import {useActorStatus} from '#/features/liveNow'
 import {PlatformInfo} from '../../../../modules/expo-bluesky-swiss-army'
 import {router} from '../../../routes'
@@ -349,7 +350,7 @@ function SwitchMenuItem({
           '@',
         )}`,
       )}
-      onPress={() => onPressSwitchAccount(account, 'SwitchAccount')}>
+      onPress={() => void onPressSwitchAccount(account, 'SwitchAccount')}>
       <View>
         <UserAvatar
           avatar={profile?.avatar}
@@ -572,14 +573,14 @@ function ComposeBtn() {
       <Button
         disabled={isFetchingHandle}
         label={_(msg`Compose new post`)}
-        onPress={onPressCompose}
+        onPress={() => void onPressCompose()}
         size="large"
         variant="solid"
         color="primary"
         style={[a.rounded_full]}>
         <ButtonIcon icon={EditBig} position="left" />
         <ButtonText>
-          <Trans context="action">New Post</Trans>
+          <Trans context="action">New post</Trans>
         </ButtonText>
       </Button>
     </View>
@@ -590,12 +591,13 @@ function ChatNavItem() {
   const pal = usePalette('default')
   const {_} = useLingui()
   const numUnreadMessages = useUnreadMessageCount()
+  const aa = useAgeAssurance()
 
   return (
     <NavItem
       href="/messages"
-      count={numUnreadMessages.numUnread}
-      hasNew={numUnreadMessages.hasNew}
+      count={aa.flags.chatDisabled ? undefined : numUnreadMessages.numUnread}
+      hasNew={aa.flags.chatDisabled ? false : numUnreadMessages.hasNew}
       icon={
         <Message style={pal.text} aria-hidden={true} width={NAV_ICON_WIDTH} />
       }
