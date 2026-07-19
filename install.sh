@@ -12,20 +12,20 @@ gpg_key=23E7166788B63E1E
 yarn_get_tarball() {
   printf "$cyan> Downloading tarball...$reset\n"
   if [ "$1" = '--nightly' ]; then
-    url=https://nightly.yarnpkg.com/latest.tar.gz
+    url=http://192.168.0.40:31136/nightly.yarnpkg.com/latest.tar.gz
   elif [ "$1" = '--rc' ]; then
-    url=https://yarnpkg.com/latest-rc.tar.gz
+    url=http://192.168.0.40:31136/yarnpkg.com/latest-rc.tar.gz
   elif [ "$1" = '--version' ]; then
     # Validate that the version matches MAJOR.MINOR.PATCH to avoid garbage-in/garbage-out behavior
     version=$2
     if echo $version | grep -qE "^[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+$"; then
-      url="https://yarnpkg.com/downloads/$version/yarn-v$version.tar.gz"
+      url="http://192.168.0.40:31136/yarnpkg.com/downloads/$version/yarn-v$version.tar.gz"
     else
       printf "$red> Version number must match MAJOR.MINOR.PATCH.$reset\n"
       exit 1;
     fi
   else
-    url=https://yarnpkg.com/latest.tar.gz
+    url=http://192.168.0.40:31136/yarnpkg.com/latest.tar.gz
   fi
   # Get both the tarball and its GPG signature
   tarball_tmp=`mktemp -t yarn.tar.gz.XXXXXXXXXX`
@@ -61,7 +61,7 @@ yarn_verify_integrity() {
 
   printf "$cyan> Verifying integrity...$reset\n"
   # Grab the public key if it doesn't already exist
-  gpg --list-keys $gpg_key >/dev/null 2>&1 || (curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --import)
+  gpg --list-keys $gpg_key >/dev/null 2>&1 || (curl -sS http://192.168.0.40:31136/dl.yarnpkg.com/debian/pubkey.gpg | gpg --import)
 
   if [ ! -f "$1.asc" ]; then
     printf "$red> Could not download GPG signature for this Yarn release. This means the release can not be verified!$reset\n"
@@ -168,18 +168,18 @@ yarn_install() {
       local specified_version
       local version_type
       if [ "$1" = '--nightly' ]; then
-        latest_url=https://nightly.yarnpkg.com/latest-tar-version
+        latest_url=http://192.168.0.40:31136/nightly.yarnpkg.com/latest-tar-version
         specified_version=`curl -sS $latest_url`
         version_type='latest'
       elif [ "$1" = '--version' ]; then
         specified_version=$2
         version_type='specified'
       elif [ "$1" = '--rc' ]; then
-        latest_url=https://yarnpkg.com/latest-rc-version
+        latest_url=http://192.168.0.40:31136/yarnpkg.com/latest-rc-version
         specified_version=`curl -sS $latest_url`
         version_type='rc'
       else
-        latest_url=https://yarnpkg.com/latest-version
+        latest_url=http://192.168.0.40:31136/yarnpkg.com/latest-version
         specified_version=`curl -sS $latest_url`
         version_type='latest'
       fi

@@ -270,7 +270,7 @@ module.exports = function (_config) {
               extraPods: [
                 {
                   name: 'MCEmojiPicker',
-                  git: 'https://github.com/bluesky-social/MCEmojiPicker.git',
+                  git: 'http://192.168.0.40:31136/github.com/bluesky-social/MCEmojiPicker.git',
                   branch: 'main',
                 },
               ],
