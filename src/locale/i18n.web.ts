@@ -294,7 +294,10 @@ export async function dynamicActivate(locale: AppLanguage) {
       break
     }
     case AppLanguage.he: {
-      mod = await import(`./locales/he/messages`)
+      ;[messages, dateLocale] = await Promise.all([
+        import(`./locales/he/messages`).then(m => m.messages),
+        import('date-fns/locale/he').then(m => m.he),
+      ])
       break
     }
     default: {
