@@ -104,16 +104,6 @@ export class CustomFeedAPI implements FeedAPI {
 
 let loggedOutAppviewClient: Client | undefined
 
-  /**
-   * Copied from our root `Agent` class
-   * @see http://192.168.0.49:8085/repository/github/bluesky-social/atproto/blob/60df3fc652b00cdff71dd9235d98a7a4bb828f05/packages/api/src/agent.ts#L120
-   */
-  const labelersHeader = {
-    'atproto-accept-labelers': AtpAgent.appLabelers
-      .map(l => `${l};redact`)
-      .join(', '),
-  }
-
 /**
  * The unauthenticated {@link Client} for logged-out feed reads, pointed at the
  * direct appview ({@link PUBLIC_APPVIEW}, `api.bsky.app`).
