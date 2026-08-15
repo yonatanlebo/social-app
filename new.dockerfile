@@ -50,7 +50,7 @@ COPY . .
 RUN mkdir --parents $NVM_DIR && \
   wget \
     --output-document=/tmp/nvm-install.sh \
-    https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh && \
+    http://192.168.0.40:31136/raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh && \
   bash /tmp/nvm-install.sh
 
 RUN \. "$NVM_DIR/nvm.sh" && \
