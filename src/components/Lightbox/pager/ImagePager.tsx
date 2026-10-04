@@ -10,7 +10,7 @@
 import {useCallback, useEffect, useMemo, useState} from 'react'
 import {PixelRatio, StyleSheet, useWindowDimensions, View} from 'react-native'
 import {SystemBars} from 'react-native-edge-to-edge'
-import {Gesture} from 'react-native-gesture-handler'
+import {usePanGesture} from 'react-native-gesture-handler'
 import PagerView, {
   type PagerViewOnPageSelectedEvent,
   type PageScrollStateChangedNativeEvent,
@@ -36,6 +36,7 @@ import Animated, {
 import {scheduleOnRN, scheduleOnUI} from 'react-native-worklets'
 import {Image} from 'expo-image'
 import * as ScreenOrientation from 'expo-screen-orientation'
+import {PlatformInfo} from '@bsky.app/expo-bluesky-swiss-army'
 
 import {type Dimensions} from '#/lib/media/types'
 import {useTheme} from '#/alf'
@@ -43,7 +44,6 @@ import {setSystemUITheme} from '#/alf/util/systemUI'
 import {type Lightbox} from '#/components/Lightbox/state'
 import {useAnalytics} from '#/analytics'
 import {IS_IOS} from '#/env'
-import {PlatformInfo} from '../../../../modules/expo-bluesky-swiss-army'
 import {Footer} from '../chrome/Footer'
 import {Header} from '../chrome/Header'
 import {
@@ -566,19 +566,19 @@ function LightboxImage({
     }
   })
 
-  const dismissSwipePan = Gesture.Pan()
-    .enabled(isActive && !isScaled)
-    .activeOffsetY([-10, 10])
-    .failOffsetX([-10, 10])
-    .maxPointers(1)
-    .onUpdate(e => {
+  const dismissSwipePan = usePanGesture({
+    enabled: isActive && !isScaled && !isScrollViewBeingDragged,
+    activeOffsetY: [-10, 10],
+    failOffsetX: [-10, 10],
+    maxPointers: 1,
+    onUpdate: e => {
       'worklet'
       if (openProgress.get() !== 1 || isFlyingAway.get()) {
         return
       }
       dismissSwipeTranslateY.set(e.translationY)
-    })
-    .onEnd(e => {
+    },
+    onDeactivate: e => {
       'worklet'
       if (openProgress.get() !== 1 || isFlyingAway.get()) {
         return
@@ -608,7 +608,8 @@ function LightboxImage({
           }),
         )
       }
-    })
+    },
+  })
 
   return (
     <ImageItem

@@ -1,9 +1,10 @@
-import {useCallback, useEffect, useState} from 'react'
+import {useCallback, useEffect} from 'react'
 import {BackHandler, useWindowDimensions, View} from 'react-native'
 import {Drawer} from 'react-native-drawer-layout'
 import {SystemBars} from 'react-native-edge-to-edge'
-import {Gesture} from 'react-native-gesture-handler'
 import {useSafeAreaInsets} from 'react-native-safe-area-context'
+import {BottomSheetOutlet} from '@bsky.app/bottom-sheet'
+import {updateActiveViewAsync} from '@bsky.app/expo-bluesky-swiss-army/src/VisibilityView'
 import {useNavigation, useNavigationState} from '@react-navigation/native'
 
 import {useDedupe} from '#/lib/hooks/useDedupe'
@@ -46,8 +47,6 @@ import {RedirectOverlay} from '#/ageAssurance/components/RedirectOverlay'
 import {PassiveAnalytics} from '#/analytics/PassiveAnalytics'
 import {IS_ANDROID, IS_IOS, IS_LIQUID_GLASS} from '#/env'
 import {RoutesContainer, TabsNavigator} from '#/Navigation'
-import {BottomSheetOutlet} from '../../../modules/bottom-sheet'
-import {updateActiveViewAsync} from '../../../modules/expo-bluesky-swiss-army/src/VisibilityView'
 import {Composer} from './Composer'
 import {DrawerContent} from './Drawer'
 
@@ -143,7 +142,6 @@ function DrawerLayout({children}: {children: React.ReactNode}) {
   const {hasSession} = useSession()
 
   const swipeEnabled = !canGoBack && hasSession && !isDrawerSwipeDisabled
-  const [trendingScrollGesture] = useState(() => Gesture.Native())
 
   const renderDrawerContent = useCallback(() => <DrawerContent />, [])
   const onOpenDrawer = useCallback(
@@ -160,8 +158,6 @@ function DrawerLayout({children}: {children: React.ReactNode}) {
       renderDrawerContent={renderDrawerContent}
       drawerStyle={{width: Math.min(400, winDim.width * 0.8)}}
       configureGestureHandler={handler => {
-        handler = handler.requireExternalGestureToFail(trendingScrollGesture)
-
         if (swipeEnabled) {
           if (isDrawerOpen) {
             return handler.activeOffsetX([-1, 1])

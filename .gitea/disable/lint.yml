@@ -24,6 +24,7 @@ jobs:
         job:
           [
             lint,
+            'intl:lint',
             prettier,
             'lexicons:verify',
             'typecheck:ios',
@@ -47,11 +48,6 @@ jobs:
           # FROM node:X.Y.Z - service runtime images
           for f in Dockerfile.bskylink Dockerfile.bskyogcard; do
             v=$(grep -oE 'FROM node:[0-9]+\.[0-9]+\.[0-9]+' "$f" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | sort -u)
-            check "$f" "$v"
-          done
-          # ENV NODE_VERSION=X.Y.Z - Go images that nvm-install Node for the JS build stage
-          for f in Dockerfile.embedr; do
-            v=$(grep -oE 'NODE_VERSION=[0-9]+\.[0-9]+\.[0-9]+' "$f" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | sort -u)
             check "$f" "$v"
           done
           # eas.json "node": "X.Y.Z"

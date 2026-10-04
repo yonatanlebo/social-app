@@ -60,9 +60,7 @@ export type Events = {
     notificationType: NotificationType
     authorCount: number
   }
-  'state:background': {
-    secondsActive: number
-  }
+  'state:background': {}
   'state:foreground': {}
   'router:navigate': {
     from?: string
@@ -502,6 +500,10 @@ export type Events = {
     feedDescriptor?: string
     position?: number
   }
+  'post:quotes:view': {
+    uri: string
+    quoteSort: 'top' | 'latest'
+  }
   'post:view': {
     uri: string
     authorDid: string
@@ -517,6 +519,7 @@ export type Events = {
       | 'Hashtag'
       | 'Topic'
       | 'PostQuotes'
+    quoteSort?: 'top' | 'latest'
     feedDescriptor?: string
     position?: number
   }

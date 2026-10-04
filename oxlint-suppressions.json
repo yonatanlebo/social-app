@@ -80,14 +80,6 @@
       "count": 2
     }
   },
-  "src/analytics/identifiers/session.test.ts": {
-    "typescript/no-unsafe-call": {
-      "count": 9
-    },
-    "typescript/no-unsafe-member-access": {
-      "count": 9
-    }
-  },
   "src/analytics/metrics/client.test.ts": {
     "typescript/no-explicit-any": {
       "count": 1
@@ -1364,9 +1356,6 @@
   "src/view/com/post-thread/PostQuotes.tsx": {
     "typescript/no-misused-promises": {
       "count": 2
-    },
-    "typescript/no-unsafe-member-access": {
-      "count": 1
     }
   },
   "src/view/com/post-thread/PostRepostedBy.tsx": {
