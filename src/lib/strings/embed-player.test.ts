@@ -1,6 +1,9 @@
+import {Dimensions} from 'react-native'
+
 import {
   type EmbedPlayerType,
   getEmbedPlayerMediaType,
+  getPlayerAspect,
   parseEmbedPlayerFromUrl,
 } from '#/lib/strings/embed-player'
 
@@ -36,6 +39,52 @@ describe.each([
   )
 })
 
+describe.each(['staging.freemix.fm', 'app.freemix.fm'])(
+  'FreeMix tracks on %s',
+  host => {
+    const actor = 'remixer.pds.staging.freemix.fm'
+    const rkey = '3mx5yed3u7m2u'
+
+    it.each(['', '/', '?ref=share#player'])(
+      'embeds an actor-qualified track with suffix %s',
+      suffix => {
+        expect(
+          parseEmbedPlayerFromUrl(
+            `https://${host}/track/${actor}/${rkey}${suffix}`,
+          ),
+        ).toEqual({
+          type: 'freemix_track',
+          source: 'freemix',
+          playerUri: `https://${host}/embed/${actor}/${rkey}`,
+        })
+      },
+    )
+
+    it.each([
+      `/track/${actor}/${rkey}/tree`,
+      `/track/${actor}/invalid`,
+      `/track/${actor}/3mx5yed3u7m21`,
+      `/track/${actor}`,
+      `/track/${rkey}`,
+      `/track//${rkey}`,
+      `/profile/${actor}/${rkey}`,
+    ])('does not embed unsupported path %s', path => {
+      expect(parseEmbedPlayerFromUrl(`https://${host}${path}`)).toBeUndefined()
+    })
+  },
+)
+
+it.each(['freemix.fm', 'www.freemix.fm', 'staging.freemix.fm.example.com'])(
+  'does not embed FreeMix tracks on unsupported host %s',
+  host => {
+    expect(
+      parseEmbedPlayerFromUrl(
+        `https://${host}/track/remixer.pds.staging.freemix.fm/3mx5yed3u7m2u`,
+      ),
+    ).toBeUndefined()
+  },
+)
+
 describe('getEmbedPlayerMediaType', () => {
   it.each<
     readonly [EmbedPlayerType, ReturnType<typeof getEmbedPlayerMediaType>]
@@ -53,5 +102,45 @@ describe('getEmbedPlayerMediaType', () => {
     ['flickr_album', 'other'],
   ])('classifies %s as %s', (type, expected) => {
     expect(getEmbedPlayerMediaType(type)).toBe(expected)
+  })
+})
+
+describe('getPlayerAspect', () => {
+  afterEach(() => jest.restoreAllMocks())
+
+  it('updates portrait video sizing when the app window is resized', () => {
+    const dimensions = jest.spyOn(Dimensions, 'get')
+    const params = {type: 'youtube_short', hasThumb: true, width: 600} as const
+
+    dimensions.mockReturnValue({
+      width: 1024,
+      height: 1366,
+      scale: 2,
+      fontScale: 1,
+    })
+    expect(getPlayerAspect(params)).toEqual({aspectRatio: (9 / 16) * 1.5})
+
+    dimensions.mockReturnValue({
+      width: 1024,
+      height: 599,
+      scale: 2,
+      fontScale: 1,
+    })
+    expect(getPlayerAspect(params)).toEqual({aspectRatio: (9 / 16) * 1.75})
+    expect(dimensions).toHaveBeenLastCalledWith('window')
+
+    dimensions.mockReturnValue({
+      width: 744,
+      height: 1133,
+      scale: 2,
+      fontScale: 1,
+    })
+    expect(getPlayerAspect(params)).toEqual({aspectRatio: (9 / 16) * 1.5})
+  })
+
+  it('preserves the placeholder aspect without a thumbnail', () => {
+    expect(
+      getPlayerAspect({type: 'youtube_short', hasThumb: false, width: 600}),
+    ).toEqual({aspectRatio: 16 / 9})
   })
 })

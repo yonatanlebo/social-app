@@ -4,13 +4,12 @@ import {
   useCallback,
   useContext,
   useImperativeHandle,
-  useMemo,
   useRef,
   useState,
 } from 'react'
 import {View} from 'react-native'
 import {DrawerGestureContext} from 'react-native-drawer-layout'
-import {Gesture, GestureDetector} from 'react-native-gesture-handler'
+import {GestureDetector, useNativeGesture} from 'react-native-gesture-handler'
 import PagerView, {
   type PagerViewOnPageScrollEventData,
   type PagerViewOnPageSelectedEvent,
@@ -24,8 +23,10 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated'
 import {scheduleOnRN} from 'react-native-worklets'
+import {updateActiveVideoViewAsync} from '@bsky.app/video'
 import {useFocusEffect} from '@react-navigation/native'
 
+import {usePagerFade} from '#/lib/hooks/usePagerFade'
 import {useSetDrawerSwipeDisabled} from '#/state/shell'
 import {atoms as a, native} from '#/alf'
 
@@ -111,6 +112,7 @@ export function Pager({
   const dragState = useSharedValue<'idle' | 'settling' | 'dragging'>('idle')
   const dragProgress = useSharedValue(selectedPage)
   const didInit = useSharedValue(false)
+  const pagerFade = usePagerFade(dragProgress)
   const handlePageScroll = usePagerHandlers({
     onPageScroll(e: PagerViewOnPageScrollEventData) {
       'worklet'
@@ -125,6 +127,14 @@ export function Pager({
     onPageScrollStateChanged(e: PageScrollStateChangedNativeEventData) {
       'worklet'
       scheduleOnRN(setIsIdle, e.pageScrollState === 'idle')
+      if (e.pageScrollState === 'idle') {
+        /*
+         * Adjacent pages stay attached to the window, so their videos are not
+         * torn down when paged away from. Re-pick the active video once the
+         * pager settles so the one on the old page stops.
+         */
+        scheduleOnRN(updateActiveVideoViewAsync)
+      }
       if (dragState.get() === 'idle' && e.pageScrollState === 'settling') {
         // This is a programmatic scroll on Android.
         // Stay "idle" to match iOS and avoid confusing downstream code.
@@ -135,6 +145,9 @@ export function Pager({
     },
     onPageSelected(e: PagerViewOnPageSelectedEventData) {
       'worklet'
+      if (!didInit.get()) {
+        dragProgress.set(e.position)
+      }
       didInit.set(true)
       scheduleOnRN(onPageSelectedJSThread, e.position)
     },
@@ -151,8 +164,9 @@ export function Pager({
       <DrawerGestureRequireFail>
         <MemoizedAnimatedPagerView
           ref={pagerView}
-          style={a.flex_1}
+          style={[a.flex_1, pagerFade.style]}
           initialPage={initialPage}
+          onLayout={pagerFade.onLayout}
           onPageScroll={handlePageScroll}>
           {children}
         </MemoizedAnimatedPagerView>
@@ -163,14 +177,7 @@ export function Pager({
 
 function DrawerGestureRequireFail({children}: {children: React.ReactNode}) {
   const drawerGesture = useContext(DrawerGestureContext)
-
-  const nativeGesture = useMemo(() => {
-    const gesture = Gesture.Native()
-    if (drawerGesture) {
-      gesture.requireExternalGestureToFail(drawerGesture)
-    }
-    return gesture
-  }, [drawerGesture])
+  const nativeGesture = useNativeGesture({requireToFail: drawerGesture})
 
   return <GestureDetector gesture={nativeGesture}>{children}</GestureDetector>
 }
